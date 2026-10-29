@@ -1,4 +1,4 @@
-﻿# myeasybuy-project
+# myeasybuy-project
 
 myeasybuy.ca（反向海淘系统）WordPress 站点的自研插件代码仓库。
 
@@ -10,7 +10,9 @@ myeasybuy.ca（反向海淘系统）WordPress 站点的自研插件代码仓库�
 ## 不包含
 WordPress 核心、公开插件（woocommerce、elementor 等）、主题、wp-config.php、数据库、uploads、manage/vendor（composer 依赖）、haitao-ai-search。
 
-## 注意
-以下文件因疑似含密钥暂未纳入，待密钥移到 wp-config.php / 环境变量后再加入：
-- plugins/product-purchase-workflow/product-purchase-workflow.php
-- plugins/product-upload/includes/Api/OAuthHandler.php
+## 配置（wp-config.php 常量）
+密钥不写在代码里。部署时需在站点 `wp-config.php`（"That's all, stop editing" 之前）定义：
+- `PPW_ONEBOUND_API_KEY`
+- `PPW_ONEBOUND_API_SECRET`
+
+（product-purchase-workflow 的 OneBound/JD 接口默认密钥，读取于 `ppw_default_settings()`；已保存在后台设置中的值仍优先使用。）
