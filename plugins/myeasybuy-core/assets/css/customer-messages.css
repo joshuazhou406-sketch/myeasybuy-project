@@ -1,0 +1,368 @@
+/* Account messages inbox. */
+
+body.meb-account-messages .wf_pagetitle {
+	display: none !important;
+}
+
+body.meb-account-messages .woocommerce-MyAccount-content {
+	padding: 22px 28px 28px;
+	background: #fff !important;
+}
+
+.meb-msg,
+.meb-msg *,
+.meb-msg *::before,
+.meb-msg *::after {
+	box-sizing: border-box;
+}
+
+.meb-msg__title {
+	margin: 0 0 22px;
+	color: #222;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.meb-msg__toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin: 0 0 8px;
+}
+
+.meb-msg__tabs {
+	display: flex;
+	gap: 10px;
+}
+
+body.meb-site a.meb-msg__tab {
+	display: inline-flex;
+	align-items: center;
+	min-height: 32px;
+	padding: 0 14px;
+	border: 1px solid #e6e8ee;
+	border-radius: 6px;
+	background: #fff;
+	color: #8b9098 !important;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 30px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+body.meb-site a.meb-msg__tab.is-active {
+	border-color: #ff7e21;
+	color: #ff7e21 !important;
+}
+
+.meb-msg__search {
+	display: flex;
+	align-items: center;
+	flex: 0 1 280px;
+	min-width: 180px;
+	min-height: 36px;
+	padding-left: 10px;
+	border: 1px solid #e6e8ee;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.meb-msg__icon {
+	display: flex;
+	flex: none;
+	color: #b0b6c0;
+}
+
+.meb-msg__icon svg {
+	width: 15px;
+	height: 15px;
+}
+
+body.meb-site .meb-msg__search input {
+	width: 100%;
+	min-height: 34px !important;
+	height: 34px;
+	margin: 0;
+	padding: 0 10px !important;
+	border: 0 !important;
+	border-radius: 6px !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	color: #222;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+body.meb-site .meb-msg__search input::placeholder {
+	color: #b0b6c0;
+	font-weight: 400;
+}
+
+body.meb-site .meb-msg__search input:focus {
+	outline: 0;
+	box-shadow: none !important;
+}
+
+.meb-msg__search:focus-within {
+	border-color: #ff7e21;
+	box-shadow: 0 0 0 3px rgba(255, 126, 33, 0.12);
+}
+
+.meb-msg__board {
+	display: flex;
+	flex-direction: column;
+	min-height: 460px;
+}
+
+.meb-msg__empty {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 48px 16px;
+	text-align: center;
+}
+
+.meb-msg__mail {
+	width: 120px;
+}
+
+.meb-msg__mail svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.meb-msg__empty p {
+	margin: 8px 0 0;
+	color: #8e97a8;
+	font-size: 14px;
+}
+
+.meb-msg__list {
+	flex: 1;
+	margin: 12px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.meb-msg__row {
+	display: grid;
+	grid-template-columns: 28px minmax(0, 1fr) auto;
+	gap: 10px;
+	align-items: start;
+	padding: 14px 4px;
+	border-bottom: 1px solid #f0f2f5;
+}
+
+.meb-msg__check {
+	display: flex;
+	align-items: center;
+	min-height: 22px;
+	font-weight: 400;
+}
+
+.meb-msg__box,
+.meb-msg__all input,
+.meb-msg__check input {
+	width: 15px;
+	height: 15px;
+	margin: 0;
+	accent-color: #ff7e21;
+}
+
+.meb-msg__subject {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	color: #8b9098;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.meb-msg__row.is-unread .meb-msg__subject {
+	color: #222;
+	font-weight: 600;
+}
+
+.meb-msg__dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #ff7e21;
+	flex: none;
+}
+
+.meb-msg__excerpt,
+.meb-msg__meta {
+	margin: 4px 0 0;
+	color: #8b9098;
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.meb-msg__time {
+	color: #b0b6c0;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.meb-msg__bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-top: auto;
+	padding: 12px 4px;
+	border-top: 1px solid #f0f2f5;
+}
+
+.meb-msg__actions,
+.meb-msg__pager,
+.meb-msg__all,
+.meb-msg__goto label {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.meb-msg__all {
+	margin-right: 8px;
+	color: #8b9098;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-msg__text {
+	min-height: 0 !important;
+	height: auto;
+	margin: 0;
+	padding: 0 8px !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	color: #222 !important;
+	font-size: 13px !important;
+	font-weight: 400 !important;
+	line-height: 1.4 !important;
+	text-transform: none !important;
+	transform: none !important;
+	cursor: pointer;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-msg__text:disabled {
+	color: #c5c9d1 !important;
+	cursor: default;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-msg__text:hover {
+	background: transparent !important;
+	transform: none !important;
+}
+
+.meb-msg__pager {
+	gap: 8px;
+	color: #8b9098;
+	font-size: 13px;
+}
+
+.meb-msg__per {
+	margin: 0;
+	font-weight: 400;
+}
+
+body.meb-site .meb-msg__per select,
+body.meb-site .meb-msg__goto input {
+	min-height: 32px !important;
+	height: 32px;
+	margin: 0;
+	padding: 0 8px !important;
+	border: 1px solid #e6e8ee !important;
+	border-radius: 4px !important;
+	background: #fff !important;
+	box-shadow: none !important;
+	color: #222;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+body.meb-site .meb-msg__per select {
+	padding-right: 22px !important;
+}
+
+body.meb-site .meb-msg__goto input {
+	width: 42px;
+	text-align: center;
+}
+
+.meb-msg__step,
+.meb-msg__current {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 32px;
+	height: 32px;
+	border-radius: 4px;
+	font-size: 13px;
+}
+
+body.meb-site a.meb-msg__step {
+	border: 1px solid #e6e8ee;
+	color: #222 !important;
+	text-decoration: none;
+}
+
+.meb-msg__step.is-disabled {
+	border: 1px solid #f0f2f5;
+	color: #d0d4dc;
+}
+
+.meb-msg__current {
+	background: #ff7e21;
+	color: #fff;
+	font-weight: 600;
+}
+
+.meb-msg__goto {
+	margin: 0;
+}
+
+.meb-msg__goto label {
+	color: #8b9098;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+@media (max-width: 768px) {
+	body.meb-account-messages .woocommerce-MyAccount-content {
+		padding: 16px;
+	}
+
+	.meb-msg__title {
+		font-size: 22px;
+	}
+
+	.meb-msg__toolbar,
+	.meb-msg__bar {
+		flex-wrap: wrap;
+	}
+
+	.meb-msg__search {
+		flex-basis: 100%;
+	}
+
+	.meb-msg__row {
+		grid-template-columns: 24px minmax(0, 1fr);
+	}
+
+	.meb-msg__time {
+		grid-column: 2;
+	}
+}

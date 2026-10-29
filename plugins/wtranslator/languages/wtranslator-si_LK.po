@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: si_LK <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: si_LK\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - වර්ඩ්ප්‍රෙස් පරිවර්තන ප්ලගිනය"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Google Translate මගින් බල ගැන්වෙන වෘත්තීය වෙබ් අඩවි පරිවර්තන ප්ලගිනය. සම්පූර්ණයෙන්ම ක්‍රියාකාරී ස්වාධීන; බාහිර API අවශ්‍ය නොවේ."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "W පරිවර්තක"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "මෙම පිටුවට ප්‍රවේශ වීමට ඔබට ප්‍රමාණවත් අවසර නොමැත."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator සැකසුම්"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "සැකසුම් සාර්ථකව සුරකින ලදී!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "ඔබගේ බෙදාගත් භාවිත දත්ත මකා දමා ඇත."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "ස්තූතියි! නිර්නාමික භාවිත බෙදාගැනීම සක්‍රීය කර ඇත."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "විජට් විකල්ප"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "ඔබේ අඩවියේ භාෂා මාරු කරන්නා දිස්වන ආකාරය වින්‍යාස කරන්න"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "විජට් පෙනුම"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "පතන"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "පාවෙන"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "කොඩි පමණි"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "කොඩි + නම"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "භාෂා මාරු කරන්නා දිස්විය යුතු ආකාරය"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "පරිවර්තනය කරන්න"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "පරිවර්තනය සඳහා මූලාශ්‍ර භාෂාව"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "දිශාව විවෘත කරන්න"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "ඉහළට"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "පහළට"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "පතන මෙනුව විවෘත වන දිශාව"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "පාවෙන භාෂා තේරීම පෙන්වන්න"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "නැත"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "පහළ වම්පස"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "පහළ දකුණ"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "ඉහළ වමේ"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "ඉහළ දකුණ"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "පාවෙන භාෂා තේරීම් විකල්පය පෙන්වන්න බොහෝ වෙබ් අඩවි සඳහා පහසුම සහ සුදුසු වේ."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "මෙනුවේ පෙන්වන්න"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- කිසිවක් නැත -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "සංචාලන මෙනුවකට භාෂා මාරු කරන්නා එක් කරන්න"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "එතුම තේරීම් CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "අභිරුචි එතුම් මූලද්‍රව්‍යය සඳහා CSS තේරීම් කාරකය"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "පෙරදසුන"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "ඔබේ අඩවියේත් එම මාරුකාරකය දිස්වේ. ඔබ සුරකින විට යාවත්කාලීන වේ."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "උසස් විකල්ප"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "අමතර වින්‍යාස විකල්ප"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "ස්වදේශීය භාෂා නම්"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "භාෂා නම් ඒවායේ ස්වදේශීය ආකාරයෙන් පෙන්වන්න"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "අමුත්තන්ගේ භාෂාවට ස්වයංක්‍රීයව මාරු වන්න"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "පළමු සංචාරයේදී (තවමත් භාෂා කුකියක් නොමැත), බ්‍රවුසරයේ Accept-Language ශීර්ෂයෙන් හෝ ඔබේ වෙබ් අඩවිය Cloudflare භාවිතා කරන විට Cloudflare රටේ ශීර්ෂයෙන් භාෂාවක් යෝජනා කරයි. තෙවන පාර්ශවීය භූ API භාවිතා නොකෙරේ."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "උප-නාමාවලි URL සහ උප-වසම් URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "උප-නාමාවලි URL (උදා: example.com/ar/) සහ උප-වසම් URL (උදා: es.example.com) WTranslator Cloud හි ඇත - එක් උපකරණ පුවරුවකින් කළමනාකරණය කරන්න."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "W පරිවර්තක වලාකුළු"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "භාෂාව තෝරාගැනීම"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "සබල කළ යුතු භාෂා තෝරන්න"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "සියල්ල සලකුණු කරන්න"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "සියල්ල සලකුණු නොකරන්න"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "නැවත ඇණවුම් කිරීමට අදින්න"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "ඉඟිය: භාෂා නැවත සකස් කිරීමට, ඒවා ඉහත ලැයිස්තුවට ඇද දමන්න."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "පෞද්ගලිකත්වය සහ විකල්ප භාවිත බෙදාගැනීම"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator අපගේ සේවාදායකයන්ට කිසිදු දත්තයක් යැවීමකින් තොරව සම්පූර්ණයෙන්ම ක්‍රියා කරයි. ඔබ ඇතුළත් වුවහොත්, අනුකූලතාව වැඩි දියුණු කිරීම සඳහා අපි පහත ලැයිස්තුගත කර ඇති විස්තර පමණක් රැස් කරන්නෙමු. ඔබට ඕනෑම වේලාවක මෙය අක්‍රිය කළ හැකිය."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.com සමඟ නිර්නාමික අඩවි විස්තර බෙදා ගැනීමට ඉඩ දෙන්න."
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "සක්‍රිය කළ විට බෙදා ගන්නා ලදී: අඩවි URL, අඩවි නාමය, ප්ලගින අනුවාදය, වර්ඩ්ප්‍රෙස් අනුවාදය, PHP අනුවාදය සහ ස්ථානය. අමුත්තන්ගේ අන්තර්ගතය යවනු නොලැබේ."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "රහස්යතා ප්රතිපත්තිය"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "සහාය උපදෙස් සඳහා WordPress පරිපාලක විද්‍යුත් තැපෑලද බෙදා ගන්න (විකල්ප)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "වෙනස්කම් සුරකින්න"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "ආරක්ෂක පරීක්ෂාව අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "භාෂාව තෝරන්න"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslator වැඩිදියුණු කිරීමට උදව් කරන්න (විකල්ප)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "ඔබ එයට ඉඩ දෙන්නේ නම්, WTranslator හට නිර්නාමික අඩවි විස්තර (අඩවි URL, WordPress/PHP/ප්ලගින අනුවාද සහ ස්ථාන) WTranslator.com සමඟ බෙදා ගත හැකි අතර එමඟින් අපට අනුකූලතාව වැඩි දියුණු කළ හැකිය. පරිවර්තනය ඕනෑම ආකාරයකින් ක්‍රියාත්මක වේ. ඔබට මෙය ඕනෑම වේලාවක සැකසීම් → WTranslator → පෞද්ගලිකත්වය තුළ වෙනස් කළ හැකිය."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "නිර්නාමික භාවිත බෙදා ගැනීමට ඉඩ දෙන්න"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "නැ ස්තුතියි"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "රහස්‍යතා විස්තර"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "ඔබට මෙය කිරීමට අවසර නැත."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "පෙළ අවශ්‍යයි"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "පෙළ අවශ්‍යයි"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "පරිවර්තනය අසාර්ථක විය."
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "සැකසුම්"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "අනවසර"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "හැඹිලිය සාර්ථකව හිස් කරන ලදී"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "හැඹිලිය හිස් කිරීමට අසමත් විය."

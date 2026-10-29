@@ -1,0 +1,135 @@
+/* Customer consolidation request (My Account). */
+
+.myeasybuy-consolidation {
+	max-width: 960px;
+}
+
+.myeasybuy-consolidation__intro,
+.myeasybuy-consolidation__note {
+	color: #222222;
+	opacity: 0.85;
+	margin-bottom: 1.25rem;
+}
+
+.myeasybuy-consolidation__pending {
+	margin: 0 0 1.5rem;
+	padding: 1rem 1.25rem;
+	background: #f8f5f0;
+	border-left: 3px solid var(--myeasybuy-accent, #ff7e21);
+}
+
+.myeasybuy-consolidation__pending h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1rem;
+}
+
+.myeasybuy-consolidation__pending ul {
+	margin: 0;
+	padding-left: 1.1rem;
+}
+
+.myeasybuy-consolidation__toolbar {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	margin-bottom: 0.75rem;
+}
+
+.myeasybuy-consolidation__select-all {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	margin-right: 0.75rem;
+	font-weight: 600;
+}
+
+.myeasybuy-consolidation__count {
+	font-weight: 700;
+	color: var(--myeasybuy-accent, #ff7e21);
+	min-width: 1.25em;
+	text-align: center;
+}
+
+.myeasybuy-consolidation__table .check-column {
+	width: 3rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.myeasybuy-consolidation__channels {
+	margin: 1.5rem 0 1rem;
+	padding: 1.25rem 1.35rem;
+	border: 1px solid rgba(26, 58, 74, 0.18);
+	background: #f8f5f0;
+}
+
+.myeasybuy-consolidation__channels legend {
+	font-weight: 700;
+	padding: 0 0.35rem;
+	color: var(--myeasybuy-accent, #ff7e21);
+}
+
+.myeasybuy-consolidation__channels .description {
+	margin: 0 0 0.85rem;
+	opacity: 0.8;
+}
+
+.myeasybuy-consolidation__channel {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+	column-gap: 0.65rem;
+	row-gap: 0.15rem;
+	align-items: start;
+	padding: 0.75rem 0.85rem;
+	margin: 0 0 0.5rem;
+	cursor: pointer;
+	background: #fff;
+	border: 1px solid transparent;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.myeasybuy-consolidation__channel:has(input:checked) {
+	border-color: var(--myeasybuy-accent, #ff7e21);
+	box-shadow: 0 0 0 1px var(--myeasybuy-accent, #ff7e21);
+}
+
+.myeasybuy-consolidation__channel input {
+	grid-row: 1 / span 2;
+	margin-top: 0.2rem;
+}
+
+.myeasybuy-consolidation__channel-label {
+	font-weight: 600;
+	color: #222222;
+}
+
+.myeasybuy-consolidation__channel-hint {
+	grid-column: 2;
+	font-size: 0.9em;
+	opacity: 0.75;
+}
+
+.myeasybuy-consolidation__submit {
+	background: var(--myeasybuy-accent, #ff7e21) !important;
+	border-color: var(--myeasybuy-accent, #ff7e21) !important;
+	color: #fff !important;
+}
+
+.myeasybuy-consolidation__submit:hover,
+.myeasybuy-consolidation__submit:focus {
+	background: #152f3c !important;
+	border-color: #152f3c !important;
+	color: #fff !important;
+}
+
+.myeasybuy-consolidation-prompt .button {
+	margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.myeasybuy-consolidation__channel {
+		grid-template-columns: auto 1fr;
+	}
+}

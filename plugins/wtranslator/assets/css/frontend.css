@@ -1,0 +1,958 @@
+/**
+ * Frontend Styles - Language Switcher
+ * Scoped CSS to prevent theme conflicts
+ */
+
+/* Hide Google Translate banner/popup (language switcher stays custom). */
+#google_translate_element2,
+div.skiptranslate,
+iframe.skiptranslate,
+iframe.goog-te-banner-frame,
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb,
+.VIpgJd-ZVi9od-l4eHX-hSRGPd {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+	height: 0 !important;
+	max-height: 0 !important;
+	width: 0 !important;
+	border: none !important;
+}
+
+body {
+	top: 0 !important;
+}
+
+/* RTL Support (WTranslator style) - Comprehensive RTL support */
+html[dir="rtl"],
+html[dir="rtl"] body,
+body[dir="rtl"],
+body.rtl {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+html[dir="ltr"],
+html[dir="ltr"] body,
+body[dir="ltr"],
+body.ltr {
+	direction: ltr !important;
+	text-align: left !important;
+}
+
+/* Comprehensive RTL support for all page elements */
+html[dir="rtl"] *,
+body.rtl * {
+	direction: inherit;
+}
+
+/* RTL for navigation menus */
+html[dir="rtl"] nav,
+html[dir="rtl"] .menu,
+html[dir="rtl"] ul.menu,
+html[dir="rtl"] #menu,
+html[dir="rtl"] .et-menu-nav,
+html[dir="rtl"] #et-top-navigation,
+body.rtl nav,
+body.rtl .menu,
+body.rtl ul.menu,
+body.rtl #menu,
+body.rtl .et-menu-nav,
+body.rtl #et-top-navigation {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+html[dir="rtl"] nav ul,
+html[dir="rtl"] .menu ul,
+html[dir="rtl"] ul.menu ul,
+body.rtl nav ul,
+body.rtl .menu ul,
+body.rtl ul.menu ul {
+	text-align: right !important;
+}
+
+html[dir="rtl"] nav li,
+html[dir="rtl"] .menu li,
+html[dir="rtl"] ul.menu li,
+body.rtl nav li,
+body.rtl .menu li,
+body.rtl ul.menu li {
+	text-align: right !important;
+}
+
+/* RTL for forms */
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select,
+html[dir="rtl"] button,
+html[dir="rtl"] form,
+body.rtl input,
+body.rtl textarea,
+body.rtl select,
+body.rtl button,
+body.rtl form {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* RTL for buttons */
+html[dir="rtl"] button,
+html[dir="rtl"] .button,
+html[dir="rtl"] a.button,
+html[dir="rtl"] input[type="submit"],
+html[dir="rtl"] input[type="button"],
+body.rtl button,
+body.rtl .button,
+body.rtl a.button,
+body.rtl input[type="submit"],
+body.rtl input[type="button"] {
+	text-align: center !important;
+}
+
+/* RTL for lists */
+html[dir="rtl"] ul,
+html[dir="rtl"] ol,
+html[dir="rtl"] li,
+body.rtl ul,
+body.rtl ol,
+body.rtl li {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+html[dir="rtl"] ul li,
+html[dir="rtl"] ol li,
+body.rtl ul li,
+body.rtl ol li {
+	text-align: right !important;
+}
+
+/* RTL for headings */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+body.rtl h1,
+body.rtl h2,
+body.rtl h3,
+body.rtl h4,
+body.rtl h5,
+body.rtl h6 {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* RTL for paragraphs and text */
+html[dir="rtl"] p,
+html[dir="rtl"] div,
+html[dir="rtl"] span,
+html[dir="rtl"] article,
+html[dir="rtl"] section,
+body.rtl p,
+body.rtl div,
+body.rtl span,
+body.rtl article,
+body.rtl section {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* RTL for tables */
+html[dir="rtl"] table,
+html[dir="rtl"] table th,
+html[dir="rtl"] table td,
+body.rtl table,
+body.rtl table th,
+body.rtl table td {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* RTL for images - keep them inline but adjust alignment */
+html[dir="rtl"] img,
+body.rtl img {
+	display: inline-block;
+}
+
+html[dir="rtl"] .alignleft,
+body.rtl .alignleft {
+	float: right !important;
+	margin-right: 0 !important;
+	margin-left: 1.5em !important;
+}
+
+html[dir="rtl"] .alignright,
+body.rtl .alignright {
+	float: left !important;
+	margin-left: 0 !important;
+	margin-right: 1.5em !important;
+}
+
+html[dir="rtl"] .aligncenter,
+body.rtl .aligncenter {
+	float: none !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+/* RTL for widgets and sidebars */
+html[dir="rtl"] .widget,
+html[dir="rtl"] .sidebar,
+html[dir="rtl"] aside,
+body.rtl .widget,
+body.rtl .sidebar,
+body.rtl aside {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* RTL for breadcrumbs */
+html[dir="rtl"] .breadcrumb,
+html[dir="rtl"] .breadcrumbs,
+html[dir="rtl"] nav[aria-label="breadcrumb"],
+body.rtl .breadcrumb,
+body.rtl .breadcrumbs,
+body.rtl nav[aria-label="breadcrumb"] {
+	direction: rtl !important;
+	text-align: right !important;
+}
+
+/* RTL for search forms */
+html[dir="rtl"] .search-form,
+html[dir="rtl"] form.search-form,
+html[dir="rtl"] .wp-block-search,
+body.rtl .search-form,
+body.rtl form.search-form,
+body.rtl .wp-block-search {
+	direction: rtl !important;
+}
+
+html[dir="rtl"] .search-form input,
+html[dir="rtl"] .wp-block-search input,
+body.rtl .search-form input,
+body.rtl .wp-block-search input {
+	text-align: right !important;
+}
+
+/* RTL for Divi theme specific elements */
+html[dir="rtl"] .et_pb_module,
+html[dir="rtl"] .et_pb_row,
+html[dir="rtl"] .et_pb_column,
+html[dir="rtl"] .et_pb_section,
+body.rtl .et_pb_module,
+body.rtl .et_pb_row,
+body.rtl .et_pb_column,
+body.rtl .et_pb_section {
+	direction: rtl !important;
+}
+
+html[dir="rtl"] .et_pb_text,
+html[dir="rtl"] .et_pb_text_align_left,
+body.rtl .et_pb_text,
+body.rtl .et_pb_text_align_left {
+	text-align: right !important;
+}
+
+html[dir="rtl"] .et_pb_text_align_right,
+body.rtl .et_pb_text_align_right {
+	text-align: left !important;
+}
+
+/* RTL for language switcher ONLY (scoped to prevent theme conflicts) */
+html[dir="rtl"] #wtranslator-switcher.wtranslator-switcher,
+body.rtl #wtranslator-switcher.wtranslator-switcher {
+	direction: rtl;
+}
+
+html[dir="rtl"] #wtranslator-switcher .wtranslator-dropdown-menu,
+body.rtl #wtranslator-switcher .wtranslator-dropdown-menu {
+	right: 0 !important;
+	left: auto !important;
+	text-align: right !important;
+}
+
+html[dir="rtl"] #wtranslator-switcher .wtranslator-lang-item,
+html[dir="rtl"] #wtranslator-switcher .wtranslator-flag-item,
+body.rtl #wtranslator-switcher .wtranslator-lang-item,
+body.rtl #wtranslator-switcher .wtranslator-flag-item {
+	text-align: right !important;
+	flex-direction: row-reverse !important;
+}
+
+html[dir="rtl"] .wtranslator-menu-dropdown-list,
+body.rtl .wtranslator-menu-dropdown-list {
+	right: 0 !important;
+	left: auto !important;
+	text-align: right !important;
+}
+
+/* RTL for dropdown arrow (scoped) */
+html[dir="rtl"] #wtranslator-switcher .wtranslator-arrow,
+body.rtl #wtranslator-switcher .wtranslator-arrow {
+	transform: rotate(180deg);
+}
+
+/* Main switcher - scoped to prevent theme conflicts */
+#wtranslator-switcher.wtranslator-switcher {
+	position: fixed !important;
+	z-index: 999999 !important;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	/* Prevent theme from overriding specific properties only */
+	font-size: inherit !important;
+	line-height: inherit !important;
+	color: inherit !important;
+	text-align: inherit !important;
+	direction: inherit !important;
+}
+
+/* Inline position - not fixed (scoped) */
+#wtranslator-switcher.wtranslator-switcher[style*="position:relative"] {
+	position: relative !important;
+	z-index: auto !important;
+}
+
+/* Position classes (scoped to prevent theme conflicts) */
+#wtranslator-switcher.wtranslator-top-left {
+	top: 20px !important;
+	left: 20px !important;
+	right: auto !important;
+	bottom: auto !important;
+}
+
+#wtranslator-switcher.wtranslator-top-right {
+	top: 20px !important;
+	right: 20px !important;
+	left: auto !important;
+	bottom: auto !important;
+}
+
+#wtranslator-switcher.wtranslator-bottom-left {
+	bottom: 20px !important;
+	left: 20px !important;
+	top: auto !important;
+	right: auto !important;
+}
+
+#wtranslator-switcher.wtranslator-bottom-right {
+	bottom: 20px !important;
+	right: 20px !important;
+	top: auto !important;
+	left: auto !important;
+}
+
+/* Dropdown Style (scoped to prevent theme conflicts) */
+#wtranslator-switcher .wtranslator-dropdown {
+	position: relative;
+	box-sizing: border-box;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-toggle {
+	display: flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	padding: 10px 16px !important;
+	background: #1e293b !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 8px !important;
+	color: #e2e8f0 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	cursor: pointer !important;
+	transition: all 0.2s !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+	box-sizing: border-box !important;
+	margin: 0 !important;
+	text-decoration: none !important;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
+/* Scoped selectors to prevent theme conflicts */
+#wtranslator-switcher .wtranslator-dropdown-toggle:hover {
+	background: #334155 !important;
+	border-color: rgba(20, 184, 166, 0.3) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-toggle:focus {
+	outline: none !important;
+	box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-toggle .wtranslator-flag {
+	font-size: 18px !important;
+	line-height: 1 !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-toggle .wtranslator-lang-name {
+	min-width: 80px !important;
+	text-align: left !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-toggle .wtranslator-arrow {
+	font-size: 10px !important;
+	opacity: 0.7 !important;
+	transition: transform 0.2s !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown.active .wtranslator-dropdown-toggle .wtranslator-arrow {
+	transform: rotate(180deg) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-menu {
+	position: absolute !important;
+	left: 0 !important;
+	padding: 4px !important;
+	background: #1e293b !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 8px !important;
+	list-style: none !important;
+	min-width: 160px !important;
+	max-height: 312px !important;
+	overflow-y: auto !important;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	transition: all 0.2s !important;
+	box-sizing: border-box !important;
+	margin: 0 !important;
+}
+
+/* Default: Open Up (scoped) */
+#wtranslator-switcher .wtranslator-dropdown.open-up .wtranslator-dropdown-menu {
+	bottom: 100% !important;
+	top: auto !important;
+	margin: 0 0 8px 0 !important;
+	transform: translateY(8px) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown.open-up.active .wtranslator-dropdown-menu {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: translateY(0) !important;
+}
+
+/* Open Down (scoped) */
+#wtranslator-switcher .wtranslator-dropdown.open-down .wtranslator-dropdown-menu {
+	top: 100% !important;
+	bottom: auto !important;
+	margin: 8px 0 0 0 !important;
+	transform: translateY(-8px) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown.open-down.active .wtranslator-dropdown-menu {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: translateY(0) !important;
+}
+
+/* Override for bottom positions (scoped) */
+#wtranslator-switcher .wtranslator-dropdown.bottom-right.open-down .wtranslator-dropdown-menu,
+#wtranslator-switcher .wtranslator-dropdown.bottom-left.open-down .wtranslator-dropdown-menu {
+	bottom: 100% !important;
+	top: auto !important;
+	margin: 0 0 8px 0 !important;
+	transform: translateY(8px) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown.bottom-right.open-down.active .wtranslator-dropdown-menu,
+#wtranslator-switcher .wtranslator-dropdown.bottom-left.open-down.active .wtranslator-dropdown-menu {
+	transform: translateY(0) !important;
+}
+
+/* Override for top positions (scoped) */
+#wtranslator-switcher .wtranslator-dropdown.top-right.open-up .wtranslator-dropdown-menu,
+#wtranslator-switcher .wtranslator-dropdown.top-left.open-up .wtranslator-dropdown-menu {
+	top: 100% !important;
+	bottom: auto !important;
+	margin: 8px 0 0 0 !important;
+	transform: translateY(-8px) !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown.top-right.open-up.active .wtranslator-dropdown-menu,
+#wtranslator-switcher .wtranslator-dropdown.top-left.open-up.active .wtranslator-dropdown-menu {
+	transform: translateY(0) !important;
+}
+
+/* Language items (scoped) */
+#wtranslator-switcher .wtranslator-lang-item {
+	display: flex !important;
+	align-items: center !important;
+	gap: 10px !important;
+	padding: 10px 12px !important;
+	color: #e2e8f0 !important;
+	text-decoration: none !important;
+	border-radius: 6px !important;
+	transition: all 0.2s !important;
+	box-sizing: border-box !important;
+	margin: 0 !important;
+}
+
+#wtranslator-switcher .wtranslator-lang-item:hover {
+	background: rgba(20, 184, 166, 0.15) !important;
+	color: #14b8a6 !important;
+}
+
+#wtranslator-switcher .wtranslator-lang-item.active {
+	background: rgba(20, 184, 166, 0.2) !important;
+	color: #14b8a6 !important;
+	font-weight: 500 !important;
+}
+
+#wtranslator-switcher .wtranslator-lang-item .wtranslator-flag {
+	font-size: 18px !important;
+	line-height: 1 !important;
+}
+
+#wtranslator-switcher .wtranslator-lang-item .wtranslator-lang-name {
+	flex: 1 !important;
+	font-size: 14px !important;
+}
+
+/* Flags Style (scoped) */
+#wtranslator-switcher .wtranslator-flags {
+	display: flex !important;
+	flex-direction: column !important;
+	gap: 8px !important;
+	background: #1e293b !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 8px !important;
+	padding: 8px !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+	box-sizing: border-box !important;
+	margin: 0 !important;
+}
+
+#wtranslator-switcher .wtranslator-flag-item {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	width: 44px !important;
+	height: 44px !important;
+	font-size: 24px !important;
+	text-decoration: none !important;
+	border-radius: 6px !important;
+	transition: all 0.2s !important;
+	cursor: pointer !important;
+	box-sizing: border-box !important;
+	margin: 0 !important;
+}
+
+#wtranslator-switcher .wtranslator-flag-item:hover {
+	background: rgba(20, 184, 166, 0.15) !important;
+	transform: scale(1.1) !important;
+}
+
+#wtranslator-switcher .wtranslator-flag-item.active {
+	background: rgba(20, 184, 166, 0.25) !important;
+	border: 2px solid #14b8a6 !important;
+}
+
+/* Scrollbar for dropdown (scoped) */
+#wtranslator-switcher .wtranslator-dropdown-menu::-webkit-scrollbar {
+	width: 6px !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-menu::-webkit-scrollbar-track {
+	background: #0f172a !important;
+	border-radius: 3px !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-menu::-webkit-scrollbar-thumb {
+	background: #475569 !important;
+	border-radius: 3px !important;
+}
+
+#wtranslator-switcher .wtranslator-dropdown-menu::-webkit-scrollbar-thumb:hover {
+	background: #64748b !important;
+}
+
+/* Mobile responsive (scoped to prevent theme conflicts) */
+@media (max-width: 768px) {
+	#wtranslator-switcher.wtranslator-switcher {
+		font-size: 12px !important;
+		position: fixed !important;
+	}
+
+	#wtranslator-switcher .wtranslator-dropdown-toggle {
+		padding: 8px 12px !important;
+		font-size: 12px !important;
+	}
+
+	#wtranslator-switcher .wtranslator-dropdown-toggle .wtranslator-lang-name {
+		min-width: 60px !important;
+	}
+
+	#wtranslator-switcher .wtranslator-dropdown-menu {
+		min-width: 160px !important;
+	}
+
+	#wtranslator-switcher .wtranslator-flag-item {
+		width: 36px !important;
+		height: 36px !important;
+		font-size: 20px !important;
+	}
+
+	#wtranslator-switcher.wtranslator-top-left,
+	#wtranslator-switcher.wtranslator-top-right {
+		top: 10px !important;
+	}
+
+	#wtranslator-switcher.wtranslator-bottom-left,
+	#wtranslator-switcher.wtranslator-bottom-right {
+		bottom: 10px !important;
+	}
+
+	#wtranslator-switcher.wtranslator-top-left,
+	#wtranslator-switcher.wtranslator-bottom-left {
+		left: 10px !important;
+	}
+
+	#wtranslator-switcher.wtranslator-top-right,
+	#wtranslator-switcher.wtranslator-bottom-right {
+		right: 10px !important;
+	}
+}
+
+/* Animation */
+@keyframes wtranslator-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Ensure widget is always visible */
+#wtranslator-switcher {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* Menu Integration Styles - Non-intrusive */
+.wtranslator-menu-item {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: list-item;
+	float: none;
+}
+
+.wtranslator-menu-switcher {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: inherit;
+}
+
+.wtranslator-menu-dropdown {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.wtranslator-menu-toggle {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 8px !important;
+	cursor: pointer !important;
+	padding: 10px 16px !important;
+	margin: 0 !important;
+	background: #1e293b !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 8px !important;
+	color: #e2e8f0 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	text-decoration: none !important;
+	white-space: nowrap !important;
+	line-height: 1.5 !important;
+	transition: all 0.2s !important;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
+.wtranslator-menu-toggle:hover {
+	background: #334155 !important;
+	border-color: rgba(20, 184, 166, 0.3) !important;
+	opacity: 1 !important;
+}
+
+.wtranslator-menu-toggle:focus {
+	outline: none !important;
+	box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2) !important;
+}
+
+.wtranslator-menu-toggle .wtranslator-flag {
+	font-size: 18px !important;
+	line-height: 1 !important;
+}
+
+.wtranslator-menu-toggle .wtranslator-lang-name {
+	min-width: 80px !important;
+	text-align: left !important;
+	color: #e2e8f0 !important;
+}
+
+.wtranslator-menu-toggle .wtranslator-arrow {
+	font-size: 10px !important;
+	opacity: 0.7 !important;
+	transition: transform 0.2s !important;
+	display: inline-block !important;
+	color: #e2e8f0 !important;
+}
+
+.wtranslator-menu-dropdown.active .wtranslator-menu-toggle .wtranslator-arrow {
+	transform: rotate(180deg);
+}
+
+.wtranslator-menu-dropdown-list {
+	position: absolute !important;
+	top: 100% !important;
+	left: 0 !important;
+	margin: 8px 0 0 0 !important;
+	padding: 4px !important;
+	background: #1e293b !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border-radius: 8px !important;
+	list-style: none !important;
+	min-width: 160px !important;
+	max-height: 312px !important;
+	overflow-y: auto !important;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4) !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	transform: translateY(-8px) !important;
+	transition: all 0.2s !important;
+	z-index: 99999 !important;
+}
+
+/* Default: Open Down (for menu integration) */
+.wtranslator-menu-dropdown.open-down .wtranslator-menu-dropdown-list {
+	top: 100%;
+	bottom: auto;
+	margin: 8px 0 0 0;
+	transform: translateY(-8px);
+}
+
+.wtranslator-menu-dropdown.open-down.active .wtranslator-menu-dropdown-list,
+.wtranslator-menu-dropdown:hover .wtranslator-menu-dropdown-list {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: translateY(0) !important;
+}
+
+/* Open Up (for top positions) */
+.wtranslator-menu-dropdown.open-up .wtranslator-menu-dropdown-list {
+	bottom: 100%;
+	top: auto;
+	margin: 0 0 8px 0;
+	transform: translateY(8px);
+}
+
+.wtranslator-menu-dropdown.open-up.active .wtranslator-menu-dropdown-list {
+	opacity: 1 !important;
+	visibility: visible !important;
+	transform: translateY(0) !important;
+}
+
+.wtranslator-menu-dropdown-list li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+
+.wtranslator-menu-dropdown-list a {
+	display: flex !important;
+	align-items: center !important;
+	gap: 10px !important;
+	padding: 10px 12px !important;
+	color: #e2e8f0 !important;
+	text-decoration: none !important;
+	border-radius: 6px !important;
+	transition: all 0.2s !important;
+	line-height: 1.5 !important;
+}
+
+.wtranslator-menu-dropdown-list a:hover,
+.wtranslator-menu-dropdown-list a.current {
+	background: rgba(20, 184, 166, 0.15) !important;
+	color: #14b8a6 !important;
+}
+
+.wtranslator-menu-dropdown-list .wtranslator-flag {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.wtranslator-menu-dropdown-list .wtranslator-lang-name {
+	flex: 1;
+	font-size: 14px;
+}
+
+.wtranslator-menu-flag {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 1;
+	text-decoration: none;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	vertical-align: middle;
+	margin: 0 4px;
+}
+
+.wtranslator-menu-flag:hover,
+.wtranslator-menu-flag.active {
+	opacity: 1;
+}
+
+/* Ensure menu item doesn't break menu layout - minimal overrides */
+ul.menu .wtranslator-menu-item,
+nav .wtranslator-menu-item,
+.menu .wtranslator-menu-item,
+#menu .wtranslator-menu-item,
+.et-menu-nav .wtranslator-menu-item,
+#et-top-navigation .wtranslator-menu-item,
+footer .wtranslator-menu-item,
+#footer .wtranslator-menu-item,
+.footer .wtranslator-menu-item {
+	display: list-item !important;
+	float: none !important;
+	vertical-align: middle !important;
+	position: relative !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	height: auto !important;
+	line-height: inherit !important;
+}
+
+/* Prevent conflicts with floating widget */
+#wtranslator-switcher {
+	z-index: 999999 !important;
+}
+
+.wtranslator-menu-dropdown-list {
+	z-index: 99999 !important;
+}
+
+/* Fix for Divi and common themes */
+.menu-item.wtranslator-menu-item,
+li.wtranslator-menu-item {
+	position: relative !important;
+	display: list-item !important;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: auto !important;
+	height: auto !important;
+	float: none !important;
+	clear: none !important;
+}
+
+.menu-item.wtranslator-menu-item > a,
+.menu-item.wtranslator-menu-item > .wtranslator-menu-switcher,
+li.wtranslator-menu-item > a,
+li.wtranslator-menu-item > .wtranslator-menu-switcher {
+	display: inline-block !important;
+	vertical-align: middle !important;
+}
+
+/* Ensure it works with theme menu styles */
+#top-menu .wtranslator-menu-item,
+#main-header .wtranslator-menu-item,
+.et-menu-nav .wtranslator-menu-item,
+footer ul .wtranslator-menu-item,
+#footer ul .wtranslator-menu-item,
+.footer ul .wtranslator-menu-item {
+	display: inline-block !important;
+	float: none !important;
+}
+
+/* Footer specific fixes */
+footer .wtranslator-menu-item,
+#footer .wtranslator-menu-item,
+.footer .wtranslator-menu-item {
+	display: inline-block !important;
+	margin: 0 5px !important;
+	padding: 0 !important;
+}
+
+/* Ensure menu switcher doesn't break layout */
+.wtranslator-menu-switcher {
+	display: inline-block !important;
+	vertical-align: middle !important;
+	line-height: inherit !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* Ensure menu toggle doesn't break layout */
+.wtranslator-menu-toggle {
+	display: inline-flex !important;
+	vertical-align: middle !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+}
+	float: none;
+}
+
+/* Footer menu specific fixes */
+footer .wtranslator-menu-item,
+#footer .wtranslator-menu-item,
+.footer .wtranslator-menu-item,
+footer ul .wtranslator-menu-item,
+#footer ul .wtranslator-menu-item,
+.footer ul .wtranslator-menu-item {
+	display: inline-block !important;
+	float: none !important;
+	margin: 0 5px !important;
+	padding: 0 !important;
+	vertical-align: middle !important;
+	position: relative !important;
+}
+
+/* Ensure menu switcher doesn't break footer layout */
+footer .wtranslator-menu-switcher,
+#footer .wtranslator-menu-switcher,
+.footer .wtranslator-menu-switcher {
+	display: inline-block !important;
+	vertical-align: middle !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* Ensure menu toggle fits in footer */
+footer .wtranslator-menu-toggle,
+#footer .wtranslator-menu-toggle,
+.footer .wtranslator-menu-toggle {
+	display: inline-flex !important;
+	vertical-align: middle !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+	font-size: 13px !important;
+	padding: 8px 12px !important;
+}
+
+.wtranslator-switcher {
+	animation: wtranslator-fade-in 0.3s ease-out;
+}

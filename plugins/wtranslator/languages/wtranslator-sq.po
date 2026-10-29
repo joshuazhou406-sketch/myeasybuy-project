@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: sq <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: sq\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - Shtojca e Përkthimit në WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Plugin profesional i përkthimit të faqeve të internetit i mundësuar nga Google Translate. Plotësisht funksional dhe i pavarur; nuk kërkohet API i jashtëm."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "Përkthyesi W"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nuk keni leje të mjaftueshme për të hyrë në këtë faqe."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Cilësimet e WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Cilësimet u ruajtën me sukses!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Të dhënat e përdorimit të përbashkëta janë fshirë."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Faleminderit! Ndarja anonime e përdorimit është aktivizuar."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Opsionet e Widget-it"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Konfiguroni se si shfaqet ndërruesi i gjuhës në faqen tuaj të internetit"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Pamja e Widget-it"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Menu zbritëse"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Noton"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Vetëm flamuj"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Flamuj + Emri"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Si duhet të duket ndërruesi i gjuhës"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Përkthe nga"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Gjuha burimore për përkthim"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Drejtim i Hapur"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Lart"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Poshtë"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Drejtimi i hapjes së menysë zbritëse"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Shfaq Përzgjedhësin e Gjuhës Lundruese"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Jo"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Poshtë majtas"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Poshtë djathtas"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Lart majtas"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Sipër djathtas"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Shfaqja e opsionit të përzgjedhjes së gjuhës lundruese është më e lehtë dhe e përshtatshme për shumicën e faqeve të internetit."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Shfaq në Meny"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Asnjë -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Shto ndërruesin e gjuhës në një meny navigimi"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "CSS i Përzgjedhësit të Mbështjellësit"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Përzgjedhësi CSS për elementin e mbështjellësit të personalizuar"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Pamje paraprake"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "I njëjti ndërrues shfaqet në faqen tuaj. Përditësohet kur e ruani."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Opsione të Avancuara"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Opsione shtesë të konfigurimit"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Emrat e Gjuhës Amtare"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Shfaq emrat e gjuhëve në formën e tyre amtare"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Kalimi automatik në gjuhën e vizitorit"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Në vizitën e parë (ende pa cookie gjuhe), sugjeron një gjuhë nga koka e Pranimit të Gjuhës së shfletuesit ose nga koka e vendit të Cloudflare kur faqja juaj përdor Cloudflare. Nuk përdoren API gjeografike të palëve të treta."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL-ja e nën-direktorisë dhe URL-ja e nën-domenit"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL-ja e nën-drejtorisë (p.sh. example.com/ar/) dhe URL-ja e nën-domenit (p.sh. es.example.com) janë të disponueshme në WTranslator Cloud — menaxhohen nga një panel i vetëm."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Përzgjedhja e gjuhës"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Zgjidhni cilat gjuhë do të aktivizohen"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Kontrollo të gjitha"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Hiq shenjën të gjithave"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Zvarrit për të rirenditur"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "KËSHILLË: Për të rirenditur gjuhët, thjesht tërhiqini dhe lëshojini ato në listën më sipër."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Privatësia dhe ndarja opsionale e përdorimit"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator funksionon plotësisht pa dërguar të dhëna në serverat tanë. Nëse zgjidhni të aktivizoni, ne mbledhim vetëm detajet e listuara më poshtë për të përmirësuar përputhshmërinë. Mund ta çaktivizoni këtë në çdo kohë."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Lejo ndarjen e detajeve anonime të faqes me WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Ndahet kur aktivizohet: URL-ja e faqes, emri i faqes, versioni i plugin-it, versioni i WordPress-it, versioni i PHP-së dhe cilësimet lokale. Nuk dërgohet përmbajtje për vizitorët."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Politika e privatësisë"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Gjithashtu ndani email-in e administratorit të WordPress për këshilla mbështetjeje (opsionale)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Ruaj ndryshimet"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Kontrolli i sigurisë dështoi. Ju lutemi provoni përsëri."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Zgjidh Gjuhën"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Ndihmoni në përmirësimin e WTranslator (opsionale)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Nëse e lejoni, WTranslator mund të ndajë detaje anonime të faqes (URL-në e faqes, versionet e WordPress/PHP/shtojcave dhe gjuhën lokale) me WTranslator.com në mënyrë që të përmirësojmë përputhshmërinë. Përkthimi vazhdon të funksionojë në të dyja rastet. Mund ta ndryshoni këtë në çdo kohë te Cilësimet → WTranslator → Privatësia."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Lejo ndarjen anonime të përdorimit"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Jo faleminderit"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Detajet e privatësisë"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Nuk ke leje për ta bërë këtë."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Tekstet janë të nevojshme"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Teksti është i detyrueshëm"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Përkthimi dështoi"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Cilësimet"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "I paautorizuar"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Memoria e përkohshme u pastrua me sukses"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Pastrimi i memories së përkohshme dështoi."

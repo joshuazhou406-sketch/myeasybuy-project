@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: km <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: km\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - កម្មវិធីជំនួយបកប្រែ WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "កម្មវិធីជំនួយបកប្រែគេហទំព័រដែលមានជំនាញវិជ្ជាជីវៈដំណើរការដោយ Google Translate។ មានមុខងារពេញលេញដាច់ដោយឡែកពីគ្នា; មិនត្រូវការ API ខាងក្រៅទេ។"
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "អ្នកបកប្រែ W"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "អ្នកមិនមានសិទ្ធិគ្រប់គ្រាន់ដើម្បីចូលប្រើទំព័រនេះទេ។"
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "ការកំណត់អ្នកបកប្រែ W"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "ការកំណត់ត្រូវបានរក្សាទុកដោយជោគជ័យ!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "ទិន្នន័យប្រើប្រាស់ដែលបានចែករំលែករបស់អ្នកត្រូវបានលុបចេញ។"
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "អរគុណ! ការចែករំលែកការប្រើប្រាស់អនាមិកត្រូវបានបើក។"
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "ជម្រើស​ធាតុ​ក្រាហ្វិក"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "កំណត់រចនាសម្ព័ន្ធរបៀបដែលឧបករណ៍ប្តូរភាសាលេចឡើងនៅលើគេហទំព័ររបស់អ្នក"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "រូបរាង​ធាតុ​ក្រាហ្វិក"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "ម៉ឺនុយទម្លាក់ចុះ"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "អណ្តែត"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "ទង់ជាតិតែប៉ុណ្ណោះ"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "ទង់ជាតិ + ឈ្មោះ"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "របៀបដែលឧបករណ៍ប្តូរភាសាគួរលេចឡើង"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "បកប្រែពី"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "ភាសាប្រភពសម្រាប់ការបកប្រែ"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "ទិសដៅបើកចំហ"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "ឡើងលើ"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "ចុះក្រោម"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "ទិសដៅដែលម៉ឺនុយទម្លាក់ចុះបើក"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "បង្ហាញ​ឧបករណ៍​ជ្រើសរើស​ភាសា​អណ្តែត"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "ទេ"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "ខាងក្រោមឆ្វេង"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "ខាងស្តាំខាងក្រោម"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "ខាងលើឆ្វេង"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "ខាងស្តាំខាងលើ"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "ជម្រើស​បង្ហាញ​ភាសា​អណ្តែត​គឺ​ងាយស្រួល​បំផុត និង​ស័ក្តិសម​សម្រាប់​គេហទំព័រ​ភាគច្រើន។"
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "បង្ហាញក្នុងម៉ឺនុយ"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- គ្មាន -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "បន្ថែមឧបករណ៍ប្តូរភាសាទៅក្នុងម៉ឺនុយរុករក"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "CSS សម្រាប់ជ្រើសរើសឧបករណ៍រុំ"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "ឧបករណ៍ជ្រើសរើស CSS សម្រាប់ធាតុរុំផ្ទាល់ខ្លួន"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "មើលជាមុន"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "ឧបករណ៍ប្តូរដូចគ្នានេះលេចឡើងនៅលើគេហទំព័ររបស់អ្នក។ ធ្វើបច្ចុប្បន្នភាពនៅពេលអ្នករក្សាទុក។"
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "ជម្រើសកម្រិតខ្ពស់"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "ជម្រើសកំណត់រចនាសម្ព័ន្ធបន្ថែម"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "ឈ្មោះភាសាកំណើត"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "បង្ហាញឈ្មោះភាសាជាទម្រង់ដើមរបស់វា"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "ប្តូរដោយស្វ័យប្រវត្តិទៅជាភាសាអ្នកទស្សនា"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "នៅពេលចូលមើលលើកដំបូង (មិនទាន់មានខូគីភាសានៅឡើយទេ) វានឹងណែនាំភាសាមួយពីបឋមកថា Accept-Language របស់កម្មវិធីរុករកតាមអ៊ីនធឺណិត ឬពីបឋមកថាប្រទេស Cloudflare នៅពេលដែលគេហទំព័ររបស់អ្នកប្រើ Cloudflare។ មិនមានការប្រើប្រាស់ geo API ភាគីទីបីទេ។"
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL ថតរង និង URL ដែនរង"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL ថតរង (ឧទាហរណ៍ example.com/ar/) និង URL ដែនរង (ឧទាហរណ៍ es.example.com) មាននៅក្នុង WTranslator Cloud — គ្រប់គ្រងពីផ្ទាំងគ្រប់គ្រងតែមួយ។"
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "ពពក WTranslator"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "ការជ្រើសរើសភាសា"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "ជ្រើសរើសភាសាដែលត្រូវបើក"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "ធីកទាំងអស់"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "ដោះធីកទាំងអស់"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "អូសដើម្បីតម្រៀបឡើងវិញ"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "តម្រៀប​ភាសា​ឡើងវិញ គ្រាន់តែ​អូស​ហើយ​ទម្លាក់​វា​ក្នុង​បញ្ជី​ខាងលើ។"
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "ភាពឯកជន និងការចែករំលែកការប្រើប្រាស់ជាជម្រើស"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator ដំណើរការយ៉ាងពេញលេញដោយមិនចាំបាច់ផ្ញើទិន្នន័យណាមួយទៅកាន់ម៉ាស៊ីនមេរបស់យើងទេ។ ប្រសិនបើអ្នកជ្រើសរើសចូលរួម យើងប្រមូលតែព័ត៌មានលម្អិតដែលបានរាយខាងក្រោមដើម្បីបង្កើនភាពឆបគ្នា។ អ្នកអាចបិទវានៅពេលណាក៏បាន។"
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "អនុញ្ញាតឱ្យចែករំលែកព័ត៌មានលម្អិតគេហទំព័រអនាមិកជាមួយ WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "ចែករំលែកនៅពេលបើកដំណើរការ៖ URL គេហទំព័រ, ឈ្មោះគេហទំព័រ, កំណែកម្មវិធីជំនួយ, កំណែ WordPress, កំណែ PHP និងមូលដ្ឋាន។ គ្មានខ្លឹមសារអ្នកទស្សនាត្រូវបានផ្ញើទេ។"
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "គោលការណ៍ឯកជនភាព"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "ចែករំលែកអ៊ីមែលអ្នកគ្រប់គ្រង WordPress ដើម្បីទទួលបានគន្លឹះជំនួយ (ស្រេចចិត្ត)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "រក្សាទុកការផ្លាស់ប្តូរ"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "ការត្រួតពិនិត្យសុវត្ថិភាពបរាជ័យ។ សូមព្យាយាមម្តងទៀត។"
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "ជ្រើសរើសភាសា"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "ជួយកែលម្អ WTranslator (ស្រេចចិត្ត)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "ប្រសិនបើអ្នកអនុញ្ញាត WTranslator អាចចែករំលែកព័ត៌មានលម្អិតអំពីគេហទំព័រអនាមិក (URL គេហទំព័រ កំណែ WordPress/PHP/កម្មវិធីជំនួយ និងភាសា) ជាមួយ WTranslator.com ដូច្នេះយើងអាចកែលម្អភាពឆបគ្នា។ ការបកប្រែនៅតែដំណើរការទាំងសងខាង។ អ្នកអាចផ្លាស់ប្តូរវានៅពេលណាក៏បាននៅក្នុងការកំណត់ → WTranslator → ភាពឯកជន។"
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "អនុញ្ញាតឱ្យចែករំលែកការប្រើប្រាស់អនាមិក"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "ទេ អរគុណ"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "ព័ត៌មានលម្អិតអំពីភាពឯកជន"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "អ្នកមិនមានការអនុញ្ញាតឱ្យធ្វើបែបនេះទេ។"
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "អត្ថបទត្រូវបានទាមទារ"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "តម្រូវ​ឲ្យ​មាន​អត្ថបទ"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "ការបកប្រែបរាជ័យ"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "ការកំណត់"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "គ្មានការអនុញ្ញាត"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "បានសម្អាតឃ្លាំងសម្ងាត់ដោយជោគជ័យ"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "មិនអាចសម្អាតឃ្លាំងសម្ងាត់បានទេ"

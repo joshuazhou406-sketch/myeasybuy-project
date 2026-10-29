@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ta_IN <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: ta_IN\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - வேர்ட்பிரஸ் மொழிபெயர்ப்பு செருகுநிரல்"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "கூகிள் மொழிபெயர்ப்பால் இயக்கப்படும் தொழில்முறை இணையதள மொழிபெயர்ப்பு செருகுநிரல். முழுமையாகத் தனித்து இயங்கக்கூடியது; வெளிப்புற API தேவையில்லை."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "இந்தப் பக்கத்தை அணுக உங்களுக்குப் போதுமான அனுமதிகள் இல்லை."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator அமைப்புகள்"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "அமைப்புகள் வெற்றிகரமாகச் சேமிக்கப்பட்டன!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "உங்கள் பகிரப்பட்ட பயன்பாட்டுத் தரவு நீக்கப்பட்டுவிட்டது."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "நன்றி! அநாமதேய பயன்பாட்டுப் பகிர்வு இயக்கப்பட்டுள்ளது."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "விட்ஜெட் விருப்பங்கள்"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "உங்கள் தளத்தில் மொழி மாற்றி தோன்றும் விதத்தை உள்ளமைக்கவும்"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "விட்ஜெட் தோற்றம்"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "கீழ்தோன்றும் பட்டியல்"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "மிதவை"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "கொடிகள் மட்டும்"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "கொடிகள் + பெயர்"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "மொழி மாற்றி எவ்வாறு தோன்ற வேண்டும்"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "மொழிபெயர்க்கவும்"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "மொழிபெயர்ப்புக்கான மூல மொழி"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "திறந்த திசை"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "மேலே"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "கீழே"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "கீழ்தோன்றும் மெனு திறக்கும் திசை"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "மிதக்கும் மொழித் தேர்வியைக் காட்டு"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "இல்லை"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "கீழ் இடது"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "கீழ் வலது"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "மேல் இடது"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "மேல் வலது"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "மிதக்கும் மொழித் தேர்வியைக் காண்பிக்கும் விருப்பம் மிகவும் எளிதானதும், பெரும்பாலான வலைத்தளங்களுக்குப் பொருத்தமானதும் ஆகும்."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "மெனுவில் காட்டு"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- எதுவுமில்லை -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "வழிசெலுத்தல் மெனுவில் மொழி மாற்றியைச் சேர்க்கவும்"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "ரேப்பர் செலக்டர் CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "தனிப்பயன் உறை உறுப்புக்கான CSS தேர்வி"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "முன்னோட்டம்"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "அதே ஸ்விட்சர் உங்கள் தளத்திலும் தோன்றும். நீங்கள் சேமிக்கும்போது புதுப்பிக்கப்படும்."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "மேம்பட்ட விருப்பங்கள்"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "கூடுதல் உள்ளமைவு விருப்பங்கள்"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "தாய்மொழி பெயர்கள்"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "மொழிப் பெயர்களை அவற்றின் தாய்மொழி வடிவத்தில் காட்டவும்"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "பார்வையாளர் மொழிக்குத் தானாக மாறவும்"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "முதல் வருகையின்போது (இன்னும் மொழி குக்கீ இல்லை), உலாவியின் Accept-Language ஹெடரிலிருந்தோ அல்லது உங்கள் தளம் Cloudflare-ஐப் பயன்படுத்தும்போது Cloudflare country ஹெடரிலிருந்தோ ஒரு மொழியைப் பரிந்துரைக்கும். மூன்றாம் தரப்பு புவியியல் API-கள் எதுவும் பயன்படுத்தப்படவில்லை."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "துணை அடைவு URL மற்றும் துணை டொமைன் URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "WTranslator Cloud-இல் துணை அடைவு URL (எ.கா. example.com/ar/) மற்றும் துணை டொமைன் URL (எ.கா. es.example.com) ஆகியவை கிடைக்கின்றன — இவற்றை ஒரே டாஷ்போர்டில் இருந்து நிர்வகிக்கலாம்."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator கிளவுட்"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "மொழித் தேர்வு"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "எந்தெந்த மொழிகளை இயக்க வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "அனைத்தையும் சரிபார்க்கவும்"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "அனைத்தையும் தேர்வுநீக்கம் செய்"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "மறுவரிசைப்படுத்த இழுக்கவும்"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "குறிப்பு: மொழிகளின் வரிசையை மாற்ற, அவற்றை மேலே உள்ள பட்டியலில் இழுத்துப் போடவும்."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "தனியுரிமை மற்றும் விருப்ப பயன்பாட்டு இணைப்பு"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator எங்கள் சேவையகங்களுக்கு எந்தத் தரவையும் அனுப்பாமல் முழுமையாகச் செயல்படுகிறது. நீங்கள் ஒப்புக்கொண்டால், இணக்கத்தன்மையை மேம்படுத்துவதற்காகக் கீழே பட்டியலிடப்பட்டுள்ள விவரங்களை மட்டுமே நாங்கள் சேகரிப்போம். நீங்கள் இதை எப்போது வேண்டுமானாலும் முடக்கலாம்."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.com உடன் அநாமதேய தள விவரங்களைப் பகிர அனுமதிக்கவும்."
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "செயல்படுத்தப்படும்போது பகிரப்படுபவை: தளத்தின் URL, தளத்தின் பெயர், செருகுநிரல் பதிப்பு, வேர்ட்பிரஸ் பதிப்பு, PHP பதிப்பு மற்றும் வட்டாரம். பார்வையாளரின் எந்த உள்ளடக்கமும் அனுப்பப்படாது."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "தனியுரிமைக் கொள்கை"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "உதவிக்குறிப்புகளுக்காக வேர்ட்பிரஸ் நிர்வாகி மின்னஞ்சலையும் பகிரவும் (விருப்பப்பட்டால்)."
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "மாற்றங்களைச் சேமிக்கவும்"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "பாதுகாப்புச் சோதனை தோல்வியடைந்தது. மீண்டும் முயற்சிக்கவும்."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "மொழியைத் தேர்ந்தெடுக்கவும்"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslator-ஐ மேம்படுத்த உதவுங்கள் (விருப்பத்திற்குரியது)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "நீங்கள் அனுமதித்தால், இணக்கத்தன்மையை மேம்படுத்துவதற்காக, WTranslator ஆனது அநாமதேய தள விவரங்களை (தள URL, WordPress/PHP/பிளகின் பதிப்புகள் மற்றும் வட்டாரம்) WTranslator.com உடன் பகிரும். எப்படியிருந்தாலும் மொழிபெயர்ப்பு தொடர்ந்து செயல்படும். இதை நீங்கள் எப்போது வேண்டுமானாலும் அமைப்புகள் → WTranslator → தனியுரிமை என்பதில் மாற்றிக்கொள்ளலாம்."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "அநாமதேய பயன்பாட்டுப் பகிர்வை அனுமதிக்கவும்"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "வேண்டாம் நன்றி"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "தனியுரிமை விவரங்கள்"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "இதைச் செய்வதற்கு உங்களுக்கு அனுமதி இல்லை."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "உரைகள் தேவைப்படுகின்றன"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "உரை தேவை"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "மொழிபெயர்ப்பு தோல்வியடைந்தது"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "அமைப்புகள்"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "அங்கீகரிக்கப்படாத"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "தற்காலிக நினைவகம் வெற்றிகரமாக அழிக்கப்பட்டது"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "தற்காலிக நினைவகத்தை அழிக்க முடியவில்லை"

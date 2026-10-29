@@ -1,0 +1,149 @@
+.meb-oms-wrap {
+	max-width: 1180px;
+}
+
+.meb-oms-pipeline {
+	display: grid;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	gap: 10px;
+	margin: 16px 0 20px;
+	padding: 0;
+	list-style: none;
+}
+
+.meb-oms-pipeline__step {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 10px 12px;
+	min-height: 92px;
+}
+
+.meb-oms-pipeline__step--out {
+	border-top: 3px solid #2271b1;
+}
+
+.meb-oms-pipeline__step--in {
+	border-top: 3px solid #007017;
+}
+
+.meb-oms-pipeline__step--wh {
+	border-top: 3px solid #8c5e00;
+}
+
+.meb-oms-pipeline__num {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #1d2327;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	line-height: 22px;
+	margin-right: 4px;
+}
+
+.meb-oms-pipeline__step strong {
+	display: block;
+	margin: 6px 0 4px;
+}
+
+.meb-oms-pipeline__step em {
+	font-size: 12px;
+	color: #646970;
+	font-style: normal;
+	word-break: break-all;
+}
+
+.meb-oms-counts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+}
+
+.meb-oms-counts li {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 999px;
+	padding: 4px 10px;
+	font-size: 12px;
+}
+
+.meb-oms-counts span {
+	font-weight: 700;
+	margin-right: 4px;
+}
+
+.meb-oms-search {
+	margin: 16px 0;
+}
+
+.meb-oms-table td {
+	vertical-align: top;
+}
+
+.meb-oms-actions form {
+	display: inline-block;
+	margin: 0 4px 4px 0;
+}
+
+.meb-oms-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 999px;
+	background: #f0f0f1;
+	font-size: 12px;
+}
+
+.meb-oms-badge--p { background: #dcdcde; }
+.meb-oms-badge--h,
+.meb-oms-badge--s { background: #c7e8ca; }
+.meb-oms-badge--x { background: #d4c5f0; }
+.meb-oms-badge--c { background: #c5d9ed; }
+.meb-oms-badge--e,
+.meb-oms-badge--r,
+.meb-oms-badge--t { background: #f8d7da; }
+
+.meb-oms-error-row td {
+	color: #b32d2e;
+	background: #fcf0f1;
+}
+
+.meb-oms-card {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	padding: 16px 20px;
+	margin-top: 24px;
+}
+
+.meb-oms-simulate {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	align-items: flex-end;
+}
+
+.meb-oms-simulate label {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	font-size: 12px;
+}
+
+.meb-oms-callback {
+	display: block;
+	padding: 8px 10px;
+	background: #f6f7f7;
+	word-break: break-all;
+}
+
+@media (max-width: 1100px) {
+	.meb-oms-pipeline {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}

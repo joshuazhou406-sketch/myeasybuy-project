@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: fr_FR\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - Extension de traduction WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Extension professionnelle de traduction de sites web basée sur Google Traduction. Fonctionne de manière autonome et ne nécessite aucune API externe."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous ne disposez pas des autorisations suffisantes pour accéder à cette page."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Paramètres de WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Paramètres enregistrés avec succès !"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Vos données d'utilisation partagées ont été supprimées."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Merci ! Le partage anonyme des données d'utilisation est activé."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Options du widget"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Configurez l'apparence du sélecteur de langue sur votre site."
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Aperçu du widget"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Dérouler"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Flotter"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Drapeaux seulement"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Drapeaux + Nom"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "À quoi devrait ressembler le sélecteur de langue ?"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Traduire de"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Langue source pour la traduction"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Direction ouverte"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "En haut"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Vers le bas"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Dans quelle direction le menu déroulant s'ouvre-t-il ?"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Afficher le sélecteur de langue flottant"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Non"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "En bas à gauche"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "En bas à droite"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "En haut à gauche"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "En haut à droite"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "L'option « Afficher le sélecteur de langue flottant » est la plus simple et convient à la plupart des sites web."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Afficher dans le menu"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Aucun -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Ajouter un sélecteur de langue à un menu de navigation"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Sélecteur CSS d'encapsulation"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Sélecteur CSS pour un élément conteneur personnalisé"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Aperçu"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Le même sélecteur apparaît sur votre site. Il se met à jour lors de l'enregistrement."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Options avancées"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Options de configuration supplémentaires"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Noms en langue maternelle"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Afficher les noms des langues dans leur forme native"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Passage automatique à la langue du visiteur"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Lors de la première visite (aucun cookie de langue n'est encore installé), la langue est suggérée à partir de l'en-tête Accept-Language du navigateur ou de l'en-tête pays de Cloudflare si votre site utilise Cloudflare. Aucune API de géolocalisation tierce n'est utilisée."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL du sous-répertoire et URL du sous-domaine"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "Les URL des sous-répertoires (par exemple example.com/ar/) et les URL des sous-domaines (par exemple es.example.com) sont disponibles dans WTranslator Cloud ; gérez-les depuis un seul tableau de bord."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Sélection de la langue"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Sélectionnez les langues à activer"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Cocher tout"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Décochez tout"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Faites glisser pour réorganiser"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "ASTUCE : Pour réorganiser les langues, il suffit de les glisser-déposer dans la liste ci-dessus."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Confidentialité et partage d'utilisation facultatif"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator fonctionne entièrement sans envoyer aucune donnée à nos serveurs. Si vous choisissez cette option, nous collectons uniquement les informations ci-dessous afin d'améliorer la compatibilité. Vous pouvez la désactiver à tout moment."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Autoriser le partage anonyme des détails du site avec WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Données partagées (lorsque cette option est activée) : URL du site, nom du site, version du plugin, version de WordPress, version de PHP et langue. Aucun contenu visiteur n’est transmis."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Veuillez également indiquer l'adresse e-mail de l'administrateur WordPress pour obtenir des conseils d'assistance (facultatif)."
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Le contrôle de sécurité a échoué. Veuillez réessayer."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Sélectionner la langue"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Contribuez à l'amélioration de WTranslator (facultatif)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Si vous l'autorisez, WTranslator peut partager des informations anonymes sur votre site (URL, versions de WordPress/PHP/extensions et langue) avec WTranslator.com afin d'améliorer la compatibilité. La traduction reste fonctionnelle dans tous les cas. Vous pouvez modifier ce paramètre à tout moment dans Réglages → WTranslator → Confidentialité."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Autoriser le partage d'utilisation anonyme"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Non merci"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Détails de confidentialité"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Vous n'avez pas la permission de faire cela."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Les textes sont requis"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Le texte est requis"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "La traduction a échoué"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Paramètres"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Non autorisé"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Cache vidé avec succès"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Échec de la suppression du cache"

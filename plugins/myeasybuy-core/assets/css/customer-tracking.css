@@ -1,0 +1,129 @@
+/* Customer international tracking timeline (My Account order view). */
+
+.myeasybuy-tracking-panel {
+	margin: 2rem 0 1.5rem;
+	padding: 1.25rem 1.35rem 1.1rem;
+	background: #fff;
+	border: 1px solid rgba(26, 58, 74, 0.16);
+}
+
+.myeasybuy-tracking-panel__intro {
+	margin: 0 0 1rem;
+	opacity: 0.82;
+}
+
+.myeasybuy-tracking-panel__table th {
+	width: 30%;
+}
+
+.myeasybuy-tracking-panel__number {
+	font-size: 1em;
+	letter-spacing: 0.02em;
+	background: #f8f5f0;
+	padding: 0.15em 0.4em;
+}
+
+.myeasybuy-tracking-panel__official {
+	margin-left: 0.35rem;
+	white-space: nowrap;
+}
+
+.myeasybuy-tracking-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 0.85rem;
+	flex-wrap: wrap;
+	margin: 0.85rem 0 1.1rem;
+}
+
+.myeasybuy-tracking-fetched {
+	opacity: 0.72;
+}
+
+.myeasybuy-tracking-error {
+	color: #8a1f11;
+	margin: 0 0 0.85rem;
+}
+
+.myeasybuy-tracking-copy.is-copied,
+.myeasybuy-tracking-refresh.is-busy {
+	opacity: 0.7;
+}
+
+.myeasybuy-tracking-timeline {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 1.15rem;
+	border-left: 2px solid rgba(26, 58, 74, 0.22);
+}
+
+.myeasybuy-tracking-timeline__item {
+	position: relative;
+	padding: 0 0 1.15rem 1.1rem;
+}
+
+.myeasybuy-tracking-timeline__item:last-child {
+	padding-bottom: 0;
+}
+
+.myeasybuy-tracking-timeline__item::before {
+	content: "";
+	position: absolute;
+	left: -1.22rem;
+	top: 0.35rem;
+	width: 0.7rem;
+	height: 0.7rem;
+	border-radius: 50%;
+	background: #f8f5f0;
+	border: 2px solid var(--myeasybuy-accent, #ff7e21);
+}
+
+.myeasybuy-tracking-timeline__item.is-current::before {
+	background: var(--myeasybuy-accent, #ff7e21);
+	box-shadow: 0 0 0 3px rgba(26, 58, 74, 0.18);
+}
+
+.myeasybuy-tracking-timeline__time {
+	display: block;
+	font-size: 0.9em;
+	opacity: 0.72;
+	margin-bottom: 0.15rem;
+}
+
+.myeasybuy-tracking-timeline__loc {
+	display: inline-block;
+	font-weight: 700;
+	color: var(--myeasybuy-accent, #ff7e21);
+	margin-bottom: 0.2rem;
+}
+
+.myeasybuy-tracking-timeline__desc {
+	margin: 0.15rem 0 0;
+	line-height: 1.5;
+}
+
+.myeasybuy-tracking-timeline__code {
+	display: inline-block;
+	margin-top: 0.2rem;
+	font-size: 0.78em;
+	opacity: 0.55;
+}
+
+.myeasybuy-tracking-timeline__empty {
+	padding-left: 1.1rem;
+	opacity: 0.8;
+}
+
+.myeasybuy-tracking-timeline__empty::before {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.myeasybuy-tracking-panel {
+		padding: 1rem 0.9rem;
+	}
+
+	.myeasybuy-tracking-panel__table th {
+		width: 38%;
+	}
+}

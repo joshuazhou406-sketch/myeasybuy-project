@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zh_TW <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: zh_TW\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress 翻譯插件"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "由Google翻譯提供支援的專業網站翻譯插件。功能齊全，可獨立運作；無需外部 API。"
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "您沒有足夠的權限來存取此頁面。"
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator 設定"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "設定已成功儲存！"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "您的共享使用資料已被刪除。"
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "謝謝！匿名使用情況分享功能已啟用。"
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "小工具選項"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "配置網站語言切換器的顯示方式"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "小部件外觀"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "下拉式選單"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "漂浮"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "僅旗幟"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "旗幟 + 名稱"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "語言切換器應如何顯示"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "翻譯自"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "翻譯原始語言"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "開放方向"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "向上"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "向下"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "下拉式選單的開啟方向"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "顯示浮動語言選擇器"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "不"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "左下角"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "右下角"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "左上"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "右上角"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "顯示浮動語言選擇器選項是最簡單且適合大多數網站的選項。"
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "在選單中顯示"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- 沒有任何 -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "在導覽選單中新增語言切換器"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "包裝器選擇器 CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "自訂包裝元素的 CSS 選擇器"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "預覽"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "您的網站上也會顯示相同的切換器。儲存後會更新。"
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "進階選項"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "其他配置選項"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "母語名稱"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "以語言的原始形式顯示語言名稱"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "自動切換到訪客語言"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "首次造訪時（尚未啟用語言 cookie），系統會根據瀏覽器 Accept-Language 標頭或 Cloudflare 國家標頭（如果您的網站使用 Cloudflare）來建議語言。系統未使用任何第三方地理位置 API。"
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "子目錄 URL 和子網域 URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "WTranslator Cloud 提供子目錄 URL（例如 example.com/ar/）和子網域 URL（例如 es.example.com）－可透過一個控制面板進行管理。"
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "語言選擇"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "選擇要啟用的語言"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "全部檢查"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "取消選取所有"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "拖曳即可重新排序"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "提示：要重新排列語言順序，只需將它們拖放到上面的清單中即可。"
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "隱私和可選的使用共享"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator 完全無需向我們的伺服器發送任何資料即可運行。如果您選擇啟用此功能，我們僅收集以下資訊以提高相容性。您可以隨時關閉此功能。"
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "允許與 WTranslator.com 分享匿名網站詳情"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "啟用後將分享以下資訊：網站 URL、網站名稱、外掛程式版本、WordPress 版本、PHP 版本和語言區域。不會發送訪客內容。"
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "隱私權政策"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "此外，還可以分享 WordPress 管理員信箱以便獲得支援（可選）。"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "儲存變更"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "安全檢查失敗，請重試。"
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "選擇語言"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "幫助改進 WTranslator（可選）"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "如果您允許，WTranslator 可以與 WTranslator.com 分享匿名網站詳情（網站 URL、WordPress/PHP/外掛程式版本和語言環境），以便我們提升相容性。無論是否允許，翻譯功能均正常運作。您可以隨時在「設定」→「WTranslator」→「隱私權」中變更此設定。"
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "允許匿名共享使用情況"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "不，謝謝"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "隱私權詳情"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "你沒有權限這樣做。"
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "需要文字"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "必填項"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "翻譯失敗"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "設定"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "未經授權"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "快取已成功清除"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "清除快取失敗"

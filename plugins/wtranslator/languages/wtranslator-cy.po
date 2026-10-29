@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: cy <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: cy\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - Ategyn Cyfieithu WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Ategyn cyfieithu gwefannau proffesiynol wedi'i bweru gan Google Translate. Yn annibynnol ac yn gwbl weithredol; nid oes angen API allanol."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "CyfieithyddW"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nid oes gennych chi ddigon o ganiatâd i gael mynediad i'r dudalen hon."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Gosodiadau WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Gosodiadau wedi'u cadw'n llwyddiannus!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Mae eich data defnydd a rennir wedi'i ddileu."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Diolch! Mae rhannu defnydd dienw wedi'i alluogi."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Dewisiadau Widget"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Ffurfweddwch sut mae'r newidydd iaith yn ymddangos ar eich gwefan"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Golwg y Widget"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Rhestr ostwng"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Arnofio"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Baneri yn Unig"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Baneri + Enw"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Sut y dylai'r newidydd iaith ymddangos"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Cyfieithu O"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Iaith ffynhonnell ar gyfer cyfieithu"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Cyfeiriad Agored"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "I fyny"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "I lawr"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Cyfeiriad y rhestr ostwng yn agor"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Dangos Dewisydd Iaith Arnofiol"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Na"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Chwith isaf"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Dde isaf"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Chwith uchaf"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Uchaf ar y dde"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Dangos yr opsiwn dewis iaith arnofiol yw'r hawsaf ac yn addas ar gyfer y rhan fwyaf o wefannau."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Dangos yn y Ddewislen"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Dim -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Ychwanegu newidydd iaith at ddewislen lywio"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Dewisydd Lapio CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Dewisydd CSS ar gyfer elfen lapio personol"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Rhagolwg"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Mae'r un newidydd yn ymddangos ar eich gwefan. Yn diweddaru pan fyddwch chi'n cadw."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Dewisiadau Uwch"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Dewisiadau ffurfweddu ychwanegol"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Enwau Iaith Brodorol"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Dangos enwau ieithoedd yn eu ffurf frodorol"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Newid awtomatig i iaith ymwelwyr"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Ar yr ymweliad cyntaf (dim cwci iaith eto), mae'n awgrymu iaith o bennawd Accept-Language y porwr, neu o bennawd gwlad Cloudflare pan fydd eich gwefan yn defnyddio Cloudflare. Ni ddefnyddir unrhyw APIs geo trydydd parti."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL is-gyfeiriadur ac URL is-barth"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "Mae URL is-gyfeiriadur (e.e. example.com/ar/) ac URL is-barth (e.e. es.example.com) ar gael yn WTranslator Cloud — rheoli o un dangosfwrdd."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "Cwmwl Cyfieithydd W"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Dewis Iaith"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Dewiswch pa ieithoedd i'w galluogi"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Gwirio Popeth"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Dad-diciwch y Cyfan"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Llusgwch i aildrefnu"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "AWGRYM: I aildrefnu'r ieithoedd, llusgwch a gollwngwch nhw yn y rhestr uchod."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Preifatrwydd a rhannu defnydd dewisol"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "Mae WTranslator yn gweithio'n llawn heb anfon unrhyw ddata i'n gweinyddion. Os ydych chi'n dewis ymuno, dim ond y manylion a restrir isod yr ydym yn eu casglu i wella cydnawsedd. Gallwch ddiffodd hyn unrhyw bryd."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Caniatáu rhannu manylion safle dienw gyda WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Wedi'i rannu pan gaiff ei alluogi: URL y safle, enw'r safle, fersiwn yr ategyn, fersiwn WordPress, fersiwn PHP, a lleoliad. Ni anfonir unrhyw gynnwys ymwelwyr."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Polisi preifatrwydd"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Rhannwch e-bost gweinyddwr WordPress hefyd am awgrymiadau cymorth (dewisol)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Cadw Newidiadau"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Methodd y gwiriad diogelwch. Rhowch gynnig arall arni."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Dewis Iaith"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Helpu i wella WTranslator (dewisol)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Os byddwch yn caniatáu hynny, gall WTranslator rannu manylion safle dienw (URL y safle, fersiynau WordPress/PHP/ategyn, a lleoliad) gyda WTranslator.com fel y gallwn wella cydnawsedd. Mae cyfieithu'n parhau i weithio beth bynnag. Gallwch newid hyn unrhyw bryd yn Gosodiadau → WTranslator → Preifatrwydd."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Caniatáu rhannu defnydd dienw"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Dim diolch"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Manylion preifatrwydd"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Nid oes gennych ganiatâd i wneud hyn."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Mae angen testunau"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Mae angen testun"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Methodd y cyfieithu"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Gosodiadau"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Heb awdurdod"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Cliriwyd y storfa yn llwyddiannus"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Methwyd clirio'r storfa"

@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: uk <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: uk\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - плагін перекладу для WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Професійний плагін перекладу веб-сайтів на базі Google Translate. Повністю функціональний автономний плагін; зовнішній API не потрібен."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "Перекладач"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "У вас недостатньо прав для доступу до цієї сторінки."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Налаштування WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Налаштування успішно збережено!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Ваші спільні дані про використання видалено."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Дякуємо! Анонімний обмін даними про використання ввімкнено."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Параметри віджетів"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Налаштуйте, як перемикач мов відображається на вашому сайті"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Вигляд віджета"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Випадаючий список"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Поплавок"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Тільки прапори"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Прапори + Ім'я"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Як має виглядати перемикач мов"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Перекласти з"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Мова оригіналу для перекладу"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Відкритий напрямок"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Вгору"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Вниз"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Напрямок відкриття спадного меню"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Показати плаваючий селектор мов"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Ні"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Внизу ліворуч"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Внизу праворуч"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Угорі ліворуч"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Угорі праворуч"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Опція «Показати плаваючий вибір мови» є найпростішою та підходящою для більшості вебсайтів."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Показати в меню"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Жоден -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Додати перемикач мов до меню навігації"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "CSS-селектор обгортки"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "CSS-селектор для користувацького елемента-обгортки"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Той самий перемикач відображається на вашому сайті. Оновлюється після збереження."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Розширені параметри"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Додаткові параметри конфігурації"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Назви рідною мовою"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Показувати назви мов у їхній рідній формі"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Автоматичне перемикання на мову відвідувача"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Під час першого відвідування (поки що немає файлу cookie мови) пропонує мову із заголовка Accept-Language браузера або із заголовка країни Cloudflare, якщо ваш сайт використовує Cloudflare. Сторонні географічні API не використовуються."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL-адреса підкаталогу та URL-адреса піддомену"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL-адреса підкаталогу (наприклад, example.com/ar/) та URL-адреса піддомену (наприклад, es.example.com) доступні в WTranslator Cloud — керуйте ними з однієї панелі керування."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "Хмара WTranslator"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Вибір мови"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Виберіть, які мови ввімкнути"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Вибрати все"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Зняти всі прапорці"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Перетягніть, щоб змінити порядок"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "ПІДКАЗКА: Щоб змінити порядок мов, просто перетягніть їх у список вище."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Конфіденційність та необов'язковий обмін даними про використання"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator працює повністю без надсилання жодних даних на наші сервери. Якщо ви погодитесь, ми збиратимемо лише перелічені нижче дані для покращення сумісності. Ви можете вимкнути цю функцію будь-коли."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Дозволити обмін анонімними даними сайту з WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Спільно доступні: URL-адреса сайту, назва сайту, версія плагіна, версія WordPress, версія PHP та локаль. Контент відвідувачів не надсилається."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Політика конфіденційності"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Також поділіться електронною поштою адміністратора WordPress для отримання порад щодо підтримки (необов’язково)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Зберегти зміни"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Перевірка безпеки не вдалася. Спробуйте ще раз."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Виберіть мову"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Допоможіть покращити WTranslator (необов'язково)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Якщо ви дозволите, WTranslator може ділитися анонімними деталями сайту (URL-адреса сайту, версії WordPress/PHP/плагінів та локалізація) з WTranslator.com, щоб ми могли покращити сумісність. Переклад працює в будь-якому випадку. Ви можете змінити це будь-коли в Налаштуваннях → WTranslator → Конфіденційність."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Дозволити анонімний обмін даними про використання"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Ні, дякую."
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Деталі конфіденційності"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "У вас немає дозволу на це."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Тексти обов'язкові"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Текст обов'язковий"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Переклад не вдалося"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Налаштування"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Неавторизовано"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Кеш успішно очищено"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Не вдалося очистити кеш"

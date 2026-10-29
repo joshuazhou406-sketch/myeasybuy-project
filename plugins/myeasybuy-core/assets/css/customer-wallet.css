@@ -1,0 +1,479 @@
+/* Account wallet. */
+
+body.meb-account-wallet .wf_pagetitle {
+	display: none !important;
+}
+
+body.meb-account-wallet .woocommerce-MyAccount-content {
+	padding: 8px 28px 48px;
+	background: #fff !important;
+}
+
+.meb-wallet,
+.meb-wallet *,
+.meb-wallet *::before,
+.meb-wallet *::after {
+	box-sizing: border-box;
+}
+
+.meb-wallet__tabs {
+	display: flex;
+	gap: 36px;
+	margin: 0 0 22px;
+	border-bottom: 1px solid #eef0f3;
+}
+
+body.meb-site a.meb-wallet__tab {
+	position: relative;
+	padding: 14px 0 12px;
+	color: #8b95a7 !important;
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+body.meb-site a.meb-wallet__tab.is-active {
+	color: #ff7e21 !important;
+	font-weight: 600;
+}
+
+body.meb-site a.meb-wallet__tab.is-active::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	left: 0;
+	height: 2px;
+	background: #ff7e21;
+}
+
+.meb-wallet__banner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin: 0 0 22px;
+	padding: 16px 18px;
+	border-radius: 8px;
+	background: #fff6ef;
+}
+
+.meb-wallet__balance {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	color: #222;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.meb-wallet__balance strong {
+	font-size: inherit;
+	font-weight: 700;
+}
+
+.meb-wallet__coin {
+	display: inline-flex;
+	color: #8aa0b8;
+}
+
+.meb-wallet__coin svg {
+	width: 22px;
+	height: 22px;
+}
+
+.meb-wallet__approx {
+	font-weight: 600;
+}
+
+.meb-wallet__actions {
+	display: flex;
+	flex: none;
+	gap: 12px;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__recharge,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__withdraw,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__confirm,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__cancel {
+	min-height: 36px !important;
+	height: 36px;
+	margin: 0;
+	padding: 0 22px !important;
+	border-radius: 6px !important;
+	box-shadow: none !important;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	line-height: 34px !important;
+	text-transform: none !important;
+	transform: none !important;
+	cursor: pointer;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__recharge,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__confirm {
+	border: 0 !important;
+	background: #ff7e21 !important;
+	color: #fff !important;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__recharge:hover,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__confirm:hover {
+	background: #f06a0a !important;
+	transform: none !important;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__withdraw,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__cancel {
+	border: 1px solid #e4e7ee !important;
+	background: #fff !important;
+	color: #333 !important;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__withdraw:hover,
+body.meb-site.woocommerce-account .site-content button.meb-wallet__cancel:hover {
+	border-color: #d5dae3 !important;
+	background: #fafbfc !important;
+	transform: none !important;
+}
+
+.meb-wallet__filters {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 0 0 8px;
+}
+
+.meb-wallet__filters-label {
+	flex: none;
+	color: #8d97a8;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.meb-wallet__dates,
+.meb-wallet__select {
+	display: flex;
+	align-items: center;
+	min-height: 36px;
+	margin: 0;
+	border: 1px solid #e6e8ee;
+	border-radius: 6px;
+	background: #fff;
+	font-weight: 400;
+}
+
+.meb-wallet__dates {
+	flex: 0 1 280px;
+	gap: 4px;
+	padding: 0 10px;
+}
+
+.meb-wallet__select {
+	position: relative;
+	flex: 0 0 148px;
+}
+
+.meb-wallet__icon {
+	display: flex;
+	flex: none;
+	color: #b0b6c0;
+}
+
+.meb-wallet__icon svg {
+	width: 16px;
+	height: 16px;
+}
+
+body.meb-site .meb-wallet__dates input,
+body.meb-site .meb-wallet__select select {
+	width: 100%;
+	min-height: 34px !important;
+	height: 34px;
+	margin: 0;
+	padding: 0 8px !important;
+	border: 0 !important;
+	border-radius: 6px !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	color: #222;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+body.meb-site .meb-wallet__dates input {
+	width: 108px;
+	padding: 0 4px !important;
+	text-align: center;
+}
+
+body.meb-site .meb-wallet__dates input::placeholder {
+	color: #b0b6c0;
+}
+
+body.meb-site .meb-wallet__select select {
+	padding-right: 28px !important;
+	appearance: none;
+	cursor: pointer;
+	color: #8b919a;
+}
+
+body.meb-site .meb-wallet__select select.has-value,
+body.meb-site .meb-wallet__select select option {
+	color: #222;
+}
+
+body.meb-site .meb-wallet__dates input:focus,
+body.meb-site .meb-wallet__select select:focus {
+	outline: 0;
+	box-shadow: none !important;
+}
+
+.meb-wallet__dates:focus-within,
+.meb-wallet__select:focus-within {
+	border-color: #ff7e21;
+	box-shadow: 0 0 0 3px rgba(255, 126, 33, 0.12);
+}
+
+.meb-wallet__select::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	width: 6px;
+	height: 6px;
+	border-right: 1.5px solid #b0b6c0;
+	border-bottom: 1.5px solid #b0b6c0;
+	transform: translateY(-70%) rotate(45deg);
+	pointer-events: none;
+}
+
+.meb-wallet__dates-sep {
+	color: #c5c9d1;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__bill {
+	min-height: 0 !important;
+	height: auto;
+	margin: 0;
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	color: #ff7e21 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	line-height: 1.4 !important;
+	text-transform: none !important;
+	transform: none !important;
+	cursor: pointer;
+}
+
+body.meb-site.woocommerce-account .site-content button.meb-wallet__bill:hover {
+	color: #f06a0a !important;
+	background: transparent !important;
+	transform: none !important;
+}
+
+.meb-wallet__table-wrap {
+	overflow-x: auto;
+}
+
+.meb-wallet__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+body.meb-site table.meb-wallet__table,
+body.meb-site table.meb-wallet__table th,
+body.meb-site table.meb-wallet__table td {
+	border: 0 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+body.meb-site table.meb-wallet__table th,
+body.meb-site table.meb-wallet__table td {
+	padding: 14px 10px !important;
+	color: #5c6570 !important;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+body.meb-site table.meb-wallet__table td.is-in {
+	color: #16a34a !important;
+}
+
+body.meb-site table.meb-wallet__table td.is-out {
+	color: #e11d48 !important;
+}
+
+body.meb-site table.meb-wallet__table th {
+	border-bottom: 1px solid #f0f2f5 !important;
+	color: #9aa3b2 !important;
+	font-weight: 500 !important;
+}
+
+.meb-wallet__table tbody tr + tr td {
+	border-top: 1px solid #f7f8fa;
+}
+
+.meb-wallet__empty {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 360px;
+	padding: 36px 16px 48px;
+	text-align: center;
+}
+
+.meb-wallet__empty--page {
+	min-height: 460px;
+}
+
+.meb-wallet__art {
+	width: 150px;
+}
+
+.meb-wallet__art svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.meb-wallet__empty p {
+	margin: 8px 0 0;
+	color: #9aa3b2;
+	font-size: 14px;
+}
+
+.meb-wallet__table td:has(.meb-wallet__empty) {
+	padding: 0;
+}
+
+.meb-wallet__mask {
+	position: fixed;
+	z-index: 1200;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	background: rgba(28, 39, 64, 0.45);
+}
+
+.meb-wallet__mask[hidden] {
+	display: none;
+}
+
+.meb-wallet__dialog {
+	width: min(440px, 100%);
+	padding: 22px 22px 18px;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0 16px 40px rgba(28, 39, 64, 0.18);
+}
+
+.meb-wallet__dialog h3 {
+	margin: 0 0 16px;
+	color: #222;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.meb-wallet__field {
+	display: block;
+	margin: 0 0 14px;
+}
+
+.meb-wallet__field span {
+	display: block;
+	margin: 0 0 8px;
+	color: #222;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+body.meb-site .site-content .meb-wallet__field input {
+	width: 100%;
+	min-height: 42px !important;
+	border: 1px solid #eceef2 !important;
+	border-radius: 8px !important;
+	background: #f6f7f9 !important;
+	color: #222;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.meb-wallet__dialog-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-top: 6px;
+}
+
+.meb-wallet__coupons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 12px;
+	margin: 8px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.meb-wallet__coupon {
+	display: flex;
+	gap: 14px;
+	align-items: center;
+	padding: 16px;
+	border: 1px solid #f0f2f5;
+	border-radius: 8px;
+	background: #fffaf6;
+}
+
+.meb-wallet__coupon-amount {
+	flex: none;
+	color: #ff7e21;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.meb-wallet__coupon-title,
+.meb-wallet__coupon-rule {
+	margin: 0;
+}
+
+.meb-wallet__coupon-title {
+	color: #222;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.meb-wallet__coupon-rule {
+	margin-top: 4px;
+	color: #8d97a8;
+	font-size: 12px;
+}
+
+@media (max-width: 768px) {
+	body.meb-account-wallet .woocommerce-MyAccount-content {
+		padding: 8px 16px 32px;
+	}
+
+	.meb-wallet__banner,
+	.meb-wallet__filters {
+		flex-wrap: wrap;
+	}
+
+	.meb-wallet__table {
+		min-width: 720px;
+	}
+}

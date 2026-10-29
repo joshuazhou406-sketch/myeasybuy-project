@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ro_RO <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: ro_RO\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - Plugin de traducere WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Plugin profesional de traducere web oferit de Google Translate. Complet funcțional, independent; nu necesită API extern."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nu aveți suficiente permisiuni pentru a accesa această pagină."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Setări WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Setările au fost salvate cu succes!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Datele tale de utilizare partajate au fost șterse."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Mulțumesc! Partajarea anonimă a utilizării este activată."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Opțiuni widget"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Configurați modul în care comutatorul de limbă apare pe site-ul dvs."
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Aspectul widgetului"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Scapă jos"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Plutitor"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Numai steaguri"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Steaguri + Nume"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Cum ar trebui să arate comutatorul de limbă"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Traduceți din"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Limba sursă pentru traducere"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Direcție deschisă"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Sus"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Jos"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Direcția în care se deschide meniul derulant"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Afișați selectorul de limbă flotant"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Nu"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Stânga jos"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Dreapta jos"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Stânga sus"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Dreapta sus"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Opțiunea „Afișare selector de limbă flotant” este cea mai ușoară și potrivită pentru majoritatea site-urilor web."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Afișează în meniu"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Niciunul -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Adăugați comutatorul de limbă la un meniu de navigare"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Selector de încapsulare CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Selector CSS pentru elementul wrapper personalizat"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Previzualizare"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Același comutator apare pe site-ul dvs. Se actualizează când salvați."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Opțiuni avansate"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Opțiuni suplimentare de configurare"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Nume în limbile materne"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Afișați numele limbilor în forma lor nativă"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Comutare automată la limba vizitatorului"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "La prima vizită (încă nu există cookie-uri de limbă), sugerează o limbă din antetul Accept-Language al browserului sau din antetul țării Cloudflare atunci când site-ul dvs. folosește Cloudflare. Nu se utilizează API-uri geografice terțe."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL-ul subdirectorului și URL-ul subdomeniului"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL-ul subdirectorului (de exemplu, example.com/ar/) și URL-ul subdomeniului (de exemplu, es.example.com) sunt disponibile în WTranslator Cloud — gestionați dintr-un singur tablou de bord."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Selectarea limbii"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Selectați limbile pe care doriți să le activați"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Bifați toate"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Debifați Toate"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Trageți pentru a reordona"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "SUGESTIE: Pentru a reordona limbile, pur și simplu trageți-le și plasați-le în lista de mai sus."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Confidențialitate și partajare opțională a utilizării"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator funcționează complet fără a trimite date către serverele noastre. Dacă vă alegeți, colectăm doar detaliile enumerate mai jos pentru a îmbunătăți compatibilitatea. Puteți dezactiva această opțiune oricând."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Permiteți partajarea anonimă a detaliilor site-ului cu WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Partajate când este activat: adresa URL a site-ului, numele site-ului, versiunea pluginului, versiunea WordPress, versiunea PHP și setările regionale. Nu este trimis conținut al vizitatorilor."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Politica de confidențialitate"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "De asemenea, distribuiți adresa de e-mail a administratorului WordPress pentru sfaturi de asistență (opțional)."
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Salvați modificările"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Verificarea de securitate a eșuat. Vă rugăm să încercați din nou."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Selectați limba"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Ajută la îmbunătățirea WTranslator (opțional)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Dacă permiteți acest lucru, WTranslator poate partaja detalii anonime ale site-ului (adresa URL a site-ului, versiunile WordPress/PHP/plugin și setările regionale) cu WTranslator.com, astfel încât să putem îmbunătăți compatibilitatea. Traducerea continuă să funcționeze în ambele cazuri. Puteți schimba oricând acest lucru în Setări → WTranslator → Confidențialitate."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Permiteți partajarea anonimă a utilizării"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Nu, mulțumesc"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Detalii privind confidențialitatea"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Nu aveți permisiunea să faceți asta."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Textele sunt obligatorii"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Textul este obligatoriu"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Traducerea a eșuat"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Setări"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Neautorizat"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Memoria cache a fost ștearsă cu succes"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Nu s-a putut șterge memoria cache"

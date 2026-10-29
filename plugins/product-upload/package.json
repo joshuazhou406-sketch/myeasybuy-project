@@ -1,0 +1,49 @@
+{
+  "name": "product-upload",
+  "version": "1.4.5",
+  "description": "Import products into WooCommerce from supported marketplaces using AI.",
+  "author": "Harrison Bay",
+  "license": "GPL-3.0+",
+  "main": "build/index.js",
+  "files": [
+    "build",
+    "changelog.txt",
+    "includes",
+    "languages",
+    "product-upload.php",
+    "README.md",
+    "readme.txt",
+    "uninstall.php",
+    "vendor/plugin-update-checker"
+  ],
+  "scripts": {
+    "build": "wp-scripts build --blocks-manifest",
+    "mock": "vite --config vite.mock.config.mjs",
+    "test": "node src/import/utils/classifyBulkUrl.test.mjs && node src/import/utils/marketplaceQuery.test.mjs",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "package:wporg": "node scripts/build-plugin.mjs --build=wporg",
+    "package:full": "node scripts/build-plugin.mjs --build=full",
+    "release": "node scripts/release.mjs",
+    "check": "node scripts/plugin-check.mjs",
+    "start": "wp-scripts start --blocks-manifest",
+    "env": "wp-env",
+    "postinstall": "rm -f src/block.json"
+  },
+  "dependencies": {
+    "@woocommerce/components": "latest",
+    "@wordpress/hooks": "latest",
+    "@wordpress/i18n": "latest"
+  },
+  "devDependencies": {
+    "@woocommerce/dependency-extraction-webpack-plugin": "latest",
+    "@woocommerce/eslint-plugin": "latest",
+    "@wordpress/env": "^10.39.0",
+    "@wordpress/prettier-config": "latest",
+    "@wordpress/scripts": "^31.6.0",
+    "vite": "^5.4.21"
+  }
+}

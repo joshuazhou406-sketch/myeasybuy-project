@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: is_IS <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: is_IS\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress þýðingarviðbót"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Fagleg viðbót fyrir vefsíðuþýðingu, knúin af Google Translate. Fullkomlega virk sjálfstætt; engin utanaðkomandi forritaskil eru nauðsynleg."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "Þýðandi"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Þú hefur ekki nægilegt leyfi til að fá aðgang að þessari síðu."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Stillingar WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Stillingar vistaðar!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Sameiginlegum notkunargögnum þínum hefur verið eytt."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Takk! Nafnlaus notkunardeiling er virk."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Valkostir viðmóts"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Stilltu hvernig tungumálaskiptirinn birtist á síðunni þinni"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Útlit græjunnar"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Fellilisti"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Fljóta"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Aðeins fánar"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Fánar + Nafn"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Hvernig tungumálaskiptirinn ætti að birtast"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Þýða frá"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Upprunalegt tungumál fyrir þýðingu"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Opna átt"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Upp"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Niður"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Átt sem fellilistinn opnast"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Sýna fljótandi tungumálaval"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Nei"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Neðst til vinstri"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Neðst til hægri"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Efst til vinstri"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Efst til hægri"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Valkosturinn að sýna fljótandi tungumálaval er auðveldastur og hentar flestum vefsíðum."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Sýna í valmynd"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Enginn -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Bæta tungumálaskipti við flakkvalmynd"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "CSS fyrir umbúðaval"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "CSS-val fyrir sérsniðið umbúðaþátt"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Forskoðun"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Sami rofi birtist á síðunni þinni. Uppfærist þegar þú vistar."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Ítarlegir valkostir"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Viðbótarstillingarvalkostir"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Nöfn á móðurmáli"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Sýna tungumálanöfn í upprunalegu formi"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Sjálfvirk skipting yfir á tungumál gesta"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Við fyrstu heimsókn (engin tungumálaköku ennþá), leggur til tungumál úr Accept-Language haus vafrans, eða úr landshaus Cloudflare þegar síðan þín notar Cloudflare. Engin landfræðileg forritaskil frá þriðja aðila eru notuð."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "Vefslóð undirmöppu og vefslóð undirléns"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "Slóðir fyrir undirmöppur (t.d. example.com/ar/) og slóðir fyrir undirlén (t.d. es.example.com) eru tiltækar í WTranslator Cloud — stjórnið þeim frá einni mælaborði."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Tungumálaval"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Veldu hvaða tungumál á að virkja"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Merktu við allt"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Afveljið allt"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Dragðu til að endurraða"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "ÁBENDING: Til að endurraða tungumálunum skaltu einfaldlega draga og sleppa þeim í listann hér að ofan."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Persónuvernd og valfrjáls notkunardeiling"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator virkar að fullu án þess að senda nein gögn til netþjóna okkar. Ef þú velur að gera það söfnum við aðeins upplýsingunum sem taldar eru upp hér að neðan til að bæta samhæfni. Þú getur slökkt á þessu hvenær sem er."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Leyfa að deila nafnlausum upplýsingum um vefsíður með WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Deilt þegar virkt er: vefslóð, heiti vefs, útgáfa viðbótar, WordPress útgáfa, PHP útgáfa og tungumál. Ekkert efni gesta er sent."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Persónuverndarstefna"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Deildu einnig netfangi WordPress stjórnanda til að fá ráðleggingar um aðstoð (valfrjálst)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Vista breytingar"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Öryggisathugun mistókst. Reyndu aftur."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Veldu tungumál"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Hjálpaðu til við að bæta WTranslator (valfrjálst)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Ef þú leyfir það getur WTranslator deilt nafnlausum upplýsingum um vefsíðuna (vefslóð, útgáfum af WordPress/PHP/viðbótum og staðsetningu) með WTranslator.com svo við getum bætt samhæfni. Þýðingin heldur áfram að virka hvort sem er. Þú getur breytt þessu hvenær sem er í Stillingar → WTranslator → Persónuvernd."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Leyfa nafnlausa notkunardeilingu"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Nei takk"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Persónuverndarupplýsingar"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Þú hefur ekki leyfi til að gera þetta."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Textar eru nauðsynlegir"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Texti er nauðsynlegur"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Þýðing mistókst"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Stillingar"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Óheimilt"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Skyndiminni hreinsað með góðum árangri"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Mistókst að hreinsa skyndiminnið"

@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ja <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: ja\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress翻訳プラグイン"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Google翻訳を搭載したプロフェッショナルなウェブサイト翻訳プラグイン。完全に機能するスタンドアロン型で、外部APIは不要です。"
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "このページにアクセスするための十分な権限がありません。"
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslatorの設定"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "設定が正常に保存されました！"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "お客様の共有利用データは削除されました。"
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "ありがとうございます！匿名での利用状況共有が有効になっています。"
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "ウィジェットオプション"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "サイト上で言語切り替え機能の表示方法を設定する"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "ウィジェット風"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "落ちる"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "フロート"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "旗のみ"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "旗 + 名前"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "言語切り替え画面の表示方法"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "翻訳元"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "翻訳の原文"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "オープンディレクション"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "上"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "下"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "ドロップダウンメニューが開く方向"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "フローティング言語セレクターを表示"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "いいえ"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "左下"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "右下"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "左上"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "右上"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "フローティング言語セレクターを表示するオプションは、ほとんどのウェブサイトにとって最も簡単で適切な方法です。"
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "メニューに表示"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- なし -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "ナビゲーションメニューに言語切り替え機能を追加する"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "ラッパーセレクターCSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "カスタムラッパー要素のCSSセレクタ"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "プレビュー"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "同じ切り替えボタンがあなたのサイトにも表示されます。保存すると自動的に更新されます。"
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "詳細オプション"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "追加の設定オプション"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "母国語の名前"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "言語名をネイティブの形式で表示する"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "訪問者の言語への自動切り替え"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "初回訪問時（言語クッキーがまだ設定されていない場合）は、ブラウザのAccept-Languageヘッダー、またはサイトがCloudflareを使用している場合はCloudflareの国ヘッダーから言語を提案します。サードパーティの地理情報APIは使用しません。"
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "サブディレクトリURLとサブドメインURL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "サブディレクトリURL（例：example.com/ar/）とサブドメインURL（例：es.example.com）はWTranslator Cloudで利用可能で、1つのダッシュボードから管理できます。"
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "言語選択"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "有効にする言語を選択してください"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "すべて選択"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "すべてチェックを外す"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "ドラッグして並べ替える"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "ヒント：言語の順序を変更するには、上記のリスト内でドラッグ＆ドロップするだけです。"
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "プライバシーとオプションの利用状況共有"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslatorは、サーバーにデータを送信することなく完全に動作します。オプトインした場合、互換性向上のため、下記に記載されている情報のみを収集します。この機能はいつでもオフにできます。"
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.comと匿名サイト情報を共有することを許可する"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "有効化されている場合、サイトURL、サイト名、プラグインバージョン、WordPressバージョン、PHPバージョン、およびロケールが共有されます。訪問者のコンテンツは送信されません。"
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "プライバシーポリシー"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "サポートに関するヒントを得るために、WordPress管理者のメールアドレスも共有してください（任意）。"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "変更を保存"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "セキュリティチェックに失敗しました。もう一度お試しください。"
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "言語を選択"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslatorの改善にご協力ください（任意）"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "許可していただければ、WTranslatorは匿名化されたサイト情報（サイトURL、WordPress/PHP/プラグインのバージョン、ロケール）をWTranslator.comと共有し、互換性の向上に役立てます。翻訳機能はどちらの場合でも正常に動作します。この設定は、「設定」→「WTranslator」→「プライバシー」でいつでも変更できます。"
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "匿名での利用状況共有を許可する"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "結構です"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "プライバシーの詳細"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "あなたにはこれを行う権限がありません。"
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "テキストが必要です"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "テキストは必須です"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "翻訳に失敗しました"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "設定"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "許可されていない"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "キャッシュのクリアに成功しました"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "キャッシュのクリアに失敗しました"

@@ -1,0 +1,344 @@
+/* Account overview. */
+
+body.meb-account-dashboard .wf_pagetitle {
+	display: none !important;
+}
+
+body.meb-site.woocommerce-account.meb-account-dashboard .woocommerce-MyAccount-content {
+	padding: 16px;
+	border-radius: 12px;
+	background: #f5f6f8 !important;
+	box-shadow: none;
+}
+
+.meb-overview,
+.meb-overview *,
+.meb-overview *::before,
+.meb-overview *::after {
+	box-sizing: border-box;
+}
+
+.meb-overview {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	color: #141414;
+}
+
+.meb-overview__hero {
+	display: grid;
+	grid-template-columns: 240px minmax(0, 1fr);
+	gap: 16px;
+}
+
+.meb-overview__profile {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	min-height: 148px;
+	padding: 22px 18px;
+	border-radius: 16px;
+	background: linear-gradient(160deg, #2b211c 0%, #4a2e24 100%);
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+.meb-overview__avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border: 3px solid #ff7e21;
+	border-radius: 50%;
+	background: #ff7e21;
+	color: #fff;
+	font-size: 26px;
+	font-weight: 700;
+	flex: 0 0 auto;
+}
+
+.meb-overview__who {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-width: 0;
+}
+
+.meb-overview__who strong {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.meb-overview__who span {
+	color: rgba(255, 255, 255, 0.72);
+	font-size: 13px;
+}
+
+.meb-overview__balance {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 148px;
+	padding: 22px 26px 18px;
+	border-radius: 16px;
+	background: linear-gradient(135deg, #ffb15a 0%, #ff7e21 58%, #f06a0a 100%);
+	color: #fff;
+	overflow: hidden;
+}
+
+.meb-overview__balance-main {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
+.meb-overview__balance-main span {
+	font-size: 15px;
+	font-weight: 600;
+	opacity: 0.92;
+}
+
+.meb-overview__balance-main strong {
+	color: #fff;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+}
+
+.meb-overview__balance-main em {
+	color: rgba(255, 255, 255, 0.88);
+	font-style: normal;
+	font-size: 14px;
+}
+
+.meb-overview__balance-links {
+	display: flex;
+	gap: 18px;
+	margin: 12px 0 0;
+}
+
+body.meb-account-dashboard .meb-overview__balance-links a {
+	color: rgba(255, 255, 255, 0.92) !important;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+body.meb-account-dashboard .meb-overview__balance-links a:hover {
+	color: #fff !important;
+	text-decoration: underline;
+}
+
+.meb-overview__card {
+	padding: 18px 20px 20px;
+	border-radius: 16px;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(20, 20, 20, 0.04);
+}
+
+.meb-overview__card--rehearsal {
+	max-width: 520px;
+}
+
+.meb-overview__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 0 0 16px;
+}
+
+.meb-overview__head h2,
+.meb-overview__group h3 {
+	margin: 0;
+	color: #141414;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+body.meb-account-dashboard .meb-overview__head a,
+body.meb-account-dashboard .meb-overview__group h3 a {
+	color: #141414 !important;
+	text-decoration: none;
+}
+
+body.meb-account-dashboard .meb-overview__head > a {
+	color: #8b95a7 !important;
+	font-size: 13px;
+}
+
+body.meb-account-dashboard .meb-overview__head a:hover,
+body.meb-account-dashboard .meb-overview__group h3 a:hover {
+	color: #ff7e21 !important;
+}
+
+.meb-overview__empty {
+	margin: 0;
+	color: #8b95a7;
+	font-size: 14px;
+}
+
+.meb-overview__coupons,
+.meb-overview__cart,
+.meb-overview__stats,
+.meb-overview__group ul {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.meb-overview__coupons {
+	flex-wrap: wrap;
+}
+
+.meb-overview__coupons li {
+	flex: 1 1 180px;
+	max-width: 280px;
+}
+
+.meb-overview__coupons a {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-height: 92px;
+	padding: 14px 16px;
+	border-radius: 12px;
+	background: linear-gradient(180deg, #fff6ef 0%, #ffe8d6 100%);
+	text-decoration: none !important;
+}
+
+.meb-overview__coupons strong {
+	color: #ff7e21;
+	font-size: 22px;
+	line-height: 1.1;
+}
+
+.meb-overview__coupons span,
+.meb-overview__coupons em {
+	color: #6b6f76;
+	font-size: 13px;
+	font-style: normal;
+}
+
+.meb-overview__cart {
+	flex-wrap: wrap;
+}
+
+.meb-overview__cart li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex: 1 1 220px;
+	max-width: 320px;
+	padding: 10px;
+	border-radius: 12px;
+	background: #f7f8fa;
+}
+
+.meb-overview__media {
+	display: flex;
+	width: 64px;
+	height: 64px;
+	overflow: hidden;
+	border-radius: 8px;
+	background: #fff;
+	flex: 0 0 auto;
+}
+
+.meb-overview__media img,
+.meb-overview__thumb {
+	width: 64px;
+	height: 64px;
+	object-fit: cover;
+}
+
+.meb-overview__name {
+	display: -webkit-box;
+	overflow: hidden;
+	color: #141414 !important;
+	font-size: 14px;
+	line-height: 1.35;
+	text-decoration: none !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.meb-overview__price {
+	margin: 6px 0 0;
+	color: #ff7e21;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.meb-overview__journey {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.meb-overview__group ul {
+	margin-top: 18px;
+	justify-content: space-between;
+}
+
+.meb-overview__group li,
+.meb-overview__stats li {
+	flex: 1 1 0;
+	text-align: center;
+}
+
+.meb-overview__group a,
+.meb-overview__stats a {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	color: inherit !important;
+	text-decoration: none !important;
+}
+
+.meb-overview__group strong,
+.meb-overview__stats strong {
+	color: #141414;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.meb-overview__group span,
+.meb-overview__stats span {
+	color: #8b95a7;
+	font-size: 13px;
+	line-height: 1.35;
+}
+
+body.meb-account-dashboard .meb-overview__group a:hover strong,
+body.meb-account-dashboard .meb-overview__stats a:hover strong {
+	color: #ff7e21;
+}
+
+.meb-overview__stats {
+	justify-content: flex-start;
+	max-width: 420px;
+}
+
+@media (max-width: 900px) {
+	.meb-overview__hero,
+	.meb-overview__journey {
+		grid-template-columns: 1fr;
+	}
+
+	.meb-overview__card--rehearsal {
+		max-width: none;
+	}
+}

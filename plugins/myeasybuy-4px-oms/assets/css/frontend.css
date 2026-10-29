@@ -1,0 +1,64 @@
+.meb-oms-timeline {
+	margin: 28px 0;
+	padding: 20px 22px;
+	border: 1px solid #e6dfd2;
+	border-radius: 12px;
+	background: #fffaf2;
+}
+
+.meb-oms-timeline h2 {
+	margin-top: 0;
+}
+
+.meb-oms-timeline ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 16px;
+}
+
+.meb-oms-timeline li {
+	padding: 6px 10px;
+	border-radius: 999px;
+	background: #efe8dc;
+	color: #6b6256;
+	font-size: 13px;
+}
+
+.meb-oms-timeline li.is-done {
+	background: #1f4d4a;
+	color: #fff;
+}
+
+.meb-oms-timeline dl {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	gap: 12px;
+	margin: 0;
+}
+
+.meb-oms-timeline dt {
+	font-size: 12px;
+	color: #6b6256;
+}
+
+.meb-oms-timeline dd {
+	margin: 2px 0 0;
+	font-weight: 600;
+}
+
+.meb-oms-photos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+.meb-oms-photos img {
+	width: 72px;
+	height: 72px;
+	object-fit: cover;
+	border-radius: 6px;
+}

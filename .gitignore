@@ -1,0 +1,13 @@
+﻿wp-config.php
+.env
+.env.*
+uploads/
+wp-content/uploads/
+*.log
+*.zip
+*.sql
+*.bak
+node_modules/
+plugins/manage/vendor/
+.DS_Store
+Thumbs.db

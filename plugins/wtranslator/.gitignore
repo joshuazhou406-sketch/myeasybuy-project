@@ -1,0 +1,27 @@
+# WordPress
+.DS_Store
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build files
+*.min.js
+*.min.css
+
+# Cache
+cache/
+*.cache
+
+# Temporary files
+tmp/
+temp/
+

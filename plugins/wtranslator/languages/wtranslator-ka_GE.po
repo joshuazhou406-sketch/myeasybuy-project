@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ka_GE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: ka_GE\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress-ის თარგმანის მოდული"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "პროფესიონალური ვებსაიტების თარგმნის დანამატი, რომელსაც Google Translate უზრუნველყოფს. სრულად ფუნქციონალური, დამოუკიდებელი; გარე API არ არის საჭირო."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "თქვენ არ გაქვთ ამ გვერდზე წვდომის საკმარისი ნებართვები."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator-ის პარამეტრები"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "პარამეტრები წარმატებით შენახულია!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "თქვენი გაზიარებული გამოყენების მონაცემები წაიშალა."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "გმადლობთ! ანონიმური გამოყენების გაზიარება ჩართულია."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "ვიჯეტის პარამეტრები"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "დააკონფიგურირეთ, თუ როგორ გამოჩნდება ენის გადამრთველი თქვენს საიტზე"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "ვიჯეტის იერსახე"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "ჩამოსაშლელი სია"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "ტივტივი"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "მხოლოდ დროშები"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "დროშები + სახელი"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "როგორ უნდა გამოჩნდეს ენის გადამრთველი"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "თარგმნა"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "თარგმანის საწყისი ენა"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "ღია მიმართულება"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "ზემოთ"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "ქვემოთ"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "მიმართულება, რომლითაც ჩამოსაშლელი სია იხსნება"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "მცურავი ენის ამომრჩევის ჩვენება"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "არა"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "ქვედა მარცხენა"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "ქვედა მარჯვენა"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "ზედა მარცხენა"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "ზედა მარჯვენა კუთხე"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "მცურავი ენის შერჩევის ოფციის ჩვენება ყველაზე მარტივი და შესაფერისია ვებსაიტების უმეტესობისთვის."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "მენიუში ჩვენება"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- არცერთი -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "ნავიგაციის მენიუში ენის გადამრთველის დამატება"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "შეფუთვის სელექტორის CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "CSS სელექტორი მორგებული შეფუთვის ელემენტისთვის"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "გადახედვა"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "იგივე გადამრთველი გამოჩნდება თქვენს საიტზე. განახლდება შენახვისას."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "გაფართოებული პარამეტრები"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "დამატებითი კონფიგურაციის პარამეტრები"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "მშობლიური ენის სახელები"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "ენების სახელების ჩვენება მათი მშობლიური ფორმით"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "სტუმრის ენაზე ავტომატური გადართვა"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "პირველი ვიზიტისას (ენის ქუქი ჯერ არ არის), ბრაუზერის „ენის მიღების“ სათაურიდან ან Cloudflare-ის ქვეყნის სათაურიდან ენის შემოთავაზება ხდება, როდესაც თქვენი საიტი Cloudflare-ს იყენებს. მესამე მხარის გეოგრაფიული API-ები არ გამოიყენება."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "ქვედირექტორიის URL და ქვედომენის URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "ქვედირექტორიის URL (მაგ. example.com/ar/) და ქვედომენის URL (მაგ. es.example.com) ხელმისაწვდომია WTranslator Cloud-ში — მართეთ ისინი ერთი დაფიდან."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "ენის შერჩევა"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "აირჩიეთ, რომელი ენები ჩასართავად"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "ყველას მონიშვნა"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "მოხსენით მონიშვნა ყველას"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "გადაათრიეთ თანმიმდევრობის შესაცვლელად"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "მინიშნება: ენების თანმიმდევრობის შესაცვლელად, უბრალოდ გადაათრიეთ და ჩააგდეთ ისინი ზემოთ მოცემულ სიაში."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "კონფიდენციალურობა და გამოყენების გაზიარება სურვილისამებრ"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator სრულად მუშაობს ჩვენს სერვერებზე მონაცემების გაგზავნის გარეშე. თუ თქვენ ამ ფუნქციას აირჩევთ, თავსებადობის გასაუმჯობესებლად ჩვენ მხოლოდ ქვემოთ ჩამოთვლილ დეტალებს შევაგროვებთ. ამის გამორთვა ნებისმიერ დროს შეგიძლიათ."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "ანონიმური საიტის დეტალების WTranslator.com-თან გაზიარების დაშვება"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "ჩართვისას გაზიარდება: საიტის URL, საიტის სახელი, დანამატის ვერსია, WordPress-ის ვერსია, PHP-ის ვერსია და ლოკალი. ვიზიტორის კონტენტი არ იგზავნება."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "კონფიდენციალურობის პოლიტიკა"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "ასევე, გააზიარეთ WordPress-ის ადმინისტრატორის ელ. ფოსტა დახმარების რჩევებისთვის (არასავალდებულო)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "ცვლილებების შენახვა"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "უსაფრთხოების შემოწმება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "ენის არჩევა"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "დაგვეხმარეთ WTranslator-ის გაუმჯობესებაში (არასავალდებულო)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "თუ ამის უფლებას მისცემთ, WTranslator-ს შეუძლია ანონიმური საიტის დეტალების (საიტის URL, WordPress/PHP/მოდულების ვერსიები და ლოკალი) გაზიარება WTranslator.com-თან, რათა ჩვენ შევძლოთ თავსებადობის გაუმჯობესება. თარგმანი ორივე შემთხვევაში გააგრძელებს მუშაობას. ამის შეცვლა ნებისმიერ დროს შეგიძლიათ პარამეტრებიდან → WTranslator → კონფიდენციალურობა."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "ანონიმური გამოყენების გაზიარების დაშვება"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "არა, გმადლობთ"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "კონფიდენციალურობის დეტალები"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "თქვენ არ გაქვთ ამის გაკეთების უფლება."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "ტექსტები აუცილებელია"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "ტექსტი აუცილებელია"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "თარგმნა ვერ მოხერხდა"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "პარამეტრები"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "არაავტორიზებული"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "ქეში წარმატებით გაიწმინდა"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "ქეშის გასუფთავება ვერ მოხერხდა"

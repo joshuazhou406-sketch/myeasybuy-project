@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: hy <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: hy\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress թարգմանության հավելված"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Google Translate-ի կողմից աջակցվող պրոֆեսիոնալ կայքերի թարգմանության հավելված: Լիովին ֆունկցիոնալ, ինքնուրույն. արտաքին API-ի կարիք չկա:"
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Դուք չունեք այս էջին մուտք գործելու բավարար թույլտվություններ։"
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator-ի կարգավորումներ"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Կարգավորումները հաջողությամբ պահպանվեցին։"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Ձեր համօգտագործման տվյալները ջնջվել են։"
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Շնորհակալություն։ Անանուն օգտագործման համօգտագործումը միացված է։"
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Վիջեթի ընտրանքներ"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Կարգավորեք, թե ինչպես է լեզվի փոխարկիչը երևում ձեր կայքում"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Վիջեթի տեսք"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Իջնող ցանկ"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Լողացող"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Միայն դրոշներ"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Դրոշներ + Անուն"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Ինչպես պետք է երևա լեզվի փոխարկիչը"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Թարգմանել"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Թարգմանության սկզբնաղբյուրի լեզուն"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Բաց ուղղություն"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Վերև"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Ներքև"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Բացվող ցանկի ուղղությունը"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Ցուցադրել լողացող լեզվի ընտրիչը"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Ոչ"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Ներքևի ձախ կողմում"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Ներքևի աջ կողմում"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Վերևի ձախ կողմում"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Վերևի աջ անկյուն"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Լողացող լեզվի ընտրության տարբերակը ցուցադրելն ամենահեշտն է և հարմար է կայքերի մեծ մասի համար։"
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Ցուցադրել ցանկում"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Ոչ մի -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Լեզվի փոխարկիչ ավելացնել նավիգացիոն ցանկում"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Փաթեթավորման ընտրիչի CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "CSS ընտրիչ՝ հատուկ փաթաթան տարրի համար"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Նախադիտում"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Նույն փոխարկիչը հայտնվում է նաև ձեր կայքում։ Թարմացվում է պահպանելիս։"
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Լրացուցիչ ընտրանքներ"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Լրացուցիչ կարգավորման տարբերակներ"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Մայրենի լեզվի անուններ"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Ցուցադրել լեզուների անունները իրենց մայրենի ձևով"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Ավտոմատ անցում այցելուի լեզվին"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Առաջին այցելության ժամանակ (դեռ լեզվի cookie չկա), առաջարկում է լեզու դիտարկիչի «Ընդունել լեզուն» վերնագրից կամ Cloudflare երկրի վերնագրից, երբ ձեր կայքը օգտագործում է Cloudflare: Երրորդ կողմի աշխարհագրական API-ներ չեն օգտագործվում:"
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "Ենթակատեգորիայի URL և ենթադոմենի URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "WTranslator Cloud-ում հասանելի են ենթատեղեկատուի URL-ը (օրինակ՝ example.com/ar/) և ենթատիրույթի URL-ը (օրինակ՝ es.example.com)՝ կառավարելով դրանք մեկ վահանակից։"
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Լեզվի ընտրություն"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Ընտրեք, թե որ լեզուներն եք միացնելու"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Նշել բոլորը"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Հանել բոլորի նշումը"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Քաշեք՝ վերադասավորելու համար"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "Հուշում. Լեզուները վերադասավորելու համար պարզապես քաշեք և գցեք դրանք վերևի ցանկում։"
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Գաղտնիություն և ըստ ցանկության օգտագործման համօգտագործում"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator-ը լիովին աշխատում է՝ առանց մեր սերվերներին որևէ տվյալ ուղարկելու: Եթե դուք միանաք, մենք կհավաքենք միայն ստորև թվարկված տվյալները՝ համատեղելիությունը բարելավելու համար: Դուք կարող եք անջատել սա ցանկացած պահի:"
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Թույլատրել անանուն կայքի մանրամասների փոխանակումը WTranslator.com-ի հետ"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Կիսվում է, երբ միացված է՝ կայքի URL-ը, կայքի անունը, պլագինի տարբերակը, WordPress տարբերակը, PHP տարբերակը և տեղայնությունը: Այցելուների բովանդակություն չի ուղարկվում:"
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Գաղտնիության քաղաքականություն"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Աջակցության խորհուրդների համար կիսվեք նաև WordPress-ի ադմինիստրատորի էլ. փոստով (ըստ ցանկության):"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Պահպանել փոփոխությունները"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Անվտանգության ստուգումը ձախողվեց։ Խնդրում ենք կրկին փորձել։"
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Ընտրեք լեզուն"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Օգնեք բարելավել WTranslator-ը (ըստ ցանկության)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Եթե ​​դուք թույլատրեք, WTranslator-ը կարող է անանուն կայքի մանրամասները (կայքի URL, WordPress/PHP/պլագինների տարբերակները և տեղայնացումը) կիսվել WTranslator.com-ի հետ, որպեսզի մենք կարողանանք բարելավել համատեղելիությունը: Թարգմանությունը շարունակում է աշխատել ցանկացած դեպքում: Դուք կարող եք փոխել սա ցանկացած պահի՝ Կարգավորումներ → WTranslator → Գաղտնիություն բաժնում:"
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Թույլատրել անանուն օգտագործման համօգտագործումը"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Ոչ, շնորհակալություն"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Գաղտնիության մանրամասներ"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Դուք թույլտվություն չունեք դա անելու։"
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Տեքստերը պարտադիր են"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Տեքստը պարտադիր է"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Թարգմանությունը ձախողվեց"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Կարգավորումներ"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Չարտոնված"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Քեշը հաջողությամբ մաքրվեց"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Չհաջողվեց մաքրել քեշը"

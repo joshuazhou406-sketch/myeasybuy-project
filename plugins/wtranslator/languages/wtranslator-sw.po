@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: sw <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: sw\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - Programu-jalizi ya Tafsiri ya WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Programu-jalizi ya kitaalamu ya tafsiri ya tovuti inayoendeshwa na Google Translate. Inafanya kazi kikamilifu peke yake; hakuna API ya nje inayohitajika."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Huna ruhusa za kutosha kufikia ukurasa huu."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Mipangilio ya WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Mipangilio imehifadhiwa kwa mafanikio!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Data yako ya matumizi yaliyoshirikiwa imefutwa."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Asante! Ushiriki wa matumizi usiojulikana umewezeshwa."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Chaguo za Wijeti"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Sanidi jinsi kibadilishaji lugha kinavyoonekana kwenye tovuti yako"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Muonekano wa Wijeti"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Menyu kunjuzi"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Kuelea"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Bendera Pekee"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Bendera + Jina"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Jinsi kibadilishaji lugha kinapaswa kuonekana"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Tafsiri Kutoka"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Lugha chanzi ya tafsiri"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Mwelekeo Wazi"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Juu"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Chini"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Mwelekeo ambapo menyu kunjuzi hufunguka"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Onyesha Kiteuzi cha Lugha Kinachoelea"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Hapana"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Chini kushoto"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Chini kulia"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Juu kushoto"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Juu kulia"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Chaguo la kuchagua lugha inayoelea ndilo rahisi na linalofaa kwa tovuti nyingi."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Onyesha kwenye Menyu"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Hakuna -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Ongeza kibadilishaji lugha kwenye menyu ya urambazaji"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Kiteuzi cha Kifungashio cha CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Kiteuzi cha CSS cha kipengele maalum cha kufunika"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Hakikisho"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Kibadilishaji hicho hicho huonekana kwenye tovuti yako. Husasishwa unapohifadhi."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Chaguzi za Kina"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Chaguo za ziada za usanidi"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Majina ya Lugha Asilia"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Onyesha majina ya lugha katika umbo lao la asili"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Badilisha kiotomatiki hadi lugha ya mgeni"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Katika ziara ya kwanza (hakuna kidakuzi cha lugha bado), hupendekeza lugha kutoka kwa kichwa cha Accept-Language cha kivinjari, au kutoka kwa kichwa cha nchi cha Cloudflare wakati tovuti yako inatumia Cloudflare. Hakuna API za kijiografia za wahusika wengine zinazotumika."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL ya saraka ndogo na URL ya kikoa kidogo"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL ya saraka ndogo (km example.com/ar/) na URL ya kikoa kidogo (km es.example.com) zinapatikana katika WTranslator Cloud — dhibiti kutoka kwenye dashibodi moja."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "Wingu la WTranslator"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Uteuzi wa Lugha"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Chagua lugha za kuwasha"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Chagua Zote"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Ondoa tiki kwa Zote"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Buruta ili kupanga upya"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "DOKEZO: Ili kupanga upya lugha, ziburute na uziangushe kwenye orodha hapo juu."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Faragha na kushiriki matumizi kwa hiari"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator inafanya kazi kikamilifu bila kutuma data yoyote kwa seva zetu. Ukichagua kuingia, tunakusanya tu maelezo yaliyoorodheshwa hapa chini ili kuboresha utangamano. Unaweza kuzima hii wakati wowote."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Ruhusu kushiriki maelezo ya tovuti bila majina ukitumia WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Imeshirikiwa inapowezeshwa: URL ya tovuti, jina la tovuti, toleo la programu-jalizi, toleo la WordPress, toleo la PHP, na eneo. Hakuna maudhui ya mgeni yanayotumwa."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Sera ya faragha"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Pia shiriki barua pepe ya msimamizi wa WordPress kwa vidokezo vya usaidizi (si lazima)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Hifadhi Mabadiliko"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Ukaguzi wa usalama umeshindwa. Tafadhali jaribu tena."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Chagua Lugha"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Saidia kuboresha WTranslator (hiari)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Ukiruhusu, WTranslator inaweza kushiriki maelezo ya tovuti bila majina (URL ya tovuti, matoleo ya WordPress/PHP/plugin, na locale) na WTranslator.com ili tuweze kuboresha utangamano. Tafsiri inaendelea kufanya kazi kwa njia yoyote ile. Unaweza kubadilisha hili wakati wowote katika Mipangilio → WTranslator → Faragha."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Ruhusu kushiriki matumizi bila majina"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Hapana asante"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Maelezo ya faragha"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Huna ruhusa ya kufanya hivi."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Maandishi yanahitajika"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Maandishi yanahitajika"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Tafsiri imeshindwa"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Mipangilio"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Hairuhusiwi"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Akiba imefutwa kwa mafanikio"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Imeshindwa kufuta akiba"

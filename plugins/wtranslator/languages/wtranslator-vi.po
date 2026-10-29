@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: vi <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: vi\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - Plugin dịch thuật cho WordPress"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Plugin dịch thuật trang web chuyên nghiệp được hỗ trợ bởi Google Translate. Hoạt động hoàn toàn độc lập; không cần API bên ngoài."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Bạn không có đủ quyền để truy cập trang này."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Cài đặt WTranslator"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Cài đặt đã được lưu thành công!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Dữ liệu sử dụng chung của bạn đã bị xóa."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Cảm ơn! Chức năng chia sẻ thông tin sử dụng ẩn danh đã được bật."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Tùy chọn tiện ích"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Tùy chỉnh cách hiển thị bộ chuyển đổi ngôn ngữ trên trang web của bạn."
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Giao diện Widget"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Menu thả xuống"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Trôi nổi"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Chỉ có cờ"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Cờ + Tên"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Giao diện của bộ chuyển đổi ngôn ngữ nên như thế nào"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Dịch từ"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Ngôn ngữ nguồn để dịch"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Hướng đi mở"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Hướng lên"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Xuống"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Hướng mở menu thả xuống"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Hiển thị bộ chọn ngôn ngữ nổi"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "KHÔNG"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Góc dưới bên trái"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Góc dưới bên phải"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Góc trên bên trái"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Góc trên bên phải"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Tùy chọn hiển thị bảng chọn ngôn ngữ nổi là cách dễ nhất và phù hợp nhất với hầu hết các trang web."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Hiển thị trong Menu"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Không có -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Thêm bộ chuyển đổi ngôn ngữ vào menu điều hướng"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Bộ chọn bao bọc CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Bộ chọn CSS cho phần tử bao bọc tùy chỉnh"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Xem trước"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Công tắc tương tự sẽ xuất hiện trên trang web của bạn. Nó sẽ tự động cập nhật khi bạn lưu."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Tùy chọn nâng cao"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Các tùy chọn cấu hình bổ sung"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Tên ngôn ngữ bản địa"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Hiển thị tên ngôn ngữ ở dạng gốc."
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Tự động chuyển sang ngôn ngữ của khách truy cập"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Lần truy cập đầu tiên (chưa có cookie ngôn ngữ), hệ thống sẽ đề xuất ngôn ngữ từ tiêu đề Accept-Language của trình duyệt hoặc từ tiêu đề quốc gia của Cloudflare nếu trang web của bạn sử dụng Cloudflare. Không sử dụng bất kỳ API định vị địa lý bên thứ ba nào."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL thư mục con & URL tên miền phụ"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL thư mục con (ví dụ: example.com/ar/) và URL tên miền phụ (ví dụ: es.example.com) đều có sẵn trong WTranslator Cloud — quản lý từ một bảng điều khiển duy nhất."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Lựa chọn ngôn ngữ"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Chọn ngôn ngữ bạn muốn bật"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Chọn tất cả"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Bỏ chọn tất cả"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Kéo để sắp xếp lại"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "GỢI Ý: Để sắp xếp lại thứ tự các ngôn ngữ, chỉ cần kéo và thả chúng vào danh sách phía trên."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Quyền riêng tư và tùy chọn chia sẻ thông tin sử dụng"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator hoạt động hoàn toàn mà không gửi bất kỳ dữ liệu nào đến máy chủ của chúng tôi. Nếu bạn chọn tham gia, chúng tôi chỉ thu thập các thông tin được liệt kê bên dưới để cải thiện khả năng tương thích. Bạn có thể tắt tính năng này bất cứ lúc nào."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Cho phép chia sẻ thông tin trang web ẩn danh với WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Khi được kích hoạt, thông tin được chia sẻ bao gồm: URL trang web, tên trang web, phiên bản plugin, phiên bản WordPress, phiên bản PHP và ngôn ngữ. Không có nội dung khách truy cập nào được gửi đi."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Chính sách bảo mật"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Bạn cũng có thể chia sẻ địa chỉ email quản trị WordPress để nhận hỗ trợ (tùy chọn)."
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Lưu thay đổi"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Kiểm tra bảo mật không thành công. Vui lòng thử lại."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Chọn ngôn ngữ"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Hãy giúp cải thiện WTranslator (tùy chọn)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Nếu bạn cho phép, WTranslator có thể chia sẻ thông tin chi tiết về trang web (URL trang web, phiên bản WordPress/PHP/plugin và ngôn ngữ) một cách ẩn danh với WTranslator.com để chúng tôi có thể cải thiện khả năng tương thích. Quá trình dịch vẫn tiếp tục hoạt động bình thường. Bạn có thể thay đổi cài đặt này bất cứ lúc nào trong Cài đặt → WTranslator → Quyền riêng tư."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Cho phép chia sẻ sử dụng ẩn danh"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Không, cảm ơn"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Thông tin riêng tư"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Bạn không được phép làm điều này."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Cần có văn bản."
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Cần phải nhập văn bản"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Bản dịch thất bại"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Không được phép"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Đã xóa bộ nhớ cache thành công"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Không thể xóa bộ nhớ cache"

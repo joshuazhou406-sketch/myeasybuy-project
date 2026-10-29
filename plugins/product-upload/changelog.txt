@@ -1,0 +1,109 @@
+*** Product Upload for WooCommerce Changelog ***
+
+2026-10-15 - version 1.4.5
+* New: Connect extension is now Integrations, with the browser extension and AI assistants (Claude and ChatGPT) in one place, showing the email an assistant signs in with
+
+2026-10-15 - version 1.4.4
+* New: eBay sellers. Paste an eBay seller or store link to browse their listings, or save eBay sellers in the bulk importer
+
+2026-10-15 - version 1.4.3
+* Fix: in the description layout, each section can be added once (Text blocks can still repeat), so Specifications no longer appears several times
+
+2026-10-15 - version 1.4.2
+* Improved: while the bulk importer loads, it now shows its real layout (marketplaces, categories, search and product cards) instead of a plain grid
+
+2026-10-15 - version 1.4.1
+* Fix: a new import now shows in Active right away, instead of briefly switching to Completed and appearing a few seconds later
+
+2026-10-15 - version 1.4.0
+* New: a redesigned bulk importer. Browse any supplier site or marketplace by category, search it, and select products in batches of up to 500
+* New: search 10 marketplaces from one place, including Etsy, Walmart and CJ Dropshipping. Prices show in your store currency
+* New: save marketplace sellers (AliExpress stores, Amazon sellers, Alibaba suppliers, Etsy shops) and import from them any time
+* New: pasting a marketplace search, category, store or seller link opens the importer straight on it
+
+2026-10-14 - version 1.3.0
+* New: an AI assistant you connect to Product Upload can edit a product in your store (title, description, prices, stock, images, tags, categories and variations), and every edit can be undone
+* Fix: updating a product's title from Product Upload no longer strips videos or styling from its description
+
+2026-10-10 - version 1.2.6
+* New: on big imports, imports that fail on hard-to-read sites, and the plan picker, a link to our done-for-you setup service if you'd rather we set up your catalogue or store
+
+2026-10-08 - version 1.2.5
+* Fix: an imported brand now uses the spelling your store already has, so OfficeSource, Office Source Inc. and Office Source US all go into your existing Office Source brand instead of creating new ones
+
+2026-10-04 - version 1.2.4
+* New: Keep description mode can use your description layout, with the supplier's text word for word and your specs, images and own text around it
+* New: an option to write a short description from facts on the product page when the supplier's is missing or very short
+
+2026-09-30 - version 1.2.3
+* New: the account bar shows how many imports you have left, and it turns amber and then red as your free imports run out
+* New: when your free imports reach zero, the plan picker opens so you can keep importing
+* New: each importing product shows which step it's on (reading, writing, publishing) in a progress ring
+
+2026-09-26 - version 1.2.2
+* Fix: on some hosts, imports failed with "The product with SKU (...) you are trying to insert is already present in the lookup table" even though the SKU was new. Those products now import normally
+
+2026-08-28 - version 1.2.1
+* Imported variations now record the supplier's own id for that variation, which is the ASIN on Amazon, in a _pu_source_variant_sku custom field. Handy if you sync price or stock from the source. Re-import an existing product to add it
+
+2026-08-21 - version 1.2.0
+* Product Upload can now update a product's title, description, price, SKU or published state directly, without you opening WP Admin. Used by the Product Upload MCP server so an AI assistant can edit your catalogue. Requests are signature-verified against your site's Product Upload connection; nothing else can call it
+
+2026-08-18 - version 1.1.13
+* Description sections can now show as their own tabs on the product page, instead of running together in the description
+
+2026-08-17 - version 1.1.12
+* Fix: answering the in-plugin feedback prompt could blank the import screen until you reloaded the page
+
+2026-08-11 - version 1.1.11
+* Variant weights: 1688 and Taobao listings that state a weight per option now import it per variant, instead of every variant inheriting the product weight
+* Variant images now import from 1688 listings
+
+2026-07-28 - version 1.1.10
+* Imported image files can now be saved under the product name instead of the supplier filename
+
+2026-07-27 - version 1.1.9
+* Fix: with a 1x price multiplier and .95 or .90 rounding, a product could be priced a few cents below what you paid for it. Prices now step up to the next .95/.90 point instead, so they never land under cost.
+
+2026-07-24 - version 1.1.8
+* New description layout builder: choose sections (overview, specs, supplier sections, FAQ) and preview before importing
+* Import defaults: assign products to categories, set backorder and tax behaviour, and optionally use the supplier SKU as the barcode
+* Optionally convert supplier prices to your store currency on import
+* Refreshed the import settings screens
+* Fix: use the SKU as a barcode only when it is a valid barcode number
+* Fix: the settings screen now matches the description style used on import
+
+2026-07-21 - version 1.1.7
+* Re-importing a product now matches earlier imports reliably, including URLs with double slashes
+* Existing products are linked to their source URL so re-imports update them instead of duplicating
+
+2026-07-21 - version 1.1.6
+* Re-importing a product now updates it instead of creating a duplicate, keeping your published status, permalink and images
+* Fix the specifications table appearing twice when your description layout already includes it
+
+2026-07-03 - version 1.1.5
+* Pricing: added a .90 price-rounding option and fixed rounding
+* Smoother in-plugin upgrade and checkout flow
+
+2026-06-23 - version 1.1.4
+* Add a "Convert images to JPG" option in Import defaults for stores that sync to platforms which reject WebP, such as Odoo
+
+2026-05-17 - version 1.0.1
+* Security: webhook handler rejects requests when no billing secret is configured (no debug-mode bypass)
+* Security: API tokens sent via Authorization: Bearer header instead of URL query strings
+* Security: banner-dismissal handler checks the edit_products capability
+* Privacy: added Third-Party Services and Privacy sections to readme.txt
+* UI: prominent AI-content review notice in the importer
+* Compact 5-column marketplace grid with clearer selected state
+* Code cleanup: removed unused defensive idioms and meta-instructional comments
+
+2025-01-01 - version 1.0.0
+* Initial release
+* Import products from any supplier URL into WooCommerce using AI
+* One-click connect via ProductUpload.co dashboard
+* Supports simple and variable products (attributes + variations)
+* AI-generated titles, descriptions, SEO meta, images, specs, and tags
+* Auto-sideloads product images into the WordPress Media Library via ImageKit proxy
+* Yoast SEO and RankMath meta support
+* HPOS (High-Performance Order Storage) compatible
+* WooCommerce Blocks compatible

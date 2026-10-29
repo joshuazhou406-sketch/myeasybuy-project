@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: mn <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: mn\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress орчуулгын залгаас"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Google Орчуулагчийн дэмжлэгтэй мэргэжлийн вэбсайт орчуулгын залгаас. Бүрэн ажиллагаатай, бие даасан; гадаад API шаардлагагүй."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Та энэ хуудсанд хандах хангалттай эрхгүй байна."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator-н тохиргоо"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Тохиргоог амжилттай хадгаллаа!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Таны хуваалцсан хэрэглээний өгөгдлийг устгасан."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Баярлалаа! Нэргүй хэрэглээний хуваалцахыг идэвхжүүлсэн."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Виджетийн сонголтууд"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Хэл солигч таны сайт дээр хэрхэн харагдахыг тохируулах"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Виджетийн харагдах байдал"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Унждаг цэс"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Хөвөгч"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Зөвхөн далбаанууд"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Тугнууд + Нэр"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Хэл солигч хэрхэн харагдах ёстой вэ"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Орчуулах"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Орчуулгын эх хэл"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Нээлттэй чиглэл"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Дээш"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Доош"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Унжих цэс нээгдэх чиглэл"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Хөвөгч хэлний сонгогчийг харуулах"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Үгүй"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Зүүн доод"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Баруун доод"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Зүүн дээд"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Баруун дээд"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Хөвөгч хэлний сонгогчийг харуулах сонголт нь ихэнх вэбсайтуудад хамгийн хялбар бөгөөд тохиромжтой."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Цэсэнд харуулах"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Байхгүй -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Навигацийн цэсэнд хэлний шилжүүлэгч нэмэх"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Wrapper Selector CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Захиалгат ороомгийн элементийн CSS сонгогч"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Урьдчилан харах"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Таны сайт дээр ижил шилжүүлэгч гарч ирнэ. Хадгалахад шинэчлэгдэнэ."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Дэвшилтэт сонголтууд"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Нэмэлт тохиргооны сонголтууд"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Төрөлх хэлний нэрс"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Хэлний нэрийг төрөлх хэлбэрээр нь харуулах"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Зочны хэл рүү автоматаар шилжих"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Анх удаа зочлоход (хэлний күүки хараахан байхгүй байна), хөтчийн Accept-Language толгой хэсгээс эсвэл таны сайт Cloudflare ашиглаж байгаа үед Cloudflare улсын толгой хэсгээс хэл санал болгоно. Гуравдагч талын гео API-г ашиглахгүй."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "Дэд лавлахын URL болон Дэд домэйны URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "Дэд лавлахын URL (жишээ нь example.com/ar/) болон Дэд домэйны URL (жишээ нь es.example.com) нь WTranslator Cloud дээр боломжтой бөгөөд нэг хяналтын самбараас удирдах боломжтой."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Хэлний сонголт"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Идэвхжүүлэх хэлнүүдийг сонгоно уу"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Бүгдийг тэмдэглэх"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Бүгдийг нь тэмдэглэхгүй болго"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Дахин дараалалд оруулахын тулд чирнэ үү"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "ЗӨВЛӨГӨӨ: Хэлнүүдийг дахин эрэмбэлэхийн тулд дээрх жагсаалтад чирж оруулна уу."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Нууцлал болон нэмэлт хэрэглээний хуваалцах"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator нь манай серверүүд рүү ямар ч өгөгдөл илгээхгүйгээр бүрэн ажилладаг. Хэрэв та зөвшөөрвөл бид зөвхөн нийцтэй байдлыг сайжруулахын тулд доор жагсаасан мэдээллийг цуглуулдаг. Та үүнийг хүссэн үедээ унтрааж болно."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.com-той нэргүй сайтын мэдээллийг хуваалцахыг зөвшөөрөх"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Идэвхжүүлсэн үед хуваалцсан: сайтын URL, сайтын нэр, залгаасын хувилбар, WordPress хувилбар, PHP хувилбар болон байршил. Зочны контент илгээгдэхгүй."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Нууцлалын бодлого"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Мөн дэмжлэгийн зөвлөгөө авахын тулд WordPress админ имэйлийг хуваалцаарай (заавал биш)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Өөрчлөлтийг хадгалах"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Аюулгүй байдлын шалгалт амжилтгүй боллоо. Дахин оролдоно уу."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Хэл сонгох"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslator-г сайжруулахад туслах (заавал биш)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Хэрэв та зөвшөөрвөл WTranslator нь WTranslator.com-той нэргүй сайтын мэдээллийг (сайтын URL, WordPress/PHP/залгаасны хувилбарууд болон локал) хуваалцаж болох бөгөөд ингэснээр бид нийцтэй байдлыг сайжруулах боломжтой. Орчуулга аль ч аргаар ажилласаар байна. Та үүнийг Тохиргоо → WTranslator → Нууцлал дотроос хүссэн үедээ өөрчилж болно."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Нэргүй хэрэглээ хуваалцахыг зөвшөөрөх"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Үгүй ээ, баярлалаа"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Нууцлалын дэлгэрэнгүй мэдээлэл"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Танд үүнийг хийх зөвшөөрөл байхгүй."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Текст шаардлагатай"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Текст шаардлагатай"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Орчуулга амжилтгүй боллоо"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Тохиргоо"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Зөвшөөрөлгүй"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Кэшийг амжилттай цэвэрлэв"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Кэшийг цэвэрлэж чадсангүй"

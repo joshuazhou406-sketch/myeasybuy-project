@@ -1,0 +1,128 @@
+/**
+ * MyEasyBuy storefront palette
+ * Text #141414 · Page #F5F6F8 · Cards #FFFFFF · Accent #FF7E21
+ */
+
+:root {
+	--wf-main-rgb: 255, 126, 33 !important;
+	--wf-main-color: #FF7E21 !important;
+	--wf-secondary-color: #F06A0A !important;
+	--wf-text-color: #141414 !important;
+	--wf-gray-color: #F5F6F8 !important;
+	--myeasybuy-ink: #141414;
+	--myeasybuy-muted: #6B6F76;
+	--myeasybuy-oat: #F5F6F8;
+	--myeasybuy-surface: #FFFFFF;
+	--myeasybuy-line: #ECEEF1;
+	--myeasybuy-sea: #FF7E21;
+	--myeasybuy-accent: #FF7E21;
+	--myeasybuy-accent-hover: #F06A0A;
+	--myeasybuy-accent-soft: #FFF4EC;
+}
+
+body,
+body.woocommerce,
+.site,
+#page,
+.wf-site {
+	color: var(--myeasybuy-ink) !important;
+	background-color: var(--myeasybuy-oat) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title a,
+.widget-title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce div.product .product_title {
+	color: var(--myeasybuy-ink) !important;
+}
+
+a:not(.button):not(.wf-btn):not(.woocommerce-Button) {
+	color: var(--myeasybuy-accent);
+}
+
+a:not(.button):not(.wf-btn):not(.woocommerce-Button):hover,
+a:not(.button):not(.wf-btn):not(.woocommerce-Button):focus {
+	color: var(--myeasybuy-accent-hover);
+}
+
+/* Cards / product tiles / account panels */
+.woocommerce ul.products li.product,
+.woocommerce-Tabs-panel,
+.woocommerce-cart-form,
+.cart_totals,
+.woocommerce-checkout,
+.woocommerce-MyAccount-navigation,
+.woocommerce-MyAccount-content,
+.wf_widget-area .widget,
+.product,
+.shop_table,
+.myeasybuy-auth__card,
+.ppw-jd-card,
+.ppw-jd-detail-dialog,
+.ppw-jd-results-section .ppw-jd-card {
+	background-color: var(--myeasybuy-surface) !important;
+	color: var(--myeasybuy-ink);
+}
+
+/* Primary actions / accent chrome */
+button[type="submit"],
+input[type="submit"],
+input[type="button"],
+.button,
+.wf-btn,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.product-categories .product-categories-btn,
+.header--seven .product-categories .product-categories-btn,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+	background-color: var(--myeasybuy-accent) !important;
+	border-color: var(--myeasybuy-accent) !important;
+	color: #fff !important;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.button:hover,
+.wf-btn:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce a.button.alt:hover,
+.product-categories .product-categories-btn:hover {
+	background-color: var(--myeasybuy-accent-hover) !important;
+	border-color: var(--myeasybuy-accent-hover) !important;
+	color: #fff !important;
+}
+
+.header--seven .wf_mobilenav-topbar-content,
+.header--seven .wf_header-topbar,
+.wf_header-topbar {
+	background-color: var(--myeasybuy-accent) !important;
+	color: #fff !important;
+}
+
+.woocommerce span.onsale,
+.ppw-jd-card-btn,
+.ppw-platform-btn.is-active {
+	background-color: var(--myeasybuy-accent) !important;
+	color: #fff !important;
+}
+
+.ppw-platform-btn.is-active {
+	box-shadow: inset 0 -2px 0 var(--myeasybuy-accent) !important;
+}
+
+::selection {
+	background: var(--myeasybuy-accent);
+	color: #fff;
+}

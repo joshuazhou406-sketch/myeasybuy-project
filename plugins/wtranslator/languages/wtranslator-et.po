@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: et <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: et\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPressi tõlkeplugin"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Professionaalne veebilehe tõlkimise plugin, mida toetab Google Translate. Täisfunktsionaalne eraldiseisev; välist API-t pole vaja."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTõlkija"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Teil pole sellele lehele juurdepääsuks piisavalt õigusi."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslatori seaded"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Seaded salvestati edukalt!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Teie jagatud kasutusandmed on kustutatud."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Tänan! Anonüümne kasutusandmete jagamine on lubatud."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Vidina valikud"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Konfigureeri, kuidas keelevahetaja oma saidil kuvatakse"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Vidina välimus"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Rippmenüü"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Ujuk"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Ainult lipud"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Lipud + nimi"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Kuidas keelevahetaja peaks välja nägema"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Tõlgi keelest"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Tõlke lähtekeel"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Avatud suund"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Üles"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Alla"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Rippmenüü avanemise suund"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Näita ujuvat keelevalijat"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Ei"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "All vasakul"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "All paremal"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Üleval vasakul"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Üleval paremal"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Ujuva keelevaliku kuvamine on lihtsaim ja sobib enamiku veebisaitide jaoks."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Kuva menüüs"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Puudub -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Lisa keelevahetaja navigeerimismenüüsse"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Ümbrise valija CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "CSS-i valija kohandatud ümbriselemendi jaoks"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Eelvaade"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Sama lüliti kuvatakse teie saidil. Värskendub salvestamisel."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Täpsemad valikud"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Täiendavad konfiguratsioonivalikud"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Emakeele nimed"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Kuva keelte nimed nende emakeelena"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Automaatne lülitumine külastaja keelele"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "Esimesel külastusel (keeleküpsist veel pole) soovitab keelt brauseri Accept-Language päisest või Cloudflare'i riigi päisest, kui teie sait kasutab Cloudflare'i. Kolmandate osapoolte geograafilisi API-sid ei kasutata."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "Alamkataloogi URL ja alamdomeeni URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "WTranslator Cloudis on saadaval alamkataloogi URL (nt example.com/ar/) ja alamdomeeni URL (nt es.example.com) – hallake neid ühelt armatuurlaualt."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslatori pilv"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Keele valik"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Valige, millised keeled lubada"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Märgi kõik"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Tühjenda kõik märgistused"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Lohistage ümberjärjestamiseks"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "VIHJE: Keelte järjestuse muutmiseks lohistage need lihtsalt ülaltoodud loendis kohale."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Privaatsus ja valikuline kasutusjagamine"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator töötab täielikult ilma meie serveritesse andmeid saatmata. Kui te sellega nõustute, kogume ühilduvuse parandamiseks ainult allpool loetletud andmeid. Saate selle igal ajal välja lülitada."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Luba anonüümsete saidiandmete jagamine WTranslator.com-iga"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Kui lubatud, jagatakse: saidi URL, saidi nimi, plugina versioon, WordPressi versioon, PHP versioon ja asukoht. Külastajale mõeldud sisu ei saadeta."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Privaatsuspoliitika"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Jaga ka WordPressi administraatori e-posti aadressi, et saada tuginõuandeid (valikuline)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Salvesta muudatused"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Turvakontroll ebaõnnestus. Palun proovige uuesti."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Valige keel"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Aita WTranslatorit täiustada (valikuline)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Kui lubate, saab WTranslator jagada WTranslator.com-iga anonüümseid saidiandmeid (saidi URL, WordPressi/PHP/pluginate versioonid ja asukoht), et saaksime ühilduvust parandada. Tõlge töötab igal juhul. Seda saate igal ajal muuta menüüs Seaded → WTranslator → Privaatsus."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Luba anonüümne kasutusjagamine"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Ei aitäh"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Privaatsusandmed"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Teil pole selleks luba."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Tekstid on kohustuslikud"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Tekst on kohustuslik"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Tõlge ebaõnnestus"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Seaded"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Volitamata"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Vahemälu tühjendati edukalt"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Vahemälu tühjendamine ebaõnnestus"

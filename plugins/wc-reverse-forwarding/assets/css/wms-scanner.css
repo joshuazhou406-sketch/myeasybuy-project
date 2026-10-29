@@ -1,0 +1,151 @@
+.wc-rf-wms {
+	max-width: 1100px;
+}
+
+.wc-rf-wms__lead {
+	max-width: 46rem;
+	color: #1d2327;
+	opacity: 0.85;
+}
+
+.wc-rf-wms__outbound {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem 0.75rem;
+	margin: 0 0 1.25rem;
+}
+
+.wc-rf-wms__outbound .description {
+	margin: 0;
+}
+
+.wc-rf-wms__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.8fr);
+	gap: 1.25rem;
+	align-items: start;
+}
+
+.wc-rf-wms-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	padding: 1.15rem 1.25rem 1.3rem;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.wc-rf-wms-scan__input {
+	width: 100%;
+	font-size: 1.45rem;
+	padding: 0.55rem 0.7rem;
+	letter-spacing: 0.04em;
+}
+
+.wc-rf-wms-owner {
+	margin: 1rem 0;
+	padding: 0.75rem 0.9rem;
+	border-left: 4px solid #c3c4c7;
+	background: #f6f7f7;
+}
+
+.wc-rf-wms-owner.is-found {
+	border-left-color: #1a7f37;
+	background: #edfaef;
+}
+
+.wc-rf-wms-owner.is-unclaimed {
+	border-left-color: #dba617;
+	background: #fcf9e8;
+}
+
+.wc-rf-wms-owner.is-locked {
+	border-left-color: #b32d2e;
+	background: #fcf0f1;
+}
+
+.wc-rf-wms-owner p {
+	margin: 0.2rem 0;
+}
+
+.wc-rf-wms-fields {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.6rem 1rem;
+}
+
+.wc-rf-wms-fields p {
+	margin: 0;
+}
+
+.wc-rf-wms-fields label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 0.2rem;
+}
+
+.wc-rf-wms-fields input[type="text"],
+.wc-rf-wms-fields input[type="number"] {
+	width: 100%;
+}
+
+.wc-rf-wms-fields__photos {
+	grid-column: 1 / -1;
+}
+
+.wc-rf-wms-unclaimed {
+	display: block;
+	margin: 1rem 0 0.5rem;
+	font-weight: 600;
+}
+
+.wc-rf-wms-actions {
+	margin: 1.1rem 0 0;
+}
+
+.wc-rf-wms-recent h2 {
+	margin-top: 0;
+}
+
+.wc-rf-wms-recent ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wc-rf-wms-recent li {
+	padding: 0.55rem 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.wc-rf-wms-recent li span {
+	display: block;
+	color: #646970;
+	font-size: 12px;
+}
+
+.wc-rf-wms-toast {
+	position: sticky;
+	top: 46px;
+	z-index: 10;
+	margin: 0 0 1rem;
+	padding: 0.75rem 1rem;
+	border-left: 4px solid #1a7f37;
+	background: #edfaef;
+	font-weight: 600;
+}
+
+.wc-rf-wms-toast.is-error {
+	border-left-color: #b32d2e;
+	background: #fcf0f1;
+}
+
+.wc-rf-wms-toast.is-info {
+	border-left-color: #dba617;
+	background: #fcf9e8;
+}
+
+@media (max-width: 960px) {
+	.wc-rf-wms__grid {
+		grid-template-columns: 1fr;
+	}
+}

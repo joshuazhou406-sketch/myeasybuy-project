@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: te <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: te\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress అనువాద ప్లగిన్"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "గూగుల్ ట్రాన్స్‌లేట్ ద్వారా పనిచేసే ప్రొఫెషనల్ వెబ్‌సైట్ అనువాద ప్లగిన్. పూర్తి స్వతంత్రంగా పనిచేస్తుంది; బాహ్య API అవసరం లేదు."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "Wఅనువాదకుడు"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "ఈ పేజీని యాక్సెస్ చేయడానికి మీకు తగినంత అనుమతులు లేవు."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator సెట్టింగ్‌లు"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "సెట్టింగ్‌లు విజయవంతంగా సేవ్ చేయబడ్డాయి!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "మీ భాగస్వామ్య వినియోగ డేటా తొలగించబడింది."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "ధన్యవాదాలు! అనామక వినియోగ భాగస్వామ్యం ప్రారంభించబడింది."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "విడ్జెట్ ఎంపికలు"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "మీ సైట్‌లో భాషా స్విచ్చర్ కనిపించే విధానాన్ని కాన్ఫిగర్ చేయండి"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "విడ్జెట్ లుక్"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "డ్రాప్‌డౌన్"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "తేలు"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "జెండాలు మాత్రమే"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "జెండాలు + పేరు"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "భాషా స్విచ్చర్ ఎలా కనిపించాలి"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "అనువదించు"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "అనువాదానికి మూల భాష"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "బహిరంగ దిశ"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "పైకి"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "క్రిందికి"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "డ్రాప్‌డౌన్ తెరుచుకునే దిశ"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "ఫ్లోటింగ్ భాషా సెలెక్టర్‌ను చూపించు"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "లేదు"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "దిగువ ఎడమ"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "దిగువ కుడి"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "ఎగువ ఎడమ"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "కుడివైపు పైభాగం"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "ఫ్లోటింగ్ లాంగ్వేజ్ సెలెక్టర్ ఆప్షన్‌ను చూపించడం చాలా సులభమైనది మరియు చాలా వెబ్‌సైట్‌లకు అనువైనది."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "మెనూలో చూపించు"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- ఏదీ లేదు -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "నావిగేషన్ మెనూకు భాషా స్విచ్చర్‌ను జోడించండి"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "వ్రాపర్ సెలెక్టర్ CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "కస్టమ్ వ్రాపర్ ఎలిమెంట్ కోసం CSS సెలెక్టర్"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "ప్రివ్యూ"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "మీ సైట్‌లో అదే స్విచ్చర్ కనిపిస్తుంది. మీరు సేవ్ చేసినప్పుడు అప్‌డేట్ అవుతుంది."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "అధునాతన ఎంపికలు"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "అదనపు కాన్ఫిగరేషన్ ఎంపికలు"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "స్థానిక భాష పేర్లు"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "భాషల పేర్లను వాటి మాతృభాష రూపంలో చూపించు"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "సందర్శకుల భాషకు స్వయంచాలకంగా మారండి"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "మొదటిసారి సందర్శించినప్పుడు (ఇంకా భాషా కుకీ లేదు), బ్రౌజర్ యొక్క Accept-Language హెడర్ నుండి లేదా మీ సైట్ Cloudflareను ఉపయోగిస్తుంటే Cloudflare కంట్రీ హెడర్ నుండి ఒక భాషను సూచిస్తుంది. ఏ థర్డ్-పార్టీ జియో APIలు ఉపయోగించబడవు."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "ఉప-డైరెక్టరీ URL & ఉప-డొమైన్ URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "WTranslator Cloudలో సబ్-డైరెక్టరీ URL (ఉదా example.com/ar/) మరియు సబ్-డొమైన్ URL (ఉదా es.example.com) అందుబాటులో ఉన్నాయి — ఒకే డాష్‌బోర్డ్ నుండి నిర్వహించండి."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "భాషా ఎంపిక"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "ఏ భాషలను ఎనేబుల్ చేయాలో ఎంచుకోండి"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "అన్నింటినీ తనిఖీ చేయండి"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "అన్నింటినీ ఎంపిక తీసివేయండి"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "క్రమాన్ని మార్చడానికి లాగండి"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "సూచన: భాషల క్రమాన్ని మార్చడానికి, వాటిని పైనున్న జాబితాలోకి లాగి వదలండి."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "గోప్యత మరియు ఐచ్ఛిక వినియోగ భాగస్వామ్యం"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator మా సర్వర్‌లకు ఎలాంటి డేటాను పంపకుండా పూర్తిగా పనిచేస్తుంది. మీరు అంగీకరిస్తే, అనుకూలతను మెరుగుపరచడానికి మేము క్రింద పేర్కొన్న వివరాలను మాత్రమే సేకరిస్తాము. మీరు దీన్ని ఎప్పుడైనా నిలిపివేయవచ్చు."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.comతో అనామక సైట్ వివరాలను పంచుకోవడానికి అనుమతించండి"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "ఎనేబుల్ చేసినప్పుడు ఇవి షేర్ చేయబడతాయి: సైట్ URL, సైట్ పేరు, ప్లగిన్ వెర్షన్, వర్డ్‌ప్రెస్ వెర్షన్, PHP వెర్షన్ మరియు లోకేల్. సందర్శకుల కంటెంట్ ఏదీ పంపబడదు."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "గోప్యతా విధానం"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "సహాయ సూచనల కోసం వర్డ్‌ప్రెస్ అడ్మిన్ ఇమెయిల్‌ను కూడా పంచుకోండి (ఐచ్ఛికం)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "మార్పులను సేవ్ చేయండి"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "భద్రతా తనిఖీ విఫలమైంది. దయచేసి మళ్ళీ ప్రయత్నించండి."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "భాషను ఎంచుకోండి"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslatorను మెరుగుపరచడంలో సహాయపడండి (ఐచ్ఛికం)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "మీరు అనుమతిస్తే, అనుకూలతను మెరుగుపరచడం కోసం WTranslator అనామక సైట్ వివరాలను (సైట్ URL, WordPress/PHP/ప్లగిన్ వెర్షన్‌లు మరియు స్థానికత) WTranslator.comతో పంచుకోగలదు. ఏ విధంగానైనా అనువాదం పనిచేస్తూనే ఉంటుంది. మీరు దీన్ని సెట్టింగ్‌లు → WTranslator → గోప్యతలో ఎప్పుడైనా మార్చుకోవచ్చు."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "అనామక వినియోగ భాగస్వామ్యాన్ని అనుమతించండి"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "వద్దు ధన్యవాదాలు"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "గోప్యతా వివరాలు"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "దీన్ని చేయడానికి మీకు అనుమతి లేదు."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "పాఠాలు అవసరం"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "టెక్స్ట్ అవసరం"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "అనువాదం విఫలమైంది"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "సెట్టింగ్‌లు"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "అనధికారిక"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "కాష్ విజయవంతంగా క్లియర్ చేయబడింది"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "కాష్‌ను క్లియర్ చేయడంలో విఫలమైంది"

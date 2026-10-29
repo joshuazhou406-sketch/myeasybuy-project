@@ -1,0 +1,273 @@
+<?php
+	private static function parse_api_error( array $data ) {
+		if ( ! empty( $data['error_code'] ) && '0000' === (string) $data['error_code'] ) {
+			return true;
+		}
+
+		if ( ! empty( $data['error'] ) ) {
+			$message = self::sanitize_api_error_message( (string) $data['error'] );
+			$code    = ! empty( $data['error_code'] ) ? (string) $data['error_code'] : '';
+			// If sanitizer already produced a user-facing message with code, keep it.
+			if ( '' !== $code && false === strpos( $message, '(code:' ) && false === strpos( $message, 'code:' ) ) {
+				$message .= ' (code: ' . $code . ')';
+			}
+			if ( '4005' === $code || false !== strpos( $message, '无权访问' ) ) {
+				$message .= ' ' . __( '请在万邦 OneBound 控制台开通对应接口：淘宝需 taobao.item_search_img + taobao.upload_img；京东需 jd.item_search_img（及 jd.upload_img）。', 'product-purchase-workflow' );
+			}
+			if ( '5000' === $code ) {
+				if ( false !== strpos( strtolower( $message ), 'jd' ) || ( isset( $data['api_type'] ) && 'jd' === $data['api_type'] ) ) {
+					$message .= ' ' . __( '京东以图搜图需使用京东图片 URL（360buyimg）或 BASE64；upload_img 返回的淘宝式名称通常不可用。', 'product-purchase-workflow' );
+				} else {
+					$message .= ' ' . __( '常见原因：图片格式需为 JPG/PNG，或 imgid 无效。请换一张清晰商品图重试。', 'product-purchase-workflow' );
+				}
+			}
+			return new WP_Error( 'ppw_onebound_error', $message, array( 'onebound_code' => $code ) );
+		}
+
+		if ( isset( $data['success'] ) && ( 0 === (int) $data['success'] || '0' === $data['success'] ) ) {
+			$message = self::sanitize_api_error_message(
+				(string) ( $data['reason'] ?? __( 'OneBound API 请求失败。', 'product-purchase-workflow' ) )
+			);
+			return new WP_Error( 'ppw_onebound_error', $message );
+		}
+
+		return true;
+	}
+
+
+	/**
+	 * Extract item list from varying OneBound response shapes.
+	 *
+	 * @param array<string, mixed> $data Parsed JSON.
+	 * @return array<int, array<string, mixed>>
+	 */
+	private static function extract_items( array $data ): array {
+		$items = array();
+
+		if ( ! empty( $data['items']['item'] ) ) {
+			$items = $data['items']['item'];
+		} elseif ( ! empty( $data['items'] ) && is_array( $data['items'] ) ) {
+			$items = $data['items'];
+		} elseif ( ! empty( $data['item'] ) && is_array( $data['item'] ) ) {
+			$items = $data['item'];
+		}
+
+		if ( empty( $items ) ) {
+			return array();
+		}
+
+		// Single item object vs list.
+		if ( isset( $items['title'] ) || isset( $items['skuName'] ) || isset( $items['num_iid'] ) ) {
+			return array( $items );
+		}
+
+		return array_values( array_filter( $items, 'is_array' ) );
+	}
+
+	/**
+	 * @param array<string, mixed> $item
+	 */
+	private static function extract_price( array $item ): float {
+		$candidates = array(
+			$item['price'] ?? null,
+			$item['promotion_price'] ?? null,
+			$item['orginal_price'] ?? null,
+			$item['original_price'] ?? null,
+			$item['zk_final_price'] ?? null,
+		);
+
+		foreach ( $candidates as $candidate ) {
+			if ( null === $candidate || '' === $candidate ) {
+				continue;
+			}
+
+			$price = (float) preg_replace( '/[^\d.]/', '', (string) $candidate );
+			if ( $price > 0 ) {
+				return $price;
+			}
+		}
+
+		return 0.0;
+	}
+}
+
+final class PPW_Pricing_Agent {
+	public readonly float $base_rate;
+	public readonly float $margin;
+	private readonly string $name;
+
+	public function __construct(
+		?float $base_rate = null,
+		?float $margin = null,
+		string $name = 'PricingAgent',
+	) {
+		$settings = get_option( 'ppw_settings', array() );
+
+		$this->base_rate = $base_rate ?? ( isset( $settings['base_rate'] ) ? (float) $settings['base_rate'] : 0.193 );
+		$this->margin    = $margin ?? ( isset( $settings['margin'] ) ? (float) $settings['margin'] : 0.03 );
+		$this->name      = $name;
+	}
+
+	public function calculate_cad_price( float $price_rmb ): float {
+		$final_rate = $this->base_rate * ( 1 + $this->margin );
+		$price_cad  = round( $price_rmb * $final_rate, 2 );
+
+		PPW_Logger::info(
+			sprintf(
+				'[%s] Converted RMB %.2f -> CAD %.2f (Rate: %s, Markup: %.0f%%)',
+				$this->name,
+				$price_rmb,
+				$price_cad,
+				(string) $this->base_rate,
+				$this->margin * 100
+			)
+		);
+
+		return $price_cad;
+	}
+}
+
+final class PPW_Product_Purchase_Workflow {
+	public readonly string $order_id;
+	public PPW_Workflow_State $state;
+	public readonly string $raw_url;
+	public ?string $sanitized_url = null;
+	public ?PPW_Product_Spec $product_spec = null;
+	public ?PPW_Order_Invoice $invoice = null;
+
+	private PPW_Link_Parser_Agent $link_parser;
+	private PPW_Pricing_Agent $pricing_engine;
+
+	/** @var callable(string, string): void|null */
+	private $alert_callback = null;
+
+	public function __construct(
+		string $raw_url,
+		?float $base_rate = null,
+		?float $platform_margin = null,
+	) {
+		$this->order_id       = self::generate_uuid();
+		$this->state          = PPW_Workflow_State::INIT;
+		$this->raw_url        = $raw_url;
+		$this->link_parser    = new PPW_Link_Parser_Agent();
+		$this->pricing_engine = new PPW_Pricing_Agent( $base_rate, $platform_margin );
+	}
+
+	/** @param callable(string, string): void $callback */
+	public function register_alert_hook( callable $callback ): void {
+		$this->alert_callback = $callback;
+	}
+
+	public function step(): PPW_Workflow_State {
+		PPW_Logger::info( "[Workflow-{$this->order_id}] Currently in state: {$this->state->value}" );
+
+		switch ( $this->state ) {
+			case PPW_Workflow_State::INIT:
+				$this->state = PPW_Workflow_State::PARSE_LINK;
+				break;
+
+			case PPW_Workflow_State::PARSE_LINK:
+				$this->sanitized_url = $this->link_parser->clean_url( $this->raw_url );
+				$spec                = $this->link_parser->fetch_product_details( $this->sanitized_url );
+
+				if ( null === $spec ) {
+					PPW_Logger::info( "[Workflow-{$this->order_id}] Automated parser failed. Moving to MANUAL_SPEC_PENDING." );
+					$this->state = PPW_Workflow_State::MANUAL_SPEC_PENDING;
+					$this->trigger_human_in_the_loop_alert();
+				} else {
+					$this->product_spec = $spec;
+					PPW_Logger::info( "[Workflow-{$this->order_id}] Parsing successful for: {$spec->title}" );
+					$this->state = PPW_Workflow_State::PRICING_ENGINE;
+				}
+				break;
+
+			case PPW_Workflow_State::MANUAL_SPEC_PENDING:
+				PPW_Logger::warning( "[Workflow-{$this->order_id}] Halted in MANUAL_SPEC_PENDING. Awaiting operator input." );
+				break;
+
+			case PPW_Workflow_State::PRICING_ENGINE:
+				if ( null === $this->product_spec ) {
+					PPW_Logger::error( "[Workflow-{$this->order_id}] Missing product specs for pricing! Flow aborted." );
+					$this->state = PPW_Workflow_State::FAILED;
+				} else {
+					$this->pricing_engine->calculate_cad_price( $this->product_spec->price_rmb );
+					$this->state = PPW_Workflow_State::CREATE_INVOICE;
+				}
+				break;
+
+			case PPW_Workflow_State::CREATE_INVOICE:
+				if ( null === $this->product_spec ) {
+					$this->state = PPW_Workflow_State::FAILED;
+					return $this->state;
+				}
+
+				$cad_price     = $this->pricing_engine->calculate_cad_price( $this->product_spec->price_rmb );
+				$this->invoice = new PPW_Order_Invoice(
+					order_id: $this->order_id,
+					source_url: $this->sanitized_url ?? $this->raw_url,
+					title: $this->product_spec->title,
+					image_url: $this->product_spec->image_url,
+					price_rmb: $this->product_spec->price_rmb,
+					price_cad: $cad_price,
+					exchange_rate: $this->pricing_engine->base_rate,
+					margin_percentage: $this->pricing_engine->margin,
+				);
+
+				PPW_Logger::info( "[Workflow-{$this->order_id}] Structured order invoice created: {$this->invoice->to_json()}" );
+				$this->state = PPW_Workflow_State::COMPLETED;
+				break;
+		}
+
+		return $this->state;
+	}
+
+	public function execute(): ?PPW_Order_Invoice {
+		while ( ! in_array(
+			$this->state,
+			array(
+				PPW_Workflow_State::COMPLETED,
+				PPW_Workflow_State::FAILED,
+				PPW_Workflow_State::MANUAL_SPEC_PENDING,
+			),
+			true
+		) ) {
+			$this->step();
+		}
+
+		return $this->invoice;
+	}
+
+	public function resolve_manual_spec( string $title, string $image_url, float $price_rmb ): ?PPW_Order_Invoice {
+		if ( PPW_Workflow_State::MANUAL_SPEC_PENDING !== $this->state ) {
+			PPW_Logger::error( "[Workflow-{$this->order_id}] Invalid action: Cannot resolve spec unless state is MANUAL_SPEC_PENDING." );
+			return null;
+		}
+
+		PPW_Logger::info( "[Workflow-{$this->order_id}] Manual specification received from Operator. Resuming workflow." );
+
+		try {
+			$this->product_spec = new PPW_Product_Spec( $title, $image_url, $price_rmb );
+			$this->state        = PPW_Workflow_State::PRICING_ENGINE;
+			return $this->execute();
+		} catch ( InvalidArgumentException $e ) {
+			PPW_Logger::error( "[Workflow-{$this->order_id}] Operator input failed validation: {$e->getMessage()}" );
+			$this->state = PPW_Workflow_State::FAILED;
+			return null;
+		}
+	}
+
+	private function trigger_human_in_the_loop_alert(): void {
+		$source   = $this->sanitized_url ?? $this->raw_url;
+		$alert_msg = "ALERT: Order ID {$this->order_id} requires manual specification entry. Source URL: {$source}";
+
+		if ( null !== $this->alert_callback ) {
+			( $this->alert_callback )( $this->order_id, $alert_msg );
+		} else {
+			PPW_Logger::warning( "No alert hook registered! Admin notification missed: {$alert_msg}" );
+		}
+	}
+
+	private static function generate_uuid(): string {
+		return wp_generate_uuid4();
+	}
+}

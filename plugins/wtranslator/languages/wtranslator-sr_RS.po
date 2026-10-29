@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: sr_RS <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:57+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: sr_RS\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress додатак за превођење"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Професионални додатак за превођење веб страница помоћу Google преводиоца. Потпуно функционалан, самосталан; није потребан спољни API."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WПреводилац"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Немате довољна овлашћења за приступ овој страници."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "Подешавања WTranslator-а"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Подешавања су успешно сачувана!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Ваши дељени подаци о коришћењу су избрисани."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Хвала! Анонимно дељење коришћења је омогућено."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Опције виџета"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Конфигуришите како се прекидач језика приказује на вашем сајту"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Изглед виџета"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Падајући мени"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Плутајући"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Само заставе"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Заставе + Име"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Како би требало да изгледа прекидач језика"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Преведи са"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Изворни језик за превод"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Отвори правац"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Горе"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Доле"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Смер отварања падајућег менија"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Прикажи плутајући селектор језика"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Не"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Доле лево"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Доле десно"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Горе лево"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Горе десно"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Опција „Прикажи плутајући селектор језика“ је најлакша и најпогоднија за већину веб локација."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Прикажи у менију"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Ниједан -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Додајте прекидач језика у мени за навигацију"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "CSS селектора омотача"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "CSS селектор за прилагођени омотачки елемент"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Преглед"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Исти прекидач се појављује на вашем сајту. Ажурира се када сачувате."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Напредне опције"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Додатне опције конфигурације"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Имена на матерњем језику"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Прикажи имена језика у њиховом изворном облику"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Аутоматски прелазак на језик посетиоца"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "При првој посети (још увек нема колачића за језик), предлаже језик из заглавља Accept-Language прегледача или из заглавља земље Cloudflare-а када ваш сајт користи Cloudflare. Не користе се географски API-ји трећих страна."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "URL поддиректоријума и URL поддомена"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "URL поддиректоријума (нпр. example.com/ar/) и URL поддомена (нпр. es.example.com) су доступни у WTranslator Cloud-у — управљајте њима са једне контролне табле."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Избор језика"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Изаберите које језике желите да омогућите"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Означи све"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Опозови избор свих"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Превуците да бисте променили редослед"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "САВЕТ: Да бисте променили редослед језика, једноставно их превуците и отпустите на горњој листи."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Приватност и опционо дељење коришћења"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator ради у потпуности без слања било каквих података нашим серверима. Ако се пријавите, прикупљамо само податке наведене у наставку ради побољшања компатибилности. Ово можете искључити у било ком тренутку."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "Дозволи дељење анонимних детаља сајта са WTranslator.com"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Дели се када је омогућено: URL сајта, назив сајта, верзија додатка, верзија WordPress-а, верзија PHP-а и локалне поставке. Садржај посетилаца се не шаље."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Политика приватности"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Такође поделите имејл адресу администратора WordPress-а за савете за подршку (опционо)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Сачувај измене"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Безбедносна провера није успела. Молимо покушајте поново."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Изаберите језик"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "Помозите нам да побољшамо WTranslator (опционо)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Ако дозволите, WTranslator може да дели анонимне детаље сајта (URL сајта, верзије WordPress/PHP/додатака и локалне подешавања) са WTranslator.com како бисмо могли да побољшамо компатибилност. Превод наставља да ради у оба смера. Ово можете променити у било ком тренутку у Подешавања → WTranslator → Приватност."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Дозволи анонимно дељење коришћења"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Не хвала"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Детаљи о приватности"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Немате дозволу да ово урадите."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Текстови су потребни"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Потребан је текст"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Превод није успео"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Подешавања"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "Неовлашћено"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Кеш меморија је успешно обрисана"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Брисање кеша није успело"

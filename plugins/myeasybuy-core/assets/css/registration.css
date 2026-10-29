@@ -1,0 +1,91 @@
+.myeasybuy-auth {
+	max-width: 520px;
+	margin: 32px auto 48px;
+	padding: 0 16px;
+}
+
+.myeasybuy-auth__card {
+	background: #fff;
+	border: 1px solid #eceef1;
+	border-radius: 12px;
+	padding: 28px 32px 24px;
+	box-shadow: 0 8px 24px rgba(20, 20, 20, 0.06);
+	color: #141414;
+}
+
+.myeasybuy-auth__title {
+	margin: 0 0 8px;
+	font-size: 1.6rem;
+	line-height: 1.3;
+	color: #222222;
+}
+
+.myeasybuy-auth__desc {
+	margin: 0 0 20px;
+	color: #222222;
+}
+
+.myeasybuy-auth .woocommerce-form-row {
+	margin-bottom: 16px;
+}
+
+.myeasybuy-auth .form-row-first,
+.myeasybuy-auth .form-row-last {
+	width: 48%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.myeasybuy-auth .form-row-first {
+	margin-right: 4%;
+}
+
+.myeasybuy-auth .woocommerce-form-register__submit,
+.myeasybuy-auth .woocommerce-form-login__submit {
+	width: 100%;
+	margin-top: 4px;
+}
+
+.myeasybuy-auth__switch {
+	margin: 20px 0 0;
+	padding-top: 16px;
+	border-top: 1px solid #eef0f2;
+	text-align: center;
+}
+
+.myeasybuy-auth__switch a {
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.myeasybuy-auth-banner {
+	margin: 0 0 24px;
+	padding: 14px 18px;
+	background: #fff4ec;
+	border: 1px solid #ffe3cf;
+	border-radius: 10px;
+}
+
+.myeasybuy-auth-banner p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.myeasybuy-auth--logged-in {
+	text-align: center;
+	padding: 24px;
+	background: #f6f7f7;
+	border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+	.myeasybuy-auth .form-row-first,
+	.myeasybuy-auth .form-row-last {
+		width: 100%;
+		margin-right: 0;
+	}
+}

@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: my_MM <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: my_MM\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress ဘာသာပြန်ပလပ်အင်"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Google Translate မှ ပံ့ပိုးပေးသော ပရော်ဖက်ရှင်နယ် ဝဘ်ဆိုက်ဘာသာပြန် plugin။ အပြည့်အဝ လုပ်ဆောင်နိုင်သော သီးခြားဘာသာပြန် plugin ဖြစ်ပြီး ပြင်ပ API မလိုအပ်ပါ။"
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "W ဘာသာပြန်သူ"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "ဤစာမျက်နှာကို ဝင်ရောက်ကြည့်ရှုရန် သင့်တွင် လုံလောက်သော ခွင့်ပြုချက်များ မရှိပါ။"
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "W ဘာသာပြန်သူ ဆက်တင်များ"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "ဆက်တင်များကို အောင်မြင်စွာ သိမ်းဆည်းပြီးပါပြီ။"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "သင်မျှဝေထားသော အသုံးပြုမှုဒေတာကို ဖျက်လိုက်ပါပြီ။"
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "ကျေးဇူးတင်ပါတယ်။ အမည်မဖော်ဘဲ အသုံးပြုမှုမျှဝေခြင်းကို ဖွင့်ထားပါသည်။"
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "ဝစ်ဂျက် ရွေးချယ်စရာများ"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "သင့်ဆိုက်တွင် ဘာသာစကားပြောင်းလဲသည့်ကိရိယာ မည်သို့ပေါ်လာသည်ကို ပြင်ဆင်သတ်မှတ်ပါ"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "ဝစ်ဂျက်ပုံစံ"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "ကျသည်"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "ပေါလောမျောပါ"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "အလံများသာ"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "အလံများ + အမည်"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "ဘာသာစကားပြောင်းလဲကိရိယာ ပေါ်လာသင့်ပုံ"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "မှ ဘာသာပြန်ပါ"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "ဘာသာပြန်ရန်အတွက် မူရင်းဘာသာစကား"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "ပွင့်လင်းသော ဦးတည်ချက်"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "အပေါ်"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "အောက်သို့"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "dropdown ပွင့်လာမည့် ဦးတည်ရာ"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "ရေပေါ်ဘာသာစကားရွေးချယ်ကိရိယာကိုပြပါ"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "မဟုတ်ပါ"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "အောက်ဘယ်ဘက်"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "အောက်ညာဘက်"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "ဘယ်ဘက်အပေါ်ထောင့်"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "အပေါ်ညာဘက်"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Show floating language selector option ဟာ ဝဘ်ဆိုက်အများစုအတွက် အလွယ်ကူဆုံးနဲ့ အသင့်တော်ဆုံးပါပဲ။"
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "မီနူးတွင်ပြပါ"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- တစ်ခုမှ မရှိဘူး -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "လမ်းညွှန်မီနူးသို့ ဘာသာစကားပြောင်းလဲသည့်ကိရိယာထည့်ပါ"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Wrapper ရွေးချယ်ရေး CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "စိတ်ကြိုက် wrapper element အတွက် CSS selector"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "အစမ်းကြည့်ရှုခြင်း"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "သင့်ဆိုက်တွင် တူညီသော switcher ပေါ်လာပါသည်။ သင်သိမ်းဆည်းသည့်အခါ အပ်ဒိတ်လုပ်ပါမည်။"
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "အဆင့်မြင့် ရွေးချယ်စရာများ"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "နောက်ထပ် ဖွဲ့စည်းပုံ ရွေးချယ်စရာများ"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "မိခင်ဘာသာစကားအမည်များ"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "ဘာသာစကားအမည်များကို ၎င်းတို့၏ မိခင်ပုံစံဖြင့် ပြပါ"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "လာရောက်လည်ပတ်သူဘာသာစကားသို့ အလိုအလျောက်ပြောင်းပါ"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "ပထမဆုံးအကြိမ် ဝင်ရောက်ကြည့်ရှုသည့်အခါ (ဘာသာစကားကွတ်ကီး မရှိသေးပါ)၊ browser ၏ Accept-Language header မှ သို့မဟုတ် သင့်ဆိုက်သည် Cloudflare ကိုအသုံးပြုသည့်အခါ Cloudflare နိုင်ငံ header မှ ဘာသာစကားတစ်ခုကို အကြံပြုပါသည်။ ပြင်ပ geo API များကို အသုံးမပြုပါ။"
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "ဆပ်ဒိုင်ထရီ URL နှင့် ဆပ်ဒိုမိန်း URL"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "WTranslator Cloud တွင် Sub-directory URL (ဥပမာ example.com/ar/) နှင့် Sub-domain URL (ဥပမာ es.example.com) တို့ကို ရရှိနိုင်ပါသည် — dashboard တစ်ခုတည်းမှ စီမံခန့်ခွဲနိုင်ပါသည်။"
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "ဘာသာစကားရွေးချယ်မှု"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "ဘယ်ဘာသာစကားတွေကို ဖွင့်ရမလဲ ရွေးချယ်ပါ"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "အားလုံးကို စစ်ဆေးပါ"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "အားလုံးကို အမှန်ခြစ်ဖြုတ်ပါ"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "ပြန်လည်စီရန် ဆွဲယူပါ"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "အရိပ်အမြွက်- ဘာသာစကားများကို ပြန်လည်စီစဉ်ရန်အတွက် အထက်ပါစာရင်းထဲတွင် ၎င်းတို့ကို ဆွဲယူ၍ ချပေးပါ။"
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "ကိုယ်ရေးကိုယ်တာနှင့် ရွေးချယ်နိုင်သော အသုံးပြုမှုမျှဝေခြင်း"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator သည် ကျွန်ုပ်တို့၏ဆာဗာများသို့ မည်သည့်ဒေတာမှ မပို့ဘဲ အပြည့်အဝအလုပ်လုပ်ပါသည်။ သင်ရွေးချယ်ပါက၊ လိုက်ဖက်ညီမှုကို ပိုမိုကောင်းမွန်စေရန်အတွက် အောက်တွင်ဖော်ပြထားသော အသေးစိတ်အချက်အလက်များကိုသာ ကျွန်ုပ်တို့စုဆောင်းပါသည်။ ၎င်းကို အချိန်မရွေးပိတ်နိုင်ပါသည်။"
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.com တွင် အမည်မဖော်လိုသော ဆိုက်အသေးစိတ်အချက်အလက်များကို မျှဝေခွင့်ပြုပါ"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "ဖွင့်ထားသည့်အခါ မျှဝေထားသည်- ဆိုက် URL၊ ဆိုက်အမည်၊ ပလပ်အင်ဗားရှင်း၊ WordPress ဗားရှင်း၊ PHP ဗားရှင်း နှင့် ဒေသ။ လာရောက်ကြည့်ရှုသူ အကြောင်းအရာ မပို့ပါ။"
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "ကိုယ်ရေးအချက်အလက်မူဝါဒ"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "ပံ့ပိုးမှု အကြံပြုချက်များအတွက် WordPress အက်ဒမင် အီးမေးလ်ကိုလည်း မျှဝေပါ (ရွေးချယ်နိုင်သည်)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "ပြောင်းလဲမှုများကို သိမ်းဆည်းပါ"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "လုံခြုံရေးစစ်ဆေးမှု မအောင်မြင်ပါ။ ထပ်မံကြိုးစားပါ။"
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "ဘာသာစကား ရွေးချယ်ပါ"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslator ကို တိုးတက်အောင် ကူညီပေးပါ (ရွေးချယ်နိုင်သည်)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "သင်ခွင့်ပြုပါက WTranslator သည် အမည်မဖော်လိုသော ဆိုက်အသေးစိတ်အချက်အလက်များ (ဆိုက် URL၊ WordPress/PHP/plugin ဗားရှင်းများနှင့် locale) ကို WTranslator.com နှင့် မျှဝေနိုင်သောကြောင့် ကျွန်ုပ်တို့သည် လိုက်ဖက်ညီမှုကို ပိုမိုကောင်းမွန်အောင် ပြုလုပ်နိုင်ပါသည်။ ဘာသာပြန်ဆိုချက်သည် မည်သည့်နည်းနှင့်မဆို အလုပ်လုပ်နေပါသည်။ ၎င်းကို ဆက်တင်များ → WTranslator → Privacy တွင် အချိန်မရွေး ပြောင်းလဲနိုင်ပါသည်။"
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "အမည်မဖော်ဘဲ အသုံးပြုမှုမျှဝေခြင်းကို ခွင့်ပြုပါ"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "ရပါတယ်ကျေးဇူးပါ"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "ကိုယ်ရေးကိုယ်တာ အသေးစိတ်အချက်အလက်များ"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "မင်းမှာ ဒီလိုလုပ်ဖို့ ခွင့်ပြုချက်မရှိဘူး။"
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "စာသားများ လိုအပ်ပါသည်"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "စာသား လိုအပ်ပါသည်"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "ဘာသာပြန်ဆိုခြင်း မအောင်မြင်ပါ"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "ဆက်တင်များ"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "ခွင့်ပြုချက်မရှိသော"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "ကက်ရှ်ကို အောင်မြင်စွာ ရှင်းလင်းပြီးပါပြီ"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "ကက်ရှ်ကို ရှင်းလင်း၍မရပါ"

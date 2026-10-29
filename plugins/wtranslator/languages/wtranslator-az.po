@@ -1,0 +1,327 @@
+# Copyright (C) 2026 WTranslator
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WTranslator - WordPress Translation Plugin 1.0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wtranslator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: az <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-18T04:54:42+00:00\n"
+"PO-Revision-Date: 2026-08-18 04:56+0000\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"Language: az\n"
+"X-Domain: wtranslator\n"
+
+#. Plugin Name of the plugin
+#: wtranslator.php
+msgid "WTranslator - WordPress Translation Plugin"
+msgstr "WTranslator - WordPress Tərcümə Plugini"
+
+#. Plugin URI of the plugin
+#: wtranslator.php
+msgid "https://wordpress.org/plugins/wtranslator/"
+msgstr "https://wordpress.org/plugins/wtranslator/"
+
+#. Description of the plugin
+#: wtranslator.php
+msgid "Professional website translation plugin powered by Google Translate. Fully functional standalone; no external API required."
+msgstr "Google Tərcümə tərəfindən dəstəklənən peşəkar veb sayt tərcümə plagini. Tam funksional müstəqil; xarici API tələb olunmur."
+
+#. Author of the plugin
+#: wtranslator.php
+#: wtranslator.php:577
+msgid "WTranslator"
+msgstr "WTranslator"
+
+#. Author URI of the plugin
+#: wtranslator.php
+msgid "https://profiles.wordpress.org/wtranslator/"
+msgstr "https://profiles.wordpress.org/wtranslator/"
+
+#: includes/class-admin-settings.php:24
+#: includes/class-admin-settings.php:404
+#: wtranslator.php:910
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Bu səhifəyə daxil olmaq üçün kifayət qədər icazəniz yoxdur."
+
+#: includes/class-admin-settings.php:45
+#: wtranslator.php:576
+msgid "WTranslator Settings"
+msgstr "WTranslator Parametrləri"
+
+#: includes/class-admin-settings.php:52
+#: wtranslator.php:2771
+msgid "Settings saved successfully!"
+msgstr "Parametrlər uğurla yadda saxlanıldı!"
+
+#: includes/class-admin-settings.php:62
+msgid "Your shared usage data has been deleted."
+msgstr "Paylaşılan istifadə məlumatlarınız silindi."
+
+#: includes/class-admin-settings.php:68
+msgid "Thanks! Anonymous usage sharing is enabled."
+msgstr "Təşəkkürlər! Anonim istifadə paylaşımı aktivdir."
+
+#: includes/class-admin-settings.php:86
+msgid "Widget Options"
+msgstr "Vidjet Seçimləri"
+
+#: includes/class-admin-settings.php:87
+msgid "Configure how the language switcher appears on your site"
+msgstr "Dil dəyişdiricinin saytınızda necə göründüyünü konfiqurasiya edin"
+
+#: includes/class-admin-settings.php:93
+msgid "Widget Look"
+msgstr "Vidjet Görünüşü"
+
+#: includes/class-admin-settings.php:98
+msgid "Dropdown"
+msgstr "Açılan menyu"
+
+#: includes/class-admin-settings.php:101
+msgid "Float"
+msgstr "Üzən"
+
+#: includes/class-admin-settings.php:104
+msgid "Flags Only"
+msgstr "Yalnız bayraqlar"
+
+#: includes/class-admin-settings.php:107
+msgid "Flags + Name"
+msgstr "Bayraqlar + Ad"
+
+#: includes/class-admin-settings.php:110
+msgid "How the language switcher should appear"
+msgstr "Dil dəyişdiricisi necə görünməlidir"
+
+#: includes/class-admin-settings.php:115
+msgid "Translate From"
+msgstr "Tərcümə edin"
+
+#: includes/class-admin-settings.php:125
+msgid "Source language for translation"
+msgstr "Tərcümə üçün mənbə dili"
+
+#: includes/class-admin-settings.php:130
+msgid "Open Direction"
+msgstr "Açıq İstiqamət"
+
+#: includes/class-admin-settings.php:135
+msgid "Up"
+msgstr "Yuxarı"
+
+#: includes/class-admin-settings.php:138
+msgid "Down"
+msgstr "Aşağı"
+
+#: includes/class-admin-settings.php:141
+msgid "Direction the dropdown opens"
+msgstr "Açılan menyunun açılma istiqaməti"
+
+#: includes/class-admin-settings.php:146
+msgid "Show Floating Language Selector"
+msgstr "Üzən Dil Seçicisini Göstər"
+
+#: includes/class-admin-settings.php:151
+msgid "No"
+msgstr "Xeyr"
+
+#: includes/class-admin-settings.php:154
+msgid "Bottom left"
+msgstr "Aşağı sol"
+
+#: includes/class-admin-settings.php:157
+msgid "Bottom right"
+msgstr "Aşağı sağ"
+
+#: includes/class-admin-settings.php:160
+msgid "Top left"
+msgstr "Yuxarı sol"
+
+#: includes/class-admin-settings.php:163
+msgid "Top right"
+msgstr "Yuxarı sağ"
+
+#: includes/class-admin-settings.php:166
+msgid "Show floating language selector option is the easiest and suitable for most websites."
+msgstr "Üzən dil seçicisini göstər seçimi ən asan və əksər veb saytlar üçün uyğundur."
+
+#: includes/class-admin-settings.php:171
+msgid "Show in Menu"
+msgstr "Menyuda göstər"
+
+#: includes/class-admin-settings.php:176
+msgid "- None -"
+msgstr "- Heç biri -"
+
+#: includes/class-admin-settings.php:191
+msgid "Add language switcher to a navigation menu"
+msgstr "Naviqasiya menyusuna dil dəyişdiricisi əlavə edin"
+
+#: includes/class-admin-settings.php:196
+msgid "Wrapper Selector CSS"
+msgstr "Sarğı Seçicisi CSS"
+
+#: includes/class-admin-settings.php:204
+msgid "CSS selector for custom wrapper element"
+msgstr "Xüsusi sarğı elementi üçün CSS seçicisi"
+
+#: includes/class-admin-settings.php:208
+msgid "Preview"
+msgstr "Önizləmə"
+
+#: includes/class-admin-settings.php:217
+msgid "Same switcher appears on your site. Updates when you save."
+msgstr "Eyni dəyişdirici saytınızda da görünür. Yadda saxladığınız zaman yenilənir."
+
+#: includes/class-admin-settings.php:228
+msgid "Advanced Options"
+msgstr "Ətraflı Seçimlər"
+
+#: includes/class-admin-settings.php:230
+msgid "Additional configuration options"
+msgstr "Əlavə konfiqurasiya seçimləri"
+
+#: includes/class-admin-settings.php:243
+msgid "Native Language Names"
+msgstr "Ana dili adları"
+
+#: includes/class-admin-settings.php:247
+msgid "Show language names in their native form"
+msgstr "Dil adlarını öz doğma formalarında göstərin"
+
+#: includes/class-admin-settings.php:258
+msgid "Auto switch to visitor language"
+msgstr "Ziyarətçi dilinə avtomatik keçid"
+
+#: includes/class-admin-settings.php:262
+msgid "On first visit (no language cookie yet), suggests a language from the browser’s Accept-Language header, or from the Cloudflare country header when your site uses Cloudflare. No third-party geo APIs are used."
+msgstr "İlk ziyarətdə (hələlik dil kukisi yoxdur), saytınız Cloudflare istifadə etdikdə brauzerin Accept-Language başlığından və ya Cloudflare ölkə başlığından bir dil təklif edir. Üçüncü tərəf coğrafi API-lərindən istifadə edilmir."
+
+#: includes/class-admin-settings.php:267
+msgid "Sub-directory URL & Sub-domain URL"
+msgstr "Alt qovluq URL-i və Alt domen URL-i"
+
+#: includes/class-admin-settings.php:269
+msgid "Sub-directory URL (e.g. example.com/ar/) and Sub-domain URL (e.g. es.example.com) are available in WTranslator Cloud — manage from one dashboard."
+msgstr "Alt qovluq URL-i (məsələn, example.com/ar/) və Alt domen URL-i (məsələn, es.example.com) WTranslator Cloud-da mövcuddur — bir idarəetmə panelindən idarə edin."
+
+#: includes/class-admin-settings.php:272
+msgid "WTranslator Cloud"
+msgstr "WTranslator Cloud"
+
+#: includes/class-admin-settings.php:287
+msgid "Language Selection"
+msgstr "Dil Seçimi"
+
+#: includes/class-admin-settings.php:288
+msgid "Select which languages to enable"
+msgstr "Aktivləşdiriləcək dilləri seçin"
+
+#: includes/class-admin-settings.php:292
+msgid "Check All"
+msgstr "Hamısını Yoxlayın"
+
+#: includes/class-admin-settings.php:293
+msgid "Uncheck All"
+msgstr "Hamısını işarədən çıxarın"
+
+#: includes/class-admin-settings.php:326
+msgid "Drag to reorder"
+msgstr "Yenidən sıralamaq üçün sürüşdürün"
+
+#: includes/class-admin-settings.php:332
+msgid "HINT: To reorder the languages, simply drag and drop them in the list above."
+msgstr "İP: Dilləri yenidən sıralamaq üçün sadəcə onları yuxarıdakı siyahıya sürüşdürüb buraxın."
+
+#: includes/class-admin-settings.php:349
+msgid "Privacy & optional usage sharing"
+msgstr "Məxfilik və isteğe bağlı istifadə paylaşımı"
+
+#: includes/class-admin-settings.php:351
+msgid "WTranslator works fully without sending any data to our servers. If you opt in, we only collect the details listed below to improve compatibility. You can turn this off anytime."
+msgstr "WTranslator serverlərimizə heç bir məlumat göndərmədən tam işləyir. Əgər qoşulsanız, uyğunluğu artırmaq üçün yalnız aşağıda sadalanan məlumatları toplayırıq. Bunu istənilən vaxt söndürə bilərsiniz."
+
+#: includes/class-admin-settings.php:363
+msgid "Allow sharing anonymous site details with wtranslator.com"
+msgstr "WTranslator.com ilə anonim sayt məlumatlarını paylaşmağa icazə verin"
+
+#: includes/class-admin-settings.php:366
+msgid "Shared when enabled: site URL, site name, plugin version, WordPress version, PHP version, and locale. No visitor content is sent."
+msgstr "Aktivləşdirildikdə paylaşılır: sayt URL-i, sayt adı, plagin versiyası, WordPress versiyası, PHP versiyası və yerli parametr. Ziyarətçi məzmunu göndərilmir."
+
+#: includes/class-admin-settings.php:368
+msgid "Privacy policy"
+msgstr "Məxfilik siyasəti"
+
+#: includes/class-admin-settings.php:381
+msgid "Also share the WordPress admin email for support tips (optional)"
+msgstr "Dəstək məsləhətləri üçün WordPress admin e-poçtunu da paylaşın (isteğe bağlı)"
+
+#: includes/class-admin-settings.php:392
+msgid "Save Changes"
+msgstr "Dəyişiklikləri Yadda Saxla"
+
+#: includes/class-admin-settings.php:409
+msgid "Security check failed. Please try again."
+msgstr "Təhlükəsizlik yoxlaması uğursuz oldu. Yenidən cəhd edin."
+
+#: includes/class-language-manager.php:666
+msgid "Select Language"
+msgstr "Dil seçin"
+
+#: includes/class-usage-consent.php:142
+msgid "Help improve WTranslator (optional)"
+msgstr "WTranslator-u təkmilləşdirməyə kömək edin (isteğe bağlı)"
+
+#: includes/class-usage-consent.php:146
+msgid "If you allow it, WTranslator can share anonymous site details (site URL, WordPress/PHP/plugin versions, and locale) with wtranslator.com so we can improve compatibility. Translation keeps working either way. You can change this anytime in Settings → WTranslator → Privacy."
+msgstr "Əgər icazə versəniz, WTranslator anonim sayt məlumatlarını (sayt URL-i, WordPress/PHP/plugin versiyaları və yerli parametrlər) WTranslator.com ilə paylaşa bilər ki, uyğunluğu təkmilləşdirək. Tərcümə istənilən şəkildə işləməyə davam edir. Bunu istənilən vaxt Parametrlər → WTranslator → Məxfilik bölməsində dəyişə bilərsiniz."
+
+#: includes/class-usage-consent.php:154
+msgid "Allow anonymous usage sharing"
+msgstr "Anonim istifadə paylaşımına icazə verin"
+
+#: includes/class-usage-consent.php:157
+msgid "No thanks"
+msgstr "Xeyr, təşəkkür edirəm"
+
+#: includes/class-usage-consent.php:160
+msgid "Privacy details"
+msgstr "Məxfilik məlumatları"
+
+#: includes/class-usage-consent.php:173
+msgid "You do not have permission to do this."
+msgstr "Bunu etmək üçün icazəniz yoxdur."
+
+#: wtranslator.php:2662
+msgid "Texts are required"
+msgstr "Mətnlər tələb olunur"
+
+#: wtranslator.php:2688
+msgid "Text is required"
+msgstr "Mətn tələb olunur"
+
+#: wtranslator.php:2696
+msgid "Translation failed"
+msgstr "Tərcümə uğursuz oldu"
+
+#: wtranslator.php:2706
+msgid "Settings"
+msgstr "Parametrlər"
+
+#: wtranslator.php:2719
+#: wtranslator.php:2739
+msgid "Unauthorized"
+msgstr "İcazəsiz"
+
+#: wtranslator.php:2726
+msgid "Cache cleared successfully"
+msgstr "Keş uğurla təmizləndi"
+
+#: wtranslator.php:2728
+msgid "Failed to clear cache"
+msgstr "Keşi təmizləmək alınmadı"
