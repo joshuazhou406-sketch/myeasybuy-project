@@ -142,6 +142,9 @@ $meb_login_url = meb_with_return_url( $meb_u['login'] );
 			<?php else : ?>
 				</span>
 			<?php endif; ?>
+			<?php if ( $meb_google_url ) : ?>
+				<p class="meb-reg__google-note" style="margin:10px 0 0;font-size:12px;line-height:1.5;color:#888;text-align:center;">By continuing with Google, you accept the Myeasybuy User Registration Agreement and Myeasybuy Statement.</p>
+			<?php endif; ?>
 		</div>
 	</section>
 </main>
