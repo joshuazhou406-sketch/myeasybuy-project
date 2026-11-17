@@ -834,9 +834,32 @@
 		});
 
 		$(document).on('click', '.ppw-jd-detail-thumb', function () {
-			var image = $(this).data('image');
+			var $btn = $(this);
+			var video = $btn.attr('data-video') || '';
+			var image = $btn.attr('data-image') || '';
+			var $main = $btn.closest('.ppw-jd-detail-gallery').find('.ppw-jd-detail-main-image');
+			var $videoEl = $main.find('.ppw-jd-detail-main-video');
+			var $img = $main.find('.ppw-jd-detail-main-photo');
+
+			$btn.addClass('is-active').siblings('.ppw-jd-detail-thumb').removeClass('is-active');
+
+			if (video && $videoEl.length) {
+				if ($img.length) {
+					$img.attr('hidden', 'hidden');
+				}
+				$videoEl.removeAttr('hidden');
+				return;
+			}
+
 			if (image) {
-				$('.ppw-jd-detail-main-image img').attr('src', image);
+				if ($videoEl.length) {
+					var node = $videoEl.get(0);
+					if (node && node.pause) {
+						node.pause();
+					}
+					$videoEl.attr('hidden', 'hidden');
+				}
+				$img.removeAttr('hidden').attr('src', image);
 			}
 		});
 

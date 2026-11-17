@@ -518,6 +518,8 @@ final class PPW_WooCommerce_Sync {
 		update_post_meta( $product_id, $prefix . 'sku_count', is_array( $item['skus'] ?? null ) ? count( $item['skus'] ) : 0 );
 		update_post_meta( $product_id, $prefix . 'attributes', wp_json_encode( $item['attributes'] ?? array(), JSON_UNESCAPED_UNICODE ) );
 		update_post_meta( $product_id, '_ppw_source_platform', $platform );
+		update_post_meta( $product_id, '_ppw_video_url', esc_url_raw( (string) ( $item['video_url'] ?? '' ) ) );
+		update_post_meta( $product_id, '_ppw_video_cover', esc_url_raw( (string) ( $item['video_cover'] ?? '' ) ) );
 	}
 
 	/** @deprecated Use save_platform_meta(). */

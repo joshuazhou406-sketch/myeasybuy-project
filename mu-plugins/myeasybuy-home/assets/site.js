@@ -135,6 +135,36 @@
 		});
 	}
 
+	function placeLanguageSwitcher() {
+		var actions = document.querySelector('.meb-header__actions');
+		var switcher = document.getElementById('wtranslator-switcher');
+		if (!actions || !switcher || switcher.parentElement === actions) {
+			return !!switcher;
+		}
+
+		var account = actions.querySelector(':scope > a.meb-btn, :scope > .meb-account-menu');
+		if (account) {
+			actions.insertBefore(switcher, account);
+		} else {
+			actions.appendChild(switcher);
+		}
+
+		switcher.classList.remove(
+			'wtranslator-top-right',
+			'wtranslator-top-left',
+			'wtranslator-bottom-right',
+			'wtranslator-bottom-left'
+		);
+
+		var dropdown = switcher.querySelector('.wtranslator-dropdown');
+		if (dropdown) {
+			dropdown.classList.remove('open-up');
+			dropdown.classList.add('open-down');
+		}
+
+		return true;
+	}
+
 	document.addEventListener('DOMContentLoaded', function () {
 		initClock();
 		initSearchFocus();
@@ -142,5 +172,13 @@
 		initBackToTop();
 		initSignup();
 		initAccountMenu();
+		if (!placeLanguageSwitcher()) {
+			var observer = new MutationObserver(function () {
+				if (placeLanguageSwitcher()) {
+					observer.disconnect();
+				}
+			});
+			observer.observe(document.body, { childList: true, subtree: true });
+		}
 	});
 })();

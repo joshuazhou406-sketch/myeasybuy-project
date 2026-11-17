@@ -53,8 +53,49 @@ if ( is_array( $meb_cached_item ) && ! empty( $meb_cached_item['images'] ) && is
 	}
 }
 
-if ( empty( $meb_images ) ) {
+$meb_video_url   = (string) get_post_meta( $meb_pid, '_ppw_video_url', true );
+$meb_video_cover = (string) get_post_meta( $meb_pid, '_ppw_video_cover', true );
+if ( '' === $meb_video_url && is_array( $meb_cached_item ) ) {
+	$meb_video_url = (string) ( $meb_cached_item['video_url'] ?? '' );
+}
+if ( '' === $meb_video_cover && is_array( $meb_cached_item ) && ! empty( $meb_cached_item['video_cover'] ) ) {
+	$meb_video_cover = (string) $meb_cached_item['video_cover'];
+}
+if ( '' === $meb_video_cover && ! empty( $meb_images[0] ) ) {
+	$meb_video_cover = (string) $meb_images[0];
+}
+
+if ( empty( $meb_images ) && '' === $meb_video_url ) {
 	$meb_push( wc_placeholder_img_src( 'large' ) );
+}
+
+$meb_slides = array();
+if ( '' !== $meb_video_url ) {
+	$meb_slides[] = array(
+		'type'   => 'video',
+		'src'    => $meb_video_url,
+		'poster' => $meb_video_cover,
+	);
+}
+foreach ( $meb_images as $meb_img ) {
+	$meb_slides[] = array(
+		'type'   => 'image',
+		'src'    => $meb_img,
+		'poster' => '',
+	);
+}
+$meb_first          = $meb_slides[0] ?? array(
+	'type'   => 'image',
+	'src'    => '',
+	'poster' => '',
+);
+$meb_first_is_video = 'video' === $meb_first['type'];
+$meb_stage_image    = '';
+foreach ( $meb_slides as $meb_slide ) {
+	if ( 'image' === $meb_slide['type'] ) {
+		$meb_stage_image = $meb_slide['src'];
+		break;
+	}
 }
 
 // Variations + attribute options for custom swatch / pill UI.
@@ -117,20 +158,34 @@ $meb_VISIBLE    = 6;
 			<!-- Left: vertical thumbs + main image -->
 			<div class="meb-pdp__media">
 				<div class="meb-pdp__thumbs" data-meb-thumbs>
-					<?php foreach ( $meb_images as $meb_i => $meb_img ) : ?>
-						<button type="button" class="meb-pdp__thumb<?php echo 0 === $meb_i ? ' is-active' : ''; ?><?php echo $meb_i >= $meb_VISIBLE ? ' is-extra' : ''; ?>" data-meb-thumb="<?php echo esc_url( $meb_img ); ?>"<?php echo $meb_i >= $meb_VISIBLE ? ' hidden' : ''; ?>>
-							<img src="<?php echo esc_url( $meb_img ); ?>" alt="" loading="lazy">
+					<?php foreach ( $meb_slides as $meb_i => $meb_slide ) : ?>
+						<?php
+						$meb_is_video = 'video' === $meb_slide['type'];
+						$meb_thumb    = $meb_is_video ? (string) $meb_slide['poster'] : (string) $meb_slide['src'];
+						?>
+						<button type="button" class="meb-pdp__thumb<?php echo 0 === $meb_i ? ' is-active' : ''; ?><?php echo $meb_is_video ? ' is-video' : ''; ?><?php echo $meb_i >= $meb_VISIBLE ? ' is-extra' : ''; ?>" data-meb-thumb data-meb-media="<?php echo esc_attr( $meb_slide['type'] ); ?>" data-meb-src="<?php echo esc_url( $meb_slide['src'] ); ?>"<?php echo $meb_i >= $meb_VISIBLE ? ' hidden' : ''; ?>>
+							<?php if ( '' !== $meb_thumb ) : ?>
+								<img src="<?php echo esc_url( $meb_thumb ); ?>" alt="" loading="lazy">
+							<?php endif; ?>
+							<?php if ( $meb_is_video ) : ?>
+								<span class="meb-pdp__play" aria-hidden="true"></span>
+							<?php endif; ?>
 						</button>
 					<?php endforeach; ?>
-					<?php if ( count( $meb_images ) > $meb_VISIBLE ) : ?>
+					<?php if ( count( $meb_slides ) > $meb_VISIBLE ) : ?>
 						<button type="button" class="meb-pdp__more-thumbs" data-meb-more-thumbs>
-							More<?php echo esc_html( (string) ( count( $meb_images ) - $meb_VISIBLE ) ); ?>
+							More<?php echo esc_html( (string) ( count( $meb_slides ) - $meb_VISIBLE ) ); ?>
 						</button>
 					<?php endif; ?>
 				</div>
 
 				<div class="meb-pdp__stage">
-					<img class="meb-pdp__main-img" data-meb-main-img src="<?php echo esc_url( $meb_images[0] ); ?>" alt="<?php echo esc_attr( $meb_product->get_name() ); ?>">
+					<?php if ( '' !== $meb_video_url ) : ?>
+						<video class="meb-pdp__main-video" data-meb-main-video controls playsinline preload="metadata"<?php echo $meb_video_cover ? ' poster="' . esc_url( $meb_video_cover ) . '"' : ''; ?> src="<?php echo esc_url( $meb_video_url ); ?>"<?php echo $meb_first_is_video ? '' : ' hidden'; ?>></video>
+					<?php endif; ?>
+					<?php if ( '' !== $meb_stage_image ) : ?>
+						<img class="meb-pdp__main-img" data-meb-main-img src="<?php echo esc_url( $meb_stage_image ); ?>" alt="<?php echo esc_attr( $meb_product->get_name() ); ?>"<?php echo $meb_first_is_video ? ' hidden' : ''; ?>>
+					<?php endif; ?>
 				</div>
 			</div>
 

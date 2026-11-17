@@ -45,7 +45,7 @@ final class PPW_Item_Get {
 		$cached    = get_transient( $cache_key );
 
 		if ( false !== $cached && is_array( $cached ) ) {
-			return $cached;
+			return self::finalize_item( $cached, $platform, $cache_key );
 		}
 
 		// Taobao Global listings (region=GLOBAL) fail OneBound item_get with format_check=fail.
@@ -54,9 +54,8 @@ final class PPW_Item_Get {
 			$world_tried = true;
 			$world       = self::fetch_from_world_page( $num_iid );
 			if ( null !== $world ) {
-				set_transient( $cache_key, $world, HOUR_IN_SECONDS );
 				PPW_Logger::info( "[PPW_Item_Get] using world.taobao.com page for {$num_iid}." );
-				return $world;
+				return self::finalize_item( $world, $platform, $cache_key );
 			}
 		}
 
@@ -107,23 +106,21 @@ final class PPW_Item_Get {
 			}
 
 			$normalized = self::normalize_item( $item, $num_iid, $platform );
-			set_transient( $cache_key, $normalized, HOUR_IN_SECONDS );
 
-			return $normalized;
+			return self::finalize_item( $normalized, $platform, $cache_key );
 		}
 
 		$fallback_item = self::resolve_fallback_item( $num_iid, $fallback, $platform );
 		if ( null !== $fallback_item ) {
 			PPW_Logger::info( "[PPW_Item_Get] item_get unavailable for {$platform}:{$num_iid}, using search snapshot fallback." );
-			return $fallback_item;
+			return self::finalize_item( $fallback_item, $platform, '' );
 		}
 
 		if ( PPW_Platform::TAOBAO === $platform && $unreadable && ! $world_tried ) {
 			$world = self::fetch_from_world_page( $num_iid );
 			if ( null !== $world ) {
-				set_transient( $cache_key, $world, HOUR_IN_SECONDS );
 				PPW_Logger::info( "[PPW_Item_Get] item_get unreadable for {$num_iid}, using world.taobao.com page." );
-				return $world;
+				return self::finalize_item( $world, $platform, $cache_key );
 			}
 		}
 
@@ -185,11 +182,11 @@ final class PPW_Item_Get {
 	/**
 	 * @return array<string, mixed>|WP_Error
 	 */
-	private static function request_api( string $url ) {
+	private static function request_api( string $url, int $timeout = 25 ) {
 		$response = wp_remote_get(
 			$url,
 			array(
-				'timeout'   => 25,
+				'timeout'   => $timeout,
 				'sslverify' => true,
 				'headers'   => array(
 					'Accept'     => 'application/json',
@@ -340,6 +337,12 @@ final class PPW_Item_Get {
 
 		$skus       = self::normalize_skus( $item['skus'] ?? null );
 		$attributes = self::build_attributes_from_item( $item, $skus );
+		$embedded   = '';
+		if ( ! empty( $item['video'] ) ) {
+			$embedded = self::extract_video_url(
+				is_array( $item['video'] ) ? array( 'video' => $item['video'] ) : array( 'video' => (string) $item['video'] )
+			);
+		}
 
 		return array(
 			'num_iid'              => (string) ( $item['num_iid'] ?? $num_iid ),
@@ -361,6 +364,7 @@ final class PPW_Item_Get {
 			'skus'                 => $skus,
 			'platform'             => $platform,
 			'from_search_fallback' => false,
+			'embedded_video_url'   => $embedded,
 		);
 	}
 
@@ -717,5 +721,335 @@ final class PPW_Item_Get {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Attach item_get_video (same key/secret as item_get) and cache the detail payload.
+	 *
+	 * @param array<string, mixed> $item Item payload.
+	 * @return array<string, mixed>
+	 */
+	private static function finalize_item( array $item, string $platform, string $cache_key ): array {
+		$already = ! empty( $item['video_fetched'] );
+		$item    = self::attach_video( $item, $platform );
+		if ( '' !== $cache_key && ! $already ) {
+			set_transient( $cache_key, $item, HOUR_IN_SECONDS );
+		}
+		return $item;
+	}
+
+	/**
+	 * @param array<string, mixed> $item Item payload.
+	 * @return array<string, mixed>
+	 */
+	private static function attach_video( array $item, string $platform ): array {
+		if ( ! empty( $item['video_fetched'] ) ) {
+			return $item;
+		}
+
+		$platform = PPW_Platform::normalize( (string) ( $item['platform'] ?? $platform ) );
+		$num_iid  = preg_replace( '/\D/', '', (string) ( $item['num_iid'] ?? '' ) );
+		$embedded = self::normalize_image_url( (string) ( $item['embedded_video_url'] ?? '' ) );
+
+		$fetched = ( '' !== $num_iid ) ? self::fetch_video( $num_iid, $platform ) : array(
+			'url'    => '',
+			'cover'  => '',
+			'failed' => true,
+		);
+
+		if ( ! empty( $fetched['failed'] ) ) {
+			if ( '' !== $embedded ) {
+				$item['video_url']   = $embedded;
+				$item['video_cover'] = (string) ( $item['video_cover'] ?? ( $item['pic_url'] ?? '' ) );
+			}
+			return $item;
+		}
+
+		unset( $item['embedded_video_url'] );
+
+		$url   = '' !== (string) ( $fetched['url'] ?? '' ) ? (string) $fetched['url'] : $embedded;
+		$cover = '' !== (string) ( $fetched['cover'] ?? '' ) ? (string) $fetched['cover'] : (string) ( $item['pic_url'] ?? '' );
+
+		$item['video_url']     = $url;
+		$item['video_cover']   = $cover;
+		$item['video_fetched'] = true;
+
+		return $item;
+	}
+
+	/**
+	 * OneBound item_get_video. Falls back to the documented item_video alias when the name is not enabled.
+	 * JD needs a second call: num_iid returns video_id, then video_id returns the play URL.
+	 *
+	 * @return array{url: string, cover: string, failed: bool}
+	 */
+	private static function fetch_video( string $num_iid, string $platform ): array {
+		$empty = array(
+			'url'    => '',
+			'cover'  => '',
+			'failed' => false,
+		);
+
+		$creds = PPW_Platform::item_get_credentials( $platform );
+		if ( '' === $creds['key'] || '' === $creds['secret'] ) {
+			$empty['failed'] = true;
+			return $empty;
+		}
+
+		$cache_key = 'ppw_item_video_v1_' . md5( $platform . '|' . $num_iid );
+		$cached    = get_transient( $cache_key );
+		if ( is_array( $cached ) && array_key_exists( 'url', $cached ) ) {
+			return array(
+				'url'    => (string) ( $cached['url'] ?? '' ),
+				'cover'  => (string) ( $cached['cover'] ?? '' ),
+				'failed' => ! empty( $cached['failed'] ),
+			);
+		}
+
+		$result = $empty;
+
+		foreach ( array( 'item_get_video', 'item_video' ) as $api_name ) {
+			$call = self::call_video_api( $creds, $num_iid, $platform, $api_name, '' );
+			if ( ! empty( $call['not_found'] ) ) {
+				continue;
+			}
+			if ( ! empty( $call['failed'] ) ) {
+				$result['failed'] = true;
+				break;
+			}
+
+			$url      = (string) ( $call['url'] ?? '' );
+			$cover    = (string) ( $call['cover'] ?? '' );
+			$video_id = (string) ( $call['video_id'] ?? '' );
+
+			if ( '' === $url && '' !== $video_id && PPW_Platform::JD === PPW_Platform::normalize( $platform ) ) {
+				$second = self::call_video_api( $creds, $num_iid, $platform, $api_name, $video_id );
+				if ( empty( $second['failed'] ) && empty( $second['not_found'] ) ) {
+					if ( '' !== (string) ( $second['url'] ?? '' ) ) {
+						$url = (string) $second['url'];
+					}
+					if ( '' !== (string) ( $second['cover'] ?? '' ) ) {
+						$cover = (string) $second['cover'];
+					}
+				}
+			}
+
+			$result = array(
+				'url'    => $url,
+				'cover'  => $cover,
+				'failed' => false,
+			);
+			PPW_Logger::info( '[PPW_Item_Get] ' . $api_name . " {$platform}:{$num_iid} video=" . ( '' !== $url ? 'yes' : 'no' ) );
+			break;
+		}
+
+		set_transient( $cache_key, $result, ! empty( $result['failed'] ) ? 5 * MINUTE_IN_SECONDS : HOUR_IN_SECONDS );
+
+		return $result;
+	}
+
+	/**
+	 * @param array{key: string, secret: string, url: string} $creds Credentials.
+	 * @return array{url: string, cover: string, video_id: string, not_found: bool, failed: bool}
+	 */
+	private static function call_video_api( array $creds, string $num_iid, string $platform, string $api_name, string $video_id ): array {
+		$blank = array(
+			'url'       => '',
+			'cover'     => '',
+			'video_id'  => '',
+			'not_found' => false,
+			'failed'    => true,
+		);
+
+		$params = array(
+			'key'         => $creds['key'],
+			'secret'      => $creds['secret'],
+			'num_iid'     => $num_iid,
+			'cache'       => 'no',
+			'lang'        => 'zh-CN',
+			'result_type' => 'json',
+		);
+
+		if ( PPW_Platform::JD === PPW_Platform::normalize( $platform ) ) {
+			$params['domain_type'] = 'jd';
+			$params['video_id']    = $video_id;
+		}
+
+		$last_error = '';
+		foreach ( self::video_servers( $platform, $api_name ) as $server_base ) {
+			$url      = rtrim( $server_base, '/' ) . '/?' . http_build_query( $params );
+			$response = self::request_api( $url, 18 );
+			if ( is_wp_error( $response ) ) {
+				$last_error = $response->get_error_message();
+				if ( false !== strpos( $last_error, 'HTTP 404' ) ) {
+					$blank['not_found'] = true;
+					$blank['failed']    = false;
+					return $blank;
+				}
+				continue;
+			}
+
+			$code = (string) ( $response['error_code'] ?? '' );
+			if ( in_array( $code, array( '4010', '4012', '4005', '4006' ), true ) ) {
+				$blank['not_found'] = true;
+				$blank['failed']    = false;
+				return $blank;
+			}
+			if ( in_array( $code, array( '4000', '4001', '4002', '4017', '5000' ), true ) ) {
+				$last_error = (string) ( $response['reason'] ?? $response['error'] ?? $code );
+				continue;
+			}
+
+			$parsed             = self::parse_video_response( $response );
+			$parsed['not_found'] = false;
+			$parsed['failed']    = false;
+			return $parsed;
+		}
+
+		if ( '' !== $last_error ) {
+			PPW_Logger::warning( '[PPW_Item_Get] ' . $api_name . " failed for {$platform}:{$num_iid}: {$last_error}" );
+		}
+
+		return $blank;
+	}
+
+	/**
+	 * @return array<int, string>
+	 */
+	private static function video_servers( string $platform, string $api_name ): array {
+		$platform = PPW_Platform::normalize( $platform );
+		$path     = $platform . '/' . $api_name;
+		$servers  = array();
+		foreach ( array( 'api-gw', 'api-1', 'api-2' ) as $host ) {
+			$servers[] = "https://{$host}.onebound.cn/{$path}";
+		}
+		return $servers;
+	}
+
+	/**
+	 * @param array<string, mixed> $data API payload.
+	 * @return array{url: string, cover: string, video_id: string}
+	 */
+	private static function parse_video_response( array $data ): array {
+		return array(
+			'url'      => self::normalize_image_url( self::extract_video_url( $data ) ),
+			'cover'    => self::extract_video_cover( $data ),
+			'video_id' => self::extract_video_id( $data ),
+		);
+	}
+
+	/**
+	 * @param array<string, mixed> $data API payload.
+	 */
+	private static function extract_video_id( array $data ): string {
+		$nodes = array( $data );
+		if ( isset( $data['item'] ) && is_array( $data['item'] ) ) {
+			$nodes[] = $data['item'];
+		}
+
+		foreach ( $nodes as $node ) {
+			foreach ( array( 'video_id', 'videoId', 'mediaId', 'media_id' ) as $key ) {
+				if ( ! isset( $node[ $key ] ) || is_array( $node[ $key ] ) ) {
+					continue;
+				}
+				$id = trim( (string) $node[ $key ] );
+				if ( '' !== $id && 'null' !== strtolower( $id ) && '0' !== $id ) {
+					return $id;
+				}
+			}
+		}
+
+		return '';
+	}
+
+	/**
+	 * @param array<string, mixed> $data API payload.
+	 */
+	private static function extract_video_cover( array $data ): string {
+		$nodes = array();
+		if ( isset( $data['item'] ) && is_array( $data['item'] ) ) {
+			$nodes[] = $data['item'];
+		}
+		$nodes[] = $data;
+
+		foreach ( $nodes as $node ) {
+			$video = $node['video'] ?? null;
+			if ( is_array( $video ) ) {
+				foreach ( array( 'pic', 'pic_url', 'cover', 'cover_url', 'coverUrl', 'imageUrl' ) as $key ) {
+					if ( ! empty( $video[ $key ] ) && is_string( $video[ $key ] ) ) {
+						return self::normalize_image_url( $video[ $key ] );
+					}
+				}
+			}
+			foreach ( array( 'video_cover', 'cover_url', 'coverUrl', 'pic_url' ) as $key ) {
+				if ( ! empty( $node[ $key ] ) && is_string( $node[ $key ] ) && ! self::looks_like_video_url( $node[ $key ] ) ) {
+					return self::normalize_image_url( $node[ $key ] );
+				}
+			}
+		}
+
+		return '';
+	}
+
+	/**
+	 * @param mixed $node Response node.
+	 */
+	private static function extract_video_url( $node, int $depth = 0 ): string {
+		if ( $depth > 6 ) {
+			return '';
+		}
+		if ( is_string( $node ) ) {
+			return self::looks_like_video_url( $node ) ? trim( $node ) : '';
+		}
+		if ( ! is_array( $node ) ) {
+			return '';
+		}
+
+		foreach ( $node as $key => $value ) {
+			$key_name = is_string( $key ) ? strtolower( $key ) : '';
+			if ( is_string( $value ) ) {
+				$value = trim( $value );
+				if ( self::is_video_field( $key_name ) && self::looks_like_video_url( $value ) ) {
+					return $value;
+				}
+				if ( self::looks_like_video_url( $value ) ) {
+					return $value;
+				}
+				continue;
+			}
+			if ( is_array( $value ) ) {
+				$found = self::extract_video_url( $value, $depth + 1 );
+				if ( '' !== $found ) {
+					return $found;
+				}
+			}
+		}
+
+		return '';
+	}
+
+	private static function is_video_field( string $key ): bool {
+		return in_array(
+			$key,
+			array( 'video', 'video_url', 'videourl', 'play_url', 'playurl', 'mediaurl', 'media_url', 'videoplayaddress', 'play_address' ),
+			true
+		);
+	}
+
+	private static function looks_like_video_url( string $url ): bool {
+		$url = trim( $url );
+		if ( '' === $url || self::looks_like_image_url( $url ) ) {
+			return false;
+		}
+		if ( ! preg_match( '#^(https?:)?//#i', $url ) ) {
+			return false;
+		}
+
+		return (bool) preg_match( '~\.(mp4|m3u8|webm|mov|m4v)(\?|#|$)~i', $url )
+			|| (bool) preg_match( '#(cloud\.video\.taobao\.com|video\.taobao\.com|jvod\.300hu\.com|vod\.300hu\.com|video\.jd\.com)#i', $url );
+	}
+
+	private static function looks_like_image_url( string $url ): bool {
+		return (bool) preg_match( '~\.(jpe?g|png|gif|webp|bmp|svg)(\?|#|$)~i', trim( $url ) );
 	}
 }

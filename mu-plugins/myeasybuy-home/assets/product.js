@@ -8,6 +8,7 @@
 		}
 
 		var mainImg = root.querySelector('[data-meb-main-img]');
+		var mainVideo = root.querySelector('[data-meb-main-video]');
 		var priceEl = root.querySelector('[data-meb-price]');
 		var varInput = root.querySelector('[data-meb-variation-id]');
 		var form = root.querySelector('[data-meb-cart-form]');
@@ -19,14 +20,45 @@
 			variations = [];
 		}
 
-		// Gallery thumbnails
+		function setActiveThumb(thumb) {
+			root.querySelectorAll('[data-meb-thumb]').forEach(function (t) {
+				t.classList.toggle('is-active', t === thumb);
+			});
+		}
+
+		function showVideo() {
+			if (!mainVideo) {
+				return;
+			}
+			if (mainImg) {
+				mainImg.hidden = true;
+			}
+			mainVideo.hidden = false;
+		}
+
+		function showImage(src) {
+			if (mainVideo) {
+				mainVideo.pause();
+				mainVideo.hidden = true;
+			}
+			if (mainImg && src) {
+				mainImg.hidden = false;
+				mainImg.src = src;
+			}
+		}
+
+		// Gallery thumbnails. The first slide is the product video when one exists.
 		root.addEventListener('click', function (e) {
 			var thumb = e.target.closest('[data-meb-thumb]');
-			if (thumb && mainImg) {
-				mainImg.src = thumb.getAttribute('data-meb-thumb');
-				root.querySelectorAll('[data-meb-thumb]').forEach(function (t) {
-					t.classList.toggle('is-active', t === thumb);
-				});
+			if (thumb) {
+				var media = thumb.getAttribute('data-meb-media') || 'image';
+				var src = thumb.getAttribute('data-meb-src') || '';
+				if (media === 'video') {
+					showVideo();
+				} else if (src) {
+					showImage(src);
+				}
+				setActiveThumb(thumb);
 				return;
 			}
 
@@ -79,7 +111,8 @@
 			return null;
 		}
 
-		function pickSwatch(btn) {
+		function pickSwatch(btn, options) {
+			options = options || {};
 			var groupKey = btn.getAttribute('data-meb-swatch');
 			var value = btn.getAttribute('data-value') || '';
 			var group = root.querySelector('[data-meb-attr-group="' + groupKey + '"]');
@@ -102,9 +135,6 @@
 			}
 
 			var swImg = btn.getAttribute('data-image');
-			if (swImg && mainImg) {
-				mainImg.src = swImg;
-			}
 
 			var matched = matchVariation();
 			if (varInput) {
@@ -113,8 +143,15 @@
 			if (matched && matched.price_html && priceEl) {
 				priceEl.textContent = matched.price_html;
 			}
-			if (matched && matched.image && mainImg) {
-				mainImg.src = matched.image;
+			if (!options.keepMedia) {
+				var nextImg = (matched && matched.image) || swImg || '';
+				if (nextImg) {
+					showImage(nextImg);
+					root.querySelectorAll('[data-meb-thumb]').forEach(function (t) {
+						var isImage = (t.getAttribute('data-meb-media') || 'image') !== 'video';
+						t.classList.toggle('is-active', isImage && t.getAttribute('data-meb-src') === nextImg);
+					});
+				}
 			}
 		}
 
@@ -129,7 +166,7 @@
 		root.querySelectorAll('[data-meb-attr-group]').forEach(function (group) {
 			var first = group.querySelector('[data-meb-swatch]');
 			if (first) {
-				pickSwatch(first);
+				pickSwatch(first, { keepMedia: true });
 			}
 		});
 

@@ -170,19 +170,39 @@ class PPW_Product_Detail {
 		if ( empty( $images ) && ! empty( $item['pic_url'] ) ) {
 			$images = array( $item['pic_url'] );
 		}
+		$video_url   = (string) ( $item['video_url'] ?? '' );
+		$video_cover = (string) ( $item['video_cover'] ?? '' );
+		if ( '' === $video_cover && ! empty( $images[0] ) ) {
+			$video_cover = (string) $images[0];
+		}
+		$has_video  = '' !== $video_url;
+		$show_thumbs = $has_video || count( $images ) > 1;
 
 		ob_start();
 		?>
 		<div class="ppw-jd-detail-layout">
 			<div class="ppw-jd-detail-gallery">
-				<?php if ( ! empty( $images ) ) : ?>
+				<?php if ( $has_video || ! empty( $images ) ) : ?>
 					<div class="ppw-jd-detail-main-image">
-						<img src="<?php echo esc_url( $images[0] ); ?>" alt="<?php echo esc_attr( $item['title'] ?? '' ); ?>" />
+						<?php if ( $has_video ) : ?>
+							<video class="ppw-jd-detail-main-video" controls playsinline preload="metadata"<?php echo $video_cover ? ' poster="' . esc_url( $video_cover ) . '"' : ''; ?> src="<?php echo esc_url( $video_url ); ?>"></video>
+						<?php endif; ?>
+						<?php if ( ! empty( $images ) ) : ?>
+							<img class="ppw-jd-detail-main-photo" src="<?php echo esc_url( $images[0] ); ?>" alt="<?php echo esc_attr( $item['title'] ?? '' ); ?>"<?php echo $has_video ? ' hidden' : ''; ?> />
+						<?php endif; ?>
 					</div>
-					<?php if ( count( $images ) > 1 ) : ?>
+					<?php if ( $show_thumbs ) : ?>
 						<div class="ppw-jd-detail-thumbs">
-							<?php foreach ( $images as $image ) : ?>
-								<button type="button" class="ppw-jd-detail-thumb" data-image="<?php echo esc_url( $image ); ?>">
+							<?php if ( $has_video ) : ?>
+								<button type="button" class="ppw-jd-detail-thumb is-video is-active" data-video="<?php echo esc_url( $video_url ); ?>">
+									<?php if ( $video_cover ) : ?>
+										<img src="<?php echo esc_url( $video_cover ); ?>" alt="" loading="lazy" />
+									<?php endif; ?>
+									<span class="ppw-jd-detail-play" aria-hidden="true"></span>
+								</button>
+							<?php endif; ?>
+							<?php foreach ( $images as $index => $image ) : ?>
+								<button type="button" class="ppw-jd-detail-thumb<?php echo ( ! $has_video && 0 === $index ) ? ' is-active' : ''; ?>" data-image="<?php echo esc_url( $image ); ?>">
 									<img src="<?php echo esc_url( $image ); ?>" alt="" loading="lazy" />
 								</button>
 							<?php endforeach; ?>
