@@ -17,6 +17,9 @@ if ( is_user_logged_in() ) {
 
 $meb_u           = meb_urls();
 $meb_brand       = get_bloginfo( 'name' );
+$meb_privacy_url   = get_privacy_policy_url();
+$meb_terms_url     = apply_filters( 'myeasybuy_registration_agreement_url', $meb_privacy_url );
+$meb_statement_url = apply_filters( 'myeasybuy_registration_statement_url', $meb_privacy_url );
 $meb_signup_url  = meb_with_return_url( $meb_u['register'] );
 $meb_lost_url    = function_exists( 'wc_lostpassword_url' ) ? wc_lostpassword_url() : wp_lostpassword_url();
 $meb_google_url  = (string) apply_filters( 'myeasybuy_google_login_url', apply_filters( 'myeasybuy_google_signup_url', '' ) );
@@ -103,7 +106,7 @@ $meb_username    = class_exists( 'MyEasyBuy_Registration' ) ? MyEasyBuy_Registra
 				</span>
 			<?php endif; ?>
 			<?php if ( $meb_google_url ) : ?>
-				<p class="meb-reg__google-note" style="margin:10px 0 0;font-size:12px;line-height:1.5;color:#888;text-align:center;">By continuing with Google, you accept the Myeasybuy User Registration Agreement and Myeasybuy Statement.</p>
+				<p class="meb-reg__google-note" style="margin:10px 0 0;font-size:12px;line-height:1.5;color:#888;text-align:center;">By continuing with Google, you accept the <?php if ( $meb_terms_url ) : ?><a href="<?php echo esc_url( $meb_terms_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> User Registration Agreement</a><?php else : ?><?php echo esc_html( $meb_brand ); ?> User Registration Agreement<?php endif; ?> and <?php if ( $meb_statement_url ) : ?><a href="<?php echo esc_url( $meb_statement_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> Statement</a><?php else : ?><?php echo esc_html( $meb_brand ); ?> Statement<?php endif; ?>.</p>
 			<?php endif; ?>
 		</div>
 	</section>

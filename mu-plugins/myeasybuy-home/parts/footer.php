@@ -49,7 +49,9 @@ $meb_u = meb_urls();
 				<h6>关于</h6>
 				<ul>
 					<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">关于 <?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></li>
-					<?php if ( get_privacy_policy_url() ) : ?>
+					<?php if ( function_exists( 'meb_footer_policy_links' ) ) : ?>
+						<?php meb_footer_policy_links(); ?>
+					<?php elseif ( get_privacy_policy_url() ) : ?>
 						<li><a href="<?php echo esc_url( get_privacy_policy_url() ); ?>">隐私政策</a></li>
 					<?php endif; ?>
 				</ul>
