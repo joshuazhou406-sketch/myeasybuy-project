@@ -387,16 +387,16 @@ class MyEasyBuy_Registration {
 	 *
 	 * @param WP_Error $errors           Validation errors.
 	 * @param string   $username         Username.
-	 * @param string   $email            Email.
-	 * @param string   $password         Password.
+	 * @param string   $password         Password (WooCommerce hook arg 3).
+	 * @param string   $email            Email (WooCommerce hook arg 4).
 	 * @return WP_Error
 	 */
-	public static function validate_extra_register_fields( $errors, $username, $email, $password ) {
+	public static function validate_extra_register_fields( $errors, $username, $password, $email ) {
 		unset( $username, $email );
 
 		if ( isset( $_POST['password2'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			$confirm = (string) wp_unslash( $_POST['password2'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			if ( $confirm !== (string) $password ) {
+			if ( $confirm !== (string) wp_unslash( $password ) ) {
 				$errors->add( 'password_mismatch', __( 'Passwords do not match.', 'myeasybuy-core' ) );
 			}
 		}
