@@ -296,6 +296,14 @@ class MyEasyBuy_Roles {
 			return self::get_home_url( $user );
 		}
 
+		// Customers: keep an explicit redirect (checkout, cart, etc.); otherwise go home.
+		if ( empty( $_POST['redirect'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$requested = class_exists( 'MyEasyBuy_Login_Required' ) ? MyEasyBuy_Login_Required::get_requested_return_url() : '';
+			if ( '' === $requested ) {
+				return home_url( '/' );
+			}
+		}
+
 		return $redirect;
 	}
 

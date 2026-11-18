@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Nextend Google login URL with a safe return URL (requested redirect_to, else My Account).
+ * Nextend Google login URL with a safe return URL (requested redirect_to, else the homepage).
  */
 function meb_google_auth_url(): string {
 	if ( ! class_exists( 'NextendSocialLogin' ) || empty( NextendSocialLogin::$enabledProviders['google'] ) ) {
@@ -18,7 +18,7 @@ function meb_google_auth_url(): string {
 	}
 	$return = class_exists( 'MyEasyBuy_Login_Required' ) ? MyEasyBuy_Login_Required::get_requested_return_url() : '';
 	if ( '' === $return ) {
-		$return = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/' );
+		$return = home_url( '/' );
 	}
 	return add_query_arg( 'redirect', rawurlencode( $return ), NextendSocialLogin::$enabledProviders['google']->getLoginUrl() );
 }

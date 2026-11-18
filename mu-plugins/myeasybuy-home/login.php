@@ -7,11 +7,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$meb_account_url = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/' );
-$meb_return_url  = class_exists( 'MyEasyBuy_Login_Required' ) ? MyEasyBuy_Login_Required::get_requested_return_url() : '';
+$meb_home_url   = home_url( '/' );
+$meb_return_url = class_exists( 'MyEasyBuy_Login_Required' ) ? MyEasyBuy_Login_Required::get_requested_return_url() : '';
 
 if ( is_user_logged_in() ) {
-	wp_safe_redirect( $meb_return_url ? $meb_return_url : $meb_account_url );
+	wp_safe_redirect( $meb_return_url ? $meb_return_url : $meb_home_url );
 	exit;
 }
 
@@ -23,7 +23,7 @@ $meb_statement_url = apply_filters( 'myeasybuy_registration_statement_url', $meb
 $meb_signup_url  = meb_with_return_url( $meb_u['register'] );
 $meb_lost_url    = function_exists( 'wc_lostpassword_url' ) ? wc_lostpassword_url() : wp_lostpassword_url();
 $meb_google_url  = (string) apply_filters( 'myeasybuy_google_login_url', apply_filters( 'myeasybuy_google_signup_url', '' ) );
-$meb_redirect_to = $meb_return_url ? $meb_return_url : $meb_account_url;
+$meb_redirect_to = $meb_return_url ? $meb_return_url : $meb_home_url;
 $meb_username    = class_exists( 'MyEasyBuy_Registration' ) ? MyEasyBuy_Registration::posted_value_public( 'username' ) : '';
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

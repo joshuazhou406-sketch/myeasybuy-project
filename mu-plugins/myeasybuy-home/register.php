@@ -7,8 +7,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
+$meb_return_url = class_exists( 'MyEasyBuy_Login_Required' ) ? MyEasyBuy_Login_Required::get_requested_return_url() : '';
+
 if ( is_user_logged_in() ) {
-	wp_safe_redirect( function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/' ) );
+	wp_safe_redirect( $meb_return_url ? $meb_return_url : home_url( '/' ) );
 	exit;
 }
 

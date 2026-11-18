@@ -451,7 +451,8 @@ class MyEasyBuy_Registration {
 	}
 
 	/**
-	 * Redirect to My Account after successful registration.
+	 * Redirect to the homepage after successful registration.
+	 * An explicit return URL (e.g. checkout) is preserved.
 	 *
 	 * @param string $redirect Default redirect URL.
 	 */
@@ -461,7 +462,7 @@ class MyEasyBuy_Registration {
 			return $redirect;
 		}
 
-		return wc_get_page_permalink( 'myaccount' );
+		return home_url( '/' );
 	}
 
 	/**
