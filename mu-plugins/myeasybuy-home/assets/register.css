@@ -420,3 +420,21 @@ body.meb-auth .screen-reader-text {
 		padding: 28px 20px 48px;
 	}
 }
+
+
+.meb-reg__terms-copy {
+	display: inline-block;
+	line-height: 1.55;
+}
+
+.meb-reg__terms-en,
+.meb-reg__terms-zh {
+	display: block;
+}
+
+.meb-reg__google.is-disabled,
+.meb-reg__google[aria-disabled="true"] {
+	opacity: 0.45;
+	pointer-events: none;
+	cursor: not-allowed;
+}

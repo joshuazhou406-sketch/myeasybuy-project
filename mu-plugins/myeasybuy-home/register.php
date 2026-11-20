@@ -87,25 +87,20 @@ $meb_login_url = meb_with_return_url( $meb_u['login'] );
 					<input type="text" class="input-text" name="invitation_code" id="reg_invitation_code" placeholder="Enter the invitation code: (optional)" value="<?php echo esc_attr( class_exists( 'MyEasyBuy_Registration' ) ? MyEasyBuy_Registration::posted_value_public( 'invitation_code' ) : '' ); ?>">
 				</p>
 
+				<?php
+				if ( class_exists( 'MyEasyBuy_Policy_Consent' ) ) {
+					MyEasyBuy_Policy_Consent::render_registration_checkbox();
+				} else {
+					?>
 				<p class="form-row meb-reg__terms">
 					<label>
-						<input type="checkbox" name="meb_terms" value="1" required>
-						<span>
-							I have already read and accept
-							<?php if ( $meb_terms_url ) : ?>
-								<a href="<?php echo esc_url( $meb_terms_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> User Registration Agreement</a>
-							<?php else : ?>
-								<?php echo esc_html( $meb_brand ); ?> User Registration Agreement
-							<?php endif; ?>
-							and
-							<?php if ( $meb_statement_url ) : ?>
-								<a href="<?php echo esc_url( $meb_statement_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> Statement</a>
-							<?php else : ?>
-								<?php echo esc_html( $meb_brand ); ?> Statement
-							<?php endif; ?>
-						</span>
+						<input type="checkbox" name="meb_terms" id="meb_terms" value="1" required>
+						<span>I have read and agree to the Terms of Service and Privacy Policy.<br>我已阅读并同意《服务条款》和《隐私政策》。</span>
 					</label>
 				</p>
+					<?php
+				}
+				?>
 
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
 				<?php
@@ -145,7 +140,11 @@ $meb_login_url = meb_with_return_url( $meb_u['login'] );
 				</span>
 			<?php endif; ?>
 			<?php if ( $meb_google_url ) : ?>
-				<p class="meb-reg__google-note" style="margin:10px 0 0;font-size:12px;line-height:1.5;color:#888;text-align:center;">By continuing with Google, you accept the <?php if ( $meb_terms_url ) : ?><a href="<?php echo esc_url( $meb_terms_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> User Registration Agreement</a><?php else : ?><?php echo esc_html( $meb_brand ); ?> User Registration Agreement<?php endif; ?> and <?php if ( $meb_statement_url ) : ?><a href="<?php echo esc_url( $meb_statement_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> Statement</a><?php else : ?><?php echo esc_html( $meb_brand ); ?> Statement<?php endif; ?>.</p>
+				<?php
+				if ( class_exists( 'MyEasyBuy_Policy_Consent' ) ) {
+					MyEasyBuy_Policy_Consent::render_google_note();
+				}
+				?>
 			<?php endif; ?>
 		</div>
 	</section>

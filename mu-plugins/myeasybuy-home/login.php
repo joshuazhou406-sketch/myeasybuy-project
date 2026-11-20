@@ -106,7 +106,11 @@ $meb_username    = class_exists( 'MyEasyBuy_Registration' ) ? MyEasyBuy_Registra
 				</span>
 			<?php endif; ?>
 			<?php if ( $meb_google_url ) : ?>
-				<p class="meb-reg__google-note" style="margin:10px 0 0;font-size:12px;line-height:1.5;color:#888;text-align:center;">By continuing with Google, you accept the <?php if ( $meb_terms_url ) : ?><a href="<?php echo esc_url( $meb_terms_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> User Registration Agreement</a><?php else : ?><?php echo esc_html( $meb_brand ); ?> User Registration Agreement<?php endif; ?> and <?php if ( $meb_statement_url ) : ?><a href="<?php echo esc_url( $meb_statement_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $meb_brand ); ?> Statement</a><?php else : ?><?php echo esc_html( $meb_brand ); ?> Statement<?php endif; ?>.</p>
+				<?php
+				if ( class_exists( 'MyEasyBuy_Policy_Consent' ) ) {
+					MyEasyBuy_Policy_Consent::render_google_note();
+				}
+				?>
 			<?php endif; ?>
 		</div>
 	</section>

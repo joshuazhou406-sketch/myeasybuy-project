@@ -3,7 +3,7 @@
  * Plugin Name:       MyEasyBuy Core
  * Plugin URI:        https://myeasybuy.local
  * Description:       Reverse-proxy shopping core for myeasybuy — order statuses, hooks, and REST API for WMS/frontend integration.
- * Version:           1.19.1
+ * Version:           1.20.4
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            MyEasyBuy
@@ -15,7 +15,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'MYEASYBUY_CORE_VERSION', '1.19.1' );
+define( 'MYEASYBUY_CORE_VERSION', '1.20.4' );
 define( 'MYEASYBUY_CORE_FILE', __FILE__ );
 define( 'MYEASYBUY_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'MYEASYBUY_CORE_URL', plugin_dir_url( __FILE__ ) );
@@ -24,6 +24,7 @@ require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-order-statuses.php';
 require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-hooks.php';
 require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-rest-api.php';
 require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-registration.php';
+require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-policy-consent.php';
 require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-login-required.php';
 require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-consolidation.php';
 require_once MYEASYBUY_CORE_DIR . 'includes/class-myeasybuy-customer-consolidation.php';
@@ -95,6 +96,7 @@ final class MyEasyBuy_Core {
 		MyEasyBuy_Hooks::init();
 		MyEasyBuy_REST_API::init();
 		MyEasyBuy_Registration::init();
+		MyEasyBuy_Policy_Consent::init();
 		MyEasyBuy_Login_Required::init();
 		MyEasyBuy_Consolidation::init();
 		MyEasyBuy_Customer_Consolidation::init();

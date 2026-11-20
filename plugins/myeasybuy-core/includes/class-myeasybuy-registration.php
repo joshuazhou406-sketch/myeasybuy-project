@@ -402,11 +402,11 @@ class MyEasyBuy_Registration {
 		}
 
 		if ( isset( $_POST['meb_terms'] ) && empty( $_POST['meb_terms'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			$errors->add( 'terms_required', __( 'Please accept the registration agreement.', 'myeasybuy-core' ) );
+			$errors->add( 'terms_required', __( 'Please accept the Terms of Service and Privacy Policy. / 请先同意《服务条款》和《隐私政策》。', 'myeasybuy-core' ) );
 		}
 
 		if ( isset( $_POST['register'] ) && ! isset( $_POST['meb_terms'] ) && isset( $_POST['password2'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			$errors->add( 'terms_required', __( 'Please accept the registration agreement.', 'myeasybuy-core' ) );
+			$errors->add( 'terms_required', __( 'Please accept the Terms of Service and Privacy Policy. / 请先同意《服务条款》和《隐私政策》。', 'myeasybuy-core' ) );
 		}
 
 		// Checkout account creation does not include our custom fields.

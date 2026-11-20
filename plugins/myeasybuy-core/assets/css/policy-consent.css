@@ -1,0 +1,330 @@
+/* Policy consent, order-pay fields, and “Three Things You Should Know” modal. */
+
+.meb-reg__terms-copy {
+	display: inline-block;
+	max-width: 32em;
+	line-height: 1.55;
+}
+
+.meb-reg__terms-en,
+.meb-reg__terms-zh {
+	display: block;
+}
+
+.meb-reg__terms-zh {
+	margin-top: 0.25em;
+}
+
+.meb-reg__google-note {
+	margin: 10px 0 0;
+	font-size: 12px;
+	line-height: 1.55;
+	color: #888;
+	text-align: center;
+}
+
+.meb-reg__google.is-disabled,
+.meb-reg__google[aria-disabled="true"] {
+	opacity: 0.45;
+	pointer-events: none;
+	cursor: not-allowed;
+}
+
+.meb-consent-forward-note {
+	margin: 0 0 1rem;
+	padding: 0.75rem 0.9rem;
+	border-radius: 8px;
+	background: #fff4ec;
+	color: #141414;
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+.meb-pay-consent {
+	margin: 1rem 0 1.25rem;
+	padding: 1rem 1.1rem;
+	border: 1px solid #eceef1;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.meb-pay-consent__check label,
+.meb-pay-consent__protection label {
+	display: flex;
+	gap: 0.6rem;
+	align-items: flex-start;
+	font-size: 14px;
+	line-height: 1.5;
+	margin: 0 0 0.75rem;
+}
+
+.meb-pay-consent__protection {
+	border: 0;
+	margin: 0.5rem 0 0;
+	padding: 0;
+}
+
+.meb-pay-consent__protection legend {
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.meb-consent-gate {
+	background: #f5f6f8;
+	min-height: 100vh;
+}
+
+.meb-consent-gate__box {
+	max-width: 36rem;
+	margin: 8vh auto;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 12px rgba(20, 20, 20, 0.06);
+	padding: 2rem 1.75rem;
+}
+
+.meb-consent-gate__box h1 {
+	margin: 0 0 0.75rem;
+	font-size: 1.5rem;
+}
+
+.meb-consent-gate__submit {
+	display: inline-block;
+	margin-top: 1rem;
+	background: #ff7e21;
+	color: #fff;
+	border: 0;
+	border-radius: 8px;
+	padding: 0.7rem 1.4rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.meb-consent-gate__submit:hover {
+	background: #f06a0a;
+}
+
+/* Disclaimer modal */
+.meb-disc {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.meb-disc[hidden] {
+	display: none !important;
+}
+
+.meb-disc__backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(20, 20, 20, 0.45);
+}
+
+.meb-disc__panel {
+	position: relative;
+	z-index: 1;
+	width: min(720px, 100%);
+	max-height: min(90vh, 820px);
+	overflow: auto;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 48px rgba(20, 20, 20, 0.18);
+	padding: 1.75rem 1.75rem 1.4rem;
+	color: #141414;
+}
+
+.meb-disc__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.6rem 0.75rem;
+	margin-bottom: 1.1rem;
+}
+
+.meb-disc__back {
+	appearance: none;
+	border: 0;
+	background: none;
+	color: #141414;
+	font-weight: 600;
+	cursor: pointer;
+	padding: 0.2rem 0.2rem 0.2rem 0;
+}
+
+.meb-disc__back[hidden],
+.meb-disc__accept[hidden] {
+	display: none !important;
+}
+
+.meb-disc__eyebrow {
+	font-weight: 700;
+	font-size: 1.05rem;
+}
+
+.meb-disc__badge {
+	display: inline-block;
+	background: linear-gradient(90deg, #ff7e21, #e62323);
+	color: #fff;
+	border-radius: 999px;
+	padding: 0.28rem 0.75rem;
+	font-size: 0.82rem;
+	font-weight: 700;
+}
+
+.meb-disc__progress {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 0.4rem;
+	background: #fff4ec;
+	border-radius: 12px;
+	padding: 0.9rem 0.8rem 0.85rem;
+	margin-bottom: 1.25rem;
+	position: relative;
+}
+
+.meb-disc__step-dot {
+	flex: 1;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.meb-disc__num {
+	width: 1.7rem;
+	height: 1.7rem;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #d9dde3;
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.meb-disc__step-dot.is-done .meb-disc__num,
+.meb-disc__step-dot.is-current .meb-disc__num {
+	background: #ff7e21;
+}
+
+.meb-disc__step-label {
+	display: block;
+	margin-top: 0.4rem;
+	font-size: 0.78rem;
+	color: #9aa0a8;
+	font-weight: 600;
+}
+
+.meb-disc__step-dot.is-done .meb-disc__step-label,
+.meb-disc__step-dot.is-current .meb-disc__step-label {
+	color: #ff7e21;
+}
+
+.meb-disc__title {
+	font-size: 1.05rem;
+	font-weight: 700;
+	line-height: 1.45;
+	margin: 0 0 0.75rem;
+}
+
+.meb-disc__title-zh {
+	margin-top: -0.35rem;
+	color: #333;
+}
+
+.meb-disc__body {
+	font-size: 0.95rem;
+	line-height: 1.65;
+	color: #3a3a3a;
+	margin: 0 0 0.75rem;
+	white-space: pre-line;
+}
+
+.meb-disc__sub {
+	margin: 0.9rem 0 0;
+}
+
+.meb-disc__sub-label {
+	display: inline-block;
+	background: #141414;
+	color: #fff;
+	border-radius: 999px;
+	padding: 0.15rem 0.65rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	margin-bottom: 0.35rem;
+}
+
+.meb-disc__foot {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	margin-top: 1.4rem;
+}
+
+.meb-disc__accept {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.5rem;
+	font-size: 0.95rem;
+	line-height: 1.4;
+}
+
+.meb-disc__btn {
+	appearance: none;
+	border: 0;
+	background: #ff7e21;
+	color: #fff;
+	border-radius: 999px;
+	padding: 0.7rem 1.35rem;
+	font-weight: 700;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.meb-disc__btn:hover {
+	background: #f06a0a;
+}
+
+.meb-disc__btn:disabled {
+	opacity: 0.45;
+	cursor: not-allowed;
+}
+
+body.meb-disc-open {
+	overflow: hidden;
+}
+
+/* Hide the default WooCommerce Blocks terms notice when our fields are present. */
+body.woocommerce-checkout .wc-block-checkout__terms,
+body.woocommerce-checkout .wp-block-woocommerce-checkout-terms-block {
+	display: none;
+}
+
+@media (max-width: 640px) {
+	.meb-disc__panel {
+		padding: 1.15rem 1rem 1.1rem;
+		max-height: 96vh;
+	}
+
+	.meb-disc__step-label {
+		font-size: 0.68rem;
+	}
+}
+
+
+/* Show only the consent fields that apply to this cart. */
+body.meb-cart-purchase .wc-block-components-address-form__myeasybuy-shipping-consent,
+body.meb-cart-purchase .wc-block-components-address-form__myeasybuy-parcel-protection,
+body.meb-cart-purchase [class*="myeasybuy-parcel-protection"],
+body.meb-cart-shipping .wc-block-components-address-form__myeasybuy-purchase-consent {
+	display: none !important;
+}

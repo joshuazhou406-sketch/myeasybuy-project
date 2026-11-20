@@ -67,6 +67,12 @@ $nonce_name   = isset( $nonce_name ) ? (string) $nonce_name : 'wc_rf_declare_non
 			<input type="text" name="declared_name" id="wc-rf-declared-name" required maxlength="255" placeholder="<?php esc_attr_e( '例如：服装、化妆品、数码配件', 'wc-rf' ); ?>" />
 		</div>
 
+		<?php
+		if ( class_exists( 'MyEasyBuy_Policy_Consent' ) ) {
+			MyEasyBuy_Policy_Consent::render_forwarding_notice();
+		}
+		?>
+
 		<button type="submit" class="wc-rf-btn wc-rf-btn--block"><?php esc_html_e( '提交预报', 'wc-rf' ); ?></button>
 	</form>
 </section>
