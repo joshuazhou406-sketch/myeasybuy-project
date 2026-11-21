@@ -1,0 +1,1531 @@
+{
+  "version": "2026-11-17T22:34:32",
+  "source": "https://myeasybuy.ca/ (WP REST, read-only)",
+  "contact_email": "joshuazhou406@gmail.com",
+  "policies": [
+    {
+      "slug": "return-refund-policy",
+      "title_en": "Return & Refund Policy",
+      "title_zh": "退货退款政策",
+      "url": "https://myeasybuy.ca/return-refund-policy/",
+      "modified": "2026-11-17T22:34:32"
+    },
+    {
+      "slug": "privacy-policy",
+      "title_en": "Privacy Policy",
+      "title_zh": "隐私政策",
+      "url": "https://myeasybuy.ca/privacy-policy/",
+      "modified": "2026-11-17T22:34:32"
+    },
+    {
+      "slug": "terms-of-service",
+      "title_en": "Terms of Service",
+      "title_zh": "服务条款",
+      "url": "https://myeasybuy.ca/terms-of-service/",
+      "modified": "2026-11-17T22:34:32"
+    },
+    {
+      "slug": "shipping-policy",
+      "title_en": "Shipping & Prohibited Items Policy",
+      "title_zh": "运输与禁运政策",
+      "url": "https://myeasybuy.ca/shipping-policy/",
+      "modified": "2026-11-17T22:34:32"
+    },
+    {
+      "slug": "storage-inspection-policy",
+      "title_en": "Storage & Inspection Policy",
+      "title_zh": "仓储与验货政策",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/",
+      "modified": "2026-11-17T22:34:32"
+    },
+    {
+      "slug": "compensation-policy",
+      "title_en": "Compensation & Parcel Protection Policy",
+      "title_zh": "赔偿与包裹保障",
+      "url": "https://myeasybuy.ca/compensation-policy/",
+      "modified": "2026-11-17T22:34:32"
+    }
+  ],
+  "clauses": [
+    {
+      "id": "return-refund-policy:intro",
+      "slug": "return-refund-policy",
+      "num": "intro",
+      "anchor": "meb-os-return-refund-policy-intro",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-intro",
+      "title_en": "Introduction",
+      "title_zh": "简介",
+      "text_en": "MyEasyBuy buys goods from Chinese Sellers on your behalf. Because the Seller — not MyEasyBuy — decides whether goods can be returned to them, and because returns from Canada to China are slow and expensive, the best time to return or exchange an item is while it is still in our China warehouse. Please review your inspection photos as soon as you are notified.\n\nThis policy does not limit any rights you have under the Ontario Consumer Protection Act, 2002 or other applicable law.",
+      "text_zh": "MyEasyBuy 代您向中国卖家购买商品。能否退货由卖家（而非 MyEasyBuy）决定，且从加拿大退回中国耗时长、费用高，因此退换货的最佳时机是商品仍在我们中国仓库期间。收到验货通知后请尽快查看照片。\n\n本政策不限制您依据安大略省《2002年消费者保护法》或其他适用法律享有的权利。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:1",
+      "slug": "return-refund-policy",
+      "num": "1",
+      "anchor": "meb-os-return-refund-policy-1",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-1",
+      "title_en": "1. Summary",
+      "title_zh": "1. 概览",
+      "text_en": "Stage — What you can do — Who pays\nBefore we purchase — Cancel anytime — Full refund, no fee\nPurchased, Seller has not shipped — Request cancellation; depends on Seller — Usually full refund of item price; service fee refunded if cancellation succeeds\nIn our warehouse, within 5 days of “In Warehouse” — Request return/exchange to Seller — Change of mind: you pay domestic return shipping + handling fee CAD 3 (first request each calendar month free). Seller or MyEasyBuy error: no cost to you\nIn warehouse, after 5 days — We will ask the Seller, but approval is unlikely — As above, if approved\nAfter delivery in Canada — Change-of-mind returns generally not available. Wrong item / damage / defect: see section 5 and the Compensation & Insurance Policy — Depends on cause",
+      "text_zh": "阶段 — 您可以 — 费用承担\n我们尚未下单 — 随时取消 — 全额退款，无手续费\n已下单、卖家未发货 — 申请取消，视卖家同意 — 通常全额退商品款；取消成功则退服务费\n已入库 5 天内 — 申请退/换货给卖家 — 个人原因：您承担国内退货运费 + 手续费 CAD 3（每自然月首次免手续费）；卖家或 MyEasyBuy 过错：您无需承担\n入库超过 5 天 — 我们会询问卖家，但成功率低 — 同上（如获同意）\n已送达加拿大 — 一般不接受无理由退货；错发/破损/质量问题见第5条及《赔偿与保险政策》 — 视原因而定",
+      "tables_en": [
+        {
+          "headers": [
+            "Stage",
+            "What you can do",
+            "Who pays"
+          ],
+          "rows": [
+            [
+              "Before we purchase",
+              "Cancel anytime",
+              "Full refund, no fee"
+            ],
+            [
+              "Purchased, Seller has not shipped",
+              "Request cancellation; depends on Seller",
+              "Usually full refund of item price; service fee refunded if cancellation succeeds"
+            ],
+            [
+              "In our warehouse, within 5 days of “In Warehouse”",
+              "Request return/exchange to Seller",
+              "Change of mind: you pay domestic return shipping + handling fee CAD 3 (first request each calendar month free). Seller or MyEasyBuy error: no cost to you"
+            ],
+            [
+              "In warehouse, after 5 days",
+              "We will ask the Seller, but approval is unlikely",
+              "As above, if approved"
+            ],
+            [
+              "After delivery in Canada",
+              "Change-of-mind returns generally not available. Wrong item / damage / defect: see section 5 and the Compensation & Insurance Policy",
+              "Depends on cause"
+            ]
+          ]
+        }
+      ],
+      "tables_zh": [
+        {
+          "headers": [
+            "阶段",
+            "您可以",
+            "费用承担"
+          ],
+          "rows": [
+            [
+              "我们尚未下单",
+              "随时取消",
+              "全额退款，无手续费"
+            ],
+            [
+              "已下单、卖家未发货",
+              "申请取消，视卖家同意",
+              "通常全额退商品款；取消成功则退服务费"
+            ],
+            [
+              "已入库 5 天内",
+              "申请退/换货给卖家",
+              "个人原因：您承担国内退货运费 + 手续费 CAD 3（每自然月首次免手续费）；卖家或 MyEasyBuy 过错：您无需承担"
+            ],
+            [
+              "入库超过 5 天",
+              "我们会询问卖家，但成功率低",
+              "同上（如获同意）"
+            ],
+            [
+              "已送达加拿大",
+              "一般不接受无理由退货；错发/破损/质量问题见第5条及《赔偿与保险政策》",
+              "视原因而定"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "return-refund-policy:2",
+      "slug": "return-refund-policy",
+      "num": "2",
+      "anchor": "meb-os-return-refund-policy-2",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-2",
+      "title_en": "2. Cancelling before purchase",
+      "title_zh": "2. 下单前取消",
+      "text_en": "If we have not yet placed the order with the Seller, you may cancel in your account or by contacting us. We refund 100% of what you paid for that item, including the service fee.",
+      "text_zh": "若我们尚未向卖家下单，您可在账户内或联系我们取消，我们将全额退还该商品已付款项，包括服务费。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:3",
+      "slug": "return-refund-policy",
+      "num": "3",
+      "anchor": "meb-os-return-refund-policy-3",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-3",
+      "title_en": "3. Cancelling after purchase but before the Seller ships",
+      "title_zh": "3. 已下单、卖家未发货时取消",
+      "text_en": "We will ask the Seller to cancel. If the Seller agrees and refunds us, we refund you the item price, domestic shipping and our service fee. If the Seller refuses or has already shipped, the item will be handled as a warehouse return (section 4).",
+      "text_zh": "我们会请求卖家取消。卖家同意并退款后，我们退还商品价、国内运费和服务费。若卖家拒绝或已发货，则按仓库退货（第4条）处理。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:4",
+      "slug": "return-refund-policy",
+      "num": "4",
+      "anchor": "meb-os-return-refund-policy-4",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-4",
+      "title_en": "4. Returns and exchanges while goods are in our warehouse",
+      "title_zh": "4. 商品在仓库期间的退换货",
+      "text_en": "4.1 Window. Request a return or exchange within 5 days after the item’s status changes to “In Warehouse” (you’ll get an email with inspection photos). Many Chinese Sellers only honour “no-reason” returns for a short period (typically 7 days from their delivery), so we cannot guarantee requests made after our window.\n\n4.2 Conditions. The item must be unused, with original packaging, tags and accessories. If you asked us to remove packaging or tags, the Seller may refuse.\n\n4.3 Items Sellers usually won’t take back: custom-made or personalized goods; underwear, swimwear, socks and intimate products; food, cosmetics or health products once opened; activated electronics; second-hand, auction, clearance or “final sale” items; goods marked non-returnable on the listing; goods from outside mainland China.\n\n4.4 Costs.\n\n– Change of mind (wrong size or colour you selected, no longer wanted, price dropped): you pay the Chinese domestic return shipping and a return/exchange handling fee of CAD 3 per request (your first return or exchange request each calendar month is free of this fee). The original domestic shipping and our service fee for that item are not refunded.\n\n– Seller error (wrong item, wrong size/colour vs. your order, defect visible in inspection, not as described): the Seller should cover return shipping; we pursue this for you at no handling fee. If the Seller refuses, we will tell you your options.\n\n– MyEasyBuy error (we ordered the wrong option, quantity or link): we fix it at our cost — reorder the correct item or refund in full, including service fee.\n\n4.5 Exchanges follow the same rules. A replacement item is inspected again when it arrives.",
+      "text_zh": "4.1 时限。 请在商品状态变为”已入库”后 5 天内 申请（届时您会收到附验货照片的邮件）。多数中国卖家仅在其签收后较短期限内（通常7天）支持无理由退货，超过我们的时限无法保证成功。\n\n4.2 条件。 商品须未使用，原包装、吊牌、配件齐全。若您要求去除包装或吊牌，卖家可能拒绝。\n\n4.3 卖家通常不接受退货的商品： 定制或个性化商品；内衣、泳衣、袜子及贴身用品；已拆封的食品、化妆品、保健品；已激活的电子产品；二手、拍卖、清仓或”不退不换”商品；页面注明不可退的商品；中国大陆以外发货的商品。\n\n4.4 费用。\n\n– 个人原因（自己选错尺码/颜色、不想要、降价）：您承担国内退货运费及退换货手续费每次 CAD 3（每个自然月第一次退换申请免手续费），该商品原国内运费和服务费不退。\n\n– 卖家原因（错发、尺码/颜色与订单不符、验货可见瑕疵、与描述不符）：退货运费应由卖家承担，我们代为处理且不收手续费；如卖家拒绝，我们会告知您可选方案。\n\n– MyEasyBuy 原因（下错规格、数量或链接）：由我们承担费用纠正——重新购买正确商品或全额退款（含服务费）。\n\n4.5 换货 规则相同，换回的商品到仓后重新验货。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:5",
+      "slug": "return-refund-policy",
+      "num": "5",
+      "anchor": "meb-os-return-refund-policy-5",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-5",
+      "title_en": "5. After your parcel arrives in Canada",
+      "title_zh": "5. 包裹送达加拿大后",
+      "text_en": "5.1 Check promptly. Inspect your parcel when it arrives. We strongly recommend recording an unboxing video from before the tape is cut.\n\n5.2 Wrong, missing or damaged items. Report within 7 days of delivery to joshuazhou406@gmail.com with your order number, photos/video of the outer box, packing and items, and the shipping label. Our responsibility and compensation are set out in the Compensation & Insurance Policy.\n\n5.3 Change-of-mind returns to China are generally not available after international shipping, because Sellers do not accept returns from abroad and the cost usually exceeds the item value. If you still want to return an item, we may help at your full cost (international return shipping, any Chinese import charges, and handling), only if the Seller agrees.\n\n5.4 Defects that appear later (warranty). Chinese Seller warranties usually cannot be used from Canada. We will try to contact the Seller within 30 days of delivery, but cannot guarantee a remedy unless the defect was caused by us. This does not limit any right you have by law.",
+      "text_zh": "5.1 及时检查。 收到包裹请尽快检查，强烈建议从未拆封胶带开始录制完整开箱视频。\n\n5.2 错发、少件或破损。 请在签收后 7 天内 发送邮件至 joshuazhou406@gmail.com，附订单号、外箱/内包装/商品的照片或视频及面单。我们的责任与赔偿见《赔偿与保险政策》。\n\n5.3 无理由退货 原则上在国际运输后不再提供，因为卖家不接受海外退货，且费用通常高于商品价值。如您仍坚持退货，在卖家同意的前提下，我们可协助处理，全部费用（国际退运、中国进口费用、手续费）由您承担。\n\n5.4 后期出现的质量问题（保修）。 中国卖家的保修通常无法在加拿大使用。我们会在签收后 30 天内尝试联系卖家，但除非问题由我们造成，无法保证解决方案。这不影响您的法定权利。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:6",
+      "slug": "return-refund-policy",
+      "num": "6",
+      "anchor": "meb-os-return-refund-policy-6",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-6",
+      "title_en": "6. Refunds",
+      "title_zh": "6. 退款",
+      "text_en": "6.1 When. For cancellations under sections 2 and 3, we refund within 15 days after the cancellation is confirmed. For warehouse returns, we refund within 5 business days after the Seller refunds us (the Seller usually takes 7–15 days after receiving the return).\n\n6.2 How. Refunds go to your original payment method (e.g., PayPal) or, if you choose, to your MyEasyBuy account balance. Payment-processing and currency-conversion costs are refunded in full when the refund results from a cancellation before purchase, an out-of-stock item, a Seller cancellation, or a Seller or MyEasyBuy error; for change-of-mind returns, processing costs already charged by the payment provider are not refunded.\n\n6.3 Currency. Refunds of RMB amounts are converted to CAD at the same rate used when you paid.\n\n6.4 Shipping overpayments (when the actual shipping charge is lower than the estimate you prepaid) are refunded as described in our Terms of Service, section 4.2.",
+      "text_zh": "6.1 时间。 第2、3条的取消，在确认取消后 15 天内 退款；仓库退货在卖家退款给我们后 5 个工作日内退款（卖家通常在收到退货后7–15天退款）。\n\n6.2 方式。 退回原支付方式（如 PayPal），或按您的选择存入 MyEasyBuy 账户余额。如退款原因是下单前取消、缺货、卖家取消或卖家/MyEasyBuy 过错，支付手续费和换汇费全额退还；个人原因退货时，支付机构已收取的手续费不予退还。\n\n6.3 币种。 人民币金额按您付款时的同一汇率换算为加元。\n\n6.4 多付运费（实际运费低于预付）按服务条款第4.2条退还。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:7",
+      "slug": "return-refund-policy",
+      "num": "7",
+      "anchor": "meb-os-return-refund-policy-7",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-7",
+      "title_en": "7. Non-refundable charges (unless MyEasyBuy is at fault)",
+      "title_zh": "7. 不予退还的费用（MyEasyBuy 过错除外）",
+      "text_en": "• Service fee on items successfully purchased and not cancelled;\n\n• Domestic return shipping and handling fees for change-of-mind returns;\n\n• Value-added services already performed (photos, measurements, packing, reinforcement);\n\n• Storage fees already incurred;\n\n• International shipping once the parcel has been handed to the carrier (except as provided in the Compensation & Insurance Policy).",
+      "text_zh": "• 已成功采购且未取消商品的服务费；\n\n• 个人原因退货的国内退货运费和手续费；\n\n• 已完成的增值服务（拍照、测量、打包、加固）；\n\n• 已产生的仓储费；\n\n• 包裹交付承运商后的国际运费（《赔偿与保险政策》另有规定的除外）。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:8",
+      "slug": "return-refund-policy",
+      "num": "8",
+      "anchor": "meb-os-return-refund-policy-8",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-8",
+      "title_en": "8. Your rights under Ontario law",
+      "title_zh": "8. 安大略省法律下的权利",
+      "text_en": "If we did not give you the required information before you agreed to an online order, you may have a right to cancel within 7 days after receiving a copy of your agreement. If goods are not delivered within 30 days after the delivery date in your agreement (or the date we later agree), you may have a right to cancel before delivery. In those cases we will refund you within 15 days of your cancellation notice. If we fail to refund, you may be able to request a credit card chargeback.",
+      "text_zh": "如我们在您同意网上订单前未提供法定信息，您可能有权在收到协议副本后7天内取消；如商品未能在协议约定交付日（或之后双方约定的日期）后30天内交付，您可能有权在交付前取消。以上情形我们将在收到取消通知后15天内退款；如我们未退款，您可能可以向信用卡发卡机构申请拒付。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "return-refund-policy:9",
+      "slug": "return-refund-policy",
+      "num": "9",
+      "anchor": "meb-os-return-refund-policy-9",
+      "url": "https://myeasybuy.ca/return-refund-policy/#meb-os-return-refund-policy-9",
+      "title_en": "9. How to request a return or refund",
+      "title_zh": "9. 如何申请",
+      "text_en": "Use the “Return/Refund” button on the order in your account, or email joshuazhou406@gmail.com with your order number, the item, and the reason. We reply within 2 business days.",
+      "text_zh": "在账户订单页点击”退货/退款”，或发送邮件至 joshuazhou406@gmail.com，注明订单号、商品及原因。我们在 2 个工作日内回复。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:intro",
+      "slug": "privacy-policy",
+      "num": "intro",
+      "anchor": "meb-os-privacy-policy-intro",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-intro",
+      "title_en": "Introduction",
+      "title_zh": "简介",
+      "text_en": "We respect your privacy. This policy explains what personal information we collect, why, who we share it with (including service providers in China), how long we keep it, and your rights.",
+      "text_zh": "我们尊重您的隐私。本政策说明我们收集哪些个人信息、用途、与谁共享（包括位于中国的服务方）、保存多久以及您的权利。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:1",
+      "slug": "privacy-policy",
+      "num": "1",
+      "anchor": "meb-os-privacy-policy-1",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-1",
+      "title_en": "1. Information we collect",
+      "title_zh": "1. 收集的信息",
+      "text_en": "Category — Examples — Source\nAccount — Name, email, password (stored hashed), invitation code used, account settings — You\nGoogle sign-in — Name, email address, profile picture and Google account ID (we do not receive your Google password) — Google, with your permission (via our social login plugin)\nDelivery & customs — Recipient name, Canadian address, phone number; contents and values of parcels — You, your orders\nOrders — Product links, options, notes, messages with us, inspection photos of your goods, return requests — You, us, Sellers\nPayments — Transaction ID, amount, currency, payment status, PayPal account email/name. We do not receive or store full card numbers — PayPal (and AlphaPay if added)\nTechnical — IP address, device and browser type, pages viewed, cookies, log data — Your device, our website (WordPress/WooCommerce) and, if enabled, website analytics (such as Google Analytics)\nMarketing preferences — Whether you agreed to receive news and offers — You\n\nWe do not knowingly collect information from anyone under the age of majority; our services are for adults.",
+      "text_zh": "类别 — 示例 — 来源\n账户 — 姓名、邮箱、密码（加密哈希存储）、使用的邀请码、账户设置 — 您\nGoogle 登录 — 姓名、邮箱、头像、Google 账户 ID（我们不会获得您的 Google 密码） — 经您授权由 Google 提供（通过社交登录插件）\n收货与报关 — 收件人姓名、加拿大地址、电话；包裹内容和价值 — 您、您的订单\n订单 — 商品链接、规格、备注、与我们的沟通、商品验货照片、退货申请 — 您、我们、卖家\n支付 — 交易号、金额、币种、支付状态、PayPal 账户邮箱/姓名；我们 不 接收或存储完整卡号 — PayPal（如增加 AlphaPay 亦同）\n技术 — IP 地址、设备和浏览器类型、浏览页面、Cookie、日志 — 您的设备、我们的网站（WordPress/WooCommerce）及网站分析工具（如启用，例如 Google Analytics）\n营销偏好 — 是否同意接收资讯和优惠 — 您\n\n我们不会故意收集未成年人的信息；本服务面向成年人。",
+      "tables_en": [
+        {
+          "headers": [
+            "Category",
+            "Examples",
+            "Source"
+          ],
+          "rows": [
+            [
+              "Account",
+              "Name, email, password (stored hashed), invitation code used, account settings",
+              "You"
+            ],
+            [
+              "Google sign-in",
+              "Name, email address, profile picture and Google account ID (we do not receive your Google password)",
+              "Google, with your permission (via our social login plugin)"
+            ],
+            [
+              "Delivery & customs",
+              "Recipient name, Canadian address, phone number; contents and values of parcels",
+              "You, your orders"
+            ],
+            [
+              "Orders",
+              "Product links, options, notes, messages with us, inspection photos of your goods, return requests",
+              "You, us, Sellers"
+            ],
+            [
+              "Payments",
+              "Transaction ID, amount, currency, payment status, PayPal account email/name. We do not receive or store full card numbers",
+              "PayPal (and AlphaPay if added)"
+            ],
+            [
+              "Technical",
+              "IP address, device and browser type, pages viewed, cookies, log data",
+              "Your device, our website (WordPress/WooCommerce) and, if enabled, website analytics (such as Google Analytics)"
+            ],
+            [
+              "Marketing preferences",
+              "Whether you agreed to receive news and offers",
+              "You"
+            ]
+          ]
+        }
+      ],
+      "tables_zh": [
+        {
+          "headers": [
+            "类别",
+            "示例",
+            "来源"
+          ],
+          "rows": [
+            [
+              "账户",
+              "姓名、邮箱、密码（加密哈希存储）、使用的邀请码、账户设置",
+              "您"
+            ],
+            [
+              "Google 登录",
+              "姓名、邮箱、头像、Google 账户 ID（我们不会获得您的 Google 密码）",
+              "经您授权由 Google 提供（通过社交登录插件）"
+            ],
+            [
+              "收货与报关",
+              "收件人姓名、加拿大地址、电话；包裹内容和价值",
+              "您、您的订单"
+            ],
+            [
+              "订单",
+              "商品链接、规格、备注、与我们的沟通、商品验货照片、退货申请",
+              "您、我们、卖家"
+            ],
+            [
+              "支付",
+              "交易号、金额、币种、支付状态、PayPal 账户邮箱/姓名；我们 不 接收或存储完整卡号",
+              "PayPal（如增加 AlphaPay 亦同）"
+            ],
+            [
+              "技术",
+              "IP 地址、设备和浏览器类型、浏览页面、Cookie、日志",
+              "您的设备、我们的网站（WordPress/WooCommerce）及网站分析工具（如启用，例如 Google Analytics）"
+            ],
+            [
+              "营销偏好",
+              "是否同意接收资讯和优惠",
+              "您"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "privacy-policy:2",
+      "slug": "privacy-policy",
+      "num": "2",
+      "anchor": "meb-os-privacy-policy-2",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-2",
+      "title_en": "2. Why we use it",
+      "title_zh": "2. 使用目的",
+      "text_en": "• Create and manage your account, including Google sign-in and invitation codes;\n\n• Buy goods on your behalf, communicate with Sellers, receive, inspect, store and ship your goods;\n\n• Prepare shipping labels and customs declarations, and respond to carriers and customs authorities;\n\n• Process payments, refunds and chargebacks, and prevent fraud;\n\n• Provide customer support and handle claims;\n\n• Keep accounting and tax records required by law;\n\n• Improve and secure our website;\n\n• Send marketing messages — only with your consent; you can unsubscribe at any time.\n\nWe do not sell your personal information.",
+      "text_zh": "• 创建和管理账户，包括 Google 登录和邀请码；\n\n• 代您购买商品、与卖家沟通、签收、验货、存储和寄运；\n\n• 制作运单和报关单，回应承运商和海关；\n\n• 处理付款、退款和拒付，防范欺诈；\n\n• 提供客服并处理理赔；\n\n• 依法保存会计和税务记录；\n\n• 改进和保护网站安全；\n\n• 发送营销信息——仅在获得您同意后，可随时退订。\n\n我们不出售您的个人信息。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:3",
+      "slug": "privacy-policy",
+      "num": "3",
+      "anchor": "meb-os-privacy-policy-3",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-3",
+      "title_en": "3. Consent",
+      "title_zh": "3. 同意",
+      "text_en": "By creating an account and placing orders, you consent to the uses in section 2 that are necessary to provide our services. Optional uses (such as marketing emails and non-essential cookies) need your separate consent, which you can withdraw at any time, subject to legal or contractual limits. Withdrawing consent to essential uses may mean we cannot provide the service.",
+      "text_zh": "创建账户和下单即表示您同意第2条中提供服务所必需的用途。可选用途（如营销邮件和非必要 Cookie）需另行同意，您可随时撤回（受法律或合同限制）。撤回对必要用途的同意可能导致我们无法提供服务。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:4",
+      "slug": "privacy-policy",
+      "num": "4",
+      "anchor": "meb-os-privacy-policy-4",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-4",
+      "title_en": "4. Who we share it with",
+      "title_zh": "4. 共享对象",
+      "text_en": "We share only what each party needs:\n\n• Our contracted warehouse, purchasing and logistics partners in mainland China (names available on request) — order details, recipient name, address and phone needed to label and dispatch parcels;\n\n• Sellers and platforms (Taobao, 1688, JD.com, etc.) — we place orders in our own name and warehouse address; we normally do not share your personal details with Sellers;\n\n• Carriers and logistics providers (e.g. Canada Post, DHL, UPS, FedEx and shipping-line operators) and customs authorities (CBSA, China Customs) — recipient details, contents and values;\n\n• Payment processors (PayPal, and AlphaPay if added) — payment information;\n\n• Technology providers — our website hosting provider, email delivery provider, Google (social login), website analytics (if enabled), and backup services;\n\n• Professional advisers and authorities — accountants, lawyers, or where required by law (e.g. court order, CRA).\n\nOur service providers must protect your information and use it only for the services they provide to us.",
+      "text_zh": "仅共享各方所需的信息：\n\n– 我们在中国大陆签约的仓储、采购和物流合作方（名称可应要求提供）—— 贴标和发货所需的订单信息、收件人姓名、地址和电话；\n\n– 卖家和平台（淘宝、1688、京东等）—— 我们以自己的名义和仓库地址下单，通常不向卖家提供您的个人信息；\n\n– 承运商和物流服务商（如 Canada Post、DHL、UPS、FedEx 及专线运营商）及海关（CBSA、中国海关）—— 收件人信息、内容和价值；\n\n– 支付机构（PayPal，以及如增加的 AlphaPay）—— 支付信息；\n\n– 技术服务商 —— 网站托管服务商、邮件发送服务商、Google（社交登录）、网站分析（如启用）及备份服务；\n\n– 专业顾问和政府机关 —— 会计师、律师，或依法要求（如法院命令、加拿大税务局 CRA）。\n\n服务商须保护您的信息，且只能为向我们提供服务而使用。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:5",
+      "slug": "privacy-policy",
+      "num": "5",
+      "anchor": "meb-os-privacy-policy-5",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-5",
+      "title_en": "5. Information stored or processed outside Canada",
+      "title_zh": "5. 境外存储和处理",
+      "text_en": "Your information will be processed in China (warehouse and logistics) and may be stored or processed in the United States or other countries by our hosting, payment, email or analytics providers. Information held abroad is subject to the laws of that country and may be accessed by its courts, law enforcement or national security authorities. We use contracts and other reasonable means to protect your information when it is transferred.",
+      "text_zh": "您的信息会在 中国（仓储和物流）处理，并可能由托管、支付、邮件或分析服务商在 美国或其他国家 存储或处理。境外信息受当地法律约束，可能被当地法院、执法或国家安全机关获取。我们通过合同及其他合理方式保护跨境传输的信息。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:6",
+      "slug": "privacy-policy",
+      "num": "6",
+      "anchor": "meb-os-privacy-policy-6",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-6",
+      "title_en": "6. Cookies",
+      "title_zh": "6. Cookie",
+      "text_en": "Our website uses cookies that are necessary for login, the shopping cart and security, and, with your consent, analytics cookies. We do not use advertising cookies. You can control cookies in your browser and through our cookie notice. Blocking necessary cookies may prevent the site from working.",
+      "text_zh": "网站使用登录、购物车和安全所必需的 Cookie，以及经您同意的分析 Cookie。我们不使用广告 Cookie。您可在浏览器及我们的 Cookie 提示栏中管理。屏蔽必要 Cookie 可能导致网站无法正常使用。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:7",
+      "slug": "privacy-policy",
+      "num": "7",
+      "anchor": "meb-os-privacy-policy-7",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-7",
+      "title_en": "7. How long we keep it",
+      "title_zh": "7. 保存期限",
+      "text_en": "• Account information: while your account is open and for 24 months after closure, unless you ask us to delete it sooner (subject to the exceptions below);\n\n• Order, payment and shipping records: at least six years after the end of the tax year, as required by Canadian tax law;\n\n• Inspection photos: 12 months after the parcel is delivered;\n\n• Marketing consent records: as long as needed to prove consent under CASL.\n\nWe then delete or anonymize the information.",
+      "text_zh": "• 账户信息：账户存续期间及注销后 24 个月，除非您要求提前删除（下列例外除外）；\n\n• 订单、支付和运输记录：依加拿大税法至少保存至相关纳税年度结束后 六年；\n\n• 验货照片：包裹签收后 12 个月；\n\n• 营销同意记录：按 CASL 证明同意所需期限保存。\n\n到期后删除或匿名化处理。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:8",
+      "slug": "privacy-policy",
+      "num": "8",
+      "anchor": "meb-os-privacy-policy-8",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-8",
+      "title_en": "8. Security",
+      "title_zh": "8. 安全",
+      "text_en": "We use reasonable safeguards appropriate to the sensitivity of the information, such as HTTPS encryption, access controls and strong passwords for staff accounts, two-factor authentication on administrator accounts, regular WordPress/plugin updates, limited staff access, and backups. No system is perfectly secure. If a breach of security safeguards creates a real risk of significant harm, we will notify you and the Office of the Privacy Commissioner of Canada as required by law, and keep a record of the breach.",
+      "text_zh": "我们采取与信息敏感程度相适应的合理措施，如 HTTPS 加密、访问控制和员工强密码、管理员账户双重验证、定期更新 WordPress/插件、最小权限访问和备份。任何系统都无法做到绝对安全。如安全保障措施被突破并构成”重大伤害的实际风险”，我们将依法通知您和加拿大隐私专员办公室（OPC），并保存违规记录。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:9",
+      "slug": "privacy-policy",
+      "num": "9",
+      "anchor": "meb-os-privacy-policy-9",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-9",
+      "title_en": "9. Your rights",
+      "title_zh": "9. 您的权利",
+      "text_en": "You may:\n\n• ask to access the personal information we hold about you and how it has been used and shared;\n\n• ask us to correct inaccurate information (you can also edit your account);\n\n• withdraw consent to optional uses, and unsubscribe from marketing;\n\n• ask us to close your account and delete information we no longer need to keep;\n\n• complain to us, and if you are not satisfied, to the Office of the Privacy Commissioner of Canada (www.priv.gc.ca).\n\nSend requests to joshuazhou406@gmail.com. We may need to verify your identity. We will respond within 30 days (or tell you if we need an extension as permitted by law). Access is free of charge.",
+      "text_zh": "您可以：\n\n– 要求 查阅 我们持有的您的个人信息及其使用和共享情况；\n\n– 要求 更正 不准确的信息（也可在账户中自行修改）；\n\n– 撤回 对可选用途的同意，退订营销信息；\n\n– 要求 注销账户并删除 我们无需继续保存的信息；\n\n– 向我们 投诉，如不满意，可向加拿大隐私专员办公室（www.priv.gc.ca）投诉。\n\n请发送请求至 joshuazhou406@gmail.com。我们可能需要核实您的身份，并将在 30天内 答复（如需延期将依法告知）。查阅免费。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:10",
+      "slug": "privacy-policy",
+      "num": "10",
+      "anchor": "meb-os-privacy-policy-10",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-10",
+      "title_en": "10. Changes",
+      "title_zh": "10. 政策变更",
+      "text_en": "We will post any updates here with a new effective date and notify you by email of significant changes.",
+      "text_zh": "更新后将在此公布新的生效日期，重大变更会邮件通知。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "privacy-policy:11",
+      "slug": "privacy-policy",
+      "num": "11",
+      "anchor": "meb-os-privacy-policy-11",
+      "url": "https://myeasybuy.ca/privacy-policy/#meb-os-privacy-policy-11",
+      "title_en": "11. Contact",
+      "title_zh": "11. 联系方式",
+      "text_en": "Privacy Officer, MyEasyBuy, 615 Ester St, Sudbury, ON P3E 5C6 · joshuazhou406@gmail.com",
+      "text_zh": "MyEasyBuy 隐私负责人，615 Ester St, Sudbury, ON P3E 5C6 · joshuazhou406@gmail.com",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:intro",
+      "slug": "terms-of-service",
+      "num": "intro",
+      "anchor": "meb-os-terms-of-service-intro",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-intro",
+      "title_en": "Introduction",
+      "title_zh": "简介",
+      "text_en": "These Terms of Service (also called the “MyEasyBuy User Registration Agreement”) form a binding agreement between you and MyEasyBuy. They incorporate the following policies, which are part of these Terms: Return & Refund Policy, Privacy Policy, Shipping & Prohibited Items Policy, Storage & Inspection Policy, and Compensation & Insurance Policy (together, the “Policies”). If any Policy conflicts with these Terms, these Terms prevail, except where a law that protects you says otherwise.\n\nNothing in these Terms limits any right you have under the Ontario Consumer Protection Act, 2002 or other consumer protection law that cannot be waived. If a term is unenforceable against you, the rest still applies.",
+      "text_zh": "本服务条款（即”Myeasybuy 用户注册协议”）是您与 MyEasyBuy 之间具有约束力的协议，并包含以下政策作为组成部分：退货退款政策、隐私政策、运输与禁运政策、仓储与验货政策、赔偿与保险政策（合称”各项政策”）。如各项政策与本条款冲突，以本条款为准，但保护您的法律另有规定的除外。\n\n本条款不限制您依据安大略省《2002年消费者保护法》（Consumer Protection Act, 2002）或其他不可放弃的消费者保护法律享有的任何权利。如某条款对您不可执行，其余条款仍然有效。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:1",
+      "slug": "terms-of-service",
+      "num": "1",
+      "anchor": "meb-os-terms-of-service-1",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-1",
+      "title_en": "1. What MyEasyBuy does",
+      "title_zh": "1. 服务内容",
+      "text_en": "1.1 Purchasing agent. At your request, we buy goods on your behalf from third-party sellers on Chinese platforms such as Taobao, Tmall, 1688 and JD.com (“Sellers”). We are not the seller or manufacturer of those goods. Product listings, photos, descriptions and translations come from the Seller or from automated translation, and we do not guarantee their accuracy.\n\n1.2 Warehouse services. Purchased goods are delivered to our partner warehouse in China (“Warehouse”), where we receive, check (see the Storage & Inspection Policy), store, and consolidate them.\n\n1.3 International shipping. At your instruction we hand your parcel to a third-party carrier for delivery to your address in Canada. You are the importer of the goods (see section 7).\n\n1.4 Forwarding (if offered). If you have goods sent to the Warehouse yourself, the same rules apply, except that we did not choose or buy those goods.",
+      "text_zh": "1.1 代购代理。 我们应您的要求，代您向淘宝、天猫、1688、京东等中国平台上的第三方卖家（”卖家”）购买商品。我们不是商品的卖家或制造商。商品页面、图片、描述及翻译来自卖家或机器翻译，我们不保证其准确性。\n\n1.2 仓库服务。 商品寄至我们在中国的合作仓库（”仓库”），由我们签收、检查（见《仓储与验货政策》）、存放和合箱。\n\n1.3 国际运输。 根据您的指示，我们将包裹交给第三方承运商寄往您在加拿大的地址。您是货物的进口人（见第7条）。\n\n1.4 转运（如提供）。 若您自行将商品寄至仓库，同样适用本条款，但该商品并非由我们挑选或购买。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:2",
+      "slug": "terms-of-service",
+      "num": "2",
+      "anchor": "meb-os-terms-of-service-2",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-2",
+      "title_en": "2. Eligibility and your account",
+      "title_zh": "2. 资格与账户",
+      "text_en": "2.1 You must be at least the age of majority in your province or territory (18 or 19) and able to enter a binding contract. Business customers may use the service; in that case consumer-protection provisions apply only as the law requires, and business customers are responsible for any import permits, labelling, product-safety and resale compliance.\n\n2.2 You may register with an email address (an invitation code is optional unless a sign-up campaign states otherwise) or through Google sign-in. If you use Google sign-in, we receive basic profile information from Google as described in our Privacy Policy.\n\n2.3 You must give accurate information (name, email, Canadian delivery address, phone) and keep it up to date. You are responsible for keeping your password confidential and for activity in your account. Tell us promptly at joshuazhou406@gmail.com if you suspect unauthorized use.\n\n2.4 One person, one account, unless we agree otherwise. Invitation codes are personal, may not be sold, and may be withdrawn if misused (for example, self-referral or fake accounts). Any referral rewards are governed by the Referral Program rules published on our website at the time the reward is earned.",
+      "text_zh": "2.1 您须已达到所在省/地区的成年年龄（18或19岁）并具有订立合同的能力。企业客户亦可使用本服务，此时消费者保护条款仅在法律要求的范围内适用，企业客户须自行负责进口许可、标签、产品安全及转售合规。\n\n2.2 您可使用电子邮箱注册（邀请码为选填，除非某项注册活动另有说明），或通过 Google 登录。使用 Google 登录时，我们会按《隐私政策》所述从 Google 获取基本资料。\n\n2.3 您须提供并及时更新真实信息（姓名、邮箱、加拿大收货地址、电话），妥善保管密码，并对账户内的活动负责。如怀疑账户被盗用，请立即联系 joshuazhou406@gmail.com。\n\n2.4 原则上一人一个账户。邀请码仅限本人使用，不得转售；如被滥用（如自我推荐、虚假账户），我们可收回。推荐奖励按获得奖励时网站公布的《推荐计划规则》执行。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:3",
+      "slug": "terms-of-service",
+      "num": "3",
+      "anchor": "meb-os-terms-of-service-3",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-3",
+      "title_en": "3. Orders",
+      "title_zh": "3. 订单",
+      "text_en": "3.1 Submitting an order. You submit the product link, options (size, colour, quantity) and any notes. You are responsible for checking the listing, the option you chose and the size chart. Before you pay, we will show you an itemized summary that includes the item price, Chinese domestic shipping, our service fee, any value-added services, the currency, and the total amount payable at that stage. You will have a chance to correct errors and to accept or decline.\n\n3.2 Two-stage payment. You normally pay in two stages: (a) Purchase payment — item price + Chinese domestic shipping + service fee; and (b) Shipping payment — international shipping + any value-added services, paid when you submit a parcel for dispatch. Amounts are shown in Canadian dollars (CAD) unless stated otherwise.\n\n3.3 Price changes by the Seller. If the Seller’s price or domestic shipping differs from what you paid, we will tell you. You may pay the difference or cancel for a refund of the amount paid for that item. We will not buy at a higher price without your approval.\n\n3.4 Out-of-stock or refused orders. If the item is unavailable, the Seller cancels, or we decline the order (for example, a prohibited item), we refund the amounts paid for that item, including the service fee.\n\n3.5 Our right to decline. We may refuse any order that we reasonably believe is illegal, prohibited for export from China or import into Canada, infringes intellectual property, is unsafe to ship, or is part of fraud. We do not knowingly buy counterfeit goods.",
+      "text_zh": "3.1 提交订单。 您提交商品链接、规格（尺码、颜色、数量）及备注，并负责核对商品页面、所选规格和尺码表。付款前我们会显示分项明细：商品价格、国内运费、服务费、增值服务费、币种及该阶段应付总额，您可更正错误并选择确认或取消。\n\n3.2 两段式付款。 通常分两次付款：(a) 购买款——商品价 + 中国国内运费 + 服务费；(b) 运费款——提交包裹发货时支付国际运费及增值服务费。除另有说明外以加元（CAD）计价。\n\n3.3 卖家改价。 如卖家价格或国内运费与您已付金额不同，我们会通知您，您可补差价或取消并获退该商品已付款项。未经您同意我们不会以更高价格下单。\n\n3.4 缺货或订单被拒。 如商品缺货、卖家取消，或我们拒绝订单（如禁运品），我们将退还该商品的全部已付款项，包括服务费。\n\n3.5 拒单权。 若我们合理认为订单违法、属于中国禁止出口或加拿大禁止进口的物品、侵犯知识产权、运输不安全或涉嫌欺诈，我们可拒绝。我们不会明知而购买假冒商品。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:4",
+      "slug": "terms-of-service",
+      "num": "4",
+      "anchor": "meb-os-terms-of-service-4",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-4",
+      "title_en": "4. Fees",
+      "title_zh": "4. 费用",
+      "text_en": "4.1 Our current fees are published on our Fees page. At the date of this version:\n\n• Service fee: 6% of the item price + Chinese domestic shipping, minimum CAD 5 per order;\n\n• International shipping: charged by chargeable weight, which is the greater of actual weight and volumetric weight (L × W × H in cm ÷ 5000 for express couriers such as DHL, UPS and FedEx, or ÷ 6000 for all other lines), rounded up to the next 0.5 kg tier, at the rate of the shipping line you choose;\n\n• Storage: see the Storage & Inspection Policy;\n\n• Value-added services: extra photos, measurements, removal of packaging, reinforcement, insurance, etc., at the prices listed.\n\n4.2 Shipping estimates and adjustments. International shipping quoted before packing is an estimate. After your parcel is packed and weighed, we calculate the actual charge. If the actual charge is lower, we refund the difference to your original payment method (or to your account balance if you prefer) within 5 business days. If it is higher, we will ask you to pay the difference before dispatch; if the increase is more than 10% or more than CAD 10, we will not charge it without your confirmation, and you may instead choose a different line, remove items, or cancel the parcel. We will show you the actual weight and dimensions on request.\n\n4.3 Exchange rate. Item prices in RMB are converted to CAD at the rate shown at checkout, which is the Bank of Canada daily CNY/CAD rate plus a 3% conversion margin. Refunds of RMB amounts are converted at the same rate used when you paid, so you are not affected by exchange-rate movements.\n\n4.4 Sales tax. MyEasyBuy is not currently registered for GST/HST and does not charge GST/HST. If we register, GST/HST will be added to our service fee, storage and value-added service charges as required by law and shown separately on your invoice. Import taxes and duties on the goods are separate (section 7).\n\n4.5 Fee changes. We may change our fees for future orders by updating the Fees page. Changes do not apply to an order or parcel you have already paid for.",
+      "text_zh": "4.1 现行费用以网站”费用说明”页为准。本版本发布时的费用如下：\n\n– 服务费： 商品价 + 中国国内运费的 6%，每单最低 CAD 5；\n\n– 国际运费： 按计费重量（实重与体积重取大者；体积重 = 长×宽×高(cm) ÷ 5000（DHL、UPS、FedEx 等国际快递）或 ÷ 6000（其他线路）），按 0.5 kg 一档向上取整，按您所选线路价格计算；\n\n– 仓储费： 见《仓储与验货政策》；\n\n– 增值服务： 加拍照片、测量、去包装、加固、保价等，按公布价格收取。\n\n4.2 运费预付与多退少补。 打包前的国际运费为预估。包裹打包称重后计算实际运费：实际运费较低的，差额在 5 个工作日内退回原支付方式（或按您的选择存入账户余额）；较高的，请您在发货前补缴；如上涨超过 10% 或超过 CAD 10，未经您确认我们不会扣款，您也可改选线路、移除商品或取消包裹。应您要求我们会提供实际重量和尺寸。\n\n4.3 汇率。 人民币商品价按结算页显示的汇率换算成加元，汇率为加拿大银行（Bank of Canada）当日人民币/加元汇率加 3% 换汇费。人民币退款按您付款时的同一汇率换算，您不承担汇率波动。\n\n4.4 销售税。 MyEasyBuy 目前未注册 GST/HST，不收取 GST/HST。注册后，将依法对服务费、仓储费和增值服务费加收 GST/HST，并在发票上单独列示。商品的进口关税和税费另计（第7条）。\n\n4.5 费用调整。 我们可通过更新费用页面调整未来订单的费用，已付款的订单或包裹不受影响。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:5",
+      "slug": "terms-of-service",
+      "num": "5",
+      "anchor": "meb-os-terms-of-service-5",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-5",
+      "title_en": "5. Payment",
+      "title_zh": "5. 支付",
+      "text_en": "5.1 We accept PayPal and other methods shown at checkout (AlphaPay may be added). Third-party payment providers have their own terms and privacy policies. We do not store your full card details.\n\n5.2 Account balance (if offered). Refunds may be credited to an account balance if you choose. You may ask us at any time to withdraw your balance to the original payment method; we will process withdrawals within 5 business days. Balances do not expire.\n\n5.3 Chargebacks. If you have a problem, please contact us first so we can fix it. Your statutory chargeback rights are not affected. If a chargeback is filed, we may pause the related orders or parcels while it is resolved.",
+      "text_zh": "5.1 我们接受 PayPal 及结算页显示的其他方式（可能增加 AlphaPay）。第三方支付机构有其自身条款和隐私政策。我们不存储您的完整银行卡信息。\n\n5.2 账户余额（如提供）。 您可选择将退款存入账户余额，并可随时申请提现至原支付方式，我们在 5 个工作日内处理。余额不设过期。\n\n5.3 拒付（Chargeback）。 遇到问题请先联系我们处理；您的法定拒付权不受影响。发起拒付期间，我们可暂停相关订单或包裹的处理。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:6",
+      "slug": "terms-of-service",
+      "num": "6",
+      "anchor": "meb-os-terms-of-service-6",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-6",
+      "title_en": "6. Warehouse, inspection and storage",
+      "title_zh": "6. 仓库、验货与仓储",
+      "text_en": "Goods are received, checked and stored as described in the Storage & Inspection Policy. Free storage is 90 days (30 days for forwarded parcels) from the date an item is logged as “In Warehouse”; storage fees and abandonment rules apply after that, with prior notice to you.",
+      "text_zh": "按《仓储与验货政策》签收、检查和存放。自商品状态变为”已入库”起免费存放 90 天（转运包裹 30 天），之后按规则收取仓储费并在事先通知后处理弃件。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:7",
+      "slug": "terms-of-service",
+      "num": "7",
+      "anchor": "meb-os-terms-of-service-7",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-7",
+      "title_en": "7. Shipping, customs, duties and taxes",
+      "title_zh": "7. 运输、清关、关税与税费",
+      "text_en": "7.1 You are the importer. Goods are shipped to Canada in your name. You are responsible for any customs duties, GST/HST/PST/QST, excise, brokerage or carrier handling charges assessed by the Canada Border Services Agency (CBSA) or collected by Canada Post or the courier, unless a shipping line expressly says duties are prepaid.\n\n7.2 Truthful declarations. We prepare the customs declaration using the actual price paid and an accurate description of contents. We will not under-declare or misdescribe goods. Requests to do so will be refused.\n\n7.3 Prohibited and restricted items are described in the Shipping & Prohibited Items Policy. You are responsible for making sure the goods you ask us to buy may lawfully be imported into and used in Canada.\n\n7.4 Delivery times are estimates. Delivery is carried out by third-party carriers. Risk of loss and our compensation obligations are set out in the Compensation & Insurance Policy.\n\n7.5 Refused or unclaimed parcels. If a parcel is returned because the address was wrong, you did not collect it, or you refused to pay duties, return and re-shipping costs are yours.",
+      "text_zh": "7.1 您是进口人。 货物以您的名义进口加拿大。加拿大边境服务局（CBSA）评定的关税、GST/HST/PST/QST、消费税、报关或承运商手续费，以及 Canada Post 或快递代收的费用，均由您承担，除非线路明确标注”包税”。\n\n7.2 如实申报。 我们按实际购买价格和真实品名申报，不会低报或错报，相关要求一律拒绝。\n\n7.3 禁运与限运品 见《运输与禁运政策》。您有责任确保所购商品可合法进口和在加拿大使用。\n\n7.4 时效 仅为预估，由第三方承运商派送。风险与赔偿见《赔偿与保险政策》。\n\n7.5 拒收或无人领取。 因地址错误、未领取或拒付关税导致退件的，退回及重新寄送费用由您承担。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:8",
+      "slug": "terms-of-service",
+      "num": "8",
+      "anchor": "meb-os-terms-of-service-8",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-8",
+      "title_en": "8. Returns, cancellations and refunds",
+      "title_zh": "8. 退货、取消与退款",
+      "text_en": "See the Return & Refund Policy. In summary: you can cancel for a full refund before we buy; after purchase, returns depend on the Seller’s rules and are generally only practical while the goods are still in China; problems caused by us are fixed at our cost.",
+      "text_zh": "见《退货退款政策》。简言之：采购前可随时取消并全额退款；采购后能否退货取决于卖家规则，通常只有商品仍在中国时才可行；因我们原因造成的问题由我们承担费用解决。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:9",
+      "slug": "terms-of-service",
+      "num": "9",
+      "anchor": "meb-os-terms-of-service-9",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-9",
+      "title_en": "9. Your responsibilities",
+      "title_zh": "9. 用户义务",
+      "text_en": "You agree not to use MyEasyBuy to:\n\n• buy, ship or import anything illegal in China or Canada, counterfeit or infringing goods, or items listed as prohibited;\n\n• give false information, use someone else’s payment method without permission, or commit fraud;\n\n• resell goods in a way that breaks Canadian law (for example, consumer product safety, labelling or import permit rules) — business users are responsible for their own compliance;\n\n• abuse our staff, interfere with the website, scrape it, or attempt unauthorized access.",
+      "text_zh": "您同意不利用 MyEasyBuy：购买、运输或进口中加两国法律禁止的物品、假冒或侵权商品、禁运品；提供虚假信息、未经授权使用他人支付方式或实施欺诈；违反加拿大法律转售商品（如消费品安全、标签或进口许可规定——企业用户自行负责合规）；辱骂员工、干扰网站、抓取数据或未经授权访问。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:10",
+      "slug": "terms-of-service",
+      "num": "10",
+      "anchor": "meb-os-terms-of-service-10",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-10",
+      "title_en": "10. Suspension and closing your account",
+      "title_zh": "10. 暂停与注销账户",
+      "text_en": "10.1 You may close your account at any time by contacting us or using the account page. Before closing, please ship or dispose of goods in storage and withdraw any balance. We will refund any remaining balance to your original payment method after deducting amounts you owe.\n\n10.2 We may suspend or close an account, with notice where reasonable, for serious or repeated breach of these Terms, suspected fraud, attempts to ship prohibited items, abusive conduct, or if required by law. If we close your account for reasons other than your breach, we will give you at least 30 days’ notice to ship or collect your goods and will refund any balance.\n\n10.3 After closure, we keep certain records as required by law (for example, tax records for at least six years) as described in our Privacy Policy.",
+      "text_zh": "10.1 您可随时注销账户（联系我们或在账户页面操作）。注销前请先发出或处理仓库中的商品并提取余额；扣除您应付款项后，剩余余额退回原支付方式。\n\n10.2 我们可暂停或关闭账户（合理情况下事先通知），情形包括严重或多次违反本条款、涉嫌欺诈、试图寄运禁运品、辱骂行为或法律要求。若非因您违约而关闭账户，我们将提前至少 30 天通知，让您发出或取回商品，并退还余额。\n\n10.3 账户关闭后，我们会依法保留部分记录（如税务记录至少六年），详见《隐私政策》。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:11",
+      "slug": "terms-of-service",
+      "num": "11",
+      "anchor": "meb-os-terms-of-service-11",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-11",
+      "title_en": "11. Limitation of liability",
+      "title_zh": "11. 责任限制",
+      "text_en": "11.1 We will provide our services with reasonable care and skill. Our liability for items lost or damaged while in our care, and for transit loss or damage, is set out in the Compensation & Insurance Policy.\n\n11.2 To the extent permitted by law, we are not liable for: (a) acts or omissions of Sellers, carriers, customs or other authorities, payment providers or platforms; (b) the authenticity, quality, functionality, safety or legality of goods beyond what our inspection covers; (c) indirect or consequential losses such as lost profits, resale value or collectible premium; (d) delays or failures caused by events beyond our reasonable control (for example, natural disasters, pandemics, strikes, government action, carrier or customs disruptions, platform outages).\n\n11.3 To the extent permitted by law, our total liability for any claim related to an order or parcel is limited to the amount you paid us for that order or parcel, plus any compensation payable under the Compensation & Insurance Policy. These limits do not apply where liability cannot be limited by law (including for our negligence causing personal injury, or fraud).",
+      "text_zh": "11.1 我们将以合理的谨慎和专业提供服务。对在我们保管期间及运输中丢失或损坏商品的责任，见《赔偿与保险政策》。\n\n11.2 在法律允许的范围内，我们不对以下情况负责：(a) 卖家、承运商、海关或其他机关、支付机构或平台的行为或疏忽；(b) 超出验货范围的商品真伪、质量、功能、安全或合法性；(c) 间接或附带损失，如利润损失、转售价值或收藏溢价；(d) 不可抗力（自然灾害、疫情、罢工、政府行为、承运商或海关中断、平台故障等）造成的延误或失败。\n\n11.3 在法律允许的范围内，我们就某一订单或包裹的赔偿总额以您就该订单或包裹向我们支付的金额，加上《赔偿与保险政策》规定的赔偿为限。法律不允许限制的责任（包括因我们过失造成的人身伤害或欺诈）除外。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:12",
+      "slug": "terms-of-service",
+      "num": "12",
+      "anchor": "meb-os-terms-of-service-12",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-12",
+      "title_en": "12. Intellectual property",
+      "title_zh": "12. 知识产权",
+      "text_en": "The MyEasyBuy name, logo and website content belong to us or our licensors. Product content belongs to the Sellers or platforms. Inspection photos we take are provided for your personal evaluation of your goods.",
+      "text_zh": "MyEasyBuy 名称、标识和网站内容归我们或授权方所有；商品内容归卖家或平台所有。我们拍摄的验货照片仅供您评估自己的商品。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:13",
+      "slug": "terms-of-service",
+      "num": "13",
+      "anchor": "meb-os-terms-of-service-13",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-13",
+      "title_en": "13. Communications",
+      "title_zh": "13. 通知",
+      "text_en": "We will contact you by email, website notices or messages in your account about orders, parcels, storage deadlines and changes to these Terms. Please keep your email current and check spam folders. We will only send marketing emails with your consent, and you can unsubscribe at any time (Canada’s Anti-Spam Legislation).",
+      "text_zh": "我们将通过邮件、网站公告或账户消息通知订单、包裹、仓储期限和条款变更。请保持邮箱有效并留意垃圾邮件。营销邮件仅在获得您同意后发送，您可随时退订（加拿大反垃圾邮件法 CASL）。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:14",
+      "slug": "terms-of-service",
+      "num": "14",
+      "anchor": "meb-os-terms-of-service-14",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-14",
+      "title_en": "14. Changes to these Terms",
+      "title_zh": "14. 条款变更",
+      "text_en": "We may update these Terms. We will post the new version with its effective date and, for material changes, notify registered users by email at least 30 days before they take effect. Changes do not apply to orders already paid for. If you do not agree, you may close your account before the change takes effect.",
+      "text_zh": "我们可更新本条款，公布新版本及生效日期；重大变更将至少提前 30 天邮件通知注册用户。变更不影响已付款订单。若不同意，您可在生效前注销账户。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:15",
+      "slug": "terms-of-service",
+      "num": "15",
+      "anchor": "meb-os-terms-of-service-15",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-15",
+      "title_en": "15. Disputes and governing law",
+      "title_zh": "15. 争议与适用法律",
+      "text_en": "15.1 Please contact us first at joshuazhou406@gmail.com; we aim to reply within 2 business days and to resolve complaints within 14 days.\n\n15.2 These Terms are governed by the laws of Ontario and the federal laws of Canada that apply there. Subject to your rights as a consumer (including any right to bring a claim in the courts where you live), disputes will be heard in the courts of Ontario, including the Small Claims Court in Sudbury. Nothing in these Terms requires a consumer to go to arbitration or prevents participation in a class proceeding where the law protects that right.",
+      "text_zh": "15.1 请先联系 joshuazhou406@gmail.com，我们力争 2 个工作日内回复，14 天内解决投诉。\n\n15.2 本条款适用安大略省法律及适用于该省的加拿大联邦法律。在不影响您作为消费者权利（包括在您居住地法院起诉的权利）的前提下，争议由安大略省法院管辖，包括萨德伯里小额钱债法院。本条款不强制消费者仲裁，也不剥夺法律保护的参与集体诉讼的权利。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:16",
+      "slug": "terms-of-service",
+      "num": "16",
+      "anchor": "meb-os-terms-of-service-16",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-16",
+      "title_en": "16. General",
+      "title_zh": "16. 其他",
+      "text_en": "Headings are for convenience. If we do not enforce a term, that is not a waiver. You may not transfer your account. We may assign this agreement to a successor of the business on notice to you. These Terms are provided in English and Chinese; if there is any inconsistency, the English version prevails.",
+      "text_zh": "标题仅为方便阅读。我们未行使某项权利不构成放弃。您不得转让账户。我们可在通知您后将本协议转让给业务承继方。本条款提供中英文版本，如有不一致，以英文版为准。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "terms-of-service:17",
+      "slug": "terms-of-service",
+      "num": "17",
+      "anchor": "meb-os-terms-of-service-17",
+      "url": "https://myeasybuy.ca/terms-of-service/#meb-os-terms-of-service-17",
+      "title_en": "17. MyEasyBuy Statement (Disclaimer)",
+      "title_zh": "17. Myeasybuy 声明（免责声明）",
+      "text_en": "MyEasyBuy is an independent Canadian business. We are not affiliated with or endorsed by Taobao, Tmall, Alibaba, 1688, JD.com or any Seller. Brand names shown in product links belong to their owners. We do not knowingly buy or ship counterfeit goods, and you are responsible for ensuring that what you buy is lawful to import and use in Canada.",
+      "text_zh": "MyEasyBuy 是独立的加拿大企业，与淘宝、天猫、阿里巴巴、1688、京东及任何卖家无关联或背书关系。商品链接中出现的品牌归其所有人所有。我们不会明知而购买或寄运假冒商品，您有责任确保所购商品可在加拿大合法进口和使用。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:1",
+      "slug": "shipping-policy",
+      "num": "1",
+      "anchor": "meb-os-shipping-policy-1",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-1",
+      "title_en": "1. Shipping lines",
+      "title_zh": "1. 运输线路",
+      "text_en": "We ship from China to Canada using third-party lines such as economy lines delivered in Canada by Canada Post, express couriers (DHL, UPS, FedEx), special air lines for sensitive goods, and sea freight for large shipments. Each line has its own price, transit estimate, size/weight limits, accepted goods, tracking, and compensation rules, shown on our Shipping Estimator page. Transit times are estimates, not guarantees.",
+      "text_zh": "我们通过第三方线路从中国寄往加拿大，例如由 Canada Post 在加拿大派送的经济线、国际快递（DHL、UPS、FedEx）、敏感货空运专线，以及大件海运。每条线路的价格、时效、尺寸/重量限制、可寄物品、追踪方式和赔偿规则不同，详见”运费估算”页面。时效仅为预估，不作保证。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:2",
+      "slug": "shipping-policy",
+      "num": "2",
+      "anchor": "meb-os-shipping-policy-2",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-2",
+      "title_en": "2. How shipping is charged",
+      "title_zh": "2. 运费计算",
+      "text_en": "• Chargeable weight = the greater of actual weight and volumetric weight (L × W × H in cm ÷ 5000 for express couriers, ÷ 6000 for all other lines), rounded up to the next 0.5 kg tier.\n\n• Some lines add a first-weight charge, fuel surcharge, remote-area fee or sensitive-goods surcharge; these are shown in the estimate.\n\n• Prepay and adjust: you pay the estimate when submitting a parcel. After packing we weigh and measure it. If the final charge is lower we refund the difference; if higher we ask you to pay the difference before dispatch (see Terms of Service §4.2). If a line becomes unavailable or a carrier changes its price before dispatch, we will ask you before switching.",
+      "text_zh": "• 计费重量 = 实际重量与体积重（长×宽×高 cm ÷ 5000（国际快递）或 ÷ 6000（其他线路））取大者，按 0.5 kg 一档向上取整。\n\n• 部分线路另收首重费、燃油附加费、偏远地区费或敏感货附加费，均在估价中显示。\n\n• 预付后多退少补： 提交包裹时按预估付款，打包后称重量尺；实际较低则退差额，较高则发货前补缴（见服务条款第4.2条）。如发货前线路停用或承运商调价，我们会先征得您同意再更换。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:3",
+      "slug": "shipping-policy",
+      "num": "3",
+      "anchor": "meb-os-shipping-policy-3",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-3",
+      "title_en": "3. Customs, duties and taxes (Canada)",
+      "title_zh": "3. 清关、关税与税费（加拿大）",
+      "text_en": "• You are the importer. Your parcel is addressed to you, and you are responsible for any duties and taxes assessed by the CBSA, including GST/HST and, where applicable, PST/QST, plus any handling or brokerage fee charged by Canada Post or the courier. These are usually collected on delivery or by invoice from the carrier. The only exception is a line expressly marked “duties included”.\n\n• Goods from China generally do not qualify for the higher CUSMA courier thresholds; low-value shipments may still be taxable. Check the CBSA website for current thresholds.\n\n• Accurate declarations only. We declare the actual price paid and a truthful description. We will not under-value, mislabel or split shipments to avoid duties. Under-declaration can lead to penalties, seizure, or loss of compensation.\n\n• If customs requests information (for example an invoice or product details), please respond promptly; we will provide the purchase records we hold.\n\n• Goods seized, detained or refused by customs or other authorities because of their nature, or because you did not respond or pay, are not eligible for compensation (see Compensation & Insurance Policy).",
+      "text_zh": "• 您是进口人。 包裹寄给您本人，CBSA 评定的关税和税费（GST/HST，及适用的 PST/QST）以及 Canada Post 或快递收取的手续费/报关费由您承担，通常在派送时代收或由承运商开单。唯一例外是明确标注”包税”的线路。\n\n• 来自中国的货物一般不适用 CUSMA 的较高快递免税额，低价值包裹也可能需缴税。请以 CBSA 网站公布的最新门槛为准。\n\n• 只做如实申报。 我们按实际购买价和真实品名申报，不会低报、错报或拆单避税。低报可能导致罚款、扣押或丧失赔偿资格。\n\n• 海关要求补充资料（如发票、商品信息）时请及时回复，我们会提供所持有的购买记录。\n\n• 因货物性质，或因您未回复/未缴税，被海关或其他机关扣押、扣留或退回的，不予赔偿（见《赔偿与保险政策》）。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:4",
+      "slug": "shipping-policy",
+      "num": "4",
+      "anchor": "meb-os-shipping-policy-4",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-4",
+      "title_en": "4. Prohibited items — we will not buy or ship",
+      "title_zh": "4. 禁运物品——我们不代购也不寄运",
+      "text_en": "• Counterfeit, replica or trademark-/copyright-infringing goods;\n\n• Weapons and replicas: firearms and parts, ammunition, prohibited weapons under Canadian law (e.g. switchblades/automatic knives, butterfly knives, brass knuckles, nunchaku, throwing stars, telescoping batons, pepper/mace spray intended for use on people, stun guns/tasers), and realistic replica firearms;\n\n• Explosives, fireworks, flammable gases and liquids, lighters with fuel, matches, compressed gas cylinders;\n\n• Toxic, corrosive, radioactive or infectious substances;\n\n• Illegal drugs and paraphernalia; cannabis and cannabis products; prescription drugs; unapproved pharmaceuticals; controlled substances;\n\n• Cash, banknotes, coins (as currency), cheques, securities, gift/payment cards, passports and identity documents;\n\n• Live animals, animal or human remains; endangered species products (CITES), ivory;\n\n• Obscene material or material that is illegal in Canada (e.g., hate propaganda, child sexual abuse material);\n\n• Goods subject to Canadian bans or recalls under the Canada Consumer Product Safety Act (e.g. baby walkers, certain small high-powered magnet sets, products with lead or other banned substances);\n\n• Items prohibited by the law of China for export, or by the carrier.",
+      "text_zh": "• 假冒、仿品或侵犯商标/版权的商品；\n\n• 武器及仿制品：枪支及零件、弹药、加拿大法律规定的禁用武器（如弹簧刀/自动刀、蝴蝶刀、指虎、双节棍、飞镖星、伸缩棍、针对人使用的胡椒/催泪喷雾、电击枪），以及逼真仿真枪；\n\n• 爆炸物、烟花、易燃气体和液体、含燃料打火机、火柴、压缩气瓶；\n\n• 有毒、腐蚀性、放射性或传染性物质；\n\n• 毒品及吸毒用具；大麻及其制品；处方药、未经批准的药品、管制物质；\n\n• 现金、纸币、流通硬币、支票、有价证券、礼品卡/支付卡、护照及身份证件；\n\n• 活体动物、动物或人体遗骸；濒危物种制品（CITES）、象牙；\n\n• 淫秽物品或在加拿大违法的物品（如仇恨宣传品、儿童性虐待材料）；\n\n• 依《加拿大消费品安全法》被禁止或召回的产品（如婴儿学步车、部分小型强磁套装、含铅等禁用物质的产品）；\n\n• 中国法律禁止出口或承运商禁止承运的物品。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:5",
+      "slug": "shipping-policy",
+      "num": "5",
+      "anchor": "meb-os-shipping-policy-5",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-5",
+      "title_en": "5. Restricted / sensitive items — may require a special line, extra fee, or may be refused",
+      "title_zh": "5. 限运/敏感物品——可能需走特殊线路、加收费用或被拒",
+      "text_en": "• Lithium batteries and devices containing them (phones, power banks, e-cigarettes/vapes, battery-powered toys); power banks and loose batteries are often refused by air lines;\n\n• Liquids, gels, pastes, creams, perfumes, nail polish, aerosols;\n\n• Powders (including cosmetics and supplements);\n\n• Magnets and magnetic items;\n\n• Food, tea, seeds, plants, soil, wood, meat, dairy, and other products of animal or plant origin (Canadian Food Inspection Agency rules apply);\n\n• Cosmetics, natural health products, medical devices (Health Canada rules apply);\n\n• Radio-transmitting devices (must meet ISED requirements), drones;\n\n• Knives that are not prohibited (e.g. kitchen and utility knives), tools, and sporting goods that could be classed as weapons — only on lines that accept them;\n\n• Tobacco and alcohol (not accepted);\n\n• Fragile items: glass, ceramics, screens — reinforced packing strongly recommended;\n\n• Oversized or heavy items (over the line’s limits).\n\nIf we find a restricted item, we will contact you with options (special line, remove the battery or item, return to Seller, or disposal at your cost). Items shipped against these rules are not covered by compensation.",
+      "text_zh": "• 锂电池及含电池设备（手机、充电宝、电子烟、电动玩具）；充电宝和散装电池常被空运线路拒收；\n\n• 液体、凝胶、膏状、乳霜、香水、指甲油、喷雾；\n\n• 粉末（含化妆品和保健品）；\n\n• 磁铁及磁性物品；\n\n• 食品、茶叶、种子、植物、土壤、木制品、肉类、乳制品等动植物源产品（适用 CFIA 规定）；\n\n• 化妆品、天然保健品、医疗器械（适用加拿大卫生部规定）；\n\n• 无线发射设备（须符合 ISED 要求）、无人机；\n\n• 非禁用刀具（如厨房刀、工具刀）、工具、可能被视为武器的运动器材——仅限接受此类物品的线路；\n\n• 烟草和酒类（不接受）；\n\n• 易碎品：玻璃、陶瓷、屏幕——强烈建议加固；\n\n• 超大超重物品（超出线路限制）。\n\n发现限运品时，我们会联系您选择方案（特殊线路、拆除电池或移除商品、退回卖家、销毁并由您承担费用）。违反上述规则寄运的物品不在赔偿范围内。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:6",
+      "slug": "shipping-policy",
+      "num": "6",
+      "anchor": "meb-os-shipping-policy-6",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-6",
+      "title_en": "6. Address, delivery and returns to sender",
+      "title_zh": "6. 地址、派送与退件",
+      "text_en": "• Please give a complete Canadian address, recipient name matching ID (for collection), and a phone number.\n\n• If a parcel is returned to China because of an incorrect address, failure to collect, refusal, or unpaid duties, the return cost (if any) and re-shipping cost are your responsibility. Parcels returned because of our error are re-shipped at our cost.\n\n• Returned parcels can take 1 to 3 months to come back to China.",
+      "text_zh": "• 请提供完整的加拿大地址、与证件一致的收件人姓名（便于自取）及电话。\n\n• 因地址错误、未领取、拒收或未缴税导致退回中国的，退回费用（如有）及重新寄送费用由您承担；因我们过错退回的，由我们承担重寄费用。\n\n• 退件返回中国可能需要 1 至 3 个月。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "shipping-policy:7",
+      "slug": "shipping-policy",
+      "num": "7",
+      "anchor": "meb-os-shipping-policy-7",
+      "url": "https://myeasybuy.ca/shipping-policy/#meb-os-shipping-policy-7",
+      "title_en": "7. Delays",
+      "title_zh": "7. 延误",
+      "text_en": "Delays caused by customs, carriers, weather, peak seasons, holidays (e.g. Chinese New Year) or government actions are outside our control. We will help trace the parcel. Delay compensation is only available where the line or purchased insurance specifically provides it.",
+      "text_zh": "海关、承运商、天气、旺季、节假日（如春节）或政府行为造成的延误不在我们控制范围内，我们会协助查询。只有线路或所购保障明确规定时才有延误赔偿。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "storage-inspection-policy:1",
+      "slug": "storage-inspection-policy",
+      "num": "1",
+      "anchor": "meb-os-storage-inspection-policy-1",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-1",
+      "title_en": "1. Receiving",
+      "title_zh": "1. 签收入库",
+      "text_en": "When a Seller’s package reaches our China warehouse, we log it, match it to your order, and set the status to “In Warehouse”. This date starts both the return window (see Return & Refund Policy) and the storage period. We aim to log and photograph items within 2 business days of arrival.",
+      "text_zh": "卖家包裹到达中国仓库后，我们登记、与您的订单匹配，并将状态设为 “已入库”。该日期同时是退货时限（见《退货退款政策》）和仓储期的起算日。我们力争在到仓后 2 个工作日内完成登记和拍照。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "storage-inspection-policy:2",
+      "slug": "storage-inspection-policy",
+      "num": "2",
+      "anchor": "meb-os-storage-inspection-policy-2",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-2",
+      "title_en": "2. Standard inspection (free)",
+      "title_zh": "2. 标准验货（免费）",
+      "text_en": "For each item we check, from the outside and without using it:\n\n• that the product, style, colour, size/spec and quantity match your order;\n\n• visible damage, stains, missing parts, or obvious defects;\n\n• whether the item appears to be prohibited or restricted for shipping (batteries, liquids, powders, magnets, etc.).\n\nWe upload 3 free photos per item (plus 1 photo of the Seller’s package on arrival) to your account. If a photo is unclear, we will retake it free of charge.\n\nWhat the standard inspection does not cover: authenticity or brand verification; functional or power-on testing; internal parts of sealed products; exact measurements (unless ordered); minor colour difference caused by lighting or screens; fit, comfort or performance in use. Sealed items (e.g. electronics in sealed boxes, cosmetics) are checked from the outside only, unless you ask us to open them.\n\n1688 / wholesale orders: we count cartons and units and spot-check 5% of units (minimum 5, maximum 20); a full unit-by-unit inspection is available at CAD 0.20 per unit.",
+      "text_zh": "对每件商品，我们在不使用商品的前提下从外观检查：\n\n– 商品、款式、颜色、尺码/规格、数量是否与订单一致；\n\n– 是否有明显破损、污渍、缺件或明显瑕疵；\n\n– 是否疑似禁运或限运（电池、液体、粉末、磁性物品等）。\n\n每件商品上传 3 张免费照片（另加 1 张卖家包裹到仓照片） 至您的账户，照片不清晰可免费重拍。\n\n标准验货不包括： 真伪或品牌鉴定；功能或通电测试；密封商品的内部；精确测量（除非另购）；灯光或屏幕造成的轻微色差；穿着体验或使用性能。密封商品（如密封包装的电子产品、化妆品）仅检查外观，除非您要求拆封。\n\n1688/批发订单： 清点箱数和件数并按件数 5% 抽检（最少 5 件，最多 20 件）；逐件全检每件 CAD 0.20。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "storage-inspection-policy:3",
+      "slug": "storage-inspection-policy",
+      "num": "3",
+      "anchor": "meb-os-storage-inspection-policy-3",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-3",
+      "title_en": "3. Optional paid services (prices on the Fees page)",
+      "title_zh": "3. 付费增值服务（价格见费用页）",
+      "text_en": "Service — Price\nExtra / detailed photos — CAD 1 per set of 3 photos\nMeasurements — CAD 1 per item\nFunction / power-on check (where possible) — CAD 3 per item\nRemove original packaging / shoe boxes to reduce volume — Free\nKeep original packaging unopened — Free (inspection limited to outside)\nReinforced packing (recommended for fragile goods) — CAD 3 per parcel\nVacuum packing / extra bubble wrap / wooden frame — CAD 2 per bag / CAD 1 per item / CAD 15 per parcel\n\nRemoving packaging may make an item non-returnable to the Seller.",
+      "text_zh": "服务 — 价格\n加拍/细节照片 — 每组 3 张 CAD 1\n测量尺寸 — 每件 CAD 1\n功能/通电检查（如可行） — 每件 CAD 3\n去除原包装/鞋盒以减小体积 — 免费\n保留原包装不拆封 — 免费（仅检查外观）\n加固包装（易碎品强烈建议） — 每包裹 CAD 3\n真空压缩/加厚气泡膜/木架 — 每袋 CAD 2 / 每件 CAD 1 / 每包裹 CAD 15\n\n去除包装可能导致卖家不接受退货。",
+      "tables_en": [
+        {
+          "headers": [
+            "Service",
+            "Price"
+          ],
+          "rows": [
+            [
+              "Extra / detailed photos",
+              "CAD 1 per set of 3 photos"
+            ],
+            [
+              "Measurements",
+              "CAD 1 per item"
+            ],
+            [
+              "Function / power-on check (where possible)",
+              "CAD 3 per item"
+            ],
+            [
+              "Remove original packaging / shoe boxes to reduce volume",
+              "Free"
+            ],
+            [
+              "Keep original packaging unopened",
+              "Free (inspection limited to outside)"
+            ],
+            [
+              "Reinforced packing (recommended for fragile goods)",
+              "CAD 3 per parcel"
+            ],
+            [
+              "Vacuum packing / extra bubble wrap / wooden frame",
+              "CAD 2 per bag / CAD 1 per item / CAD 15 per parcel"
+            ]
+          ]
+        }
+      ],
+      "tables_zh": [
+        {
+          "headers": [
+            "服务",
+            "价格"
+          ],
+          "rows": [
+            [
+              "加拍/细节照片",
+              "每组 3 张 CAD 1"
+            ],
+            [
+              "测量尺寸",
+              "每件 CAD 1"
+            ],
+            [
+              "功能/通电检查（如可行）",
+              "每件 CAD 3"
+            ],
+            [
+              "去除原包装/鞋盒以减小体积",
+              "免费"
+            ],
+            [
+              "保留原包装不拆封",
+              "免费（仅检查外观）"
+            ],
+            [
+              "加固包装（易碎品强烈建议）",
+              "每包裹 CAD 3"
+            ],
+            [
+              "真空压缩/加厚气泡膜/木架",
+              "每袋 CAD 2 / 每件 CAD 1 / 每包裹 CAD 15"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storage-inspection-policy:4",
+      "slug": "storage-inspection-policy",
+      "num": "4",
+      "anchor": "meb-os-storage-inspection-policy-4",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-4",
+      "title_en": "4. Problems found during inspection",
+      "title_zh": "4. 验货发现问题",
+      "text_en": "If we see a mismatch, damage or a likely prohibited item, we will notify you and recommend options (return/exchange, keep, remove a battery, dispose, etc.). We will not ship an item we believe cannot legally or safely be shipped.",
+      "text_zh": "如发现不符、破损或疑似禁运品，我们会通知您并给出建议（退换货、保留、拆除电池、销毁等）。我们认为不能合法或安全寄运的商品不会发出。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "storage-inspection-policy:5",
+      "slug": "storage-inspection-policy",
+      "num": "5",
+      "anchor": "meb-os-storage-inspection-policy-5",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-5",
+      "title_en": "5. Storage periods",
+      "title_zh": "5. 仓储期限",
+      "text_en": "Item — Rule\nFree storage — 90 days from “In Warehouse” for purchased items; 30 days for forwarded parcels\nAfter free period — CAD 0.10 per item per day — charged when you ship\nMaximum storage — 180 days from “In Warehouse”. You may request an extension before expiry at CAD 2 per item per month (in addition to daily storage fees), up to a total of 270 days\nReminders — Email at day 60, day 80, day 90 (end of free period) and 14 days before the maximum storage date\n\nEach item has its own clock; a new item arriving does not extend an older item’s storage period. Plan consolidation within your free period.",
+      "text_zh": "项目 — 规则\n免费仓储 — 代购商品自”已入库”起 90 天 ；转运包裹 30 天\n免费期后 — 每件每天 CAD 0.10，发货时结算\n最长存放 — 自”已入库”起 180 天 ；到期前可申请延期，每件每月 CAD 2（另计每日仓储费），累计最长 270 天\n提醒 — 第 60 天、第 80 天、第 90 天（免费期结束）及最长期限前 14 天邮件提醒\n\n每件商品单独计时，新商品入库不会延长旧商品的仓储期。请在免费期内规划合箱。",
+      "tables_en": [
+        {
+          "headers": [
+            "Item",
+            "Rule"
+          ],
+          "rows": [
+            [
+              "Free storage",
+              "90 days from “In Warehouse” for purchased items; 30 days for forwarded parcels"
+            ],
+            [
+              "After free period",
+              "CAD 0.10 per item per day — charged when you ship"
+            ],
+            [
+              "Maximum storage",
+              "180 days from “In Warehouse”. You may request an extension before expiry at CAD 2 per item per month (in addition to daily storage fees), up to a total of 270 days"
+            ],
+            [
+              "Reminders",
+              "Email at day 60, day 80, day 90 (end of free period) and 14 days before the maximum storage date"
+            ]
+          ]
+        }
+      ],
+      "tables_zh": [
+        {
+          "headers": [
+            "项目",
+            "规则"
+          ],
+          "rows": [
+            [
+              "免费仓储",
+              "代购商品自”已入库”起 90 天 ；转运包裹 30 天"
+            ],
+            [
+              "免费期后",
+              "每件每天 CAD 0.10，发货时结算"
+            ],
+            [
+              "最长存放",
+              "自”已入库”起 180 天 ；到期前可申请延期，每件每月 CAD 2（另计每日仓储费），累计最长 270 天"
+            ],
+            [
+              "提醒",
+              "第 60 天、第 80 天、第 90 天（免费期结束）及最长期限前 14 天邮件提醒"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storage-inspection-policy:6",
+      "slug": "storage-inspection-policy",
+      "num": "6",
+      "anchor": "meb-os-storage-inspection-policy-6",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-6",
+      "title_en": "6. Unclaimed and abandoned goods",
+      "title_zh": "6. 逾期与弃件",
+      "text_en": "If an item reaches the maximum storage period without a shipping request or an approved extension, we will send a final written notice to your registered email giving you at least 14 days to ship, pay outstanding fees, or tell us what you want. If you still do not respond, the item is considered abandoned and we may sell, donate, or dispose of it. Where we sell an abandoned item, we may apply the proceeds to unpaid storage and other charges owed by you, and any surplus will be credited to your MyEasyBuy account balance. We are not responsible for items disposed of under this section.",
+      "text_zh": "商品达到最长存放期仍未提交发货或获批延期的，我们将向您注册邮箱发送 最终书面通知，给予至少 14 天 时间发货、付清费用或告知处理意见。逾期仍无回复的，视为放弃，我们可出售、捐赠或销毁。如出售，所得款项可用于抵扣您所欠仓储费等费用，余额存入您的 MyEasyBuy 账户余额。依本条处理的商品我们不承担责任。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "storage-inspection-policy:7",
+      "slug": "storage-inspection-policy",
+      "num": "7",
+      "anchor": "meb-os-storage-inspection-policy-7",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-7",
+      "title_en": "7. Consolidation and packing",
+      "title_zh": "7. 合箱与打包",
+      "text_en": "When you submit a parcel, we combine your selected items, choose suitable packaging, weigh and measure the parcel, and calculate the actual shipping charge (see Terms of Service, section 4.2). We may split a parcel if it exceeds the size or weight limits of the shipping line, or if some items (e.g. batteries) must travel by a different line. Repacking at your request after packing is CAD 3 per parcel.",
+      "text_zh": "您提交包裹后，我们将所选商品合箱、选择合适包装、称重量尺并计算实际运费（见服务条款第4.2条）。如超出线路尺寸或重量限制，或部分商品（如带电）须走其他线路，我们可拆分包裹。打包后应您要求重新打包，每包裹收费 CAD 3。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "storage-inspection-policy:8",
+      "slug": "storage-inspection-policy",
+      "num": "8",
+      "anchor": "meb-os-storage-inspection-policy-8",
+      "url": "https://myeasybuy.ca/storage-inspection-policy/#meb-os-storage-inspection-policy-8",
+      "title_en": "8. Care of goods in storage",
+      "title_zh": "8. 存放期间的保管",
+      "text_en": "We store goods in a secured, indoor warehouse. Our responsibility for goods lost or damaged while in the warehouse is set out in the Compensation & Insurance Policy.",
+      "text_zh": "商品存放于 安全的室内 仓库。保管期间丢失或损坏的责任见《赔偿与保险政策》。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:intro",
+      "slug": "compensation-policy",
+      "num": "intro",
+      "anchor": "meb-os-compensation-policy-intro",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-intro",
+      "title_en": "Introduction",
+      "title_zh": "简介",
+      "text_en": "This policy explains what we pay if something goes wrong while goods are in our care or in transit. It does not limit rights you have under applicable consumer protection law.",
+      "text_zh": "本政策说明商品在我们保管期间或运输途中出现问题时的赔偿方式，不限制您依适用消费者保护法享有的权利。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:1",
+      "slug": "compensation-policy",
+      "num": "1",
+      "anchor": "meb-os-compensation-policy-1",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-1",
+      "title_en": "1. Our errors and loss/damage in our warehouse",
+      "title_zh": "1. 我方差错及仓库内丢失/损坏",
+      "text_en": "If, while goods are in our care (from “In Warehouse” until handover to the carrier), they are lost, damaged by us, or we made a mistake (wrong item, wrong option, wrong quantity, missed item when packing):\n\n• we will, at your choice where possible, re-purchase the correct item at our cost or refund in full the item price, Chinese domestic shipping, our service fee, and any value-added fees for that item;\n\n• if the mistake is only discovered in Canada, we also refund the international shipping attributable to the affected item (by weight share), or re-ship the missing item at our cost.\n\n• There is no separate cap: compensation equals what you paid for the affected item, as described above.",
+      "text_zh": "商品在我们保管期间（自”已入库”至交付承运商）丢失、被我们损坏，或我们出错（错购、规格错、数量错、打包漏件）时：\n\n– 我们将尽可能按您的选择 自费重新购买正确商品，或 全额退还 该商品的商品价、国内运费、服务费及相关增值服务费；\n\n– 如问题在加拿大才发现，另按重量比例退还该商品分摊的国际运费，或由我们承担费用补寄。\n\n– 不另设上限：按上述方式赔偿您为该商品支付的全部款项。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:2.1",
+      "slug": "compensation-policy",
+      "num": "2.1",
+      "anchor": "meb-os-compensation-policy-2-1",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-2-1",
+      "title_en": "2.1 Without parcel protection (default)",
+      "title_zh": "2.1 未购买包裹保障（默认）",
+      "text_en": "International shipping is performed by third-party carriers. If a parcel is confirmed lost or damaged in transit and you did not buy parcel protection:\n\n• Confirmed total loss: we refund the international shipping you paid and compensate the goods’ value up to three times the international shipping paid for the parcel or CAD 100, whichever is lower.\n\n• Damage or partial loss: proportionate amount on the same basis.\n\n• If the carrier compensates us more than this, we pass the full carrier compensation to you.",
+      "text_zh": "国际运输由第三方承运商完成。包裹经确认在途丢失或损坏且您未购买保障的：\n\n– 确认全部丢失： 退还已付国际运费，并按货值赔偿，上限为 该包裹已付国际运费的 3 倍或 CAD 100，取较低者。\n\n– 部分损坏或部分丢失： 按同一标准按比例计算。\n\n– 如承运商给我们的赔款高于上述金额，我们将全额转交给您。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:2.2",
+      "slug": "compensation-policy",
+      "num": "2.2",
+      "anchor": "meb-os-compensation-policy-2-2",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-2-2",
+      "title_en": "2.2 With MyEasyBuy Parcel Protection (optional, purchased before dispatch)",
+      "title_zh": "2.2 购买 MyEasyBuy 包裹保障（可选，发货前购买）",
+      "text_en": "Parcel Protection is a service guarantee provided directly by MyEasyBuy. It is not an insurance product and is not underwritten by an insurer.\n\n• Price: 3% of the declared value, minimum CAD 3 per parcel.\n\n• Maximum covered value: CAD 1,000 per parcel. Parcels worth more should be split or shipped by a courier line with its own declared-value coverage.\n\n• Confirmed total loss: we refund the declared value (or actual purchase value if lower) plus international shipping paid.\n\n• Damage or partial loss: proportionate value of the damaged/missing items, plus the proportion of shipping.\n\n• Customs seizure (only where the goods were lawful, accurately declared and you co-operated with customs): covered on the same basis as total loss.\n\n• Delay: not compensated as such; a parcel not delivered within 60 days after dispatch is treated as lost.\n\n• The premium is refundable only if the parcel is cancelled before dispatch.",
+      "text_zh": "包裹保障是 MyEasyBuy 直接提供的服务保障，不是保险产品，也不由保险公司承保。\n\n– 费用： 申报价值的 3%，每包裹最低 CAD 3。\n\n– 最高保障金额： 每包裹 CAD 1,000。价值更高的货物请拆分包裹，或选择自带申报价值保障的快递线路。\n\n– 确认全部丢失： 赔付申报价值（实际购买价较低时按实际价）并退还已付国际运费。\n\n– 部分损坏或丢失： 按受损/缺失商品价值比例赔付，并按比例退还运费。\n\n– 海关扣押（仅限货物合法、如实申报且您配合海关的情况）：按全部丢失标准赔付。\n\n– 延误： 延误本身不赔；发货后 60 天仍未送达的包裹按丢失处理。\n\n– 保障费仅在包裹发货前取消时可退。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:2.3",
+      "slug": "compensation-policy",
+      "num": "2.3",
+      "anchor": "meb-os-compensation-policy-2-3",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-2-3",
+      "title_en": "2.3 Fragile, liquid and special items",
+      "title_zh": "2.3 易碎、液体及特殊物品",
+      "text_en": "Glass, ceramics, screens, liquids and similar goods are covered for loss only unless you bought reinforced packing and parcel protection; then damage is covered as in 2.2. Cosmetic damage to retail packaging (e.g. crushed shoe box) that does not affect the product is not compensated.",
+      "text_zh": "玻璃、陶瓷、屏幕、液体等仅 保丢不保损，除非您同时购买了加固包装 和 包裹保障，此时损坏按2.2赔付。零售包装外观受损（如鞋盒压瘪）但不影响商品本身的，不予赔偿。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:3",
+      "slug": "compensation-policy",
+      "num": "3",
+      "anchor": "meb-os-compensation-policy-3",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-3",
+      "title_en": "3. What is not covered",
+      "title_zh": "3. 不予赔偿的情形",
+      "text_en": "• Prohibited or restricted items shipped without our approval, or undeclared/under-declared/misdescribed goods;\n\n• Seizure, detention, destruction or return by customs or other authorities due to the nature of the goods, missing permits, or your failure to respond or pay duties/taxes;\n\n• Loss or damage caused by an incorrect or incomplete address, refusal of delivery, or failure to collect;\n\n• Defects, quality issues or quantity shortages that existed when the goods arrived from the Seller and were outside the scope of our inspection (we will still help you raise them with the Seller);\n\n• Functional faults of electronics we were not asked to test; inherent qualities of goods (e.g. perishables, melting);\n\n• Delay, except where expressly covered;\n\n• Indirect losses (lost profit, resale or collectible premium, emotional value);\n\n• Goods abandoned under the Storage & Inspection Policy;\n\n• Force majeure events beyond our reasonable control.",
+      "text_zh": "• 未经我们同意寄运的禁运或限运品，或未申报、低报、错报的货物；\n\n• 因货物性质、缺少许可，或您未回复/未缴关税税费，被海关或其他机关扣押、扣留、销毁或退回；\n\n• 因地址错误或不完整、拒收、未领取造成的丢失或损坏；\n\n• 卖家发货时已存在、且超出我们验货范围的瑕疵、质量问题或数量短缺（我们仍会协助您向卖家交涉）；\n\n• 未要求测试的电子产品功能故障；商品自然属性（如易腐、融化）；\n\n• 延误（明确承保的除外）；\n\n• 间接损失（利润、转售或收藏溢价、情感价值）；\n\n• 依《仓储与验货政策》被视为弃件的商品；\n\n• 超出我们合理控制范围的不可抗力。",
+      "tables_en": [],
+      "tables_zh": []
+    },
+    {
+      "id": "compensation-policy:4",
+      "slug": "compensation-policy",
+      "num": "4",
+      "anchor": "meb-os-compensation-policy-4",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-4",
+      "title_en": "4. How to claim",
+      "title_zh": "4. 理赔流程",
+      "text_en": "Situation — Deadline — Evidence\nDamaged or missing items on delivery — Within 7 days of delivery — Photos/video of outer box (all sides, label), inner packing and items; unboxing video strongly recommended; keep all packaging until the claim is closed\nParcel not delivered / no tracking updates — After 30 days without tracking movement, and no later than 90 days after dispatch — Order/parcel number; we open the carrier investigation\nVisible damage at delivery — Note it with the driver if possible and refuse or accept “damaged” — Carrier damage report if available\n\nWe review claims within 5 business days after receiving complete evidence. Carrier investigations can take 15 to 45 days. Approved compensation is paid to your original payment method or account balance (your choice) within 5 business days of approval. Only one claim per parcel.",
+      "text_zh": "情形 — 时限 — 所需证据\n签收时破损或少件 — 签收后 7 天内 — 外箱各面及面单照片/视频、内包装和商品照片；强烈建议完整开箱视频；理赔结束前保留全部包装\n包裹未送达/物流长时间无更新 — 物流停滞 30 天 后，且不晚于发货后 90 天 — 订单/包裹号；由我们向承运商发起调查\n派送时外包装明显破损 — 尽量请派送员记录，可拒收或注明”破损” — 承运商破损证明（如有）\n\n收到完整材料后 5 个工作日内完成审核；承运商调查可能需要 15 至 45 天。核准的赔款在 5 个工作日内退回原支付方式或账户余额（由您选择）。每个包裹只受理一次理赔。",
+      "tables_en": [
+        {
+          "headers": [
+            "Situation",
+            "Deadline",
+            "Evidence"
+          ],
+          "rows": [
+            [
+              "Damaged or missing items on delivery",
+              "Within 7 days of delivery",
+              "Photos/video of outer box (all sides, label), inner packing and items; unboxing video strongly recommended; keep all packaging until the claim is closed"
+            ],
+            [
+              "Parcel not delivered / no tracking updates",
+              "After 30 days without tracking movement, and no later than 90 days after dispatch",
+              "Order/parcel number; we open the carrier investigation"
+            ],
+            [
+              "Visible damage at delivery",
+              "Note it with the driver if possible and refuse or accept “damaged”",
+              "Carrier damage report if available"
+            ]
+          ]
+        }
+      ],
+      "tables_zh": [
+        {
+          "headers": [
+            "情形",
+            "时限",
+            "所需证据"
+          ],
+          "rows": [
+            [
+              "签收时破损或少件",
+              "签收后 7 天内",
+              "外箱各面及面单照片/视频、内包装和商品照片；强烈建议完整开箱视频；理赔结束前保留全部包装"
+            ],
+            [
+              "包裹未送达/物流长时间无更新",
+              "物流停滞 30 天 后，且不晚于发货后 90 天",
+              "订单/包裹号；由我们向承运商发起调查"
+            ],
+            [
+              "派送时外包装明显破损",
+              "尽量请派送员记录，可拒收或注明”破损”",
+              "承运商破损证明（如有）"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compensation-policy:5",
+      "slug": "compensation-policy",
+      "num": "5",
+      "anchor": "meb-os-compensation-policy-5",
+      "url": "https://myeasybuy.ca/compensation-policy/#meb-os-compensation-policy-5",
+      "title_en": "5. Value used for compensation",
+      "title_zh": "5. 赔偿计算基数",
+      "text_en": "Compensation is based on the lower of the declared customs value and the actual price paid (supported by the order record), converted to CAD at the rate used when you paid. Declaring a higher value than you paid does not increase compensation; declaring less than you paid limits compensation to the declared amount.",
+      "text_zh": "以申报价值与实际购买价（以订单记录为准）中较低者为基数，按您付款时汇率换算为加元。高于实际价申报不会提高赔偿；低于实际价申报则以申报价为上限。",
+      "tables_en": [],
+      "tables_zh": []
+    }
+  ],
+  "faqs": [
+    {
+      "id": "return-window",
+      "q_en": "Return window",
+      "q_zh": "退货期限",
+      "chip": true,
+      "keywords": [
+        "return",
+        "returns",
+        "refund",
+        "refunds",
+        "exchange",
+        "exchanges",
+        "window",
+        "5 days",
+        "five days",
+        "5-day",
+        "in warehouse",
+        "退货",
+        "退款",
+        "退换",
+        "退换货",
+        "期限",
+        "几天",
+        "五日",
+        "5天",
+        "五天",
+        "仓库",
+        "无理由"
+      ],
+      "clause_ids": [
+        "return-refund-policy:1",
+        "return-refund-policy:4"
+      ],
+      "lead_en": "In our warehouse, within 5 days of “In Warehouse” — Request return/exchange to Seller — Change of mind: you pay domestic return shipping + handling fee CAD 3 (first request each calendar month free). Seller or MyEasyBuy error: no cost to you",
+      "lead_zh": "已入库 5 天内 — 申请退/换货给卖家 — 个人原因：您承担国内退货运费 + 手续费 CAD 3（每自然月首次免手续费）；卖家或 MyEasyBuy 过错：您无需承担"
+    },
+    {
+      "id": "service-fee",
+      "q_en": "Service fee",
+      "q_zh": "服务费",
+      "chip": true,
+      "keywords": [
+        "service fee",
+        "fee",
+        "fees",
+        "6%",
+        "minimum cad 5",
+        "surcharge",
+        "服务费",
+        "手续费",
+        "费用",
+        "收费",
+        "百分之六"
+      ],
+      "clause_ids": [
+        "terms-of-service:4",
+        "return-refund-policy:7"
+      ],
+      "lead_en": "• Service fee: 6% of the item price + Chinese domestic shipping, minimum CAD 5 per order;",
+      "lead_zh": "– 服务费： 商品价 + 中国国内运费的 6%，每单最低 CAD 5；"
+    },
+    {
+      "id": "storage-days",
+      "q_en": "Storage days",
+      "q_zh": "仓储天数",
+      "chip": true,
+      "keywords": [
+        "storage",
+        "store",
+        "warehouse days",
+        "free storage",
+        "90 days",
+        "30 days",
+        "180 days",
+        "storage fee",
+        "仓储",
+        "仓储费",
+        "存放",
+        "免费仓储",
+        "90天",
+        "90 天",
+        "三十天",
+        "三十日",
+        "180天",
+        "逾期",
+        "弃件"
+      ],
+      "clause_ids": [
+        "storage-inspection-policy:5",
+        "storage-inspection-policy:6"
+      ],
+      "lead_en": "Free storage — 90 days from “In Warehouse” for purchased items; 30 days for forwarded parcels",
+      "lead_zh": "免费仓储 — 代购商品自”已入库”起 90 天 ；转运包裹 30 天"
+    },
+    {
+      "id": "prohibited-items",
+      "q_en": "Prohibited items",
+      "q_zh": "禁运物品",
+      "chip": true,
+      "keywords": [
+        "prohibited",
+        "forbidden",
+        "banned",
+        "restricted",
+        "battery",
+        "batteries",
+        "counterfeit",
+        "weapon",
+        "liquids",
+        "sensitive",
+        "禁运",
+        "违禁",
+        "禁止",
+        "限运",
+        "敏感",
+        "电池",
+        "仿牌",
+        "假货",
+        "液体",
+        "刀",
+        "枪"
+      ],
+      "clause_ids": [
+        "shipping-policy:4",
+        "shipping-policy:5"
+      ],
+      "lead_en": "• Weapons and replicas: firearms and parts, ammunition, prohibited weapons under Canadian law (e.g.",
+      "lead_zh": "• 爆炸物、烟花、易燃气体和液体、含燃料打火机、火柴、压缩气瓶；"
+    },
+    {
+      "id": "compensation",
+      "q_en": "Compensation",
+      "q_zh": "赔偿标准",
+      "chip": true,
+      "keywords": [
+        "compensation",
+        "compensate",
+        "lost",
+        "loss",
+        "damage",
+        "damaged",
+        "parcel protection",
+        "insurance",
+        "uninsured",
+        "cad 100",
+        "3x",
+        "three times",
+        "claim",
+        "赔偿",
+        "理赔",
+        "丢失",
+        "遗失",
+        "损坏",
+        "破损",
+        "保障",
+        "包裹保障",
+        "未投保",
+        "100",
+        "三倍"
+      ],
+      "clause_ids": [
+        "compensation-policy:2.1",
+        "compensation-policy:2.2"
+      ],
+      "lead_en": "• Confirmed total loss: we refund the international shipping you paid and compensate the goods’ value up to three times the international shipping paid for the parcel or CAD 100, whichever is lower.",
+      "lead_zh": "– 确认全部丢失： 退还已付国际运费，并按货值赔偿，上限为 该包裹已付国际运费的 3 倍或 CAD 100，取较低者。"
+    },
+    {
+      "id": "shipping-cost",
+      "q_en": "Shipping cost",
+      "q_zh": "运费计算",
+      "chip": true,
+      "keywords": [
+        "shipping cost",
+        "shipping fee",
+        "postage",
+        "volumetric",
+        "chargeable weight",
+        "estimate",
+        "freight",
+        "how much to ship",
+        "运费",
+        "国际运费",
+        "计费重",
+        "体积重",
+        "运费计算",
+        "多少钱运"
+      ],
+      "clause_ids": [
+        "shipping-policy:2",
+        "terms-of-service:4"
+      ],
+      "lead_en": "• Chargeable weight = the greater of actual weight and volumetric weight (L × W × H in cm ÷ 5000 for express couriers, ÷ 6000 for all other lines), rounded up to the next 0.5 kg tier.",
+      "lead_zh": "• 计费重量 = 实际重量与体积重（长×宽×高 cm ÷ 5000（国际快递）或 ÷ 6000（其他线路））取大者，按 0.5 kg 一档向上取整。"
+    },
+    {
+      "id": "consolidate",
+      "q_en": "How to consolidate",
+      "q_zh": "如何合箱",
+      "chip": true,
+      "keywords": [
+        "consolidate",
+        "consolidation",
+        "combine",
+        "pack",
+        "packing",
+        "parcel submit",
+        "合箱",
+        "打包",
+        "拼箱",
+        "合并包裹",
+        "提交包裹"
+      ],
+      "clause_ids": [
+        "storage-inspection-policy:7",
+        "terms-of-service:6"
+      ],
+      "lead_en": "When you submit a parcel, we combine your selected items, choose suitable packaging, weigh and measure the parcel, and calculate the actual shipping charge (see Terms of Service, section 4.2).",
+      "lead_zh": "您提交包裹后，我们将所选商品合箱、选择合适包装、称重量尺并计算实际运费（见服务条款第4.2条）。如超出线路尺寸或重量限制，或部分商品（如带电）须走其他线路，我们可拆分包裹。打包后应您要求重新打包，每包裹收费 CAD 3。"
+    },
+    {
+      "id": "customs",
+      "q_en": "Customs and duties",
+      "q_zh": "关税税费",
+      "chip": false,
+      "keywords": [
+        "customs",
+        "duty",
+        "duties",
+        "tax",
+        "taxes",
+        "gst",
+        "hst",
+        "cbsa",
+        "importer",
+        "tariff",
+        "seizure",
+        "关税",
+        "税费",
+        "清关",
+        "海关",
+        "查扣",
+        "税",
+        "进口"
+      ],
+      "clause_ids": [
+        "shipping-policy:3",
+        "compensation-policy:3"
+      ],
+      "lead_en": "Your parcel is addressed to you, and you are responsible for any duties and taxes assessed by the CBSA, including GST/HST and, where applicable, PST/QST, plus any handling or brokerage fee charged by Canada Post or the courier.",
+      "lead_zh": "包裹寄给您本人，CBSA 评定的关税和税费（GST/HST，及适用的 PST/QST）以及 Canada Post 或快递收取的手续费/报关费由您承担，通常在派送时代收或由承运商开单。唯一例外是明确标注”包税”的线路。"
+    },
+    {
+      "id": "cancel",
+      "q_en": "Cancel an order",
+      "q_zh": "取消订单",
+      "chip": false,
+      "keywords": [
+        "cancel",
+        "cancellation",
+        "before purchase",
+        "before shipping",
+        "取消",
+        "取消订单",
+        "下单前",
+        "未发货"
+      ],
+      "clause_ids": [
+        "return-refund-policy:2",
+        "return-refund-policy:3"
+      ],
+      "lead_en": "If we have not yet placed the order with the Seller, you may cancel in your account or by contacting us.",
+      "lead_zh": "若我们尚未向卖家下单，您可在账户内或联系我们取消，我们将全额退还该商品已付款项，包括服务费。"
+    },
+    {
+      "id": "privacy",
+      "q_en": "Privacy and personal data",
+      "q_zh": "隐私与个人信息",
+      "chip": false,
+      "keywords": [
+        "privacy",
+        "personal data",
+        "personal information",
+        "cookie",
+        "cookies",
+        "data",
+        "collected",
+        "隐私",
+        "个人信息",
+        "收集",
+        "cookie",
+        "数据"
+      ],
+      "clause_ids": [
+        "privacy-policy:1",
+        "privacy-policy:9"
+      ],
+      "lead_en": "Technical — IP address, device and browser type, pages viewed, cookies, log data — Your device, our website (WordPress/WooCommerce) and, if enabled, website analytics (such as Google Analytics)",
+      "lead_zh": "技术 — IP 地址、设备和浏览器类型、浏览页面、Cookie、日志 — 您的设备、我们的网站（WordPress/WooCommerce）及网站分析工具（如启用，例如 Google Analytics）"
+    },
+    {
+      "id": "change-of-mind",
+      "q_en": "Change of mind returns",
+      "q_zh": "个人原因退货",
+      "chip": false,
+      "keywords": [
+        "change of mind",
+        "change my mind",
+        "changed my mind",
+        "return shipping",
+        "handling fee",
+        "CAD 3",
+        "个人原因",
+        "不想要",
+        "选错",
+        "退货运费",
+        "退换货手续费"
+      ],
+      "clause_ids": [
+        "return-refund-policy:4",
+        "return-refund-policy:1"
+      ],
+      "lead_en": "– Change of mind (wrong size or colour you selected, no longer wanted, price dropped): you pay the Chinese domestic return shipping and a return/exchange handling fee of CAD 3 per request (your first return or exchange request each calen…",
+      "lead_zh": "– 个人原因（自己选错尺码/颜色、不想要、降价）：您承担国内退货运费及退换货手续费每次 CAD 3（每个自然月第一次退换申请免手续费），该商品原国内运费和服务费不退。"
+    }
+  ]
+}

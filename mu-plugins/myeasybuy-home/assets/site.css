@@ -1516,3 +1516,39 @@ body.meb-site .wf_widget-area .widget-title {
 @keyframes ppw-jd-spin {
 	to { transform: rotate(360deg); }
 }
+
+/* Buttons: no dotted mouse-focus ring. Keyboard :focus-visible gets a soft orange halo. Local-only until approved for deploy. */
+body.meb-site button:focus:not(:focus-visible),
+body.meb-site .button:focus:not(:focus-visible),
+body.meb-site a.button:focus:not(:focus-visible),
+body.meb-site input[type="submit"]:focus:not(:focus-visible),
+body.meb-site input[type="button"]:focus:not(:focus-visible),
+body.meb-site input[type="reset"]:focus:not(:focus-visible),
+body.meb-site [role="button"]:focus:not(:focus-visible),
+body.meb-site .wp-element-button:focus:not(:focus-visible),
+body.meb-site .wp-block-button__link:focus:not(:focus-visible),
+body.meb-site .meb-btn:focus:not(:focus-visible),
+body.meb-site .wc-block-components-button:focus:not(:focus-visible) {
+	outline: none;
+}
+body.meb-site button:focus-visible,
+body.meb-site .button:focus-visible,
+body.meb-site a.button:focus-visible,
+body.meb-site input[type="submit"]:focus-visible,
+body.meb-site input[type="button"]:focus-visible,
+body.meb-site input[type="reset"]:focus-visible,
+body.meb-site [role="button"]:focus-visible,
+body.meb-site .wp-element-button:focus-visible,
+body.meb-site .wp-block-button__link:focus-visible,
+body.meb-site .meb-btn:focus-visible,
+body.meb-site .wc-block-components-button:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(255, 126, 33, 0.35);
+}
+/* Online Service launcher keeps its own mascot drop-shadow cue; do not draw an oval ring around mascot + pill. */
+body.meb-site .meb-os__fab:focus,
+body.meb-site .meb-os__fab:focus:not(:focus-visible),
+body.meb-site .meb-os__fab:focus-visible {
+	outline: none !important;
+	box-shadow: none !important;
+}
