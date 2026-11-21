@@ -328,3 +328,58 @@ body.meb-cart-purchase [class*="myeasybuy-parcel-protection"],
 body.meb-cart-shipping .wc-block-components-address-form__myeasybuy-purchase-consent {
 	display: none !important;
 }
+
+
+/* Classic [woocommerce_checkout] / order-pay: keep consent and payment list on-brand. */
+form.woocommerce-checkout .meb-pay-consent,
+form#order_review .meb-pay-consent {
+	margin: 1rem 0 1.25rem;
+}
+
+form.woocommerce-checkout .woocommerce-terms-and-conditions-wrapper,
+form#order_review .woocommerce-terms-and-conditions-wrapper {
+	display: none;
+}
+
+form.woocommerce-checkout #payment ul.payment_methods,
+form#order_review #payment ul.payment_methods {
+	border: 1px solid #eceef1;
+	border-radius: 10px;
+	background: #fff;
+	padding: 0.4rem 0.75rem;
+	list-style: none;
+	margin: 0 0 1rem;
+}
+
+form.woocommerce-checkout #payment ul.payment_methods li,
+form#order_review #payment ul.payment_methods li {
+	padding: 0.7rem 0.25rem;
+	border-bottom: 1px solid #eceef1;
+}
+
+form.woocommerce-checkout #payment ul.payment_methods li:last-child,
+form#order_review #payment ul.payment_methods li:last-child {
+	border-bottom: 0;
+}
+
+form.woocommerce-checkout #payment div.payment_box,
+form#order_review #payment div.payment_box {
+	background: #fff4ec;
+	color: #141414;
+	border-radius: 8px;
+}
+
+form.woocommerce-checkout #place_order,
+form#order_review #place_order {
+	background: #ff7e21;
+	border-color: #ff7e21;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 8px;
+}
+
+form.woocommerce-checkout #place_order:hover,
+form#order_review #place_order:hover {
+	background: #f06a0a;
+	border-color: #f06a0a;
+}

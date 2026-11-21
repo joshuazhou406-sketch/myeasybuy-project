@@ -109,6 +109,8 @@ class MyEasyBuy_Policy_Consent {
 		add_action( 'woocommerce_store_api_checkout_update_order_from_request', array( __CLASS__, 'validate_and_save_blocks_checkout' ), 10, 2 );
 		add_action( 'woocommerce_store_api_checkout_order_processed', array( __CLASS__, 'save_blocks_checkout_meta' ) );
 		add_action( 'woocommerce_checkout_create_order', array( __CLASS__, 'validate_and_save_classic_checkout' ), 20, 2 );
+		add_action( 'woocommerce_after_checkout_validation', array( __CLASS__, 'validate_classic_checkout_posted' ), 20, 2 );
+		add_action( 'woocommerce_review_order_before_submit', array( __CLASS__, 'render_classic_checkout_consent' ) );
 
 		add_action( 'woocommerce_pay_order_before_submit', array( __CLASS__, 'render_order_pay_consent' ) );
 		add_action( 'woocommerce_before_pay_action', array( __CLASS__, 'validate_order_pay_consent' ) );
@@ -521,7 +523,8 @@ class MyEasyBuy_Policy_Consent {
 	 * @param bool $show Whether to show default terms.
 	 */
 	public static function maybe_hide_default_terms( $show ) {
-		if ( is_checkout() && is_wc_endpoint_url( 'order-pay' ) ) {
+		// Our required consent checkbox replaces the default terms on classic checkout and order-pay.
+		if ( function_exists( 'is_checkout' ) && is_checkout() ) {
 			return false;
 		}
 		return $show;
@@ -613,7 +616,7 @@ class MyEasyBuy_Policy_Consent {
 	}
 
 	/**
-	 * Classic checkout (rare; most traffic is Blocks or order-pay).
+	 * Persist classic shortcode checkout consent onto the new order (validation already ran).
 	 *
 	 * @param WC_Order $order Order.
 	 * @param array    $data  Posted data.
@@ -635,17 +638,16 @@ class MyEasyBuy_Policy_Consent {
 			self::write_shipping_order_meta( $order, $choice );
 			return;
 		}
-		if ( empty( $_POST['meb_purchase_consent'] ) && empty( $_POST[ str_replace( '/', '_', self::FIELD_PURCHASE ) ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			// Blocks additional fields may also post under their ids; skip if already handled.
+		$posted_purchase = ! empty( $_POST['meb_purchase_consent'] ) || ! empty( $_POST[ str_replace( '/', '_', self::FIELD_PURCHASE ) ] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+		if ( ! $posted_purchase ) {
+			wc_add_notice( __( 'Please agree to the Terms of Service, Return & Refund Policy, and Shipping & Prohibited Items Policy. / 请先同意《服务条款》《退货退款政策》和《运输与禁运政策》。', 'myeasybuy-core' ), 'error' );
 			return;
 		}
-		if ( ! empty( $_POST['meb_purchase_consent'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
-			if ( ! self::user_has_disclaimer_consent( get_current_user_id() ) ) {
-				wc_add_notice( __( 'Please review and accept “Three Things You Should Know” first. / 请先阅读并同意「三件事须知」。', 'myeasybuy-core' ), 'error' );
-				return;
-			}
-			self::write_purchase_order_meta( $order );
+		if ( ! self::user_has_disclaimer_consent( get_current_user_id() ) ) {
+			wc_add_notice( __( 'Please review and accept “Three Things You Should Know” first. / 请先阅读并同意「三件事须知」。', 'myeasybuy-core' ), 'error' );
+			return;
 		}
+		self::write_purchase_order_meta( $order );
 	}
 
 	/**
@@ -682,16 +684,49 @@ class MyEasyBuy_Policy_Consent {
 	}
 
 	/**
-	 * Consent UI on the classic order-pay screen (代购二价 bills).
+	 * Validate classic shortcode checkout before the order is created.
+	 *
+	 * @param array    $data   Posted checkout data.
+	 * @param WP_Error $errors Validation errors.
 	 */
-	public static function render_order_pay_consent(): void {
-		$order_id = absint( get_query_var( 'order-pay' ) );
-		$order    = $order_id ? wc_get_order( $order_id ) : false;
-		if ( ! $order instanceof WC_Order ) {
+	public static function validate_classic_checkout_posted( $data, $errors ): void {
+		if ( ! $errors instanceof WP_Error ) {
 			return;
 		}
-		$shipping = self::order_is_shipping( $order );
-		$urls     = self::policy_urls();
+		if ( self::cart_is_shipping() ) {
+			if ( empty( $_POST['meb_shipping_consent'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+				$errors->add( 'meb_shipping_consent', __( 'Please agree to the Shipping & Prohibited Items, Storage & Inspection, and Compensation & Parcel Protection policies. / 请先同意《运输与禁运政策》《仓储与验货政策》和《赔偿与包裹保障》。', 'myeasybuy-core' ) );
+			}
+			$choice = isset( $_POST['meb_parcel_protection'] ) ? sanitize_key( wp_unslash( (string) $_POST['meb_parcel_protection'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			if ( ! in_array( $choice, array( 'buy', 'decline' ), true ) ) {
+				$errors->add( 'meb_parcel_protection', __( 'Please choose to buy or decline parcel protection. / 请选择购买或放弃包裹保障。', 'myeasybuy-core' ) );
+			}
+			return;
+		}
+		if ( empty( $_POST['meb_purchase_consent'] ) && empty( $_POST[ str_replace( '/', '_', self::FIELD_PURCHASE ) ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$errors->add( 'meb_purchase_consent', __( 'Please agree to the Terms of Service, Return & Refund Policy, and Shipping & Prohibited Items Policy. / 请先同意《服务条款》《退货退款政策》和《运输与禁运政策》。', 'myeasybuy-core' ) );
+		}
+		if ( ! self::user_has_disclaimer_consent( get_current_user_id() ) ) {
+			$errors->add( 'meb_disclaimer_required', __( 'Please review and accept “Three Things You Should Know” before placing your first purchase order. / 首次代购下单前，请先阅读并同意「三件事须知」。', 'myeasybuy-core' ) );
+		}
+	}
+
+	/**
+	 * Consent UI on classic [woocommerce_checkout] (purchase or intl-shipping cart).
+	 */
+	public static function render_classic_checkout_consent(): void {
+		if ( function_exists( 'is_wc_endpoint_url' ) && ( is_wc_endpoint_url( 'order-pay' ) || is_wc_endpoint_url( 'order-received' ) ) ) {
+			return;
+		}
+		self::render_consent_fields( self::cart_is_shipping() );
+	}
+
+	/**
+	 * Shared consent markup for classic checkout and order-pay.
+	 *
+	 * @param bool $shipping Whether this is an international-shipping payment.
+	 */
+	public static function render_consent_fields( bool $shipping ): void {
 		echo '<div class="meb-pay-consent">';
 		if ( $shipping ) {
 			$s_en = self::policy_anchor( 'shipping-policy', 'Shipping & Prohibited Items Policy', '运输与禁运政策', 'en' );
@@ -722,6 +757,18 @@ class MyEasyBuy_Policy_Consent {
 			echo '</p>';
 		}
 		echo '</div>';
+	}
+
+	/**
+	 * Consent UI on the classic order-pay screen (代购二价 bills).
+	 */
+	public static function render_order_pay_consent(): void {
+		$order_id = absint( get_query_var( 'order-pay' ) );
+		$order    = $order_id ? wc_get_order( $order_id ) : false;
+		if ( ! $order instanceof WC_Order ) {
+			return;
+		}
+		self::render_consent_fields( self::order_is_shipping( $order ) );
 	}
 
 	/**
