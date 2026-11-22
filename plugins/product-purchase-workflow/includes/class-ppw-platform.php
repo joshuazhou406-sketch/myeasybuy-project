@@ -271,10 +271,64 @@ final class PPW_Platform {
 				return html_entity_decode( $m[0], ENT_QUOTES );
 			}
 
+			// e.tb.cn / m.tb.cn share pages often return HTTP 200 with a JS
+			// bounce (var url = 'https://pages-g.m.taobao.com/...?id=...')
+			// instead of a 30x Location header.
+			$embedded = self::extract_embedded_taobao_item_url( $body );
+			if ( $embedded ) {
+				return $embedded;
+			}
+
 			break;
 		}
 
 		return $current;
+	}
+
+	/**
+	 * Extract a Taobao/Tmall item URL from a short-link HTML/JS bounce page.
+	 *
+	 * Only allows taobao/tmall hosts and URLs from which extract_id_from_url
+	 * can read a numeric item id (rejects scanError.htm and similar).
+	 */
+	private static function extract_embedded_taobao_item_url( string $body ): ?string {
+		if ( '' === trim( $body ) ) {
+			return null;
+		}
+
+		$candidates = array();
+
+		if ( preg_match_all( '/\bvar\s+url\s*=\s*[\'"]([^\'"]+)[\'"]/i', $body, $ms ) ) {
+			foreach ( $ms[1] as $raw ) {
+				$candidates[] = $raw;
+			}
+		}
+
+		if ( preg_match_all( '#https?://(?:(?:[\w-]+\.)*(?:taobao\.com|tmall\.com|tmall\.hk|tmall\.tv|tb\.cn))[^"\'\s<>]*#i', $body, $ms ) ) {
+			foreach ( $ms[0] as $raw ) {
+				$candidates[] = $raw;
+			}
+		}
+
+		foreach ( $candidates as $raw ) {
+			$candidate = html_entity_decode( (string) $raw, ENT_QUOTES );
+			$candidate = str_replace( '\\/', '/', $candidate );
+			$candidate = trim( $candidate );
+			if ( ! preg_match( '#^https?://#i', $candidate ) ) {
+				continue;
+			}
+
+			$host = strtolower( (string) ( wp_parse_url( $candidate, PHP_URL_HOST ) ?: '' ) );
+			if ( ! preg_match( '/(?:^|\.)(?:taobao\.com|tmall\.com|tmall\.hk|tb\.cn|tmall\.tv)$/i', $host ) ) {
+				continue;
+			}
+
+			if ( null !== self::extract_id_from_url( $candidate ) ) {
+				return $candidate;
+			}
+		}
+
+		return null;
 	}
 
 	/**
