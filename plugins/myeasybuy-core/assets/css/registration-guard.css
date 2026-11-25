@@ -1,0 +1,15 @@
+.myeasybuy-turnstile {
+	margin: 1rem 0 1.25rem;
+}
+
+.myeasybuy-turnstile .cf-turnstile {
+	min-height: 65px;
+}
+
+.woocommerce-account-fields .myeasybuy-turnstile--checkout {
+	margin-top: 0.75rem;
+}
+
+.myeasybuy-turnstile[hidden] {
+	display: none !important;
+}

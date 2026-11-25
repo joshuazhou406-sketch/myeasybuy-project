@@ -110,14 +110,14 @@ $meb_login_url = meb_with_return_url( $meb_u['login'] );
 				}
 				?>
 
+				<?php do_action( 'woocommerce_register_form' ); ?>
+
 				<button type="submit" class="meb-reg__submit" name="register" value="Sign up">Sign up</button>
 
 				<p class="meb-reg__login">
 					Already have an account?
 					<a href="<?php echo esc_url( $meb_login_url ); ?>">Log in</a>
 				</p>
-
-				<?php do_action( 'woocommerce_register_form' ); ?>
 				<?php do_action( 'woocommerce_register_form_end' ); ?>
 			</form>
 
