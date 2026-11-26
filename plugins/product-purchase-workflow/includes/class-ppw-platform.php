@@ -178,6 +178,18 @@ final class PPW_Platform {
 					break;
 				}
 			}
+			// pages-fast.m.taobao.com share pages (xsms / e.tb.cn) use itemIds=...
+			if ( '' === $num_iid ) {
+				foreach ( array( 'itemIds', 'itemids', 'item_ids' ) as $key ) {
+					if ( empty( $query[ $key ] ) || ! is_scalar( $query[ $key ] ) ) {
+						continue;
+					}
+					if ( preg_match( '/(?:^|,)(\d{5,})(?:[,|]|$)/', (string) $query[ $key ], $m ) ) {
+						$num_iid = $m[1];
+						break;
+					}
+				}
+			}
 			// a.m.taobao.com/i123456.htm
 			if ( '' === $num_iid && preg_match( '#/i(\d{5,})\.htm#i', $path, $m ) ) {
 				$num_iid = $m[1];
