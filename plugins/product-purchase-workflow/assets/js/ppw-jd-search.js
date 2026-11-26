@@ -11,12 +11,13 @@
 	var lastKeyword = (ppwSearch && ppwSearch.keyword) || '';
 	var lastSearchMode = 'keyword';
 	var lastImageFile = null;
+	var lastImageUrl = '';
 
 	function platformLabel(platform) {
 		if (ppwSearch.labels && ppwSearch.labels[platform]) {
 			return ppwSearch.labels[platform];
 		}
-		return platform === 'jd' ? '京东' : '淘宝';
+		return platform === 'jd' ? 'JD' : 'Taobao';
 	}
 
 	function getResultsSection() {
@@ -122,7 +123,7 @@
 		}
 		platform = platform || currentPlatform;
 		$title.attr('data-keyword', keyword).attr('data-platform', platform);
-		var tpl = ppwSearch.titleTpl || '「%1$s」的%2$s商品（已显示 %3$d 件）';
+		var tpl = ppwSearch.titleTpl || 'Results for “%1$s” on %2$s (%3$d items shown)';
 		$title.text(
 			tpl
 				.replace('%1$s', keyword)
@@ -206,6 +207,66 @@
 			return true;
 		}
 		return /(?:^|\/\/|www\.)?(?:item\.|detail\.|product\.|m\.|a\.m\.|u\.|e\.)?(?:jd\.(?:com|hk)|taobao\.com|tmall\.(?:com|hk)|tb\.cn)/i.test(
+			value
+		);
+	}
+
+	function hostnameOf(value) {
+		try {
+			return new URL(value).hostname.toLowerCase();
+		} catch (err) {
+			return '';
+		}
+	}
+
+	function isAlibabaImageUrl(value) {
+		value = $.trim(value || '');
+		if (!/^https?:\/\//i.test(value)) {
+			return false;
+		}
+		if (isProductPageUrl(value)) {
+			return false;
+		}
+		var host = hostnameOf(value);
+		return /(^|\.)(alicdn|taobao|tmall)\.com$/i.test(host);
+	}
+
+	function looksLikeImageUrl(value) {
+		value = $.trim(value || '');
+		if (!/^https?:\/\//i.test(value)) {
+			return false;
+		}
+		if (isProductPageUrl(value)) {
+			return false;
+		}
+		if (/\.(jpe?g|png|webp|gif)(?:\?|#|$)/i.test(value)) {
+			return true;
+		}
+		return /(?:alicdn|taobaocdn|tbcdn|taobao|tmall|360buyimg|media-amazon|ssl-images-amazon|myeasybuy)\./i.test(
+			value
+		);
+	}
+
+	function isImageSearchUrl(value) {
+		return isAlibabaImageUrl(value);
+	}
+
+	function showUnsupportedImageMessage() {
+		var msg =
+			ppwSearch.imgInvalidUrl ||
+			'Image search only supports Taobao/Tmall image links (alicdn, taobao, or tmall). Please paste a product image URL from Taobao or Tmall.';
+		getResultsSection().addClass('is-visible').removeClass('is-loading');
+		getResultsContainer().html('<p class="ppw-jd-error">' + msg + '</p>');
+		showSection();
+	}
+
+	function isImageUploadEnabled() {
+		return !!(ppwSearch && ppwSearch.imageUploadEnabled);
+	}
+
+	function isProductPageUrl(value) {
+		value = $.trim(value || '');
+		return /(?:item\.taobao|detail\.tmall|e\.tb\.cn|item\.jd|item\.m\.jd|\/item\.html|\/item\.htm(?:\?|$))/i.test(
 			value
 		);
 	}
@@ -309,6 +370,16 @@
 		append = !!append;
 		platform = platform || currentPlatform;
 
+		if (!append && isAlibabaImageUrl(keyword)) {
+			searchByImageUrl(keyword, 1, false, platform);
+			return;
+		}
+
+		if (!append && looksLikeImageUrl(keyword)) {
+			showUnsupportedImageMessage();
+			return;
+		}
+
 		if (!append && looksLikeProductUrl(keyword)) {
 			resolveProductLink(keyword);
 			return;
@@ -328,6 +399,7 @@
 		lastKeyword = keyword;
 		lastSearchMode = 'keyword';
 		lastImageFile = null;
+		lastImageUrl = '';
 
 		if (currentRequest) {
 			currentRequest.abort();
@@ -482,11 +554,18 @@
 			? form.closest('.header-search-form')
 			: form.parent();
 
-		if ($host.find('.ppw-img-search').length) {
+		if (!isImageUploadEnabled()) {
+			$host.find('.ppw-img-search').remove();
+			bindImageUrlPaste(form, $());
 			return;
 		}
 
-		var label = ppwSearch.imgButtonLabel || '图片搜索';
+		if ($host.find('.ppw-img-search').length) {
+			bindImageUrlPaste(form, $host.find('.ppw-img-search'));
+			return;
+		}
+
+		var label = ppwSearch.imgButtonLabel || 'Image search';
 		var $wrap = $(
 			'<div class="ppw-img-search" title="' +
 				label +
@@ -518,12 +597,12 @@
 
 			var allowed = /^(image\/jpeg|image\/png|image\/webp|image\/gif)$/i;
 			if (!allowed.test(file.type)) {
-				window.alert(ppwSearch.imgInvalidType || '请上传 JPG / PNG / WEBP / GIF 图片。');
+				window.alert(ppwSearch.imgInvalidType || 'Please use a JPG, PNG, WEBP, or GIF image.');
 				inputEl.value = '';
 				return;
 			}
 			if (file.size > 5 * 1024 * 1024) {
-				window.alert(ppwSearch.imgTooLarge || '图片过大，请选择 5MB 以内的图片。');
+				window.alert(ppwSearch.imgTooLarge || 'That image is too large. Please choose a file under 5MB.');
 				inputEl.value = '';
 				return;
 			}
@@ -536,7 +615,7 @@
 							.html(
 								'<img src="' +
 									window.URL.createObjectURL(readyFile) +
-									'" alt="" /><button type="button" class="ppw-img-search-clear" aria-label="清除">×</button>'
+									'" alt="" /><button type="button" class="ppw-img-search-clear" aria-label="Clear">×</button>'
 							)
 							.prop('hidden', false);
 					}
@@ -553,8 +632,94 @@
 			e.preventDefault();
 			$wrap.find('.ppw-img-search-preview').prop('hidden', true).empty();
 			lastImageFile = null;
+			lastImageUrl = '';
 			lastSearchMode = 'keyword';
 		});
+
+		bindImageUrlPaste(form, $wrap);
+	}
+
+	function bindImageUrlPaste(form, $wrap) {
+		var $input = form.find(
+			'input[name="s"], input.header-search-input, input.wf_search-field, input.search'
+		);
+		if (!$input.length || $input.data('ppwPasteBound')) {
+			return;
+		}
+		$input.data('ppwPasteBound', true);
+		$input.on('paste', function (e) {
+			var cdt = e.originalEvent && e.originalEvent.clipboardData;
+			if (!cdt) {
+				return;
+			}
+			if (cdt.files && cdt.files[0] && /^image\//i.test(cdt.files[0].type)) {
+				if (!isImageUploadEnabled()) {
+					e.preventDefault();
+					window.alert(
+						ppwSearch.imgUploadOff ||
+							'Photo and file upload search is temporarily unavailable. Paste a Taobao/Tmall image link to find similar products.'
+					);
+					return;
+				}
+				e.preventDefault();
+				var file = cdt.files[0];
+				prepareImageFile(file)
+					.then(function (readyFile) {
+						showImagePreview($wrap, readyFile);
+						searchByImage(readyFile, 1, false, currentPlatform);
+					})
+					.catch(function () {
+						searchByImage(file, 1, false, currentPlatform);
+					});
+				return;
+			}
+			var text = $.trim(cdt.getData('text') || '');
+			if (isAlibabaImageUrl(text)) {
+				e.preventDefault();
+				$input.val(text);
+				showImageUrlPreview($wrap, text);
+				searchByImageUrl(text, 1, false, currentPlatform);
+				return;
+			}
+			if (looksLikeImageUrl(text)) {
+				e.preventDefault();
+				$input.val(text);
+				showUnsupportedImageMessage();
+			}
+		});
+	}
+
+	function showImagePreview($wrap, file) {
+		var $preview = $wrap.find('.ppw-img-search-preview');
+		if (!$preview.length) {
+			return;
+		}
+		if (window.URL && window.URL.createObjectURL && file) {
+			$preview
+				.html(
+					'<img src="' +
+						window.URL.createObjectURL(file) +
+						'" alt="" /><button type="button" class="ppw-img-search-clear" aria-label="Clear">×</button>'
+				)
+				.prop('hidden', false);
+		}
+	}
+
+	function showImageUrlPreview($wrap, url) {
+		var $preview = $('.ppw-img-search-preview').first();
+		if ($wrap && $wrap.find) {
+			$preview = $wrap.find('.ppw-img-search-preview');
+		}
+		if (!$preview.length || !url) {
+			return;
+		}
+		$preview
+			.html(
+				'<img src="' +
+					String(url).replace(/"/g, '&quot;') +
+					'" alt="" /><button type="button" class="ppw-img-search-clear" aria-label="Clear">×</button>'
+			)
+			.prop('hidden', false);
 	}
 
 	/**
@@ -646,6 +811,16 @@
 		if (!file) {
 			return;
 		}
+		if (!isImageUploadEnabled()) {
+			showUnsupportedImageMessage();
+			getResultsContainer().html(
+				'<p class="ppw-jd-error">' +
+					(ppwSearch.imgUploadOff ||
+						'Photo and file upload search is temporarily unavailable. Paste a Taobao/Tmall image link to find similar products.') +
+					'</p>'
+			);
+			return;
+		}
 
 		page = page || 1;
 		append = !!append;
@@ -654,7 +829,7 @@
 
 		lastSearchMode = 'image';
 		lastImageFile = file;
-		lastKeyword = ppwSearch.imgButtonLabel || '以图搜图';
+		lastKeyword = ppwSearch.imgButtonLabel || 'Image search';
 
 		if (currentRequest) {
 			currentRequest.abort();
@@ -760,7 +935,7 @@
 				}
 				var msg = ppwSearch.error;
 				if (xhr.statusText === 'timeout') {
-					msg = '图片搜索超时，请换一张较小的 JPG/PNG 图片后重试。';
+					msg = 'Image search timed out. Please try a smaller Taobao/Tmall image link.';
 				} else if (
 					xhr.responseJSON &&
 					xhr.responseJSON.data &&
@@ -770,6 +945,154 @@
 				}
 				if (!append) {
 					getResultsContainer().html('<p class="ppw-jd-error">' + msg + '</p>');
+					showSection();
+				} else {
+					$('[data-ppw-view-more]')
+						.prop('disabled', false)
+						.removeClass('is-loading')
+						.text(ppwSearch.viewMore);
+					window.alert(msg);
+				}
+			})
+			.always(function () {
+				getResultsSection().removeClass('is-loading');
+				currentRequest = null;
+			});
+	}
+
+	function searchByImageUrl(imageUrl, page, append, platform) {
+		imageUrl = $.trim(imageUrl || '');
+		if (!imageUrl) {
+			return;
+		}
+		if (!isAlibabaImageUrl(imageUrl)) {
+			showUnsupportedImageMessage();
+			return;
+		}
+
+		page = page || 1;
+		append = !!append;
+		platform = platform || currentPlatform;
+		setActivePlatform(platform);
+
+		lastSearchMode = 'image';
+		lastImageFile = null;
+		lastImageUrl = imageUrl;
+		lastKeyword = imageUrl;
+		showImageUrlPreview(null, imageUrl);
+
+		if (currentRequest) {
+			currentRequest.abort();
+		}
+
+		if (!append) {
+			getResultsSection().addClass('is-visible is-loading');
+			getResultsContainer().html(
+				'<div class="ppw-jd-loading"><span class="ppw-jd-spinner"></span>' +
+					(ppwSearch.imgSearching || ppwSearch.loading) +
+					'</div>'
+			);
+			totalShown = 0;
+			updateUrl(imageUrl, currentPlatform);
+		} else {
+			$('[data-ppw-view-more]')
+				.prop('disabled', true)
+				.addClass('is-loading')
+				.text(ppwSearch.loadingMore);
+		}
+
+		currentRequest = $.ajax({
+			url: ppwSearch.ajaxUrl,
+			type: 'POST',
+			data: {
+				action: 'ppw_img_search',
+				nonce: ppwSearch.nonce,
+				platform: currentPlatform,
+				page: String(page),
+				image_url: imageUrl
+			},
+			timeout: 120000
+		})
+			.done(function (response) {
+				if (!response.success || !response.data) {
+					var failMsg =
+						response.data && response.data.message
+							? response.data.message
+							: ppwSearch.noResults;
+					if (!append) {
+						getResultsContainer().html(
+							'<p class="ppw-jd-empty">' + failMsg + '</p>'
+						);
+						showSection();
+					} else {
+						$('[data-ppw-view-more]')
+							.prop('disabled', true)
+							.removeClass('is-loading')
+							.text(ppwSearch.noMore);
+					}
+					return;
+				}
+
+				var data = response.data;
+				var count = data.count || 0;
+				var plat = data.platform || currentPlatform;
+				var titleKeyword = data.keyword || lastKeyword;
+
+				if (append) {
+					if (data.cards_html) {
+						$('[data-ppw-jd-grid]').append(data.cards_html);
+						totalShown += count;
+						updateResultsTitle(titleKeyword, totalShown, plat);
+					}
+
+					var $more = $('[data-ppw-view-more]');
+					if (data.has_more) {
+						$more
+							.prop('disabled', false)
+							.removeClass('is-loading')
+							.attr('data-page', data.page)
+							.attr('data-keyword', titleKeyword)
+							.attr('data-platform', plat)
+							.attr('data-mode', 'image')
+							.text(ppwSearch.viewMore);
+					} else {
+						$more
+							.prop('disabled', true)
+							.removeClass('is-loading')
+							.text(ppwSearch.noMore);
+						setTimeout(function () {
+							$more.closest('.ppw-jd-view-more-wrap').fadeOut(200);
+						}, 800);
+					}
+				} else if (data.html) {
+					getResultsContainer().html(data.html);
+					$('[data-ppw-view-more]').attr('data-mode', 'image');
+					totalShown = count;
+					showSection();
+					scrollToResults();
+				} else {
+					getResultsContainer().html(
+						'<p class="ppw-jd-empty">' + ppwSearch.noResults + '</p>'
+					);
+					showSection();
+				}
+			})
+			.fail(function (xhr) {
+				if (xhr.statusText === 'abort') {
+					return;
+				}
+				var msg = ppwSearch.error;
+				if (
+					xhr.responseJSON &&
+					xhr.responseJSON.data &&
+					xhr.responseJSON.data.message
+				) {
+					msg = xhr.responseJSON.data.message;
+				}
+				if (!append) {
+					getResultsContainer().html(
+						'<p class="ppw-jd-error">' + msg + '</p>'
+					);
 					showSection();
 				} else {
 					$('[data-ppw-view-more]')
@@ -798,12 +1121,17 @@
 				searchByImage(lastImageFile, 1, false, currentPlatform);
 				return;
 			}
+			if (lastSearchMode === 'image' && lastImageUrl) {
+				searchByImageUrl(lastImageUrl, 1, false, currentPlatform);
+				return;
+			}
 			if (lastKeyword && looksLikeProductUrl(lastKeyword)) {
 				getResultsContainer().html(
 					'<p class="ppw-jd-empty">' +
-						'当前为' +
-						platformLabel(currentPlatform) +
-						'，可输入关键词搜索，或粘贴对应平台商品链接。' +
+						(ppwSearch.switchHint || 'This is the %s catalog. Enter a keyword, paste a product link, or paste a Taobao/Tmall image link.').replace(
+							'%s',
+							platformLabel(currentPlatform)
+						) +
 						'</p>'
 				);
 				return;
@@ -813,9 +1141,10 @@
 			} else {
 				getResultsContainer().html(
 					'<p class="ppw-jd-empty">' +
-						'当前为' +
-						platformLabel(currentPlatform) +
-						'商品，请输入关键词或粘贴商品链接，也可使用图片搜索。' +
+						(ppwSearch.switchHint || 'This is the %s catalog. Enter a keyword, paste a product link, or paste a Taobao/Tmall image link.').replace(
+							'%s',
+							platformLabel(currentPlatform)
+						) +
 						'</p>'
 				);
 				updateUrl('', currentPlatform);
@@ -885,6 +1214,10 @@
 
 			if (mode === 'image' && lastImageFile) {
 				searchByImage(lastImageFile, page + 1, true, platform);
+				return;
+			}
+			if (mode === 'image' && lastImageUrl) {
+				searchByImageUrl(lastImageUrl, page + 1, true, platform);
 				return;
 			}
 

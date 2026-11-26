@@ -161,7 +161,7 @@ final class PPW_Link_Parser_Agent {
 				'ppw_missing_credentials',
 				sprintf(
 					/* translators: %s: platform label */
-					__( '请先在后台「设置 → 商品搜索设置」中配置 %s API Key 和 Secret。', 'product-purchase-workflow' ),
+					__( 'Please add the %s API key and secret under Settings → Product Search.', 'product-purchase-workflow' ),
 					PPW_Platform::label( $this->platform )
 				)
 			);
@@ -229,8 +229,8 @@ final class PPW_Link_Parser_Agent {
 	/**
 	 * Search products by image (OneBound item_search_img).
 	 *
-	 * Local images are uploaded via upload_img first. Taobao uses numeric imgid or URL (+ app_ver=2).
-	 * JD local images fall back to Taobao visual → keyword search when needed.
+	 * Paste path: Taobao/Tmall/alicdn image URLs with app_ver=2 only.
+	 * File / photo upload uses upload_img only when ppw_is_image_upload_enabled() is true.
 	 *
 	 * @param string $image_source Public image URL, data-URI, raw base64, or file:/path.
 	 * @param int    $page_size    Page size (max 20).
@@ -243,7 +243,7 @@ final class PPW_Link_Parser_Agent {
 				'ppw_missing_credentials',
 				sprintf(
 					/* translators: %s: platform label */
-					__( '请先在后台「设置 → 商品搜索设置」中配置 %s API Key 和 Secret。', 'product-purchase-workflow' ),
+					__( 'Please add the %s API key and secret under Settings → Product Search Settings.', 'product-purchase-workflow' ),
 					PPW_Platform::label( $this->platform )
 				)
 			);
@@ -251,7 +251,7 @@ final class PPW_Link_Parser_Agent {
 
 		$image_source = trim( $image_source );
 		if ( '' === $image_source ) {
-			return new WP_Error( 'ppw_missing_image', __( '请上传或粘贴一张商品图片。', 'product-purchase-workflow' ) );
+			return new WP_Error( 'ppw_missing_image', __( 'Please paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' ) );
 		}
 
 		$page_size = min( max( 1, $page_size ), 20 );
@@ -271,6 +271,12 @@ final class PPW_Link_Parser_Agent {
 			return $imgid;
 		}
 
+		// Alibaba image URLs always use taobao.item_search_img app_ver=2 (saves a JD keyword bridge call).
+		if ( self::is_alibaba_image_url( (string) $imgid ) && PPW_Platform::JD === $this->platform ) {
+			$tb = new self( $this->name . '/tb-img', null, null, null, PPW_Platform::TAOBAO );
+			return $tb->search_products_by_image( (string) $imgid, $page_size, $page );
+		}
+
 		// JD native item_search_img only accepts 360buyimg/jfs URLs. Anything else (local upload,
 		// Taobao-style name, temp URL) must use Taobao visual → JD keyword bridge.
 		if ( PPW_Platform::JD === $this->platform
@@ -281,6 +287,12 @@ final class PPW_Link_Parser_Agent {
 		PPW_Logger::info( "[{$this->name}] 以图搜图 {$this->platform}，imgid=" . self::mask_imgid( $imgid ) . "，页码: {$page}" );
 
 		$attempts = $this->build_img_search_attempts( $imgid, $page, $page_size );
+		if ( empty( $attempts ) ) {
+			return new WP_Error(
+				'ppw_img_no_attempts',
+				__( 'Image search needs a Taobao/Tmall image link (alicdn, taobao, or tmall).', 'product-purchase-workflow' )
+			);
+		}
 		$servers  = array_slice( PPW_Platform::img_search_servers( $this->platform ), 0, 2 );
 		$last_error = null;
 		$tried      = array();
@@ -313,8 +325,9 @@ final class PPW_Link_Parser_Agent {
 						$last_error = $result;
 						$data       = $result->get_error_data();
 						$code       = is_array( $data ) ? (string) ( $data['onebound_code'] ?? '' ) : '';
-						// Keep trying alternate modes for data errors; stop on auth.
-						if ( '4005' === $code ) {
+						// Keep trying alternate modes for transient errors only.
+						// 5000/2000/4003/4005/4013+ would burn the daily cap if retried across servers.
+						if ( in_array( $code, array( '4005', '5000', '2000', '4003', '4013', '4014', '4016' ), true ) ) {
 							self::remember_img_search(
 								array(
 									'ok'       => false,
@@ -374,14 +387,14 @@ final class PPW_Link_Parser_Agent {
 
 		if ( self::is_demo_mode_enabled() ) {
 			PPW_Logger::warning( "[{$this->name}] 以图搜图 API 不可用，使用演示商品数据。" );
-			return self::get_demo_products( __( '以图搜图', 'product-purchase-workflow' ), $page_size, $this->platform );
+			return self::get_demo_products( __( 'Image search', 'product-purchase-workflow' ), $page_size, $this->platform );
 		}
 
 		return $last_error ?? new WP_Error(
 			'ppw_img_search_unreachable',
 			sprintf(
 				/* translators: %s: platform label */
-				__( '无法连接%s以图搜图 API，请检查网络或 API 配置。', 'product-purchase-workflow' ),
+				__( 'Could not reach the %s image search API. Please try again later.', 'product-purchase-workflow' ),
 				PPW_Platform::label( $this->platform )
 			)
 		);
@@ -505,10 +518,9 @@ final class PPW_Link_Parser_Agent {
 	}
 
 	/**
-	 * Build item_search_img parameter variants.
-	 *
-	 * JD expects a JD-format image URL / jfs path, or BASE64 via POST.
-	 * Taobao expects numeric imgid or URL (+ app_ver=2).
+	 * Build item_search_img attempts per OneBound docs:
+	 * - app_ver=1 (default): imgid = ID from upload_img
+	 * - app_ver=2: imgid = public jpg/png image URL only; supports page
 	 *
 	 * @return array<int, array{mode:string,method?:string,params:array<string,string>,body?:array<string,string>}>
 	 */
@@ -522,85 +534,47 @@ final class PPW_Link_Parser_Agent {
 			'result_type' => 'json',
 		);
 
-		$attempts  = array();
-		$is_obtemp = str_starts_with( $imgid, 'obtemp:' );
-		$ob_url    = $is_obtemp ? substr( $imgid, strlen( 'obtemp:' ) ) : '';
-		$is_b64    = str_starts_with( $imgid, 'b64payload:' );
-		$b64       = $is_b64 ? substr( $imgid, strlen( 'b64payload:' ) ) : '';
-		$is_url    = (bool) preg_match( '#^https?://#i', $imgid );
-		$is_num    = (bool) preg_match( '#^\d{6,}$#', $imgid );
-		$is_jfs    = (bool) preg_match( '#(^|/)jfs/#i', $imgid );
-		$is_cdn    = $is_url && self::is_marketplace_image_url( $imgid );
+		$attempts = array();
+		$is_b64   = str_starts_with( $imgid, 'b64payload:' );
+		$b64      = $is_b64 ? substr( $imgid, strlen( 'b64payload:' ) ) : '';
+		$is_url   = (bool) preg_match( '#^https?://#i', $imgid );
+		$is_id    = self::is_upload_img_id( $imgid );
+		$is_v2url = self::is_app_ver_2_image_url( $imgid );
+		$is_jfs   = (bool) preg_match( '#(^|/)jfs/#i', $imgid );
 
 		if ( PPW_Platform::TAOBAO === $this->platform ) {
-			if ( $is_b64 && '' !== $b64 ) {
-				// Local phone photos often only get OneBound temp upload URLs (GET → 5000).
-				// Official item_search_img also accepts POST imgid=BASE64.
-				$attempts[] = array(
-					'mode'   => 'taobao_post_base64',
-					'method' => 'post',
-					'params' => $auth,
-					'body'   => array( 'imgid' => $b64 ),
-				);
-				$attempts[] = array(
-					'mode'   => 'taobao_post_base64_app_ver_2',
-					'method' => 'post',
-					'params' => array_merge( $auth, array( 'app_ver' => '2' ) ),
-					'body'   => array( 'imgid' => $b64 ),
-				);
-				$attempts[] = array(
-					'mode'   => 'taobao_post_data_uri',
-					'method' => 'post',
-					'params' => array_merge( $auth, array( 'app_ver' => '2' ) ),
-					'body'   => array( 'imgid' => 'data:image/jpeg;base64,' . $b64 ),
-				);
-			} elseif ( $is_obtemp && '' !== $ob_url ) {
-				// Temp upload host: POST first (GET historically returns 5000).
-				$attempts[] = array(
-					'mode'   => 'taobao_obtemp_post',
-					'method' => 'post',
-					'params' => $auth,
-					'body'   => array( 'imgid' => $ob_url ),
-				);
-				$attempts[] = array(
-					'mode'   => 'taobao_obtemp_post_app_ver_2',
-					'method' => 'post',
-					'params' => array_merge( $auth, array( 'app_ver' => '2' ) ),
-					'body'   => array( 'imgid' => $ob_url ),
-				);
-			} else {
+			// Docs: app_ver=1 → pass upload_img ID (no app_ver / app_ver=1).
+			if ( $is_id ) {
 				$base = array_merge( $auth, array( 'imgid' => $imgid ) );
-				if ( $is_num ) {
-					$attempts[] = array(
-						'mode'   => 'taobao_imgid',
-						'method' => 'get',
-						'params' => $base,
-					);
-				}
-				if ( $is_cdn ) {
-					$attempts[] = array(
-						'mode'   => 'taobao_url_app_ver_2',
-						'method' => 'get',
-						'params' => array_merge( $base, array( 'app_ver' => '2' ) ),
-					);
-					$attempts[] = array(
-						'mode'   => 'taobao_url_raw',
-						'method' => 'get',
-						'params' => $base,
-					);
-				}
-				if ( ! $is_num && ! $is_url ) {
-					$attempts[] = array(
-						'mode'   => 'taobao_imgid_raw',
-						'method' => 'get',
-						'params' => $base,
-					);
-					$attempts[] = array(
-						'mode'   => 'taobao_force_app_ver_2',
-						'method' => 'get',
-						'params' => array_merge( $base, array( 'app_ver' => '2' ) ),
-					);
-				}
+				$attempts[] = array(
+					'mode'   => 'taobao_app_ver_1_id',
+					'method' => 'get',
+					'params' => $base,
+				);
+				$attempts[] = array(
+					'mode'   => 'taobao_app_ver_1_explicit',
+					'method' => 'get',
+					'params' => array_merge( $base, array( 'app_ver' => '1' ) ),
+				);
+			}
+
+			// Docs: app_ver=2 → jpg/png image URL only (+ page).
+			if ( $is_v2url ) {
+				$attempts[] = array(
+					'mode'   => 'taobao_app_ver_2_url',
+					'method' => 'get',
+					'params' => array_merge( $auth, array( 'imgid' => $imgid, 'app_ver' => '2' ) ),
+				);
+			}
+
+			// Last resort only when upload failed to yield a usable ID/URL (not in official sample).
+			if ( empty( $attempts ) && $is_b64 && '' !== $b64 ) {
+				$attempts[] = array(
+					'mode'   => 'taobao_post_base64_fallback',
+					'method' => 'post',
+					'params' => $auth,
+					'body'   => array( 'imgid' => $b64 ),
+				);
 			}
 		} else {
 			// JD: prefer JD URL / jfs GET; local uploads use POST base64 (docs).
@@ -715,6 +689,40 @@ final class PPW_Link_Parser_Agent {
 	}
 
 	/**
+	 * Whether value is a Taobao/Tmall/alicdn image URL allowed for item_search_img (app_ver=2).
+	 * Host must be alicdn.com, taobao.com, or tmall.com, or a subdomain of those.
+	 */
+	public static function is_alibaba_image_url( string $value ): bool {
+		$value = trim( $value );
+		if ( ! preg_match( '#^https?://#i', $value ) ) {
+			return false;
+		}
+		if ( self::is_onebound_temp_image_url( $value ) ) {
+			return false;
+		}
+		// Product pages are not image URLs (frontend routes those separately).
+		if ( preg_match( '#(?:item\.taobao|detail\.tmall|e\.tb\.cn|/item\.html|/item\.htm(?:\?|$))#i', $value ) ) {
+			return false;
+		}
+		$host = strtolower( (string) wp_parse_url( $value, PHP_URL_HOST ) );
+		$port = wp_parse_url( $value, PHP_URL_PORT );
+		if ( '' === $host || filter_var( $host, FILTER_VALIDATE_IP ) ) {
+			return false;
+		}
+		if ( null !== $port && ! in_array( (int) $port, array( 80, 443 ), true ) ) {
+			return false;
+		}
+		return self::is_alibaba_host( $host );
+	}
+
+	/**
+	 * @param string $host Lowercase hostname, no port.
+	 */
+	private static function is_alibaba_host( string $host ): bool {
+		return (bool) preg_match( '#(?:^|\.)(?:alicdn|taobao|tmall)\.com$#i', $host );
+	}
+
+	/**
 	 * Whether value is a OneBound temporary image host (IP:port /image/…).
 	 * upload_img often returns these; item_search_img GET with them returns 5000.
 	 */
@@ -759,14 +767,49 @@ final class PPW_Link_Parser_Agent {
 			return false;
 		}
 
-		return (bool) preg_match(
-			'#(?:^|\.)(?:alicdn|taobao|tmall|tbcdn|360buyimg|jd)\.(?:com|cn|hk)$#i',
-			$host
-		);
+		return self::is_alibaba_host( $host );
 	}
 
 	/**
-	 * Whether extracted upload_img value can be passed to item_search_img as GET imgid.
+	 * Whether value looks like an upload_img ID for app_ver=1 (not a URL).
+	 * Docs: app_ver=1 requires upload first, then pass the returned ID.
+	 */
+	private static function is_upload_img_id( string $imgid ): bool {
+		$imgid = trim( $imgid );
+		if ( '' === $imgid || self::looks_like_base64_blob( $imgid ) ) {
+			return false;
+		}
+		if ( preg_match( '#^https?://#i', $imgid ) || str_starts_with( $imgid, '//' ) ) {
+			return false;
+		}
+		if ( preg_match( '#^\d{6,}$#', $imgid ) ) {
+			return true;
+		}
+		// Taobao-style image name / id token (TB… / O1CN… / hash).
+		return (bool) preg_match( '#^[A-Za-z0-9_\-!.]{8,}$#', $imgid );
+	}
+
+	/**
+	 * Whether value can be sent to taobao.item_search_img with app_ver=2.
+	 *
+	 * Live policy (OneBound, 2026-11): only Alibaba-domain image URLs (alicdn/taobao/tmall).
+	 * Amazon, JD CDN, and first-party media URLs are rejected before the API is called.
+	 */
+	private static function is_app_ver_2_image_url( string $value ): bool {
+		$value = trim( $value );
+		if ( ! preg_match( '#^https?://#i', $value ) ) {
+			return false;
+		}
+		if ( self::is_onebound_temp_image_url( $value ) ) {
+			return false;
+		}
+		return self::is_marketplace_image_url( $value );
+	}
+
+	/**
+	 * Whether extracted upload_img value can be used with item_search_img.
+	 * - app_ver=1 ID, or
+	 * - app_ver=2 public jpg/png URL
 	 */
 	private static function is_usable_search_imgid( string $imgid, string $platform = '' ): bool {
 		$imgid    = trim( $imgid );
@@ -777,18 +820,14 @@ final class PPW_Link_Parser_Agent {
 		if ( self::is_onebound_temp_image_url( $imgid ) ) {
 			return false;
 		}
-		if ( preg_match( '#^\d{6,}$#', $imgid ) ) {
-			return true;
+		if ( self::is_upload_img_id( $imgid ) ) {
+			return PPW_Platform::JD !== $platform;
 		}
-		if ( self::is_marketplace_image_url( $imgid ) ) {
+		if ( self::is_app_ver_2_image_url( $imgid ) ) {
 			if ( PPW_Platform::JD === $platform ) {
 				return self::is_jd_compatible_imgid( $imgid );
 			}
 			return true;
-		}
-		// Taobao-style image name (TB… / O1CN…) — not an http URL.
-		if ( ! preg_match( '#^https?://#i', $imgid ) && preg_match( '#^[A-Za-z0-9_\-!.]{8,}$#', $imgid ) ) {
-			return PPW_Platform::JD !== $platform;
 		}
 		return false;
 	}
@@ -881,6 +920,10 @@ final class PPW_Link_Parser_Agent {
 	/**
 	 * Resolve OneBound imgid for item_search_img.
 	 *
+	 * OneBound docs:
+	 * - app_ver=1: upload_img first, then pass returned ID
+	 * - app_ver=2: pass public jpg/png image URL (+ page)
+	 *
 	 * @param string $image_source URL / data-URI / base64 / file:/path.
 	 * @return string|WP_Error
 	 */
@@ -890,78 +933,116 @@ final class PPW_Link_Parser_Agent {
 			preg_match( '#^data:image/[^;]+;base64,#i', $source ) ||
 			( ! preg_match( '#^https?://#i', $source ) && preg_match( '#^[A-Za-z0-9+/=\s]+$#', $source ) && strlen( $source ) > 200 );
 
-		// Local upload / data-URI / raw base64.
+		$unsupported = __( 'Image search only supports Taobao/Tmall image links (alicdn, taobao, or tmall). Please paste a product image URL from Taobao or Tmall.', 'product-purchase-workflow' );
+		$upload_off  = __( 'Photo and file upload search is temporarily unavailable. Paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' );
+
+		// Local upload / data-URI / raw base64 → upload_img only when the admin toggle is on.
 		if ( $is_local ) {
+			if ( ! ppw_is_image_upload_enabled() ) {
+				return new WP_Error( 'ppw_img_upload_disabled', $upload_off );
+			}
+
 			if ( PPW_Platform::JD === $this->platform ) {
-				// OneBound jd.item_search_img rejects local uploads / Taobao-style names (5000).
-				// Always bridge via Taobao visual → JD item_search keyword.
+				// JD native local search is unreliable; bridge via Taobao visual → JD keyword.
 				return 'jd_needs_bridge';
 			}
 
 			$uploaded = $this->upload_image_for_search( $source );
-			if ( ! is_wp_error( $uploaded ) && self::is_usable_search_imgid( $uploaded, PPW_Platform::TAOBAO ) ) {
+			if ( ! is_wp_error( $uploaded ) && self::is_upload_img_id( $uploaded ) ) {
+				// Best path: upload ID for app_ver=1.
 				return $uploaded;
 			}
-			// Phone photos often only get OneBound temp URLs (IP:5027) — GET item_search_img → 5000.
-			// Prefer BASE64 POST; keep temp URL as last-resort POST attempt.
-			$b64 = self::encode_image_source_as_base64( $source );
-			if ( '' !== $b64 ) {
-				return 'b64payload:' . $b64;
+			if ( ! is_wp_error( $uploaded ) && self::is_app_ver_2_image_url( $uploaded ) ) {
+				// Upload returned a public jpg/png URL usable with app_ver=2.
+				return $uploaded;
 			}
-			if ( ! is_wp_error( $uploaded ) && self::is_onebound_temp_image_url( $uploaded ) ) {
-				return 'obtemp:' . $uploaded;
+
+			// If site is publicly reachable, publish local JPEG and use app_ver=2 URL mode.
+			$public = self::publish_local_image_public_url( $source );
+			if ( ! is_wp_error( $public ) && self::is_app_ver_2_image_url( $public ) ) {
+				self::remember_img_search(
+					array(
+						'ok'       => true,
+						'phase'    => 'resolve_imgid',
+						'platform' => $this->platform,
+						'mode'     => 'published_public_url_for_app_ver_2',
+						'imgid'    => self::mask_imgid( $public ),
+						'time'     => gmdate( 'c' ),
+					)
+				);
+				return $public;
+			}
+
+			// Do not POST raw base64 to item_search_img: that path returns 5000 and uses quota.
+
+			$local_hint = '';
+			$home_host  = strtolower( (string) wp_parse_url( home_url(), PHP_URL_HOST ) );
+			if ( 'localhost' === $home_host || str_ends_with( $home_host, '.local' ) || filter_var( $home_host, FILTER_VALIDATE_IP ) ) {
+				$local_hint = ' ' . __( 'This local site is not reachable from OneBound. You can paste a Taobao/Tmall image link instead.', 'product-purchase-workflow' );
 			}
 			if ( is_wp_error( $uploaded ) ) {
 				return new WP_Error(
 					$uploaded->get_error_code(),
-					self::sanitize_api_error_message( $uploaded->get_error_message() ),
+					self::sanitize_api_error_message( $uploaded->get_error_message() ) . $local_hint,
 					$uploaded->get_error_data()
 				);
 			}
 			return new WP_Error(
 				'ppw_upload_no_imgid',
-				__( '图片已上传，但未返回可用于搜图的 ID。请换一张较小的 JPG/PNG 重试。', 'product-purchase-workflow' )
+				__( 'The image was uploaded, but no search ID was returned. Please try a smaller JPG or PNG, or paste a Taobao/Tmall image link.', 'product-purchase-workflow' ) . $local_hint
 			);
 		}
 
 		if ( preg_match( '#^https?://#i', $source ) ) {
-			$host = strtolower( (string) wp_parse_url( $source, PHP_URL_HOST ) );
-
-			$is_tb_cdn = (bool) preg_match( '#(?:alicdn\.com|taobao\.com|tmall\.com)$#i', $host );
-			$is_jd_cdn = (bool) preg_match( '#(?:360buyimg\.com|jd\.com|jd\.hk)$#i', $host );
-
-			// Prefer upload→usable imgid for Taobao. Fall back to CDN URL or BASE64 POST.
-			if ( PPW_Platform::TAOBAO === $this->platform ) {
-				$uploaded = $this->upload_image_for_search( $source );
-				if ( ! is_wp_error( $uploaded ) && self::is_usable_search_imgid( $uploaded, PPW_Platform::TAOBAO ) ) {
-					return $uploaded;
-				}
-				if ( $is_tb_cdn || self::is_marketplace_image_url( $source ) ) {
-					return $source;
-				}
-				$b64 = self::encode_image_source_as_base64( $source );
-				if ( '' !== $b64 ) {
-					return 'b64payload:' . $b64;
-				}
-				return is_wp_error( $uploaded )
-					? new WP_Error(
-						$uploaded->get_error_code(),
-						self::sanitize_api_error_message( $uploaded->get_error_message() ),
-						$uploaded->get_error_data()
-					)
-					: new WP_Error( 'ppw_upload_failed', __( '图片上传失败，请换一张较小的 JPG/PNG 商品图重试。', 'product-purchase-workflow' ) );
+			if ( self::is_alibaba_image_url( $source ) ) {
+				return $source;
 			}
 
-			if ( PPW_Platform::JD === $this->platform ) {
-				if ( self::is_jd_compatible_imgid( $source ) || $is_jd_cdn ) {
-					return $source;
-				}
-				// Non-JD URL: use Taobao visual → JD keyword bridge.
-				return 'jd_needs_bridge';
-			}
+			// Never call upload_img or item_search_img for non-Alibaba URLs (saves quota).
+			return new WP_Error( 'ppw_img_unsupported_host', $unsupported );
 		}
 
-		return new WP_Error( 'ppw_invalid_image', __( '无法识别的图片数据，请重新上传。', 'product-purchase-workflow' ) );
+		return new WP_Error( 'ppw_invalid_image', $unsupported );
+	}
+
+	private static function publish_local_image_public_url( string $source ) {
+		$home_host = strtolower( (string) wp_parse_url( home_url(), PHP_URL_HOST ) );
+		if ( '' === $home_host
+			|| 'localhost' === $home_host
+			|| str_ends_with( $home_host, '.local' )
+			|| filter_var( $home_host, FILTER_VALIDATE_IP ) ) {
+			return new WP_Error( 'ppw_local_site', 'site not publicly reachable' );
+		}
+
+		$prepared = self::prepare_local_image_file( $source );
+		if ( is_wp_error( $prepared ) || 'file' !== ( $prepared['mode'] ?? '' ) || empty( $prepared['path'] ) ) {
+			return is_wp_error( $prepared ) ? $prepared : new WP_Error( 'ppw_publish_prepare', 'prepare failed' );
+		}
+
+		$path = (string) $prepared['path'];
+		$bytes = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+		if ( false === $bytes || '' === $bytes ) {
+			return new WP_Error( 'ppw_publish_read', __( '无法读取上传的图片。', 'product-purchase-workflow' ) );
+		}
+
+		$uploads = wp_upload_dir();
+		if ( ! empty( $uploads['error'] ) ) {
+			return new WP_Error( 'ppw_publish_uploads', (string) $uploads['error'] );
+		}
+
+		$filename = 'ppw-imgsearch-' . gmdate( 'YmdHis' ) . '-' . wp_generate_password( 6, false ) . '.jpg';
+		$dest     = trailingslashit( (string) $uploads['path'] ) . $filename;
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+		if ( false === file_put_contents( $dest, $bytes ) ) {
+			return new WP_Error( 'ppw_publish_write', __( '无法写入公开图片文件。', 'product-purchase-workflow' ) );
+		}
+
+		$url = trailingslashit( (string) $uploads['url'] ) . $filename;
+		if ( is_ssl() ) {
+			$url = set_url_scheme( $url, 'https' );
+		}
+
+		return $url;
 	}
 
 	/**
@@ -1015,7 +1096,8 @@ final class PPW_Link_Parser_Agent {
 			'cache'       => 'no',
 		);
 
-		$type_variants = array( '1', '' );
+		// img_type=1 is required so upload_img returns image_id for item_search_img.
+		$type_variants = array( '1' );
 
 		try {
 			foreach ( $type_variants as $img_type ) {
@@ -1150,7 +1232,7 @@ final class PPW_Link_Parser_Agent {
 
 						$last_error = new WP_Error(
 							'ppw_upload_no_imgid',
-							__( '图片已上传，但未返回可用于搜图的 ID。', 'product-purchase-workflow' ),
+							__( 'The image was uploaded, but no search ID was returned.', 'product-purchase-workflow' ),
 							array( 'raw' => self::summarize_api_payload( $data ) )
 						);
 					}
@@ -1177,7 +1259,7 @@ final class PPW_Link_Parser_Agent {
 
 		return new WP_Error(
 			'ppw_upload_failed',
-			__( '图片上传失败，请换一张较小的 JPG/PNG 商品图重试。', 'product-purchase-workflow' )
+			__( 'Could not upload the image. Please try a smaller JPG or PNG, or paste a public image URL.', 'product-purchase-workflow' )
 		);
 	}
 
@@ -1423,15 +1505,15 @@ final class PPW_Link_Parser_Agent {
 			if ( preg_match( '#\(code:\s*(\d+)\)#i', $message, $m ) ) {
 				$code = $m[1];
 				if ( '4003' === $code ) {
-					return __( '图片文件不被 OneBound 接受（code: 4003）。请上传清晰的 JPG/PNG 商品图，建议小于 1MB。', 'product-purchase-workflow' );
+					return __( 'This image was not accepted (code: 4003). Please use a clear JPG or PNG under 1MB.', 'product-purchase-workflow' );
 				}
 				return sprintf(
 					/* translators: %s: error code */
-					__( '图片搜索失败（code: %s）。请换一张较小的 JPG/PNG 商品图重试。', 'product-purchase-workflow' ),
+					__( 'Image search failed (code: %s). Please try a different JPG or PNG.', 'product-purchase-workflow' ),
 					$code
 				);
 			}
-			return __( '图片搜索失败：图片格式或大小不被接口接受，请换一张较小的 JPG/PNG 商品图。', 'product-purchase-workflow' );
+			return __( 'Image search failed. Please use a smaller JPG or PNG and try again.', 'product-purchase-workflow' );
 		}
 		return $message;
 	}
@@ -1457,7 +1539,7 @@ final class PPW_Link_Parser_Agent {
 			if ( isset( $item[0] ) && is_array( $item[0] ) ) {
 				$item = $item[0];
 			}
-			foreach ( array( 'name', 'url', 'pic_url', 'imgid', 'img_id', 'id', 'pic' ) as $key ) {
+			foreach ( array( 'image_id', 'imgid', 'img_id', 'name', 'url', 'pic_url', 'id', 'pic' ) as $key ) {
 				if ( ! empty( $item[ $key ] ) && is_scalar( $item[ $key ] ) ) {
 					$candidates[] = (string) $item[ $key ];
 				}
@@ -1469,14 +1551,14 @@ final class PPW_Link_Parser_Agent {
 			if ( isset( $fallback_item[0] ) && is_array( $fallback_item[0] ) ) {
 				$fallback_item = $fallback_item[0];
 			}
-			foreach ( array( 'name', 'url', 'pic_url', 'imgid', 'img_id', 'id' ) as $key ) {
+			foreach ( array( 'image_id', 'imgid', 'img_id', 'name', 'url', 'pic_url', 'id' ) as $key ) {
 				if ( ! empty( $fallback_item[ $key ] ) && is_scalar( $fallback_item[ $key ] ) ) {
 					$candidates[] = (string) $fallback_item[ $key ];
 				}
 			}
 		}
 
-		foreach ( array( 'name', 'url', 'pic_url', 'imgid', 'img_id', 'id' ) as $key ) {
+		foreach ( array( 'image_id', 'imgid', 'img_id', 'name', 'url', 'pic_url', 'id' ) as $key ) {
 			if ( ! empty( $data[ $key ] ) && is_scalar( $data[ $key ] ) ) {
 				$candidates[] = (string) $data[ $key ];
 			}
@@ -1523,19 +1605,19 @@ final class PPW_Link_Parser_Agent {
 			return '';
 		}
 
-		// Taobao: numeric imgid > marketplace CDN > TB-style name.
-		// Temp OneBound URLs are returned only when nothing better exists (caller should prefer BASE64).
+		// Taobao app_ver=1 prefers upload ID; app_ver=2 can use marketplace jpg/png URL.
+		// Never prefer OneBound temp IP URLs — they are not valid app_ver=1 IDs nor app_ver=2 image URLs.
 		if ( ! empty( $numeric ) ) {
 			return $numeric[0];
+		}
+		if ( ! empty( $other ) ) {
+			return $other[0];
 		}
 		if ( ! empty( $urls ) ) {
 			return $urls[0];
 		}
 		if ( ! empty( $jd_ids ) ) {
 			return $jd_ids[0];
-		}
-		if ( ! empty( $other ) ) {
-			return $other[0];
 		}
 		if ( ! empty( $temps ) ) {
 			return $temps[0];
@@ -1583,11 +1665,11 @@ final class PPW_Link_Parser_Agent {
 				$message .= ' (code: ' . $code . ')';
 			}
 			if ( '4005' === $code || false !== strpos( $message, '无权访问' ) ) {
-				$message .= ' ' . __( '请在万邦 OneBound 控制台开通对应接口：淘宝需 taobao.item_search_img + taobao.upload_img；京东需 jd.item_search_img（及 jd.upload_img）。', 'product-purchase-workflow' );
+				$message .= ' ' . __( 'This OneBound API is not enabled (Taobao needs item_search_img and upload_img; JD needs the JD equivalents).', 'product-purchase-workflow' );
 			}
 			if ( '5000' === $code ) {
 				// Do not assume every JD 5000 is item_search_img — keyword item_search can also 5000.
-				$message .= ' ' . __( '常见原因：图片格式需为 JPG/PNG，imgid 无效，或接口暂时无结果。请换图 / 换关键词后重试。', 'product-purchase-workflow' );
+				$message .= ' ' . __( 'Common causes: the image URL is not fetchable (use a Taobao/Tmall CDN URL or upload the photo), the format must be JPG/PNG, or there is no match.', 'product-purchase-workflow' );
 			}
 			return new WP_Error( 'ppw_onebound_error', $message, array( 'onebound_code' => $code ) );
 		}
@@ -1863,7 +1945,7 @@ final class PPW_Link_Parser_Agent {
 			$shop = (string) ( $item['seller_info']['shop_name'] ?? ( $item['seller_info']['nick'] ?? '' ) );
 		}
 		if ( '' === $shop ) {
-			$shop = (string) ( $item['nick'] ?? ( $item['shop_name'] ?? '' ) );
+			$shop = (string) ( $item['nick'] ?? ( $item['shop_name'] ?? ( $item['seller_nick'] ?? '' ) ) );
 		}
 
 		return array(

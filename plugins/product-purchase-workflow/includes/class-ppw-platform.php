@@ -27,8 +27,8 @@ final class PPW_Platform {
 	 */
 	public static function label( string $platform ): string {
 		return self::JD === self::normalize( $platform )
-			? __( '京东', 'product-purchase-workflow' )
-			: __( '淘宝', 'product-purchase-workflow' );
+			? __( 'JD', 'product-purchase-workflow' )
+			: __( 'Taobao', 'product-purchase-workflow' );
 	}
 
 	/**

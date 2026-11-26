@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Product Purchase Workflow
  * Plugin URI:  https://myeasybuy.local
- * Description: 首页支持关键词、图片或淘宝/京东商品链接搜索，点击后展示详情并自动同步到 WooCommerce。
- * Version:     1.5.12
+ * Description: Homepage search by keyword, Taobao/Tmall image link, or Taobao/JD product link; open details and sync to WooCommerce.
+ * Version:     1.5.15
  * Author:      MyEasyBuy
  * Text Domain: product-purchase-workflow
  * Requires PHP: 8.1
@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PPW_VERSION', '1.5.12' );
+define( 'PPW_VERSION', '1.5.15' );
 define( 'PPW_PLUGIN_FILE', __FILE__ );
 define( 'PPW_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PPW_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -100,6 +100,17 @@ function ppw_maybe_upgrade_settings() {
 		ppw_clear_search_cache();
 		update_option( 'ppw_settings_v140', '1' );
 	}
+
+	// v1.5.15: image upload / photo search toggle (default off).
+	if ( get_option( 'ppw_settings_v1515' ) !== '1' ) {
+		$current = get_option( 'ppw_settings', array() );
+		$merged  = wp_parse_args( is_array( $current ) ? $current : array(), $defaults );
+		if ( ! isset( $current['image_upload_enabled'] ) ) {
+			$merged['image_upload_enabled'] = 0;
+		}
+		update_option( 'ppw_settings', $merged );
+		update_option( 'ppw_settings_v1515', '1' );
+	}
 }
 
 register_activation_hook( __FILE__, 'ppw_activate' );
@@ -160,8 +171,19 @@ function ppw_default_settings() {
 		'page_size'       => 20,
 		'demo_mode'       => 0,
 		'auto_publish_wc' => 1,
-		'default_platform'=> 'taobao',
+		'default_platform'     => 'taobao',
+		'image_upload_enabled' => 0,
 	);
+}
+
+
+/**
+ * Whether file / camera / clipboard-image search is enabled.
+ * Default is off: OneBound currently accepts only Alibaba-domain image URLs.
+ */
+function ppw_is_image_upload_enabled(): bool {
+	$settings = get_option( 'ppw_settings', array() );
+	return ! empty( $settings['image_upload_enabled'] );
 }
 
 /**
@@ -173,11 +195,13 @@ function ppw_clear_search_cache() {
 	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 	$wpdb->query(
 		$wpdb->prepare(
-			"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s",
+			"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s",
 			'_transient_ppw_jd_%',
 			'_transient_timeout_ppw_jd_%',
 			'_transient_ppw_search_%',
-			'_transient_timeout_ppw_search_%'
+			'_transient_timeout_ppw_search_%',
+			'_transient_ppw_img_%',
+			'_transient_timeout_ppw_img_%'
 		)
 	);
 }

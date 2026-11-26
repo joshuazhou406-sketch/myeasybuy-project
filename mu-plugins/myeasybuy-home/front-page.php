@@ -94,7 +94,7 @@ $meb_products = $meb_u['has_wc']
 <div class="meb-notice">
 	<div class="meb-container meb-notice__inner">
 		<span class="meb-notice__label"><?php echo meb_icon( 'megaph' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>公告</span>
-		<p class="meb-notice__text"><?php echo esc_html( apply_filters( 'meb_home_notice', get_bloginfo( 'name' ) . ' 现已支持淘宝、京东商品代购，支持合箱发货与以图搜图。' ) ); ?></p>
+		<p class="meb-notice__text"><?php echo esc_html( apply_filters( 'meb_home_notice', get_bloginfo( 'name' ) . ' 现已支持淘宝、京东商品代购，支持合箱发货。' ) ); ?></p>
 		<a class="meb-notice__more" href="<?php echo esc_url( $meb_u['shop'] ); ?>">更多 <?php echo meb_icon( 'arrow' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 	</div>
 </div>

@@ -73,29 +73,33 @@ class PPW_Search {
 				'platform'        => $platform,
 				'defaultPlatform' => $platform,
 				'labels'          => array(
-					'taobao' => __( '淘宝', 'product-purchase-workflow' ),
-					'jd'     => __( '京东', 'product-purchase-workflow' ),
+					'taobao' => __( 'Taobao', 'product-purchase-workflow' ),
+					'jd'     => __( 'JD', 'product-purchase-workflow' ),
 				),
-				'loading'         => __( '正在搜索商品…', 'product-purchase-workflow' ),
-				'loadingMore'     => __( '正在加载更多…', 'product-purchase-workflow' ),
-				'noResults'       => __( '未找到相关商品，请换个关键词试试。', 'product-purchase-workflow' ),
-				'error'           => __( '搜索失败，请稍后重试。', 'product-purchase-workflow' ),
-				'heading'         => __( '商品搜索结果', 'product-purchase-workflow' ),
-				'buyText'         => __( '查看详情', 'product-purchase-workflow' ),
+				'loading'         => __( 'Searching for products…', 'product-purchase-workflow' ),
+				'loadingMore'     => __( 'Loading more…', 'product-purchase-workflow' ),
+				'noResults'       => __( 'No matching products were found. Please try a different keyword.', 'product-purchase-workflow' ),
+				'error'           => __( 'Search failed. Please try again in a moment.', 'product-purchase-workflow' ),
+				'heading'         => __( 'Product search results', 'product-purchase-workflow' ),
+				'buyText'         => __( 'View details', 'product-purchase-workflow' ),
 				'viewMore'        => __( 'View More', 'product-purchase-workflow' ),
-				'noMore'          => __( '没有更多商品了', 'product-purchase-workflow' ),
-				'detailLoading'   => __( '正在加载商品详情…', 'product-purchase-workflow' ),
-				'detailError'     => __( '加载商品详情失败。', 'product-purchase-workflow' ),
-				'linkLoading'     => __( '正在解析商品链接…', 'product-purchase-workflow' ),
-				'linkError'       => __( '无法解析该商品链接。', 'product-purchase-workflow' ),
-				'linkResolved'    => __( '已根据链接获取商品详情', 'product-purchase-workflow' ),
-				'searchHint'      => __( '可输入关键词或粘贴淘宝/京东商品链接', 'product-purchase-workflow' ),
-				'titleTpl'        => __( '「%1$s」的%2$s商品（已显示 %3$d 件）', 'product-purchase-workflow' ),
-				'imgSearchTitle'  => __( '以图搜图 · %1$s（已显示 %2$d 件）', 'product-purchase-workflow' ),
-				'imgSearching'    => __( '正在识别图片并搜索相似商品…', 'product-purchase-workflow' ),
-				'imgButtonLabel'  => __( '图片搜索', 'product-purchase-workflow' ),
-				'imgTooLarge'     => __( '图片过大，请选择 5MB 以内的图片。', 'product-purchase-workflow' ),
-				'imgInvalidType'  => __( '请上传 JPG / PNG / WEBP / GIF 图片。', 'product-purchase-workflow' ),
+				'noMore'          => __( 'No more products', 'product-purchase-workflow' ),
+				'detailLoading'   => __( 'Loading product details…', 'product-purchase-workflow' ),
+				'detailError'     => __( 'Could not load product details.', 'product-purchase-workflow' ),
+				'linkLoading'     => __( 'Opening that product link…', 'product-purchase-workflow' ),
+				'linkError'       => __( 'Could not open that product link.', 'product-purchase-workflow' ),
+				'linkResolved'    => __( 'Product details loaded from the link.', 'product-purchase-workflow' ),
+				'searchHint'      => __( 'Paste a Taobao/Tmall image link to find similar products, or enter a keyword or product link', 'product-purchase-workflow' ),
+				'titleTpl'        => __( 'Results for “%1$s” on %2$s (%3$d items shown)', 'product-purchase-workflow' ),
+				'imgSearchTitle'  => __( 'Image search · %1$s (%2$d items shown)', 'product-purchase-workflow' ),
+				'imgSearching'    => __( 'Recognizing the image and searching for similar products…', 'product-purchase-workflow' ),
+				'imgButtonLabel'  => __( 'Image search', 'product-purchase-workflow' ),
+				'imgTooLarge'     => __( 'That image is too large. Please choose a file under 5MB.', 'product-purchase-workflow' ),
+				'imgInvalidType'  => __( 'Please use a JPG, PNG, WEBP, or GIF image.', 'product-purchase-workflow' ),
+				'imgInvalidUrl'   => __( 'Image search only supports Taobao/Tmall image links (alicdn, taobao, or tmall). Please paste a product image URL from Taobao or Tmall.', 'product-purchase-workflow' ),
+				'imgUploadOff'    => __( 'Photo and file upload search is temporarily unavailable. Paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' ),
+				'switchHint'      => __( 'This is the %s catalog. Enter a keyword, paste a product link, or paste a Taobao/Tmall image link.', 'product-purchase-workflow' ),
+				'imageUploadEnabled' => ppw_is_image_upload_enabled(),
 			)
 		);
 	}
@@ -146,9 +150,9 @@ class PPW_Search {
 		$platform = self::default_platform();
 		echo '<section id="ppw-jd-results-section" class="ppw-jd-results-section wf-py-default" aria-live="polite" data-platform="' . esc_attr( $platform ) . '">';
 		echo '<div class="wf-container">';
-		echo '<div class="ppw-platform-switcher" role="tablist" aria-label="' . esc_attr__( '商品平台', 'product-purchase-workflow' ) . '">';
-		echo '<button type="button" class="ppw-platform-btn' . ( PPW_Platform::TAOBAO === $platform ? ' is-active' : '' ) . '" data-ppw-platform="taobao" role="tab" aria-selected="' . ( PPW_Platform::TAOBAO === $platform ? 'true' : 'false' ) . '">' . esc_html__( '淘宝', 'product-purchase-workflow' ) . '</button>';
-		echo '<button type="button" class="ppw-platform-btn' . ( PPW_Platform::JD === $platform ? ' is-active' : '' ) . '" data-ppw-platform="jd" role="tab" aria-selected="' . ( PPW_Platform::JD === $platform ? 'true' : 'false' ) . '">' . esc_html__( '京东', 'product-purchase-workflow' ) . '</button>';
+		echo '<div class="ppw-platform-switcher" role="tablist" aria-label="' . esc_attr__( 'Product platform', 'product-purchase-workflow' ) . '">';
+		echo '<button type="button" class="ppw-platform-btn' . ( PPW_Platform::TAOBAO === $platform ? ' is-active' : '' ) . '" data-ppw-platform="taobao" role="tab" aria-selected="' . ( PPW_Platform::TAOBAO === $platform ? 'true' : 'false' ) . '">' . esc_html__( 'Taobao', 'product-purchase-workflow' ) . '</button>';
+		echo '<button type="button" class="ppw-platform-btn' . ( PPW_Platform::JD === $platform ? ' is-active' : '' ) . '" data-ppw-platform="jd" role="tab" aria-selected="' . ( PPW_Platform::JD === $platform ? 'true' : 'false' ) . '">' . esc_html__( 'JD', 'product-purchase-workflow' ) . '</button>';
 		echo '</div>';
 		echo '<div id="ppw-jd-results" class="ppw-jd-results"></div>';
 		echo '</div>';
@@ -184,7 +188,7 @@ class PPW_Search {
 
 		if ( strlen( $keyword ) < 2 ) {
 			wp_send_json_error(
-				array( 'message' => __( '请输入至少 2 个字符。', 'product-purchase-workflow' ) ),
+				array( 'message' => __( 'Please enter at least 2 characters.', 'product-purchase-workflow' ) ),
 				400
 			);
 		}
@@ -245,7 +249,7 @@ class PPW_Search {
 				array(
 					'message' => sprintf(
 						/* translators: %s: platform label */
-						__( '未找到相关%s商品，请换个关键词试试。', 'product-purchase-workflow' ),
+						__( 'No matching %s products were found. Please try a different keyword.', 'product-purchase-workflow' ),
 						$label
 					),
 				),
@@ -292,7 +296,13 @@ class PPW_Search {
 
 		$image_source = self::resolve_uploaded_image_source();
 		if ( is_wp_error( $image_source ) ) {
-			wp_send_json_error( array( 'message' => $image_source->get_error_message() ), 400 );
+			wp_send_json_error(
+				array(
+					'message' => $image_source->get_error_message(),
+					'called'  => false,
+				),
+				400
+			);
 		}
 
 		$settings  = get_option( 'ppw_settings', array() );
@@ -345,7 +355,7 @@ class PPW_Search {
 		$label   = PPW_Platform::label( $platform );
 		$keyword = sprintf(
 			/* translators: %s: platform label */
-			__( '以图搜图(%s)', 'product-purchase-workflow' ),
+			__( 'Image search (%s)', 'product-purchase-workflow' ),
 			$label
 		);
 
@@ -371,7 +381,7 @@ class PPW_Search {
 				array(
 					'message' => sprintf(
 						/* translators: %s: platform label */
-						__( '未找到相似的%s商品，请换一张图片试试。', 'product-purchase-workflow' ),
+						__( 'No similar %s products were found. Please try a different image.', 'product-purchase-workflow' ),
 						$label
 					),
 				),
@@ -392,7 +402,7 @@ class PPW_Search {
 		if ( ! empty( $last['bridge_keyword'] ) && is_string( $last['bridge_keyword'] ) ) {
 			$keyword = sprintf(
 				/* translators: 1: platform label, 2: derived keyword */
-				__( '以图搜图(%1$s)·关键词：%2$s', 'product-purchase-workflow' ),
+				__( 'Image search (%1$s) · keyword: %2$s', 'product-purchase-workflow' ),
 				$label,
 				$last['bridge_keyword']
 			);
@@ -407,7 +417,7 @@ class PPW_Search {
 			'has_more'   => $has_more,
 			'products'   => $products,
 			'cards_html' => $cards_html,
-			'html'       => self::render_products_html( $products, $keyword, $page, $has_more, $platform ),
+			'html'       => self::render_products_html( $products, $keyword, $page, $has_more, $platform, 'image' ),
 			'mode'       => 'image',
 			'bridge'     => ( ! empty( $last['mode'] ) && 'jd_via_taobao_title' === $last['mode'] ),
 		);
@@ -422,20 +432,27 @@ class PPW_Search {
 	 * @return string|WP_Error Local "file:/path", https URL, or data-URI/base64.
 	 */
 	private static function resolve_uploaded_image_source() {
+		$upload_enabled = ppw_is_image_upload_enabled();
+		$unsupported    = __( 'Image search only supports Taobao/Tmall image links (alicdn, taobao, or tmall). Please paste a product image URL from Taobao or Tmall.', 'product-purchase-workflow' );
+		$upload_off     = __( 'Photo and file upload search is temporarily unavailable. Paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' );
+
 		if ( ! empty( $_FILES['image'] ) && is_array( $_FILES['image'] ) ) {
+			if ( ! $upload_enabled ) {
+				return new WP_Error( 'ppw_img_upload_disabled', $upload_off );
+			}
 			$file = $_FILES['image']; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- validated below.
 			$error = isset( $file['error'] ) ? (int) $file['error'] : UPLOAD_ERR_NO_FILE;
 			if ( UPLOAD_ERR_OK !== $error ) {
-				return new WP_Error( 'ppw_upload_err', __( '图片上传失败，请重试。', 'product-purchase-workflow' ) );
+				return new WP_Error( 'ppw_upload_err', __( 'The image could not be uploaded. Please try again.', 'product-purchase-workflow' ) );
 			}
 
 			$tmp  = isset( $file['tmp_name'] ) ? (string) $file['tmp_name'] : '';
 			$size = isset( $file['size'] ) ? (int) $file['size'] : 0;
 			if ( '' === $tmp || ! is_uploaded_file( $tmp ) ) {
-				return new WP_Error( 'ppw_upload_tmp', __( '无效的上传文件。', 'product-purchase-workflow' ) );
+				return new WP_Error( 'ppw_upload_tmp', __( 'That upload is not a valid image file.', 'product-purchase-workflow' ) );
 			}
 			if ( $size <= 0 || $size > 5 * MB_IN_BYTES ) {
-				return new WP_Error( 'ppw_upload_size', __( '图片过大，请选择 5MB 以内的图片。', 'product-purchase-workflow' ) );
+				return new WP_Error( 'ppw_upload_size', __( 'That image is too large. Please choose a file under 5MB.', 'product-purchase-workflow' ) );
 			}
 
 			$check = wp_check_filetype_and_ext(
@@ -448,7 +465,7 @@ class PPW_Search {
 				// Fallback to mime from file info.
 				$finfo = function_exists( 'mime_content_type' ) ? mime_content_type( $tmp ) : '';
 				if ( ! is_string( $finfo ) || ! str_starts_with( $finfo, 'image/' ) ) {
-					return new WP_Error( 'ppw_upload_type', __( '请上传 JPG / PNG / WEBP / GIF 图片。', 'product-purchase-workflow' ) );
+					return new WP_Error( 'ppw_upload_type', __( 'Please use a JPG, PNG, WEBP, or GIF image.', 'product-purchase-workflow' ) );
 				}
 			}
 
@@ -457,13 +474,16 @@ class PPW_Search {
 		}
 
 		if ( ! empty( $_POST['image_base64'] ) ) {
+			if ( ! $upload_enabled ) {
+				return new WP_Error( 'ppw_img_upload_disabled', $upload_off );
+			}
 			$raw = wp_unslash( (string) $_POST['image_base64'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 			$raw = trim( $raw );
 			if ( '' === $raw ) {
-				return new WP_Error( 'ppw_missing_image', __( '请上传或粘贴一张商品图片。', 'product-purchase-workflow' ) );
+				return new WP_Error( 'ppw_missing_image', __( 'Please paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' ) );
 			}
 			if ( strlen( $raw ) > 7 * MB_IN_BYTES ) {
-				return new WP_Error( 'ppw_upload_size', __( '图片过大，请选择 5MB 以内的图片。', 'product-purchase-workflow' ) );
+				return new WP_Error( 'ppw_upload_size', __( 'That image is too large. Please choose a file under 5MB.', 'product-purchase-workflow' ) );
 			}
 			return $raw;
 		}
@@ -471,18 +491,17 @@ class PPW_Search {
 		if ( ! empty( $_POST['image_url'] ) ) {
 			$url = esc_url_raw( wp_unslash( (string) $_POST['image_url'] ) );
 			if ( '' === $url ) {
-				return new WP_Error( 'ppw_missing_image', __( '请上传或粘贴一张商品图片。', 'product-purchase-workflow' ) );
+				return new WP_Error( 'ppw_missing_image', __( 'Please paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' ) );
+			}
+			if ( ! PPW_Link_Parser_Agent::is_alibaba_image_url( $url ) ) {
+				return new WP_Error( 'ppw_img_unsupported_host', $unsupported );
 			}
 			return $url;
 		}
 
-		return new WP_Error( 'ppw_missing_image', __( '请上传或粘贴一张商品图片。', 'product-purchase-workflow' ) );
+		return new WP_Error( 'ppw_missing_image', __( 'Please paste a Taobao/Tmall image link to find similar products.', 'product-purchase-workflow' ) );
 	}
 
-	/**
-	 * @param array<int, array<string, mixed>> $products Product list.
-	 * @return string
-	 */
 	public static function render_product_cards_html( $products ) {
 		if ( empty( $products ) ) {
 			return '';
@@ -517,7 +536,7 @@ class PPW_Search {
 					<?php if ( ! empty( $product['image'] ) ) : ?>
 						<img src="<?php echo esc_url( (string) $product['image'] ); ?>" alt="<?php echo esc_attr( (string) ( $product['title'] ?? '' ) ); ?>" loading="lazy" />
 					<?php else : ?>
-						<span class="ppw-jd-no-image"><?php esc_html_e( '暂无图片', 'product-purchase-workflow' ); ?></span>
+						<span class="ppw-jd-no-image"><?php esc_html_e( 'No image', 'product-purchase-workflow' ); ?></span>
 					<?php endif; ?>
 				</div>
 				<div class="ppw-jd-card-body">
@@ -536,7 +555,7 @@ class PPW_Search {
 							CAD <?php echo esc_html( number_format( (float) $product['price_cad'], 2 ) ); ?>
 						</p>
 					<?php endif; ?>
-					<span class="ppw-jd-card-btn"><?php esc_html_e( '查看详情', 'product-purchase-workflow' ); ?></span>
+					<span class="ppw-jd-card-btn"><?php esc_html_e( 'View details', 'product-purchase-workflow' ); ?></span>
 				</div>
 			</button>
 		</li>
@@ -551,15 +570,16 @@ class PPW_Search {
 	 * @param string $platform Platform slug.
 	 * @return string
 	 */
-	public static function render_products_html( $products, $keyword, $page = 1, $has_more = false, $platform = 'taobao' ) {
+	public static function render_products_html( $products, $keyword, $page = 1, $has_more = false, $platform = 'taobao', $mode = 'keyword' ) {
 		$platform = PPW_Platform::normalize( (string) $platform );
 		$label    = PPW_Platform::label( $platform );
+		$mode     = ( 'image' === $mode ) ? 'image' : 'keyword';
 
 		if ( empty( $products ) ) {
 			return '<p class="ppw-jd-empty">' . esc_html(
 				sprintf(
 					/* translators: %s: platform label */
-					__( '未找到相关%s商品，请换个关键词试试。', 'product-purchase-workflow' ),
+					__( 'No matching %s products were found. Please try a different keyword.', 'product-purchase-workflow' ),
 					$label
 				)
 			) . '</p>';
@@ -575,7 +595,7 @@ class PPW_Search {
 				<?php
 				printf(
 					/* translators: %s: platform label */
-					esc_html__( '当前为演示数据：OneBound API 未授权。请在后台购买正版 API 并关闭「演示模式」以显示真实%s商品。', 'product-purchase-workflow' ),
+					esc_html__( 'Demo data is shown because the OneBound API is not authorized. Add a licensed API key in settings and turn off demo mode to show real %s products.', 'product-purchase-workflow' ),
 					esc_html( $label )
 				);
 				?>
@@ -584,13 +604,22 @@ class PPW_Search {
 		<div class="ppw-jd-results-header">
 			<h2 class="ppw-jd-results-title" data-ppw-results-title data-keyword="<?php echo esc_attr( $keyword ); ?>" data-platform="<?php echo esc_attr( $platform ); ?>">
 				<?php
-				printf(
-					/* translators: 1: keyword, 2: platform label, 3: product count */
-					esc_html__( '「%1$s」的%2$s商品（已显示 %3$d 件）', 'product-purchase-workflow' ),
-					esc_html( $keyword ),
-					esc_html( $label ),
-					$count
-				);
+				if ( 'image' === $mode ) {
+					printf(
+						/* translators: 1: platform label, 2: product count */
+						esc_html__( 'Image search · %1$s (%2$d items shown)', 'product-purchase-workflow' ),
+						esc_html( $label ),
+						$count
+					);
+				} else {
+					printf(
+						/* translators: 1: keyword, 2: platform label, 3: product count */
+						esc_html__( 'Results for “%1$s” on %2$s (%3$d items shown)', 'product-purchase-workflow' ),
+						esc_html( $keyword ),
+						esc_html( $label ),
+						$count
+					);
+				}
 				?>
 			</h2>
 		</div>
@@ -606,7 +635,7 @@ class PPW_Search {
 					data-keyword="<?php echo esc_attr( $keyword ); ?>"
 					data-platform="<?php echo esc_attr( $platform ); ?>"
 					data-page="<?php echo esc_attr( (string) $page ); ?>"
-					<?php if ( false !== strpos( $keyword, '以图搜图' ) ) : ?>
+					<?php if ( 'image' === $mode ) : ?>
 						data-mode="image"
 					<?php endif; ?>
 				>

@@ -48,7 +48,7 @@ class PPW_Admin {
 			'ppw_general_section',
 			__( '通用', 'product-purchase-workflow' ),
 			static function () {
-				echo '<p>' . esc_html__( '首页默认展示淘宝商品；可通过界面按钮切换到京东。搜索框支持关键词、图片搜索（淘宝/京东 item_search_img）或粘贴商品链接。', 'product-purchase-workflow' ) . '</p>';
+				echo '<p>' . esc_html__( 'The homepage search box accepts a keyword, a Taobao/JD product link, or a pasted Taobao/Tmall image link (alicdn/taobao/tmall). File and photo search is off by default and can be re-enabled below if OneBound supports it again.', 'product-purchase-workflow' ) . '</p>';
 			},
 			'ppw-settings'
 		);
@@ -69,6 +69,15 @@ class PPW_Admin {
 			'ppw-settings',
 			'ppw_general_section',
 			array( 'field_id' => 'page_size' )
+		);
+
+		add_settings_field(
+			'ppw_image_upload_enabled',
+			__( 'Enable image upload / photo search', 'product-purchase-workflow' ),
+			array( __CLASS__, 'render_field' ),
+			'ppw-settings',
+			'ppw_general_section',
+			array( 'field_id' => 'image_upload_enabled' )
 		);
 
 		add_settings_section(
@@ -264,6 +273,7 @@ class PPW_Admin {
 			'page_size'              => min( 20, max( 1, (int) ( $input['page_size'] ?? 20 ) ) ),
 			'demo_mode'              => ! empty( $input['demo_mode'] ) ? 1 : 0,
 			'default_platform'       => PPW_Platform::normalize( (string) ( $input['default_platform'] ?? 'taobao' ) ),
+			'image_upload_enabled'   => ! empty( $input['image_upload_enabled'] ) ? 1 : 0,
 		);
 	}
 
@@ -315,6 +325,17 @@ class PPW_Admin {
 				esc_attr( $field_id ),
 				esc_attr( (string) $value )
 			);
+			return;
+		}
+
+		if ( 'image_upload_enabled' === $field_id ) {
+			printf(
+				'<label><input type="checkbox" name="ppw_settings[%1$s]" id="ppw_%1$s" value="1" %2$s /> %3$s</label>',
+				esc_attr( $field_id ),
+				checked( 1, (int) $value, false ),
+				esc_html__( 'Enable image upload / photo search', 'product-purchase-workflow' )
+			);
+			echo '<p class="description">' . esc_html__( 'Off by default. OneBound currently supports only Taobao/Tmall image links (alicdn, taobao, or tmall domains). Turn this on later to show the upload and camera buttons and restore the upload_img path.', 'product-purchase-workflow' ) . '</p>';
 			return;
 		}
 
@@ -379,7 +400,7 @@ class PPW_Admin {
 			$last = class_exists( 'PPW_Link_Parser_Agent' ) ? PPW_Link_Parser_Agent::get_last_img_search() : array();
 			if ( empty( $last ) ) :
 				?>
-				<p><?php esc_html_e( '尚无记录。请在首页上传商品图片搜索后再回来查看。', 'product-purchase-workflow' ); ?></p>
+				<p><?php esc_html_e( 'No record yet. Run an image-link search on the homepage, then return here.', 'product-purchase-workflow' ); ?></p>
 			<?php else : ?>
 				<table class="widefat striped" style="max-width:900px">
 					<tbody>
@@ -397,9 +418,9 @@ class PPW_Admin {
 			<ol>
 				<li><?php esc_html_e( '在 OneBound 注册并获取 API Key / Secret。', 'product-purchase-workflow' ); ?></li>
 				<li><?php esc_html_e( '填写淘宝 / 京东配置并保存（API URL 保持默认即可）。', 'product-purchase-workflow' ); ?></li>
-				<li><?php esc_html_e( '图片搜索：淘宝支持本地上传（upload_img + item_search_img）。京东官方接口主要接受 360buyimg / jfs 图片地址；本地图会先淘宝识图再按关键词搜京东。', 'product-purchase-workflow' ); ?></li>
+				<li><?php esc_html_e( 'Image search: paste a Taobao/Tmall image URL (item_search_img, app_ver=2). File/photo upload and upload_img stay disabled until you check “Enable image upload / photo search”.', 'product-purchase-workflow' ); ?></li>
 				<li><?php esc_html_e( '激活「Product Purchase Workflow」插件。', 'product-purchase-workflow' ); ?></li>
-				<li><?php esc_html_e( '访问首页默认搜索淘宝商品；点击「京东」可切换平台；也可使用「图片搜索」。', 'product-purchase-workflow' ); ?></li>
+				<li><?php esc_html_e( 'On the homepage, search by keyword, paste a Taobao/JD product link, or paste a Taobao/Tmall image link. Enable the upload toggle above only when OneBound supports file/photo search again.', 'product-purchase-workflow' ); ?></li>
 				<li><?php esc_html_e( '点击商品查看详情；若 WooCommerce 中无该商品会自动上架。', 'product-purchase-workflow' ); ?></li>
 			</ol>
 		</div>
